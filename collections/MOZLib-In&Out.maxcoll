@@ -1,0 +1,5 @@
+{
+	"name" : "MOZLib In&Out",
+	"type" : "filelist",
+	"contents" : ["drop_xml.maxsnip", "ezmidi_instr.maxsnip"]
+}

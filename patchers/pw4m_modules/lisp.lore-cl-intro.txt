@@ -1,0 +1,12 @@
+Welcome to LISPlore !
+
+Here you can browse through different libraries or packages of functions available in moz-complete.core and understand how they work (see PWforMax Overview if this doesn't make sense). 
+The purpose of this module is purely pedagogical and exploratory\, to help you realize that the core file is not just a black box\, but you can actually control it from the outside !
+
+First choose a package\, then a category\, a finally a function to display its description or docstring.
+
+First package : Introduction to Common LISP
+Just a selection of frequently encountered Common LISP functions\, for beginners and oblivious people like me. For a more advanced reference\, see the Hyperspec :
+http://www.lispworks.com/documentation/HyperSpec/Front/
+
+Note : LIST is obviously not here because it is somehow incompatible with Max :( Use LST in the PW package instead

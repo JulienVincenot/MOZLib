@@ -1,0 +1,1480 @@
+	[ generic-rules
+		[ no-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule dos not allow any repetition.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-absolute-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"It does not allow any repetition in abslute mode inside a solution.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-local-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule dos not allow any repetition.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-spaced-repetition-rule
+			[
+				[ candidates
+					[ 1 3 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ function\ does\ not\ allow\ any\ repetition\ for\ an\ element\ and\ another.\ The\ distance\ between\ the\ two\ elements\ is\ indicated\ with\ the\ numbers\ put\ in\ candidates.\ For\ example\ if\ you\ put\ (1\ 4)\ it\ means\ that\ each\ element\ has\ to\ be\ different\ from\ the\ fourth\ after\ itself.\ If\ you\ put\ (1\ 7)\ that\ means\ that\ an\ element\ has\ to\ be\ different\ from\ the\ seventh\ after\ itself.\	
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied.
+		In the mode heuristic, the rule is applied as much as possible."
+		]
+		[ not-modulo-x-repetition-rule
+			[
+				[ modulo 12 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any candidate having the same modulo given in modulo.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ modulo-x-repetition-rule
+			[
+				[ modulo 12 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule allows any candidate having the same modulo given in modulo.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible.
+N.B. USEFULL IN QUANTIFICATION OF DURATIONS."
+		]
+		[ not-modulo-x-local-repetition-rule
+			[
+				[ modulo 12 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any candidate having the same local modulo given in modulo.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible
+N.B. USEFULL IN QUANTIFICATION OF DURATIONS."
+		]
+		[ not-rpt-elmts-in-lists-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any element of one list to be repeated in the following
+list.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-consecutive-number-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow numeric candidate to be followed by its consecutive. It means that if candidates are:
+1 2 3 4 5 there will not be 1 follow by 2, but by 3, or 4 or 5.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-consecutive-ascending-rule
+			[
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow more ascending value than as indicate in how-many.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-consecutive-descending-rule
+			[
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow more descending value than as indicate in how-many.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-consecutive-equal-rule
+			[
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow more equal values than as indicate in how-many.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-repeated-element-sub-group-rule
+			[
+				[ sub-group-length 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any repeated element into a given sub-group. The input
+sub-group-length indicates the length of the sub-group.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-repeated-list-sub-group-rule
+			[
+				[ sub-group-length 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any repeated list into a given sub-group. The input
+sub-group-length indicates the length of the sub-group.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ item-sub-group-member-rule
+			[
+				[ sub-group-length 5 ]
+				[ item-index 1 ]
+				[ allowed
+					[ 1 7 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Item indicated with 'item index' will be a member of 'allowed' elements in each sub group of length
+ 'sub-group-length'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ allowed-chain-rule
+			[
+				[ element 2 ]
+				[ following
+					[ 5 7 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a given element,
+to be followed by those elements eneterd in following.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-allowed-chain-rule
+			[
+				[ element 2 ]
+				[ following
+					[ 5 7 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a given element,
+NOT to be followed by those elements eneterd in following.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ length-sub-group-rule
+			[
+				[ lengths
+					[ 2 6 4 1 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges the sub solutions to have a length accordingly to the list put in 'lengths'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-consecutive-equal-length-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"The length of two consecutive groups has not to be equal.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-length-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"No repetition of sub group equal length.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ index-rule
+			[
+				[ index i1 ]
+				[ value 7 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ value\ (indicated\ as\ index)\ of\ the\ solution\ to\ be\ the\ value\ indicated\ in\ \'value\'.
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-index-rule
+			[
+				[ index i1 ]
+				[ value 7 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ value\ (indicated\ as\ index)\ of\ the\ solution\ NOT\ to\ be\ the\ value\ indicated\ in\ \'value\'.
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible. ATTENTION: HEURISTIC NOT YET IMPLEMENTED."
+		]
+		[ index-higher-rule
+			[
+				[ index i1 ]
+				[ value 7 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ value\ (indicated\ as\ index)\ of\ the\ solution\ to\ be\ higher\ than\ the\ value\ indicated\ in\ \'value\'.
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible. ATTENTION: HEURISTIC NOT YET IMPLEMENTED."
+		]
+		[ index-lower-rule
+			[
+				[ index i1 ]
+				[ value 7 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ value\ (indicated\ as\ index)\ of\ the\ solution\ to\ be\ lower\ than\ the\ value\ indicated\ in\ \'value\'..
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible ATTENTION: HEURISTIC NOT YET IMPLEMENTED."
+		]
+		[ index-length-rule
+			[
+				[ index i1 ]
+				[ length 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ value\ (indicated\ as\ index)\ of\ the\ solution\ to\ have\ the\ length\ put\ in\ \'length\'.
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible ATTENTION: HEURISTIC NOT YET IMPLEMENTED."
+		]
+		[ index-nth-rule
+			[
+				[ index i1 ]
+				[ nth? 0 ]
+				[ what? 1 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ nth\ (indicate\ from\ 0\ to\ n)\ of\ the\ index\ (indicated\ with\ i1\,\ i2\,\ i3...)\ to\ be\ the\ value\ put\ in\ what?.
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible. ATTENTION: HEURISTIC NOT YET IMPLEMENTED."
+		]
+		[ index-applied-sum-rule
+			[
+				[ index i1 ]
+				[ sum 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ value\ (indicated\ as\ index)\ of\ the\ solution\ to\ have\ elements\ that\ summed\ together\ they\ give\ back\ the\ number\ put\ in\ sum.
+		"
+		ATTENTION : in the mode true/false, the rule is perfectly applied. In the mode heuristic, the rule is applied as much as possible. ATTENTION: HEURISTIC NOT YET IMPLEMENTED."
+		]
+		[ member-rule
+			[
+				[ list
+					[ 1 2 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges any element of the solution to belong to the elements indicated in 'domain'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-member-rule
+			[
+				[ list
+					[ 1 2 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges any element of the solution not to belong to the elements indicated in 'domain'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-higher-than-rule
+			[
+				[ limit 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges any element of the solution not to belong to the elements indicated in 'domain'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-lower-than-rule
+			[
+				[ limit 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges any element of the solution not to belong to the elements indicated in 'domain'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-common-elements-rule
+			[
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges sub lists to have the number of common elements put in 'how-many.
+ATTENTION : This rule works with a list of lists.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-any-element-rule
+			[
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obligesa solution to have any element repeated many times as indicated in 'how-many.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-this-element-rule
+			[
+				[ element 10 ]
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obligesa solution to have any element repeated many times as indicated in 'how-many.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+	]
+	[ interval-rules
+		[ no-interval-local-repetition-rule
+			[
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allowed any local repetition of intervals.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-interval-repetition-rule
+			[
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any repetition of intervals.
+If the menu 'absolute?' is 'absolute, that means that intervals are
+intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-locally-repeated-given-interval-rule
+			[
+				[ interval 3 ]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a solution not to have a given 'interval' locally repeated.
+It is a sort of no-local-repetition but limited to the given interval.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ allowed-intervals-rule
+			[
+				[ intervals
+					[ -1 2 -3 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule allows only the intervals indicated in 'intervals'.
+If the menu 'absolute?' is 'absolute,
+that means that intervals are intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-allowed-intervals-rule
+			[
+				[ intervals
+					[ -1 2 -3 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow the intervals indicated in 'intervals'.
+If the menu 'absolute?' is 'absolute,
+that means that intervals are intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ allowed-distant-intervals-rule
+			[
+				[ distance
+					[ 1 3 ]
+				]
+				[ intervals
+					[ 1 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule allows a sequence of intervals to be equals with a given distance. The allowed intervals are put in INTERVALS.
+The distance has to be described giving the first and the last note of the distance. For instance, if in distance you put 1 and 3 it means that in a sequence each the interval between the first and the third note has to be a member of INTERVALS. 
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-consecutive-equal-intervals-rule
+			[
+				[ how-many 3 ]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow any repetition of intervals for a length put in 'how-many'.
+If the menu 'absolute?' is 'absolute, that means that intervals are
+intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ obliged-interval-chain-rule
+			[
+				[ interval 3 ]
+				[ int-list
+					[ 1 2 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges an interval to be followed by those put in int-list.
+If the menu 'absolute?' is 'absolute, that means that intervals are
+intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-obliged-interval-chain-rule
+			[
+				[ interval 3 ]
+				[ int-list
+					[ 1 2 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges an interval NOT to be followed by those put in int-list.
+If the menu 'absolute?' is 'absolute, that means that intervals are
+intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ repeat-interval-rule
+			[
+				[ interval 3 ]
+				[ which3 1 ]
+				[ times 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a solution to have a given interval repeated many times as indicated in time. The interval is considered ins the absolute mode. If the menu which? is set on <, it means that the given interval has to be repeated a number of time inferior to the one put in times. If the menu which? is set on =, it means that the given interval has to be repeated a number of time equal to the one put in times.
+If the menu which? is set on >, it means that the given interval has to be repeated a number of times bigger than the one put in times.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ repeat-resulting-interval-rule
+			[
+				[ resulting-interval 3 ]
+				[ which3 1 ]
+				[ times 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ a\ solution\ to\ have\ a\ given\ resulting-interval\ repeated\ many\ times\ as\ indicated\ in\ time.\ A\ resulting\ interval\ is\ an\ interval\ between\ a\ note\ with\ any\ possible\ other\ notes.\ In\ this\ sense\,\ look\ at\ the\ function\ find-all-intervals\ (that\ you\ can\ call\ using\ the\ package\ jbs-constraints::find-all-intervals).\ This\ function\ gives\ all\ the\ interval\ between\ all\ notes\ of\ a\ sequence.\ So\ a\ resulting\ interval\ is\ an\ interval\ that\ is\ the\ result\ of\ the\ function\ find-all-intervals.
+		"
+		
+If the menu which? is set on <, it means that the given interval has to be repeated a number of time inferior to the one put in times. If the menu which? is set on =, it means that the given interval has to be repeated a number of time equal to the one put in times.
+If the menu which? is set on >, it means that the given interval has to be repeated a number of times bigger than the one put in times.
+
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ index-interval-rule
+			[
+				[ index 2 ]
+				[ allowed
+					[ 2 4 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a given interval indicated with 'index' to be a member of a list
+of possible intervals indicated in 'allowed'. If the menu 'absolute?' is 'absolute,
+that means that intervals are intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-index-interval-rule
+			[
+				[ index 2 ]
+				[ allowed
+					[ 2 4 ]
+				]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a given interval indicated with 'index' NOT to be a member of a list
+of possible intervals indicated in 'allowed'. If the menu 'absolute?' is 'absolute,
+that means that intervals are intented in absolute mode. If this menu is 'up/down', that means that
+the intervals are divided into ascending and descending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-higher-interval-rule
+			[
+				[ limit 6 ]
+				[ sign? :+ ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"First you have to define if you work on positif or negatif intrevals using the menu 'sign?'.
+If you chose '+', it means that this function does not allow interval higher than the one entered in 'limit' only for positif interval. If you chose '-' it means that this function does not allow interval higher than the one entered in 'limit' only for negatif interval.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-bigger-interval-rule
+			[
+				[ limit 6 ]
+				[ sign? :+ ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"First you have to define if you work on positif or negatif intrevals using the menu 'sign?'.
+If you chose '+', it means that this function does not allow interval higher than the one entered in 'limit' only for positif interval. If you chose '-' it means that this function does not allow interval higher than the one entered in 'limit' only for negatif interval.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-lower-interval-rule
+			[
+				[ limit 6 ]
+				[ sign? :+ ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"First you have to define if you work on positif or negatif intrevals using the menu 'sign?'.
+If you chose '+', it means that this function does not allow interval lower than the one entered in 'limit' only for positif interval. If you chose '-' it means that this function does not allow interval lower than the one entered in 'limit' only for negatif interval.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-smaller-interval-rule
+			[
+				[ limit 6 ]
+				[ sign? :+ ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"First you have to define if you work on positif or negatif intrevals using the menu 'sign?'.
+If you chose '+', it means that this function does not allow interval lower than the one entered in 'limit' only for positif interval. If you chose '-' it means that this function does not allow interval lower than the one entered in 'limit' only for negatif interval.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ resulting-interval-rule
+			[
+				[ interval 6 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`A\ resulting\ interval\ is\ an\ interval\ between\ a\ note\ of\ a\ sequence\ with\ any\ possible\ other\ notes\ of\ the\ same\ sequence.\ In\ this\ sense\,\ look\ at\ the\ function\ find-all-intervals\ (that\ you\ can\ call\ using\ the\ package\ jbs-constraints::find-all-intervals).\ This\ function\ gives\ all\ the\ interval\ between\ all\ notes\ of\ a\ sequence.\ So\ a\ resulting\ interval\ is\ an\ interval\ that\ is\ the\ result\ of\ the\ function\ find-all-intervals.
+		"
+		
+Resulting-interval-rule "
+		`[1]\ obliges\ the\ solution\ to\ have\,\ among\ all\ the\ intervals\ among\ all\ eh\ notes\ of\ the\ sequence\,\ the\ defined\ interval.\ 
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-resulting-interval-rule
+			[
+				[ interval 6 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow the existence of the given 'interval' even as the result
+of the verticality of all the elements of a solution.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ jump-resolution-rule
+			[
+				[ interval 6 ]
+				[ resolution 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"If an interval is higher than the value put in interval, the next interval as to go in the opposite direction and it has to be smaller than the value put in resolution."
+		]
+		[ do-reach-that-interval-rule
+			[
+				[ how-many 4 ]
+				[ interval 12 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		]
+		[ do-not-reach-that-interval-rule
+			[
+				[ how-many 6 ]
+				[ interval 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Does not reach a given interval in how-many notes" ]
+		[ apply-interval-sum-rule
+			[
+				[ sum 26 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule outputs a solution having the the sum of all intervals equal to the value put in sum.
+First it makes the x->dx of all intervals and then it applies '+ to all.
+ATTENTION : in the mode true/false, does NOT work: because of SLEN"
+		]
+		[ apply-interval-global-sum-rule
+			[
+				[ sum 26 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule outputs a solution having the the sum of all intervals equal to the value put in sum.
+First it makes the x->dx of all intervals and then it applies '+ to all.
+ATTENTION : in the mode true/false, does NOT work: because of SLEN"
+		]
+		[ not-complementary-interval-rule
+			[
+				[ interval 12 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow the existence of a given interval as the product of two consecutive
+intervals.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ interval-structure-rule
+			[
+				[ interval-structure
+					[ 2 3 -1 7 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges elements to have the given 'interval-structure'.
+N.B. BE CAREFULL: the number of intervals put in 'interval-stricture' has to be
+one element less than the number of candidates you put in the search space!.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-interval-structure-rule
+			[
+				[ interval-structure
+					[ 5 4 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges elements not to have the given 'interval-structure'.
+N.B. BE CAREFULL: the number of intervals put in 'interval-stricture' has to be
+one element less than the number of candidates you put in the search space!.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-positive-intervals-rule
+			[
+				[ number 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"The solution must have a number of positive intrevals as indicatd in number.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule DOES NOT WORK because of Slen..."
+		]
+		[ count-negative-intervals-rule
+			[
+				[ number 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"The solution must have a number of negative intrevals as indicatd in number.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule DOES NOT WORK because of Slen..."
+		]
+	]
+	[ pitch-rules
+		[ allowed-pitch-rule
+			[
+				[ pitch
+					[ 60 62 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Only the pitches indicated in 'pitch' will be allowed in any octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-allowed-pitch-rule
+			[
+				[ pitch
+					[ 60 62 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Only the pitches indicated in 'pitch' will be allowed in any octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ allowed-polarized-pitch-rule
+			[
+				[ pitch
+					[ 60 62 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Only the pitches indicated in 'pitch' will be allowed in any octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ allowed-pitch-structure-rule
+			[
+				[ pitch
+					[ 60 63 67 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Only the pitches indicated in 'pitch' will be allowed in any octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule does not work because of SLEN..."
+		]
+		[ allowed-pitch-class-rule
+			[
+				[ pitch
+					[ 60 63 67 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`Only\ the\ class\ (for\ instance\ minor\ triad)\ indicated\ in\ \'pitch\'\ will\ be\ allowed\ in\ any\ octave.
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule does not work because of SLEN..."
+		]
+		[ allowed-pitch-class-sub-list-rule
+			[
+				[ pitch
+					[ 60 63 67 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ function\ outputs\ a\ solution\ having\ only\ the\ class\ (for\ instance\ minor\ triad)\ indicated\ in\ \'pitch\'\ will\ be\ allowed\ in\ any\ octave\ including\ also\ other\ notes.\ That\ means\ that\ is\ I\'m\ looking\ for\ a\ minor\ triad\ in\ a\ 5\ notes\ chord\,\ the\ solution\ will\ look\ if\ a\ minor\ triad\ exists\ inside\ the\ 5\ notes\ chord.
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule does not work because of SLEN..."
+		]
+		[ not-allowed-pitch-structure-rule
+			[
+				[ pitch
+					[ 60 63 67 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Only the pitches indicated in 'pitch' will be allowed in any octave and in any position.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule does not work because of SLEN..."
+		]
+		[ not-allowed-pitch-class-rule
+			[
+				[ pitch
+					[ 60 63 67 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`Only\ the\ class\ (for\ instance\ a\ minor\ triad)\ indicated\ in\ \'pitch\'\ will\ be\ allowed\ in\ any\ octave.
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule does not work because of SLEN..."
+		]
+		[ not-allowed-pitch-class-sub-list-rule
+			[
+				[ pitch
+					[ 60 63 67 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ function\ outputs\ a\ solution\ having\ only\ the\ class\ (for\ instance\ minor\ triad)\ indicated\ in\ \'pitch\'\ will\ NOT\ be\ allowed\ in\ any\ octave\ including\ also\ other\ notes.\ That\ means\ that\ is\ I\'m\ looking\ for\ NOT\ HAVING\ a\ minor\ triad\ in\ a\ 5\ notes\ chord\,\ the\ solution\ will\ look\ if\ a\ minor\ triad\ exists\ inside\ the\ 5\ notes\ chord.
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule does not work because of SLEN..."
+		]
+		[ index-pitch-rule
+			[
+				[ index i1 ]
+				[ pitch
+					[ 60 62 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`For\ the\ give\ index\ (i1\,\ i2\,\ i3...)\ only\ the\ pitches\ indicated\ in\ \'pitch\'\ will\ be\ allowed\ in\ any\ octave.
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-index-pitch-rule
+			[
+				[ index i1 ]
+				[ pitch
+					[ 60 62 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`For\ the\ give\ index\ (i1\,\ i2\,\ i3...)\ only\ the\ pitches\ indicated\ in\ \'pitch\'\ will\ NOT\ be\ allowed\ in\ any\ octave.
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ any-note-repeated-rule
+			[
+				[ times 2 ]
+				[ which3 1 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`Any\ notes\ has\ to\ be\ repeated\ (in\ modulo\ too)\ a\ less\,\ exactly\ or\ more\ times\ as\ indicated\ in\ \'times\'.
+		"
+		
+N.B. BE CAREFULL: the menu which? defines less, equal or more.
+If <, the calculation is quite fast.
+If =, be sure to have a 'pari' number of candidates in the esarch space.
+If >, the calculation can be very slow.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-this-note-rule
+			[
+				[ note 68 ]
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a solution to have the given note repeated many times as indicated in 'how-many inthe exact octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-this-modulo-rule
+			[
+				[ note 68 ]
+				[ how-many 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges a solution to have a given note repeated many times as indicated in 'how-many, in any possible octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-repeated-modulo12-sub-group-rule
+			[
+				[ sub-group-length 4 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"There are no modulo 12 repetition inside each sub group indicated with 'sub-group-length'.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-modulo12-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule allows only solution without any repetition in any octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-modulo12-local-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule allows only solution without any LOCAL repetition in any octave.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ mk-profile-pitch-rule
+			[
+				[ curve-min 60 ]
+				[ curve-max 72 ]
+				[ steps 10 ]
+				[ bpf_profile
+					[ ]
+				]
+				[ approx 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to put out a solution identical to the one put in profile.
+As you understand, this rule is usefull only as heuristic!
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ mk-profile-pitch-modulo-rule
+			[
+				[ pitches
+					[ 60 62 64 65 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to put out a solution of pitches having the same modulo 12 of the given profile.
+It is a OTTAVIATORE.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+	]
+	[ shaping-rules
+		[ ascending-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges all the value to be ascending.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ ascending-without-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges all the value to be ascending without any repetition.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ ascending-sub-group-no-repet-rule
+			[
+				[ nth-? 0 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ nth\ (put\ in\ nth-?)\ values\ of\ a\ list\ of\ lists\ to\ be\ ascending\ without\ any\ repetition.
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ ascending-sub-group-with-repet-rule
+			[
+				[ nth-? 0 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ nth\ (put\ in\ nth-?)\ values\ of\ a\ list\ of\ lists\ to\ be\ ascending\ with\ repetitions.
+		"
+		
+ATTENTION : The Heuristic implementation can not work." ]
+		[ descending-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges all the value to be descending
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ descending-without-repetition-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges all the value to be descending without any repetition.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ descending-sub-group-no-repet-rule
+			[
+				[ nth-? 0 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ nth\ (put\ in\ nth-?)\ values\ of\ a\ list\ of\ lists\ to\ be\ descending\ without\ any\ repetition.
+		"
+		
+ATTENTION : THE HEURISTIC MODE IT IS NOT WORKING" ]
+		[ descending-sub-group-with-repet-rule
+			[
+				[ nth-? 0 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ obliges\ the\ nth\ (put\ in\ nth-?)\ values\ of\ a\ list\ of\ lists\ to\ be\ descending\ with\ repetitions.
+		"
+		
+ATTENTION : The Heuristic implementation can not work." ]
+		[ mk-fix-profile-rule
+			[
+				[ profile
+					[ 60 63 70 74 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to put out a solution identical to the one put in profile.
+As you understand, this rule is usefull only as heuristic!
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ mk-profile-rule
+			[
+				[ curve-min 60 ]
+				[ curve-max 72 ]
+				[ steps 10 ]
+				[ bpf_profile
+					[ ]
+				]
+				[ decimals 0 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to put out a solution identical to the one put in profile.
+As you understand, this rule is usefull only as heuristic!
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ sub-group-mk-profile-rule
+			[
+				[ curve-min 60 ]
+				[ curve-max 72 ]
+				[ nth-? 0 ]
+				[ steps 10 ]
+				[ bpf_profile
+					[ ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to put out a solution in which for
+each sub-groups the nth 
+		"
+		`(put\ in\ nth-?)\ has\ to\ be\ identical\ to\ the\ one\ put\ in\ profile.
+		"
+		
+As you understand, this rule is usefull only as heuristic!ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ direct-analysis-rule
+			[
+				[ analysis
+					[ 1 -1 0 1 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to put out a solution identical to the one put in profile.
+As you understand, this rule is usefull only as heuristic!
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ energy-profile-rule
+			[
+				[ energy-profile
+					[ 32 22 18 19 40 12 1 249 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ energy-profile-range-rule
+			[
+				[ energy-profile
+					[ 32 22 18 19 40 12 1 249 ]
+				]
+				[ range 10 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+	]
+	[ pattern-rules
+		[ ptrn-find-rule
+			[
+				[ ptrn-length 2 ]
+				[ repeat-ptrn 3 ]
+				[ which5 1 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule looks for solutions having patterns with a giveen length of element
+put in ptrn-length. In repeated-ptrn you have to put how many time do you
+want the pattern to be repeated.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ not-ptrn-find-rule
+			[
+				[ ptrn-length 2 ]
+				[ repeat-ptrn 3 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule looks for solutions NOT having patterns with a giveen length of element
+put in ptrn-length. In repeated-ptrn you have to put how many time do you
+want the pattern to be repeated.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ find-this-ptrn-n-times-rule
+			[
+				[ pattern
+					[ 1 2 3 ]
+				]
+				[ repeat-ptrn 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule looks for solutions having patterns with a giveen length of element
+put in ptrn-length. In repeated-ptrn you have to put how many time do you
+want the pattern to be repeated.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-shape-pattern-lcl-repetition-rule
+			[
+				[ ptrn-length 4 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule does not allow two consecutive pattern described in the dirct-analys format. In Italiano : questa regola 
+non ammette due pattern consecutivi la cui descrizione Ë basata sul direct analys di morphologie: chiama Filippo se non ti ricordi..."
+		]
+		[ more-first-repeated-than-second-rule
+			[
+				[ element-1
+					[ 2 ]
+				]
+				[ element-2
+					[ 3 ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule asks the engine to have a solution with the first element repeated
+more times than the second.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ repeated-pattern-rule
+			[
+				[ pattern 2 ]
+				[ times 3 ]
+				[ which_unparen := ]
+				[ absolute? :absolute ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule is for pattern repetitions. In 'pattern you put what you want to be repeated.
+In 'times you put how many times you want teh pattern to be repeated. In 'which? you can chose among
+'< it that means less times, '= that means an exact number of times and '> that means more times.
+In 'absolute? you can chose if you are looking for positive elements "
+		`(absolute)\ or\ not.
+		"
+		
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ always-more-little-included-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`When\ one\ element\ (as\ list\ of\ lists)\ is\ bigger\ than\ a\ second\ so\ the\ more\ little\ has\ to\ be\ included\ in\ the\ bigger.
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+	]
+	[ distance-rules
+		[ distance-rule
+			[
+				[ pattern
+					[ 1 2 3 ]
+				]
+				[ distance 50 ]
+				[ which_unparen :< ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This is a morphological rule. It asks to the engine those solutions who have a distance
+- given in 'distance - with the 'pattern. In which? you can chose if you want an equal distance '=,
+a more little distance '< or a bigger distance '>.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+	]
+	[ structure-rules
+		[ mk-symbol-structure-rule
+			[
+				[ structure
+					[ c i a o ]
+				]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges the solution to be as indicated in structure.
+You understand that this rule has meaning only as heuristic.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ find-apply-global-sum-rule
+			[
+				[ sum 10 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule finds out the candidates that summed together they give as a risult the same value
+put in sum.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ find-apply-global-absolute-sum-rule
+			[
+				[ sum 10 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ finds\ out\ the\ candidates\ that\ summed\ together\ (in\ an\ absolute\ mode)\ they\ give\ as\ a\ risult\ the\ same\ value\ put\ in\ sum.
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ find-apply-approx-sum-rule
+			[
+				[ sum 7 ]
+				[ approx 0.200000 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule finds out the candidates that summed together they give as a risult the same value
+put in sum.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ find-apply-approx-absolute-sum-rule
+			[
+				[ sum 7 ]
+				[ approx 0.200000 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`This\ rule\ finds\ out\ the\ candidates\ that\ summed\ together\ (in\ the\ absoulte\ mode)\ they\ give\ as\ a\ risult\ the\ same\ value\ put\ in\ sum.
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ length-sub-group-applied-sum-rule
+			[
+				[ length? 1 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges each sub list of the solution ti have an applied sum equal to length?.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ structured-order-sum-rule
+			[
+				[ candidates
+					[ ?1 ?2 ?3 ]
+				]
+				[ order
+					[ 0 1 0 2 2 2 2 0 1 ]
+				]
+				[ sum 11 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		`In\ candidates\ you\ put\ in\ sconstraints\ symbol\ the\ candidates\ you\ are\ looking\ for\ (ex.\ ?1\ ?2\ ?3).\ Then\ in\ order\ you\ put\ a\ list\ of\ indexes\ that\ has\ to\ be\ applied\ to\ a\ posn-match\ for\ the\ candidates
+		``
+			[ "ex. "
+				[ "0 1 0 2 2 2 2 0 1" ]
+			]
+		". Then in sum you put the value that the 3 candidates you haveindicated, summmed together in the given order."
+		"
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-positive-rule
+			[
+				[ number 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"The solution must have a number of positive valure as indicatd in number.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ count-negative-rule
+			[
+				[ number 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"The solution must have a number of negative valure as indicatd in number.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-consecutive-rests-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Two negative values can not be consecutive.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ no-consecutive-pulses-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"Two positive values can not be consecutive.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ alternating-positive-negative-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule obliges positive number to be alternated with negative numbers.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ alternating-+/-first-elmt-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule ceates a result of sub lists in which the fisrt element is, in an alterning way, before positive then negative an so on.
+ATTENTION : this rule works with list of lists.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ alternating-+/-last-elmt-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule ceates a result of sub lists in which the last element is, in an alterning way, before positive
+then negative an so on.
+ATTENTION : this rule works with list of lists.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+	]
+	[ matrix-rules
+		[ mk-latin-matrix-rule
+			[
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule create a latin matrix like following :
+     1 3 2 4
+     2 1 4 3
+     3 4 1 2
+     4 2 3 1
+
+ATTENTION : It works with list of lists.
+ATTENTION : in the mode true/false, the rule is perfectly applied.
+In the mode heuristic, the rule is applied as much as possible"
+		]
+		[ chain-common-element-lists-rule
+			[
+				[ chain-length? 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule chains lists of lists following the criteria of adaptating figure: see CMI thoery.
+You have two lists of lists: in chain-lenngth?, the length of the last part of the corrent list
+		"
+		`(and\ automatically\ the\ length\ of\ the\ first\ part\ of\ the\ forword\ one.
+		"
+ATTENTION : IN THE HEURISTIC MODE IT DOES NOT WORK. WHY???" ]
+		[ chain-more-little-included-common-lists-rule
+			[
+				[ first-n? 2 ]
+				[ last-n? 2 ]
+				[ mode? :true/false ]
+				[ weight 1 ]
+			]
+		"This rule chains lists of lists following the criteria of adaptating figure: see CMI thoery.
+You have two lists of lists: in chain-lenngth?, the length of the last part of the corrent list "
+		`(and\ automatically\ the\ length\ of\ the\ first\ part\ of\ the\ forword\ one.
+		"
+ATTENTION : IN THE HEURISTIC MODE IT DOES NOT WORK. WHY???" ]
+	]

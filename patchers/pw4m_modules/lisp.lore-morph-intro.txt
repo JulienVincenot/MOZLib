@@ -1,0 +1,6 @@
+Introduction to Morphologie by Frédéric Voisin and Jacopo Baboni Schilingi (1997-99)
+
+Morphologie is a set of functions and algorithms for the analysis\, classification\, pattern recognition and reconstruction of profiles and sequences\, both numerical and symbolic. 
+These sequences - melodic\, harmonic or rhythmic — can therefore be studied according to either their numerical dimensions\, when possible (pitch\, duration\, intensity\, etc.)\, or according only to their inherent structure when these sequences have a symbolic dimension. Through this library\, we also attempt a transition from the digital-physical world to the symbolic-cognitive one\, and vice versa.
+
+A more recent version\, fv-morphologie\, is developed by Voisin since 2009\, and available for PWGL\, OM and pure LISP\, and will be adapted for PW for Max shortly
