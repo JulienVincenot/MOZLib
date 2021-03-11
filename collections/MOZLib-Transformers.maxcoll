@@ -1,0 +1,13 @@
+{
+	"name" : "MOZLib Transformers",
+	"type" : "filelist",
+	"contents" : [ "moz.transpoform.maxsnip", "moz.pitch_rules.maxsnip",
+				   "moz.remap_notes.maxsnip", "moz.remap_symbols.maxsnip", 
+				   "moz.minmax_notes.maxsnip",  
+				    
+				   "moz.rotate.maxsnip", 
+				   "moz.reflect.maxsnip", "moz.double-reflect.maxsnip", 
+				   "moz.interpolate.maxsnip", "moz.hybridize.maxsnip", "moz.deviate.maxsnip",
+				   "moz.tonal_answer.maxsnip"
+				   ]
+}

@@ -1,0 +1,11 @@
+{
+	"name" : "MOZLib λ-PWConstraints",
+	"type" : "filelist",
+	"contents" : 
+	[ "pmc.engine.maxsnip", 
+	  "pmc.domain.maxsnip", 
+	  "pmc.rule.maxsnip", 
+	  "pmc.heur_rule.maxsnip",
+	  "pmc.jbs_rules.maxsnip"
+    ]
+}

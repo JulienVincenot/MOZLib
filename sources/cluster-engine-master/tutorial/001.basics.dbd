@@ -1,0 +1,68 @@
+:section-start "Basic parameters"
+:bodytext
+"In the Cluster Engine system, one box manage the cluster of search engines. The search process takes place inside this box and is not visible to the user (but it is possible to study parts of how the search is/was done by using the available debug tools).
+
+The system will use the number of engines it finds necessary to solve a problem. This depends on the number of voices and the number of unknown parameters. There is no reason for a user to try to affect the number of used engines.
+
+The clusterengine box can be expanded in order to increase the number of simultaneous voices being searched for. The maximum is set to 10 voices. The basic inputs/settings are described below."
+
+:figure "engine.jpg"
+
+:bodytext
+"The Cluster Engine system builds a score from domains of allowed durations and pitches. A domain is a set of allowed durations or pitches. One element in a domain is called a candidate. To build a single voice, the system needs two domains; one with allowed durations and one with allowed pitches. A characteristic of the Cluster Engine system is that each voice in a score is built from its own dedicated domains.
+
+It is possible to search for voices with only durations (excluding pitches), but you cannot search for a voice with only pitches (excluding durations): a pitch value needs to know its time position to exit in the final score. 
+
+"
+
+
+
+"Inputs: general parameters "
+:items
+"no-of-variables: When any engine has assigned candidates (i.e. durations or pitches) to this number of variables, the search will stop and the solution will be output. Note that other engines than the one that caused the search to halt will have assigned candidates to less number of variables. Note also that a variable can in some cases be more than one duration/pitch (see further on in this tutorial)."
+
+"rnd?: This is a flag that is either true or false. If it is true, the candidates in the domain will be visited in random order. If it is false, the system will always try the first candidate in the domain before trying the second, etc. If the rules are not very strict, the resulting score may be very repetitive if this flag is false. Using heuristic rules (see further on in this tutorial) may remove the effect of this setting." 
+
+"debug?: This is a flag that is either true or false. If it is true, the system will store some information during the search to support available debugging tools. The system will also print the highest index numbers (i.e. the number of assigned variables - 1) for each engine during the search, and information about how many times the system backtracked during the search (this information is only printed when a solution is found). "
+
+"---"
+
+"rules: This is the input for all rules (strict as well as heuristic rules). A single rule can be directly connected to this input. If more than one rule is used, they are collected by the rules->cluster box before connected to this input."
+
+"tempo: Tempo is not part of the search and cannot be accessed internally by the rules. The tempo setting will only set the tempo in the resulting score, affecting the MIDI playback."
+
+"---"
+
+"output: This is a menu where you can choose the format of the output. \":score-object\" will assume that the box is connected to a Score-Editor that will receive a score object. \":list\" will make the clusterengine box output a list of lists, where each sublist is an engine's sequence of variables. The last sublist will be the sequence of time signatures." 
+
+:bodytext
+"Inputs: domains "
+:items
+
+"metric-domain: Regardless of how many voices the system is searching for, the first input for the domains is always the metric domain. All voices share the same sequences of time signatures. The metric domain is a list of allowed time signatures, for example 
+'((4 4)(3 4)). If the metric domain is empty, it is assumed that the time signature is 4//4 (non-metric notation is not possible in the system). It is also possible to define how the metric structure interact with some rules in more details by using the metric-domain box (see further on in this tutorial)."
+
+"---"
+
+"Each following row has two inputs, which are the rhythm and pitch domains for one voice."
+
+"rhythmdomain: A voice needs at least one duration value in its rhythm domain. Candidates in a rhythm domain can either be single note values or durations grouped into motifs (see further on in this tutorial)."
+
+"pitchdomain: Candidates in a pitch domain can either be single pitches, pitches grouped into motifs or melodic profiles (see further on in this tutorial). If the pitch domain is empty, only rhythm is searched for. Pitches cannot be searched for without durations; if a user wants to only search for a sequence of pitches, a single duration (for example a whole note) should be given as a rhythm domian."
+
+"Note that a domain with only one candidate does not trigger a search, since it gives no choices for the system. Engines with one-candidate domains will never backtrack and thus not slow down the search in teh other engines. At least one engine will have to have a domain with more than one candidate to make the box output a score."
+
+"---"
+
+"The clusterengine box can be expanded to support up to 10 voices (this is only a graphic limitation, and can in principle be increased)."
+
+"---"
+
+
+:bodytext
+
+
+"The system will stop after 1,000,000 loops even if no solution was found (this can be increased). 
+
+"
+

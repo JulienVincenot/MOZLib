@@ -1,0 +1,15 @@
+:title "The Cluster Engine"
+:bodytext
+"The Cluster Engine is a system for solving musical constraint satisfaction problems. The solution to a musical constraint satisfaction problem is a score that satisfies a set of constraints defined by the user/composer. The name The Cluster Engine refers to the idea of using a cluster of search engines that collaboratively solve a problem (similar to the idea of a computer cluster). 
+
+"
+
+"The Cluster Engine breaks down the musical score into several sequences of variables. Each sequence refers to the succession of elements for a specific parameter in a voice in the score, for example a sequence can refer to the pitches in one voice. A single voice is represented by two sequences: one for pitches and one for durations (including rests). One additional sequence represents the metric structure in the score. "
+
+:figure "search_structure1.jpg"
+:caption "Several engines collaboratively solve a problem. In the figure, \"dur\" refers to a single duration and \"rhythm\" refers to a group of durations (i.e. a motif)."
+
+:figure "search_structure2.jpg"
+:caption "The score corresponds to the sequences of variables in figure 1. For example, the first voice in figure 2 is built by the first two engines in figure 1: the first whole note corresponds to the \"dur\" box in the first engine in figure 1, and the two half notes correspond to the \"rhythm\" box. The three \"pitch\" boxes in the second engine in figure 1 correspond to the three pitches in the first voice in figure 2."
+
+

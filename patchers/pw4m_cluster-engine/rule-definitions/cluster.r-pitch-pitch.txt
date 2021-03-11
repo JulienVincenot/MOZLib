@@ -1,0 +1,18 @@
+	[ [ name ce::r-pitch-pitch ]
+	  [ hrname ce::hr-pitch-pitch ]
+		[ voices 0 1 ]
+		[ timepoints 0 ]
+		[ rule-input
+			[ :all :beat :1st-beat :1st-voice :at-timepoints ]
+		]
+		[ gracenotes?
+			[ :normal :exclude-gracenotes ]
+		]
+		[ format 
+			[ :pitch :p_d_offs :p_d_offs+timepoint ]
+		]
+
+		[ mode 
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]

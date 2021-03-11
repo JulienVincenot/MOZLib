@@ -1,0 +1,30 @@
+	[ (name ce::r-rhythms-one-voice)
+	  (hrname ce::hr-rhythms-one-voice)
+		[ voices 0 ]
+		[ rule-input
+			[ :durations :dur/time :motifs :motif/time :all-durations ]
+		]
+		[ mode
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]
+	[  (name ce::r-pitches-one-voice)
+	   (hrname ce::hr-pitches-one-voice)
+		[ voices 0 ]
+		[ rule-input
+			[ :pitches :pitch/nth :motifs :motif/nth :motif/index :all-pitches ]
+		]
+		[ mode
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]
+	[  (name ce::r-time-signatures)
+		(hrname ce::hr-time-signatures)
+		[ voices ]
+		[ rule-input
+			[ :timesigns :all-timesigns ]
+		]
+		[ mode
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]

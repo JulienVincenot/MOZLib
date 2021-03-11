@@ -1,0 +1,284 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 1,
+			"revision" : 3,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "box",
+		"rect" : [ 34.0, 79.0, 652.0, 782.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "135 x 56, containing 1 object",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"boxes" : [ 			{
+				"box" : 				{
+					"bgmode" : 1,
+					"border" : 1,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-2",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "lisp.lore.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 6.0, 5.0, 109.0, 35.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+ ],
+		"lines" : [  ],
+		"dependency_cache" : [ 			{
+				"name" : "lisp.lore.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_modules",
+				"patcherrelativepath" : "../../patchers/pw4m_modules",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pw.eval-box.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_code_generators_legacy",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "make_path_once.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_code_generators_legacy",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pw.quote.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_code_generators_legacy",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bpatcher-resize.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../patchers/utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bpatcher-resize-gizmo.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.rminus.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../bach/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bach.join.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.reg.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.write.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "shell.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.read.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.portal.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.append.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.nth.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.slice.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.args.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.group.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.iter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.flat.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "bach.expr.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"snippetinfo" : 		{
+			"name" : "make_notes",
+			"objects" : "jpatcher",
+			"tags" : "",
+			"description" : "135 x 56, containing 1 object",
+			"image" : "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"
+		}
+,
+		"autosave" : 0,
+		"styles" : [ 			{
+				"name" : "MOZ-numint",
+				"default" : 				{
+					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"fontsize" : [ 16.95833875454338 ],
+					"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"fontname" : [ "Menlo Regular" ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "MOZ-param",
+				"default" : 				{
+					"fontsize" : [ 16.0 ],
+					"fontname" : [ "Menlo Regular" ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "MOZ-title",
+				"default" : 				{
+					"fontsize" : [ 22.062094355029235 ],
+					"fontname" : [ "Andale Mono" ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "MOZ-umenu",
+				"default" : 				{
+					"fontface" : [ 2 ],
+					"elementcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"fontname" : [ "Menlo Regular" ],
+					"bgfillcolor" : 					{
+						"type" : "color",
+						"color1" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+						"color2" : [ 0.2, 0.2, 0.2, 1.0 ],
+						"color" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.5,
+						"autogradient" : 0.0
+					}
+,
+					"color" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "SPLIM",
+				"parentstyle" : "comment001",
+				"multi" : 0
+			}
+, 			{
+				"name" : "comment001",
+				"default" : 				{
+					"fontsize" : [ 18.0 ],
+					"fontname" : [ "Herculanum" ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "message001",
+				"default" : 				{
+					"fontsize" : [ 13.0 ],
+					"textcolor_inverse" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+					"fontname" : [ "Arial" ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "orjan style",
+				"default" : 				{
+					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgcolor" : [ 0.97911, 0.963068, 0.9712, 1.0 ],
+					"elementcolor" : [ 0.898251, 0.915112, 0.965693, 1.0 ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgfillcolor" : 					{
+						"type" : "gradient",
+						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+						"color1" : [ 1.0, 1.0, 1.0, 1.0 ],
+						"color2" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+						"angle" : 270.0,
+						"proportion" : 0.39,
+						"autogradient" : 0
+					}
+,
+					"color" : [ 0.037449, 0.035848, 0.03644, 1.0 ]
+				}
+,
+				"parentstyle" : "",
+				"multi" : 0
+			}
+ ]
+	}
+
+}

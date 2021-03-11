@@ -1,0 +1,21 @@
+	[ [ name ce::r-note-meter ]
+	  [ hrname ce::hr-note-meter ]
+		[ voices 0 ]
+		[ format 
+			[ :offs :d_offs :d_offs_m :d_offs_m_n ]
+		]
+		[ metric_structure
+			[ :beats :1st-beat ]
+		]
+		[ rests?
+			[ :incl-rests :durations ]
+		]
+
+		[ gracenotes?
+			[ :normal :exclude-gracenotes ]
+		]
+
+		[ mode 
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]

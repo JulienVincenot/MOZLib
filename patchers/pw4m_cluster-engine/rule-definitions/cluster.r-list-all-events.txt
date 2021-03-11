@@ -1,0 +1,11 @@
+	[ [ name ce::r-list-all-events ]
+	  [ hrname ce::hr-list-all-events ]
+		[ voices 0 1 ]
+		[ timepoints 0 ]
+		[ rule_parameter
+			[ :pitches :durations ]
+		]
+		[ mode 
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]

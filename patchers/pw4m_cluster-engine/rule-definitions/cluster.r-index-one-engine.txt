@@ -1,0 +1,28 @@
+	[ (name ce::r-index-rhythms-one-voice)
+	  (hrname ce::hr-index-rhythms-one-voice)
+		[ voices 0 ]
+		[ rule-input
+			[ :position-for-duration :index-for-cell ]
+		]
+		[ mode
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]
+	[  (name ce::r-index-pitches-one-voice)
+	   (hrname ce::hr-index-pitches-one-voice)
+		[ voices 0 ]
+		[ rule-input
+			[ :position-for-pitches :index-for-cell ]
+		]
+		[ mode
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]
+	[  (name ce::r-index-time-signatures)
+		(hrname ce::hr-index-time-signatures)
+		[ voices ]
+		[ rule-input ]
+		[ mode
+			[ :true/false :heur-switch :real-heuristic ]
+		]
+	]
