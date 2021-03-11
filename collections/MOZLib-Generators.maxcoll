@@ -1,8 +1,0 @@
-{
-	"name" : "MOZLib Generators",
-	"type" : "filelist",
-	"contents" : [  
-	"moz.make_notes.maxsnip", "moz.draw_notes.maxsnip", "moz.draw_graph.maxsnip", 
-	"moz.collector.maxsnip", "moz.rhythmic_collector.maxsnip",
-	"moz.harmonic_fields.maxsnip", "moz.time_tap.maxsnip" ]
-}

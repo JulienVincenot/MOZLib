@@ -1,8 +1,0 @@
-{
-	"name" : "MOZLib λ-Utilities",
-	"type" : "filelist",
-	"contents" : 
-	[ "lisp.edit.maxsnip", 
-	  "lisp.lore.maxsnip"
-	]
-}

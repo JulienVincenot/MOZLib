@@ -1,5 +1,0 @@
-{
-	"name" : "MOZLib Utilities",
-	"type" : "filelist",
-	"contents" : [ "moz.drop_xml.maxsnip", "moz.ezmidi_instr.maxsnip", "moz.at_text_toggle.maxsnip", "moz.safe.maxsnip" ]
-}

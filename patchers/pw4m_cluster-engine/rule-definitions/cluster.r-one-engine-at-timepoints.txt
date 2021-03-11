@@ -1,9 +1,0 @@
-	[ (name ce::r-rhythms-one-voice-at-timepoints)
-	  (hrname ce::hr-rhythms-one-voice-at-timepoints)
-		[ voices 0 ]
-		[ rule-input
-			[ :dur-start :motifs-start :motifs-end ]
-		]
-		[ mode [ :true/false :heur-switch :real-heuristic ]
-		]
-	]
