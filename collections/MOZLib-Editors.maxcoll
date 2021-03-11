@@ -1,5 +1,0 @@
-{
-	"name" : "MOZLib Editors",
-	"type" : "filelist",
-	"contents" : [ "chord_view.maxsnip", "score_view.maxsnip", "time_view.maxsnip"]
-}
