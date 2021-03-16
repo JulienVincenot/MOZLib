@@ -50,8 +50,6 @@ MOZ'Lib includes the following open-source software :
 
 
 ** on macOS
------------
-
 
 3) Copy the decompressed folder of MOZ’Lib in the Packages folder as well.
 
@@ -76,7 +74,14 @@ MOZ'Lib includes the following open-source software :
  
 
 ** on Windows 10
-----------------
+
+
+
+
+
+
+
+
 
 
 5) Go to the MOZ’Lib Intro in the Extras menu and… HAVE FUN !
