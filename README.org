@@ -31,7 +31,7 @@ MOZ'Lib includes the following open-source software :
 
 -----
 
-To install MOZ’ LIB:
+To install MOZ’Lib :
 
 (BEFORE INSTALLING/UPDATING, MAKE SURE YOU DON'T HAVE ANY PAST VERSION OF MOZ'LIB ON YOUR MACHINE !)
 
