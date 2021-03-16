@@ -16,11 +16,3 @@
 *.wx64fsl
 *.wx32fsl
 
-# Tmp files
-*~
-
-# Compiled files
-*.clufasl
-
-# System files
-.DS_Store
