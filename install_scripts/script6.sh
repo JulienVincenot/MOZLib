@@ -1,0 +1,2 @@
+#! /bin/sh # shebang
+export WINHOME=$(wslpath "$(wslvar USERPROFILE 2> /dev/null)") && sudo apt-get install -y unzip && cd $WINHOME/Desktop && rm -f MOZLib-master.zip && curl -JLO https://github.com/JulienVincenot/MOZLib/archive/master.zip && rm -fR MOZLib-master && unzip MOZLib-master.zip -d $WINHOME/Desktop && unzip $WINHOME/Desktop/MOZLib-master/MOZLib.zip -d "$WINHOME/Documents/Max 8/Packages/" 
