@@ -15,4 +15,5 @@ Get-WmiObject Win32_OperatingSystem | Select  Version | FL #find the windows ver
 #i need to find a way to retrieve the windows version
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
 
-Read-Host -Prompt "Done!! Press Enter to exit and run script3"
+Remove-Item -Path "C:\Windows\Temp\MOZLib_setup_log\step3.txt" -Force 
+#Read-Host -Prompt "Done!! Press Enter to exit and run script3"
