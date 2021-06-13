@@ -9,7 +9,7 @@ if (Test-Path "C:\Users\$env:UserName\Documents\Max 8\Packages\MOZLib") #test if
 #authorize writing
 #wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script6.sh 
 
-invoke-expression 'cmd /c start powershell -Command { echo "Installing unzip for Ubuntu. Please enter your password when prompted" ; wsl sudo apt-get install -y unzip ; wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script6.sh ; cd C:\Windows\Temp\MOZLib-master\install_scripts ; bash scrip6.sh ; Read-Host -Prompt "wait" }'
+invoke-expression 'cmd /c start powershell -Command { echo "Installing unzip for Ubuntu. Please enter your password when prompted" ; wsl sudo apt-get install -y unzip ; wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script6.sh ; cd C:\Windows\Temp\MOZLib-master\install_scripts ; bash script6.sh }'
 
 
 #run the script
