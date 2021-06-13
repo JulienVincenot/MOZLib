@@ -9,4 +9,4 @@ wsl sudo sh install.sh
 wsl chmod +x /mnt/c/Users/matte/Desktop/MOZLib_setup_scripts/script8.sh #authorize writing
 cd C:\Users\matte\Desktop\MOZLib_setup_scripts
 bash script8.sh #run the script
-Read-Host -Prompt "sbcl installed, open script 9"
+#Read-Host -Prompt "sbcl installed, open script 9"

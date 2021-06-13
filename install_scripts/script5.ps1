@@ -18,4 +18,4 @@ bash script6.sh
 #remove the downloaded folder form the desktop
 #Remove-Item -Path C:\Users\$env:UserName\Desktop\MOZLib-master -Recurse 
 
-Read-Host -Prompt "Done!! Open script7"
+#Read-Host -Prompt "Done!! Open script7"
