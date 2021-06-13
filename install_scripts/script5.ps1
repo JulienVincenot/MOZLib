@@ -1,5 +1,5 @@
 ﻿$env:UserName #retrieve the username
-cd C:\Users\$env:UserName\Desktop\MOZLib_setup_scripts #cd to the desktop (move all this in temp)
+cd C:\Windows\Temp\MOZLib-master\install_scripts 
 
 if (Test-Path "C:\Users\$env:UserName\Documents\Max 8\Packages\MOZLib") #test if MOZLib folder exists
 {
@@ -8,7 +8,8 @@ if (Test-Path "C:\Users\$env:UserName\Documents\Max 8\Packages\MOZLib") #test if
 
 #authorize writing
 wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script6.sh 
-invoke-expression 'cmd /c start powershell -Command { bash script6.sh}'
+
+invoke-expression 'cmd /c start powershell -Command { echo "Installing unzip for Ubuntu. Please enter your password when prompted" ; wsl sudo apt-get install -y unzip ; bash scrip6.sh }'
 
 
 #run the script
