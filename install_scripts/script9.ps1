@@ -8,4 +8,4 @@ wsl chmod +x /mnt/c/Users/$env:UserName/Desktop/MOZLib_setup_scripts/script10.sh
 cd C:\Users\$env:UserName\Desktop\MOZLib_setup_scripts
 bash script10.sh 
 
-Read-Host -Prompt "old core removed, Fuck yeah!!"
+#Read-Host -Prompt "old core removed, Fuck yeah!!"
