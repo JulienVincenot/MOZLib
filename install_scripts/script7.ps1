@@ -6,7 +6,7 @@ wsl tar -xvf /mnt/c/Windows/Temp/sbcl-2.1.3-x86-64-linux-binary.tar.bz2 -C /mnt/
 wsl sudo $rvmsudo apt-get install make
 cd C:\Windows\Temp\sbcl-2.1.3-x86-64-linux
 wsl sudo sh install.sh
-wsl chmod +x /mnt/c/Users/matte/Desktop/MOZLib_setup_scripts/script8.sh #authorize writing
-cd C:\Users\matte\Desktop\MOZLib_setup_scripts
+wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script8.sh #authorize writing
+cd C:\Windows\Temp\MOZLib-master\install_scripts
 bash script8.sh #run the script
 #Read-Host -Prompt "sbcl installed, open script 9"

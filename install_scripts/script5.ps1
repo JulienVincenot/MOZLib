@@ -7,7 +7,7 @@ if (Test-Path "C:\Users\$env:UserName\Documents\Max 8\Packages\MOZLib") #test if
 }
 
 #authorize writing
-wsl chmod +x /mnt/c/Users/matte/Desktop/MOZLib_setup_scripts/script6.sh 
+wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script6.sh 
 
 #run the script
 bash script6.sh 

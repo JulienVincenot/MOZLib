@@ -2,10 +2,10 @@
 $env:UserName
 
 #authorize writing
-wsl chmod +x /mnt/c/Users/$env:UserName/Desktop/MOZLib_setup_scripts/script10.sh 
+wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script10.sh 
 
 #run the script
-cd C:\Users\$env:UserName\Desktop\MOZLib_setup_scripts
+cd C:\Windows\Temp\MOZLib-master\install_scripts
 bash script10.sh 
 
 #Read-Host -Prompt "old core removed, Fuck yeah!!"
