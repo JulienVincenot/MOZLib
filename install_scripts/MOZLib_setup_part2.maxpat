@@ -102,7 +102,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -21292.0, -21249.0, 1547.0, 722.0 ],
+						"rect" : [ 41.0, 84.0, 1547.0, 722.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -581,7 +581,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 91.999996900558472, 115.0, 58.0, 22.0 ],
+					"patching_rect" : [ 95.999996900558472, 74.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -590,12 +590,11 @@
 				"box" : 				{
 					"fontsize" : 17.057292431829982,
 					"id" : "obj-3",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 390.160711321175825, 818.459119337909669, 202.000002503395081, 46.0 ],
-					"text" : "Unzipping and moving MOZLib to the packages"
+					"patching_rect" : [ 390.160711321175825, 818.459119337909669, 202.000002503395081, 26.0 ],
+					"text" : "done!"
 				}
 
 			}
@@ -2195,7 +2194,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-14",
-					"items" : [ "step7.txt", ",", "step8.txt", ",", "step9.txt" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -2255,13 +2254,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-14", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
