@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 70.0, 109.0, 1663.0, 1071.0 ],
+		"rect" : [ 211.0, 210.0, 1663.0, 1071.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -55,7 +55,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 41.0, 84.0, 1547.0, 722.0 ],
+						"rect" : [ 42.0, 85.0, 1547.0, 722.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -103,8 +103,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script4.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script4.bat"
 								}
 
 							}
@@ -115,8 +115,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script4.bat"
+									"patching_rect" : [ 89.5, 227.600002765655518, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script4.bat"
 								}
 
 							}
@@ -540,24 +540,12 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 416.0, 430.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 319.0, 273.0, 29.5, 22.0 ],
+					"patching_rect" : [ 251.0, 236.666668891906738, 29.5, 22.0 ],
 					"text" : "0"
 				}
 
@@ -662,8 +650,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 309.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script4_1.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 459.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script4_1.bat"
 								}
 
 							}
@@ -674,8 +662,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 230.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script4_1.bat"
+									"patching_rect" : [ 78.5, 219.600002765655518, 381.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script4_1.bat"
 								}
 
 							}
@@ -1199,8 +1187,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script9.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script9.bat"
 								}
 
 							}
@@ -1211,8 +1199,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script9.bat"
+									"patching_rect" : [ 106.5, 223.600002765655518, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script9.bat"
 								}
 
 							}
@@ -1687,8 +1675,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script7.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script7.bat"
 								}
 
 							}
@@ -1699,8 +1687,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script7.bat"
+									"patching_rect" : [ 100.5, 227.600002765655518, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script7.bat"
 								}
 
 							}
@@ -1772,7 +1760,7 @@
 									"numinlets" : 11,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 547.775001192092986, 280.200000762939453, 133.0, 77.0 ],
+									"patching_rect" : [ 547.775001192092986, 280.200000762939453, 135.0, 77.0 ],
 									"text" : "combine C: a Windows a Temp a MOZLib-master a install_scripts a script7.ps1 @triggers 1"
 								}
 
@@ -2175,8 +2163,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script5.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script5.bat"
 								}
 
 							}
@@ -2187,8 +2175,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script5.bat"
+									"patching_rect" : [ 137.5, 233.600002765655518, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script5.bat"
 								}
 
 							}
@@ -2766,13 +2754,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-14", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-73", 0 ],
-					"source" : [ "obj-15", 0 ]
 				}
 
 			}
