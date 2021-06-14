@@ -1,0 +1,1 @@
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\Windows\Temp\MOZLib_trigger_batch_files\script0.ps1 EnableFirewall EnableDefender 

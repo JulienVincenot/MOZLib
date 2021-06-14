@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 95.0, 84.0, 1104.0, 795.0 ],
+		"rect" : [ 230.0, 233.0, 1104.0, 795.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -58,7 +58,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 640.0, 272.0, 24.0, 24.0 ]
+					"patching_rect" : [ 642.5, 248.0, 86.0, 86.0 ]
 				}
 
 			}
@@ -127,8 +127,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 309.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script1_1.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 459.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script1_1.bat"
 								}
 
 							}
@@ -139,8 +139,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 230.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script1_1.bat"
+									"patching_rect" : [ 126.5, 219.600002765655518, 381.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script1_1.bat"
 								}
 
 							}
@@ -511,7 +511,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 664.500000134903075, 353.866674423217773, 78.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "run script1_1"
 				}
 
@@ -652,8 +651,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 426.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script3.bat"
+									"patching_rect" : [ 50.0, 426.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script3.bat"
 								}
 
 							}
@@ -664,8 +663,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script3.bat"
+									"patching_rect" : [ 77.5, 221.600002765655518, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script3.bat"
 								}
 
 							}
@@ -1139,8 +1138,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 426.200000762939453, 309.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script2_2.bat"
+									"patching_rect" : [ 50.0, 426.200000762939453, 459.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script2_2.bat"
 								}
 
 							}
@@ -1151,8 +1150,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 230.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script2_2.bat"
+									"patching_rect" : [ 124.5, 215.600002765655518, 381.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script2_2.bat"
 								}
 
 							}
@@ -2187,8 +2186,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script2.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script2.bat"
 								}
 
 							}
@@ -2199,8 +2198,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script2.bat"
+									"patching_rect" : [ 101.5, 335.200000762939453, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script2.bat"
 								}
 
 							}
@@ -2675,8 +2674,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script1.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script1.bat"
 								}
 
 							}
@@ -2687,8 +2686,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script1.bat"
+									"patching_rect" : [ 111.400034925758405, 242.600002765655518, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script1.bat"
 								}
 
 							}
@@ -3202,7 +3201,7 @@
 					"numoutlets" : 7,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "" ],
 					"patching_rect" : [ 414.142854043415582, 518.666668891906738, 1144.857142857142662, 22.0 ],
-					"text" : "sel 4 5 6 7 8 9"
+					"text" : "sel 5 6 7 8 9 10"
 				}
 
 			}
@@ -3327,7 +3326,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 41.0, 87.0, 1320.0, 768.0 ],
+						"rect" : [ 42.0, 87.0, 1320.0, 768.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3399,7 +3398,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 185.666666666666742, 261.0, 1109.0, 36.0 ],
-									"text" : "cd C:/Windows/Temp/MOZLib_setup_log, cr, copy nul step1.txt, cr, copy nul step2.txt, cr, copy nul step3.txt, cr, copy nul step4.txt, cr, copy nul step5.txt, cr, copy nul step6.txt, cr, copy nul step7.txt, cr, copy nul step8.txt, cr, copy nul step9.txt"
+									"text" : "cd C:/Windows/Temp/MOZLib_setup_log, cr, copy nul step1.txt, cr, copy nul step2.txt, cr, copy nul step3.txt, cr, copy nul step4.txt, cr, copy nul step5.txt, cr, copy nul step6.txt, cr, copy nul step7.txt, cr, copy nul step8.txt, cr, copy nul step9.txt, cr, copy nul step10.txt"
 								}
 
 							}
@@ -3434,8 +3433,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 253.500000000000114, 181.0, 327.0, 22.0 ],
-									"text" : "clear, cd C:/Windows/Temp, cr, mkdir MOZLib_setup_log, cr"
+									"patching_rect" : [ 253.500000000000114, 181.0, 529.0, 22.0 ],
+									"text" : "clear, cd C:/Windows/Temp, cr, mkdir MOZLib_setup_log, cr, mkdir MOZLib_trigger_batch_files, cr"
 								}
 
 							}
@@ -3583,6 +3582,18 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 138.0, 46.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-84",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -3643,12 +3654,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-82",
+									"linecount" : 4,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 296.399997234344482, 238.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/unzip_MOZLib.ps1"
+									"patching_rect" : [ 60.0, 326.399997234344482, 140.0, 64.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/unzip_MOZLib.ps1"
 								}
 
 							}
@@ -3741,6 +3753,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-83", 0 ],
 									"source" : [ "obj-115", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-83", 0 ],
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -3934,8 +3953,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 295.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script0.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 446.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script0.bat"
 								}
 
 							}
@@ -3946,8 +3965,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 217.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script0.bat"
+									"patching_rect" : [ 101.5, 201.999991059303284, 367.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script0.bat"
 								}
 
 							}
@@ -4014,13 +4033,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-207",
-									"linecount" : 4,
+									"linecount" : 5,
 									"maxclass" : "newobj",
-									"numinlets" : 7,
+									"numinlets" : 9,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 540.475006246566863, 264.600002765655518, 116.0, 64.0 ],
-									"text" : "combine C: a Windows a Temp a script0.ps1 @triggers 1"
+									"patching_rect" : [ 555.475006246566863, 257.600002765655518, 140.0, 77.0 ],
+									"text" : "combine C: a Windows a Temp a MOZLib_trigger_batch_files a script0.ps1 @triggers 1"
 								}
 
 							}
@@ -4195,7 +4214,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-207", 5 ],
+									"destination" : [ "obj-207", 7 ],
 									"order" : 0,
 									"source" : [ "obj-210", 0 ]
 								}
@@ -4203,7 +4222,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-207", 3 ],
+									"destination" : [ "obj-207", 5 ],
 									"order" : 1,
 									"source" : [ "obj-210", 0 ]
 								}
@@ -4211,8 +4230,16 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-207", 1 ],
+									"destination" : [ "obj-207", 3 ],
 									"order" : 2,
+									"source" : [ "obj-210", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-207", 1 ],
+									"order" : 3,
 									"source" : [ "obj-210", 0 ]
 								}
 
@@ -4342,12 +4369,24 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 120.0, 204.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-51",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 164.0, 799.0, 43.0, 22.0 ],
+									"patching_rect" : [ 158.0, 540.0, 43.0, 22.0 ],
 									"text" : "-Force"
 								}
 
@@ -4358,7 +4397,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 338.599990922212783, 640.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 332.599990922212783, 381.799985527992249, 19.0, 20.0 ],
 									"text" : "\\"
 								}
 
@@ -4370,7 +4409,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 248.299995326995941, 605.0, 29.5, 22.0 ],
+									"patching_rect" : [ 242.299995326995941, 346.0, 29.5, 22.0 ],
 									"text" : "b 2"
 								}
 
@@ -4381,7 +4420,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 281.924995326995941, 640.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 275.924995326995941, 381.799985527992249, 19.0, 20.0 ],
 									"text" : "\""
 								}
 
@@ -4393,7 +4432,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 248.299995326995941, 640.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 242.299995326995941, 381.799985527992249, 29.5, 22.0 ],
 									"text" : "34"
 								}
 
@@ -4405,7 +4444,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 248.299995326995941, 679.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 242.299995326995941, 420.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4417,7 +4456,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 305.424995326995941, 640.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 299.424995326995941, 381.799985527992249, 29.5, 22.0 ],
 									"text" : "92"
 								}
 
@@ -4429,7 +4468,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 305.424995326995941, 679.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 299.424995326995941, 420.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4442,7 +4481,7 @@
 									"numinlets" : 11,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 217.299995326995941, 778.0, 113.0, 64.0 ],
+									"patching_rect" : [ 211.299995326995941, 519.0, 113.0, 64.0 ],
 									"text" : "combine q C: a Windows a Temp a MOZLib_setup_log a step1.txt q"
 								}
 
@@ -4454,7 +4493,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 10,
 									"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang" ],
-									"patching_rect" : [ 30.0, 510.0, 989.5, 22.0 ],
+									"patching_rect" : [ 24.0, 251.0, 989.5, 22.0 ],
 									"text" : "b 10"
 								}
 
@@ -4462,13 +4501,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-40",
-									"linecount" : 3,
+									"linecount" : 4,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 30.0, 776.0, 98.0, 50.0 ],
-									"text" : "write C:/Windows/Temp/script0.ps1"
+									"patching_rect" : [ 24.0, 517.0, 120.0, 64.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/script0.ps1"
 								}
 
 							}
@@ -4480,7 +4519,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 337.799995058775039, 785.0, 144.0, 50.0 ],
+									"patching_rect" : [ 331.799995058775039, 526.0, 144.0, 50.0 ],
 									"text" : "-Force, cr, Remove-Item -Path $ZipFile -Force, cr, Remove-Item -Path"
 								}
 
@@ -4492,7 +4531,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 940.174995058775039, 630.0, 29.5, 22.0 ],
+									"patching_rect" : [ 934.174995058775039, 371.0, 29.5, 22.0 ],
 									"text" : "b 2"
 								}
 
@@ -4504,7 +4543,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 484.674995326995941, 634.0, 29.5, 22.0 ],
+									"patching_rect" : [ 478.674995326995941, 375.0, 29.5, 22.0 ],
 									"text" : "b 2"
 								}
 
@@ -4515,7 +4554,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 575.974990922212783, 665.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 569.974990922212783, 406.799985527992249, 19.0, 20.0 ],
 									"text" : "\\"
 								}
 
@@ -4526,7 +4565,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 518.299995326995941, 669.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 512.299995326995941, 410.799985527992249, 19.0, 20.0 ],
 									"text" : "\""
 								}
 
@@ -4538,7 +4577,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 484.674995326995941, 669.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 478.674995326995941, 410.799985527992249, 29.5, 22.0 ],
 									"text" : "34"
 								}
 
@@ -4550,7 +4589,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 484.674995326995941, 708.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 478.674995326995941, 449.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4562,7 +4601,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 541.799995326995941, 669.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 535.799995326995941, 410.799985527992249, 29.5, 22.0 ],
 									"text" : "92"
 								}
 
@@ -4574,7 +4613,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 541.799995326995941, 708.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 535.799995326995941, 449.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4587,7 +4626,7 @@
 									"numinlets" : 7,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 484.674995326995941, 778.0, 88.0, 50.0 ],
+									"patching_rect" : [ 478.674995326995941, 519.0, 88.0, 50.0 ],
 									"text" : "combine q C: a Windows a Temp q"
 								}
 
@@ -4600,7 +4639,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 593.474990653991881, 778.0, 113.0, 64.0 ],
+									"patching_rect" : [ 587.474990653991881, 519.0, 113.0, 64.0 ],
 									"text" : "-OutFile $ZipFile, cr, Expand-Archive -Path $ZipFile -DestinationPath"
 								}
 
@@ -4611,7 +4650,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 779.799995058775039, 687.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 773.799995058775039, 428.799985527992249, 19.0, 20.0 ],
 									"text" : "\""
 								}
 
@@ -4623,7 +4662,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 746.174995058775039, 687.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 740.174995058775039, 428.799985527992249, 29.5, 22.0 ],
 									"text" : "34"
 								}
 
@@ -4635,7 +4674,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 746.174995058775039, 726.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 740.174995058775039, 467.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4648,7 +4687,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 714.674995326995941, 778.0, 106.0, 91.0 ],
+									"patching_rect" : [ 708.674995326995941, 519.0, 106.0, 91.0 ],
 									"text" : "combine q https://github.com/JulienVincenot/MOZLib/archive/refs/heads/master.zip q"
 								}
 
@@ -4661,7 +4700,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 833.674995326995941, 778.0, 111.0, 77.0 ],
+									"patching_rect" : [ 827.674995326995941, 519.0, 111.0, 77.0 ],
 									"text" : "cr, New-Item $ZipFile -ItemType File -Force, cr, Invoke-RestMethod -Uri"
 								}
 
@@ -4672,7 +4711,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1031.474990653991881, 665.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 1025.474990653991881, 406.799985527992249, 19.0, 20.0 ],
 									"text" : "\\"
 								}
 
@@ -4683,7 +4722,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 973.799995058775039, 669.799985527992249, 19.0, 20.0 ],
+									"patching_rect" : [ 967.799995058775039, 410.799985527992249, 19.0, 20.0 ],
 									"text" : "\""
 								}
 
@@ -4695,7 +4734,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 940.174995058775039, 669.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 934.174995058775039, 410.799985527992249, 29.5, 22.0 ],
 									"text" : "34"
 								}
 
@@ -4707,7 +4746,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 940.174995058775039, 708.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 934.174995058775039, 449.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4719,7 +4758,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 997.299995058775039, 669.799985527992249, 29.5, 22.0 ],
+									"patching_rect" : [ 991.299995058775039, 410.799985527992249, 29.5, 22.0 ],
 									"text" : "92"
 								}
 
@@ -4731,7 +4770,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 997.299995058775039, 708.799985527992249, 40.0, 22.0 ],
+									"patching_rect" : [ 991.299995058775039, 449.799985527992249, 40.0, 22.0 ],
 									"text" : "itoa"
 								}
 
@@ -4744,7 +4783,7 @@
 									"numinlets" : 9,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 954.299995058775039, 778.0, 83.0, 77.0 ],
+									"patching_rect" : [ 948.299995058775039, 519.0, 83.0, 77.0 ],
 									"text" : "combine q C: a Windows a Temp a MOZLib-master.zip q"
 								}
 
@@ -4756,7 +4795,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1057.674995326995941, 778.0, 94.0, 22.0 ],
+									"patching_rect" : [ 1051.674995326995941, 519.0, 94.0, 22.0 ],
 									"text" : "clear, $ZipFile ="
 								}
 
@@ -4768,221 +4807,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 889.124999731779099, 931.0, 40.0, 22.0 ],
-									"text" : "text"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-9",
-									"maxclass" : "button",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 71.0, 479.0, 24.0, 24.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-7",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 400.0, 223.0, 124.0, 22.0 ],
-									"text" : "cr, Get-Job | Wait-Job"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-75",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 262.799995326995941, 210.799985527992249, 19.0, 20.0 ],
-									"text" : "\\"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-76",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 229.174995326995941, 210.799985527992249, 29.5, 22.0 ],
-									"text" : "92"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-77",
-									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"patching_rect" : [ 229.174995326995941, 249.799985527992249, 40.0, 22.0 ],
-									"text" : "itoa"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"maxclass" : "newobj",
-									"numinlets" : 9,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 99.0, 305.0, 413.0, 22.0 ],
-									"text" : "combine C: a Windows a Temp a MOZLib_setup_log a step1.txt @triggers 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 296.0, 223.0, 97.0, 22.0 ],
-									"text" : "cr, Remove-Item"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-15",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 26.0, 249.799985527992249, 195.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/script0.ps1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-133",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 675.625, 166.0, 19.0, 20.0 ],
-									"text" : ","
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-134",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 642.0, 166.0, 29.5, 22.0 ],
-									"text" : "44"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-135",
-									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"patching_rect" : [ 642.0, 205.0, 40.0, 22.0 ],
-									"text" : "itoa"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-11",
-									"linecount" : 6,
-									"maxclass" : "newobj",
-									"numinlets" : 9,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 516.624999731779099, 268.0, 218.0, 91.0 ],
-									"text" : "combine $client.DownloadFile( quotes https://github.com/JulienVincenot/MOZLib/archive/refs/heads/master.zip quotes comma quotes C:/Windows/Temp/MOZLib-master.zip quotes )"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-123",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 575.124999731779099, 175.999999940395355, 19.0, 20.0 ],
-									"text" : "\""
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-124",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 541.499999731779099, 175.999999940395355, 29.5, 22.0 ],
-									"text" : "34"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-125",
-									"maxclass" : "newobj",
-									"numinlets" : 3,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"patching_rect" : [ 541.499999731779099, 214.999999940395355, 40.0, 22.0 ],
-									"text" : "itoa"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-5",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 8,
-									"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "bang", "bang" ],
-									"patching_rect" : [ 65.5, 94.0, 814.083333333333371, 22.0 ],
-									"text" : "b 8"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 747.0, 252.0, 339.0, 22.0 ],
-									"text" : "clear, $client = new-object System.Net.WebClient, cr Start-Job"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "bang", "int" ],
-									"patching_rect" : [ 137.0, 440.0, 40.0, 22.0 ],
+									"patching_rect" : [ 883.124999731779099, 672.0, 40.0, 22.0 ],
 									"text" : "text"
 								}
 
@@ -4996,62 +4821,15 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 30.0, 424.0, 30.0, 30.0 ]
+									"patching_rect" : [ 24.0, 165.0, 30.0, 30.0 ]
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"midpoints" : [ 526.124999731779099, 354.5, 146.5, 354.5 ],
-									"source" : [ "obj-11", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-41", 0 ],
 									"source" : [ "obj-111", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-125", 0 ],
-									"source" : [ "obj-124", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 7 ],
-									"order" : 0,
-									"source" : [ "obj-125", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 5 ],
-									"order" : 1,
-									"source" : [ "obj-125", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 3 ],
-									"order" : 2,
-									"source" : [ "obj-125", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 1 ],
-									"order" : 3,
-									"source" : [ "obj-125", 0 ]
 								}
 
 							}
@@ -5064,30 +4842,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-135", 0 ],
-									"source" : [ "obj-134", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 4 ],
-									"source" : [ "obj-135", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-14", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"midpoints" : [ 35.5, 361.0, 146.5, 361.0 ],
-									"source" : [ "obj-15", 0 ]
 								}
 
 							}
@@ -5126,6 +4882,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-20", 0 ],
 									"source" : [ "obj-19", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-41", 0 ],
+									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -5186,14 +4949,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-28", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"midpoints" : [ 756.5, 369.0, 146.5, 369.0 ],
-									"source" : [ "obj-3", 0 ]
 								}
 
 							}
@@ -5282,13 +5037,6 @@
 								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-39", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -5454,124 +5202,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-11", 0 ],
-									"source" : [ "obj-5", 4 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-124", 0 ],
-									"source" : [ "obj-5", 5 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-134", 0 ],
-									"source" : [ "obj-5", 6 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-15", 0 ],
-									"source" : [ "obj-5", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
-									"source" : [ "obj-5", 7 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-4", 0 ],
-									"source" : [ "obj-5", 2 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
-									"source" : [ "obj-5", 3 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-76", 0 ],
-									"source" : [ "obj-5", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-51", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"source" : [ "obj-6", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"source" : [ "obj-7", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-77", 0 ],
-									"source" : [ "obj-76", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 7 ],
-									"order" : 0,
-									"source" : [ "obj-77", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 5 ],
-									"order" : 1,
-									"source" : [ "obj-77", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 3 ],
-									"order" : 2,
-									"source" : [ "obj-77", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-6", 1 ],
-									"order" : 3,
-									"source" : [ "obj-77", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-41", 0 ],
-									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -5714,13 +5346,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-40", 0 ],
 					"source" : [ "obj-24", 4 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"source" : [ "obj-24", 0 ]
 				}
 
 			}
