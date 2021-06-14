@@ -604,7 +604,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 95.999996900558472, 74.0, 58.0, 22.0 ],
+					"patching_rect" : [ 91.999996900558472, 113.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -2141,7 +2141,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 6,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "" ],
-					"patching_rect" : [ 226.499996900558472, 520.666668891906738, 727.303571428571331, 22.0 ],
+					"patching_rect" : [ 157.239282614844115, 529.666668891906738, 976.303571428571331, 22.0 ],
 					"text" : "sel 0 1 2 3 4"
 				}
 
