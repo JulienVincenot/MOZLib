@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 230.0, 233.0, 1104.0, 795.0 ],
+		"rect" : [ 230.0, 233.0, 1655.0, 1037.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,18 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-32",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 345.333343625068665, 569.333350300788879, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-15",
 					"maxclass" : "button",
@@ -1698,8 +1686,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 418.200000762939453, 309.0, 36.0 ],
-									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/run_script2_1.bat"
+									"patching_rect" : [ 50.0, 418.200000762939453, 459.0, 36.0 ],
+									"text" : ";\r\nmax launchbrowser C:/Windows/Temp/MOZLib_trigger_batch_files/run_script2_1.bat"
 								}
 
 							}
@@ -1710,8 +1698,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 141.5, 271.600002765655518, 230.0, 22.0 ],
-									"text" : "write C:/Windows/Temp/run_script2_1.bat"
+									"patching_rect" : [ 122.5, 231.600002765655518, 381.0, 22.0 ],
+									"text" : "write C:/Windows/Temp/MOZLib_trigger_batch_files/run_script2_1.bat"
 								}
 
 							}
@@ -3287,7 +3275,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-14",
-					"items" : [ "step6.txt", ",", "step7.txt", ",", "step8.txt", ",", "step9.txt" ],
+					"items" : [ "step10.txt", ",", "step6.txt", ",", "step7.txt", ",", "step8.txt", ",", "step9.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -5351,6 +5339,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-59", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-68", 0 ],
 					"source" : [ "obj-24", 3 ]
 				}
@@ -5402,13 +5397,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
 					"source" : [ "obj-31", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-59", 0 ],
-					"source" : [ "obj-32", 0 ]
 				}
 
 			}
