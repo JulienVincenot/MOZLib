@@ -2,6 +2,6 @@
 
 wsl chmod +x /mnt/c/Windows/Temp/MOZLib-master/install_scripts/script10.sh ;
 cd C:\Windows\Temp\MOZLib-master\install_scripts ;
-Remove-Item -Path C:\Users\matte\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\MOZLib_setup_part2.maxpat -Force
+Remove-Item -Path "C:\Users\matte\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\MOZLib_setup_part2.maxpat" -Force
 
 bash script10.sh
