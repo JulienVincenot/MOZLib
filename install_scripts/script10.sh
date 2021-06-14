@@ -9,4 +9,4 @@ rm /mnt/c/Windows/Temp/MOZLib_setup_log/step10.txt &&
 rm -r /mnt/c/Windows/Temp/MOZLib_setup_log &&
 rm -r /mnt/c/Windows/Temp/MOZLib_setup_files &&
 rm -r /mnt/c/Windows/Temp/MOZLib_setup_log &&
-rm -r /mnt/c/Windows/Temp/MOZLib_trigger_batch_files &&
+rm -r /mnt/c/Windows/Temp/MOZLib_trigger_batch_files 
