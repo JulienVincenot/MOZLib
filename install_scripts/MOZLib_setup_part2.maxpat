@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1639.0, 810.0 ],
+		"rect" : [ 41.0, 84.0, 1639.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -484,7 +484,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 50.0, 127.0, 410.5, 22.0 ],
+									"patching_rect" : [ 50.0, 127.0, 468.5, 22.0 ],
 									"text" : "t b l"
 								}
 
@@ -496,7 +496,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 49.5, 201.0, 411.0, 22.0 ],
+									"patching_rect" : [ 49.5, 201.0, 469.0, 22.0 ],
 									"text" : "sprintf symout C:/Users/%s/Documents/Max 8/Packages/MOZLib/media/%s"
 								}
 
@@ -508,7 +508,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 164.0, 229.0, 22.0 ],
+									"patching_rect" : [ 50.0, 164.0, 439.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"autostart" : 1,
 										"defer" : 0,
@@ -517,7 +517,7 @@
 										"watch" : 0
 									}
 ,
-									"text" : "node.script getUserName.js @autostart 1"
+									"text" : "node.script C:/Windows/Temp/MOZLib_setup_files/getUserName.js @autostart 1"
 								}
 
 							}
@@ -751,7 +751,6 @@
 					"fontname" : "Arial",
 					"fontsize" : 18.0,
 					"id" : "obj-58",
-					"linecount" : 8,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -759,10 +758,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 351.410711186272465, 1099.333344000000125, 579.0, 258.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 8,
 					"presentation_rect" : [ 33.999996900558472, 184.333344000000125, 436.0, 449.0 ],
 					"separator" : "nl",
-					"text" : "Just one more thing\rwe need to install the fonts... :-) Please click install on the two windows when they appear in ...\r3\r2\r1\rnow you can close the patch\rMOZLib is ready :)\r",
 					"varname" : "TXTTXT"
 				}
 
@@ -2877,7 +2874,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-14",
-					"items" : "<empty>",
+					"items" : [ "step6.txt", ",", "step7.txt", ",", "step8.txt", ",", "step9.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3239,8 +3236,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "getUserName.js",
-				"bootpath" : "~/Documents/GitHub/MOZLib/install_scripts",
-				"patcherrelativepath" : ".",
+				"bootpath" : "C:/Windows/Temp/MOZLib_setup_files",
+				"patcherrelativepath" : "../../../../../../Windows/Temp/MOZLib_setup_files",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
