@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 84.0, 1639.0, 810.0 ],
+		"rect" : [ 27.0, 84.0, 1639.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -506,17 +506,9 @@
 									"id" : "obj-8",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 164.0, 439.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"autostart" : 1,
-										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
-										"watch" : 0
-									}
-,
 									"text" : "node.script C:/Windows/Temp/MOZLib_setup_files/getUserName.js @autostart 1"
 								}
 
@@ -1249,8 +1241,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1126.303568329129803, 614.666668891906738, 107.0, 22.0 ],
-					"text" : "Set WSL version 2"
+					"patching_rect" : [ 1126.303568329129803, 614.666668891906738, 137.0, 22.0 ],
+					"text" : "Setting WSL version 2..."
 				}
 
 			}
@@ -1760,8 +1752,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 414.880354043415593, 610.666668891906738, 135.0, 22.0 ],
-					"text" : "Creating a new core file"
+					"patching_rect" : [ 414.880354043415593, 610.666668891906738, 145.0, 22.0 ],
+					"text" : "Creating a new core file..."
 				}
 
 			}
@@ -2248,8 +2240,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 652.021425471987072, 610.666668891906738, 176.0, 22.0 ],
-					"text" : "Downloading and installing sbcl"
+					"patching_rect" : [ 652.021425471987072, 610.666668891906738, 186.0, 22.0 ],
+					"text" : "Downloading and installing sbcl..."
 				}
 
 			}
@@ -2737,8 +2729,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 889.162496900558494, 614.666668891906738, 99.0, 50.0 ],
-					"text" : "Unzipping and moving MOZLib to the packages"
+					"patching_rect" : [ 889.162496900558494, 614.666668891906738, 102.999999999999886, 50.0 ],
+					"text" : "Unzipping and moving MOZLib to the packages..."
 				}
 
 			}
@@ -3234,14 +3226,7 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "getUserName.js",
-				"bootpath" : "C:/Windows/Temp/MOZLib_setup_files",
-				"patcherrelativepath" : "../../../../../../Windows/Temp/MOZLib_setup_files",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 
