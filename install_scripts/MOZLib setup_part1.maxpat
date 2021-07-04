@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 138.0, 133.0, 1201.0, 1037.0 ],
+		"rect" : [ 77.0, 84.0, 1084.0, 795.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,43 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-50",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1185.714282614844024, 608.000018119812012, 29.5, 22.0 ],
+					"text" : "13"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1175.214282614844024, 906.000007629394531, 114.0, 22.0 ],
+					"text" : "print MOZLib_setup"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"linecount" : 9,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1175.214282614844024, 747.866674891906769, 141.0, 133.0 ],
+					"presentation_linecount" : 2,
+					"text" : "After a while you should choose a username and password for Ubuntu., Please remember those... we will need them later!, When the install is complete close the terminal window and click on button 2."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-74",
 					"maxclass" : "newobj",
@@ -87,7 +124,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 797.714282749746872, 930.333344000000125, 37.0, 22.0 ],
+					"patching_rect" : [ 815.964282749746872, 925.333344000000125, 37.0, 22.0 ],
 					"text" : "itoa"
 				}
 
@@ -3166,7 +3203,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1185.214282614844024, 602.666668891906738, 110.0, 50.0 ],
+					"patching_rect" : [ 1220.214282614844024, 608.000018119812012, 110.0, 50.0 ],
 					"text" : "Downloading and installing Ubuntu distro"
 				}
 
@@ -3177,7 +3214,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1185.214282614844024, 680.666668891906738, 114.0, 22.0 ],
+					"patching_rect" : [ 1220.214282614844024, 677.666668891906738, 114.0, 22.0 ],
 					"text" : "print MOZLib_setup"
 				}
 
@@ -3187,10 +3224,10 @@
 					"id" : "obj-40",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 1164.714282614844024, 565.666668891906738, 39.5, 22.0 ],
-					"text" : "b 2"
+					"numoutlets" : 4,
+					"outlettype" : [ "bang", "bang", "bang", "bang" ],
+					"patching_rect" : [ 1164.714282614844024, 565.666668891906738, 50.5, 22.0 ],
+					"text" : "b 4"
 				}
 
 			}
@@ -3212,8 +3249,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1372.857139757701134, 816.666668891906738, 163.0, 22.0 ],
-					"text" : "Cloning MOZLib from GitHub"
+					"patching_rect" : [ 1372.857139757701134, 812.000007629394531, 237.0, 22.0 ],
+					"text" : "Cloning MOZLib from GitHub... please wait"
 				}
 
 			}
@@ -3385,7 +3422,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-14",
-					"items" : "<empty>",
+					"items" : [ "step2.txt", ",", "step3.txt", ",", "step4.txt", ",", "step5.txt", ",", "step6.txt", ",", "step7.txt", ",", "step8.txt", ",", "step9.txt" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -5602,8 +5639,31 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
+					"destination" : [ "obj-20", 0 ],
+					"order" : 0,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-54", 0 ],
+					"order" : 1,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-40", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-41", 0 ],
+					"source" : [ "obj-40", 3 ]
 				}
 
 			}
@@ -5611,6 +5671,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-50", 0 ],
+					"source" : [ "obj-40", 2 ]
 				}
 
 			}
@@ -5634,6 +5701,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-56", 0 ],
+					"source" : [ "obj-50", 0 ]
 				}
 
 			}
