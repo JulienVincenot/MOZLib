@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 11,
+			"minor" : 2,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 590.0, 201.0, 1201.0, 1037.0 ],
+		"rect" : [ 138.0, 133.0, 1201.0, 1037.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -111,7 +111,6 @@
 					"fontname" : "Arial",
 					"fontsize" : 18.0,
 					"id" : "obj-58",
-					"linecount" : 3,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -119,10 +118,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 764.714282749747099, 1014.333344000000125, 579.0, 258.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 3,
 					"presentation_rect" : [ 33.999996900558472, 184.333344000000125, 436.0, 449.0 ],
 					"separator" : "nl",
-					"text" : "Creating MOZLib_setup_log\rCloning MOZLib from GitHub\rDownloading and installing Ubuntu distro\r",
 					"varname" : "TXTTXT"
 				}
 
@@ -206,8 +203,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -719,8 +716,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1206,8 +1203,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1742,8 +1739,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2230,8 +2227,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2718,8 +2715,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3302,7 +3299,7 @@
 					"numoutlets" : 7,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "bang", "" ],
 					"patching_rect" : [ 414.142854043415582, 518.666668891906738, 1144.857142857142662, 22.0 ],
-					"text" : "sel 5 6 7 8 9 10"
+					"text" : "sel 4 5 6 7 8 9"
 				}
 
 			}
@@ -3388,7 +3385,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-14",
-					"items" : [ "step10.txt", ",", "step2.txt", ",", "step3.txt", ",", "step4.txt", ",", "step5.txt", ",", "step6.txt", ",", "step7.txt", ",", "step8.txt", ",", "step9.txt" ],
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3420,8 +3417,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3499,7 +3496,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 185.666666666666742, 261.0, 1109.0, 36.0 ],
-									"text" : "cd C:/Windows/Temp/MOZLib_setup_log, cr, copy nul step1.txt, cr, copy nul step2.txt, cr, copy nul step3.txt, cr, copy nul step4.txt, cr, copy nul step5.txt, cr, copy nul step6.txt, cr, copy nul step7.txt, cr, copy nul step8.txt, cr, copy nul step9.txt, cr, copy nul step10.txt"
+									"text" : "cd C:/Windows/Temp/MOZLib_setup_log, cr, copy nul step1.txt, cr, copy nul step2.txt, cr, copy nul step3.txt, cr, copy nul step4.txt, cr, copy nul step5.txt, cr, copy nul step6.txt, cr, copy nul step7.txt, cr, copy nul step8.txt, cr, copy nul step9.txt"
 								}
 
 							}
@@ -3646,8 +3643,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3999,8 +3996,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -4433,8 +4430,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 11,
+							"minor" : 2,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
