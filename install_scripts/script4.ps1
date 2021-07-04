@@ -2,4 +2,6 @@
 #set WSL default version 2
 wsl --set-default-version 2
 
-Read-Host -Prompt "wsl set to Ver.2 - Press Enter to exit"
+Remove-Item -Path "C:\Windows\Temp\MOZLib_setup_log\step6.txt" -Force
+
+ 
