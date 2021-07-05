@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 41.0, 84.0, 1639.0, 802.0 ],
+		"rect" : [ 82.0, 194.0, 1639.0, 784.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 2,
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 446.880354043415537, 406.166668891906738, 103.0, 36.0 ],
+					"text" : ";\r\nmax relaunchmax"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-2",
 					"linecount" : 7,
@@ -477,6 +490,7 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-9",
@@ -518,18 +532,10 @@
 									"id" : "obj-8",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 164.0, 439.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"autostart" : 1,
-										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
-										"watch" : 0
-									}
-,
-									"text" : "node.script C:/Windows/Temp/MOZLib_setup_files/getUserName.js @autostart 1"
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 50.0, 164.0, 329.0, 22.0 ],
+									"text" : "node.script C:/Windows/Temp/getUserName.js @autostart 1"
 								}
 
 							}
@@ -763,7 +769,6 @@
 					"fontname" : "Arial",
 					"fontsize" : 18.0,
 					"id" : "obj-58",
-					"linecount" : 4,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -771,10 +776,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 351.410711186272465, 1099.333344000000125, 579.0, 258.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 4,
 					"presentation_rect" : [ 33.999996900558472, 184.333344000000125, 436.0, 449.0 ],
 					"separator" : "nl",
-					"text" : "Setting WSL version 2...\rUnzipping and moving MOZLib to the packages...\rDownloading and installing sbcl...\rCreating a new core file...\r",
 					"varname" : "TXTTXT"
 				}
 
@@ -2889,7 +2892,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-14",
-					"items" : "step9.txt",
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3249,14 +3252,7 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "getUserName.js",
-				"bootpath" : "C:/Windows/Temp/MOZLib_setup_files",
-				"patcherrelativepath" : "../../../../../../Windows/Temp/MOZLib_setup_files",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
- ],
+		"dependency_cache" : [  ],
 		"autosave" : 0
 	}
 
