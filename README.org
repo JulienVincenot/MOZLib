@@ -12,10 +12,9 @@ This new version, fully documented and translated into English, is part of his d
 Using this library requires to install Cycling’74’s Max 7 or 8 for Mac or Windows — it will work without a licence (Runtime mode) but you won’t be able to save new patches ! 
 MOZ’Lib makes an extensive use of the bach library developed by Daniele Ghisi and Andrea Agostini, extended with the language SBCL (Steel Bank Common LISP), which is distributed with MOZ’Lib under GNU licence.
 
-MOZ’Lib will remain free and open-source, just like the many pieces of CAC software it relies on. However if you enjoy this project very much and would like to buy me a beer, a pizza or a ticket for an exuberant art show or the last blockbuster movie, you can leave me a tip here : paypal.me/julienvincenot
+MOZ’Lib will remain free and open-source, just like the many pieces of CAC software it relies on. However if you enjoy this project very much and would like to buy me a beer, a pizza or a ticket for an exuberant art show or the last blockbuster movie, you can leave me a tip here : https://paypal.me/julienvincenot
 
-If you want to be kept informed about future MOZ’Lib updates,
-just send an email to mozlib+subscribe@googlegroups.com
+If you want to be kept informed about future MOZ’Lib updates, just send an email to mozlib+subscribe@googlegroups.com
 
 -----
 * Dependencies :
@@ -45,7 +44,7 @@ WARNING : BEFORE INSTALLING/UPDATING, MAKE SURE YOU DON'T HAVE ANY PAST VERSION 
    
    If installing from the website, make sure you place the decompressed folders of bach / cage / dada into Max’s Packages folder 
    on Mac : your_user_folder/Documents/Max 8/Packages/ (or equivalent for Max 7)
-   on PC : My Documents\Max8\Packages\
+   on PC : C:\Windows\Users\your_name\Documents\Max8\Packages\
  
 
 
@@ -55,12 +54,13 @@ WARNING : BEFORE INSTALLING/UPDATING, MAKE SURE YOU DON'T HAVE ANY PAST VERSION 
 
 3— Copy the decompressed folder of MOZ’Lib in the Packages folder as well.
  
-   WARNING:
-   - If you downloaded the GitHub version, after unzipping you got a MOZLib-master folder.
+   WARNING: 
+   
+   — If you downloaded the GitHub version, after unzipping you got a MOZLib-master folder.
    DO NOT place this one in packages ! Instead, unzip the MOZLib.zip inside of it, then
    place the resulting MOZLib folder in Packages.
 
-   - If you downloaded MOZLib from my website, just unzip and place the MOZLib folder in Packages.
+   — If you downloaded MOZLib from my website, just unzip and place the MOZLib folder in Packages.
 
 
    IMPORTANT: 
