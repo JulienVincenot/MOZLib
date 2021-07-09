@@ -96,6 +96,26 @@ Follow the procedure attentively (you'll need to restart halfway) and it will in
 WSL (Windows Subsystem for Linux, Windows 10 only), install SBCL for Windows and 
 download and install the MOZ files automatically.
 
+The whole install can take time, be patient it's a one time thing ! :)
+
+<pre><code>
+----------begin_max5_patcher----------
+544.3ocyUssaaCBF9Z6mBKt1yhyG1c6cnWLoooJhCsinDbDFGksp9tO.6j4s
+3ojV0NMjOH9A9++NXLOUV.V0czzCp9X0WpJJdprnHGJEnXpeAXm9X6VcedZf
+f4Xvr1F.0iCdP6c5cl7X2846hWmFYu2zabAcv14t2aZCikgPZToFWAgLljJv
+0UHIsgDaTJL2PXVcEkvafwWTUCr5qSI0tNWotUa9.SdpROz4BmAwm7V81yXP
+6iwCF+8Fmd017LfSi0MD1ZBguu2LBL.ntBXcgzq784hNmIo4hNm8P62rtGmw
+NAm1HPTrDKnJAU.UpH8fnE3GSnR7Cyjy3maXm0EgU+75zaR7Hz4yDzscNu6s
++HieTLK+JGibKmDZJ3ykkoG02nI21samwc1iSddNN9JdKhQahLCwZHHlPpnB
+BWRwnnEyylY54RdIUBthVmvvlg9f8Aa6sXDLFaxH3HpLJ7XZr7jFdpIkJjBx
+EpjMPt.XKZByE63ZHTgTH3QZBIXLeQoG9FJ8nqH8zk1V8x8AwasOD2DeAt9S
+afH+uyFVMDBQtckO2o4O2kKPGYVlk+EYFwdU+fZk183q5uRbDNAz3tyaAnKp
+6+tjhdujzkNc3kquX4+V8UgtD0uOhcdc.898GL99IfkU6nVuY7.BYctq0M1M
+mSf2bvdZ9nwPZejFgHGF7imbdjSAiqsasw6FrSEOZwwZlMxzor860siKH42k
+OW9SnsI8Y.
+-----------end_max5_patcher-----------
+</code></pre>
+
 VERY IMPORTANT: at some point in the procedure you will need to choose a username and password
 for WSL. Keep those preciously, you will need them later to compile and install SBCL as well as some
 other small install actions.
