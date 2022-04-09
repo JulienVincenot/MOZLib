@@ -7,10 +7,10 @@ Its main purpose is to introduce the various problematics of computer-aided inst
 MOZ’Lib is developed by composer [**Julien Vincenot**](http://julienvincenot.com), initially as a commission from the project *Ariane#*, directed by the DRAC (Regional Directorate of Cultural Affairs) of Franche-Comté region and piloted by the **Conservatory of Montbéliard**.
 This new version, fully documented and translated into English, is part of Vincenot's doctoral research in composition at Harvard University, under the guidance of **Hans Tutschku**. 
 
-Developed since the beginning on macOS, MOZ'Lib and the *PWforMax* system it contains have been ported to Windows 10 in 2021 thanks to the invaluable help of **Matteo Marson** and **Juan Vassallo** :) 
+Developed since the beginning on macOS, MOZ'Lib and the *PWforMax* system it contains have been ported to Windows 10 in 2021 thanks to the invaluable help of [**Matteo Marson**](https://www.patreon.com/mmmt) and [**Juan Vassallo**](https://www.juanvassallo.com) :) 
 
 Using this library requires to install [Cycling’74](http://cycling74.com)’s Max 7 or 8 for Mac or Windows — it will work without a licence (Runtime mode) but you won’t be able to save new patches ! 
-MOZ’Lib makes an extensive use of the ***bach*** library developed by **Daniele Ghisi** and **Andrea Agostini**, extended with the language [SBCL](http://sbcl.org) (Steel Bank Common LISP), which is distributed with MOZ’Lib under *GNU licence*.
+MOZ’Lib makes an extensive use of the [***bach***](http://www.bachproject.net) library developed by **Daniele Ghisi** and **Andrea Agostini**, extended with the language [SBCL](http://sbcl.org) (Steel Bank Common LISP), which is distributed with MOZ’Lib under *GNU licence*.
 
 MOZ’Lib will remain free and open-source, just like the many pieces of CAC software it relies on. However if you enjoy this project very much and would like to buy me a beer, a pizza or a ticket for an exuberant art show or the last blockbuster movie, you can leave me a tip [here](https://paypal.me/julienvincenot).
 
