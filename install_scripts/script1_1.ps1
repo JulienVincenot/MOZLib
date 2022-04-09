@@ -1,1 +1,0 @@
-﻿ Remove-Item -Path "C:\Windows\Temp\MOZLib_setup_log\step2.txt" -Force
