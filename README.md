@@ -1,4 +1,5 @@
 MOZ’ Lib
+<img src="icon.png" align="left" alt="MOZ icon" width="140"/>
 ==============
 
 **MOZ’Lib** is a collection of bpatcher modules and objects for **Max**.
@@ -24,7 +25,7 @@ MOZ'Lib includes the following open-source software :
 - [shell](https://github.com/jeremybernstein/shell) object for Max by Jeremy Bernstein and Bill Orcutt
 - [SBCL](http://www.sbcl.org) (Steel Bank Common Lisp), an open source Common Lisp compiler 
   Note: MOZ'Lib contains an executable of SBCL 2.1.3 pre-compiled for macOS. New versions will be compiled when needed. In April 2022, this version is compatible with macOS Catalina and onwards.
-- the ***moz-complete.core*** used for *PWforMax* contains a modified version of several  Lisp functions from **Ircam's** ***OpenMusic**** sources (based on ***PatchWork***), as well as user libraries written for either *PatchWork*, *OpenMusic* or *PWGL* by **Mikael Laurson** and **Örjan Sandred** (*PW Constraints* a.k.a. *OMCS*), **Jacopo Baboni Schilingi** (*JBS-CMI*, *JBS-Profile* and *JBS-Constraints*) and **Frederic Voisin** (*Morphologie*). The core also contains the [*ITERATE*](https://common-lisp.net/project/iterate/) library by **Jonathan Amsterdam** and **Andrea Fuchs** and a modified version of Guy Steele's [*BACKQUOTE*](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node367.html) implementation in Common Lisp.
+- the ***moz-complete.core*** used for *PWforMax* contains a modified version of several Lisp functions from **Ircam's** ***OpenMusic*** sources (based on ***PatchWork***), as well as user libraries written for either *PatchWork*, *OpenMusic* or *PWGL* by **Mikael Laurson** (*PW Constraints* a.k.a. *OMCS*), **Örjan Sandred** (*Cluster-Engine*), **Jean-Baptiste Barrière** (*Chréode*), **Kaija Saariaho** (*Transkaija*), **Jacopo Baboni Schilingi** (*JBS-CMI*, *JBS-Profile* and *JBS-Constraints*) and **Frederic Voisin** (*Morphologie*). The core also contains the [*ITERATE*](https://common-lisp.net/project/iterate/) library by **Jonathan Amsterdam** and **Andrea Fuchs** and a modified version of Guy Steele's [*BACKQUOTE*](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node367.html) implementation in Common Lisp.
 
 **Note:** All those are available in the sources subfolder, allowing users to recompile the core and add other libraries if they wish.
 
