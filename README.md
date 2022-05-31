@@ -1,5 +1,5 @@
 MOZ’Lib
-<img src="icon.png" align="left" alt="MOZ icon" width="210"/>
+<img src="icon.png" align="left" alt="MOZ icon" width="230"/>
 ==============
 
 **MOZ’Lib** is a **Max** package dedicated to **computer-aided composition** (or CAC).
