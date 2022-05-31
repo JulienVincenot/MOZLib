@@ -1,4 +1,4 @@
-MOZ’ Lib
+MOZ’Lib
 <img src="icon.png" align="left" alt="MOZ icon" width="140"/>
 ==============
 
