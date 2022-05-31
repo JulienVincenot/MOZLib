@@ -1,9 +1,13 @@
 MOZ’Lib
-<img src="icon.png" align="left" alt="MOZ icon" width="140"/>
+<img src="icon.png" align="left" alt="MOZ icon" width="210"/>
 ==============
 
-**MOZ’Lib** is a collection of bpatcher modules and objects for **Max**.
-Its main purpose is to introduce the various problematics of computer-aided instrumental composition, programming and creation in general to young musicians between 9 and 99 years old.
+**MOZ’Lib** is a **Max** package dedicated to **computer-aided composition** (or CAC).
+Its main purpose is to introduce the various problematics of CAC, programming and creation in general to young musicians between 9 and 99 years old.
+The library is made of several modules (or bpatchers) largely based on the [***bach***](http://www.bachproject.net) ecosystem created by **Andrea Agostini** and **Daniele Ghisi**. Each of these modules represents a compositional idea or technique, allowing the user to interact through various graphical interfaces.
+
+**But that's just the tip of the iceberg !**
+In addition to those main modules, MOZ’Lib includes a system called ***PWforMax***. Previously hidden in the background, *PWforMax* allows users to generate and run Lisp code in Max, and to work in real time with any library from the PatchWork / OpenMusic / PWGL family !
 
 MOZ’Lib is developed by composer [**Julien Vincenot**](http://julienvincenot.com), initially as a commission from the project *Ariane#*, directed by the DRAC (Regional Directorate of Cultural Affairs) of Franche-Comté region and piloted by the **Conservatory of Montbéliard**.
 This new version, fully documented and translated into English, is part of Vincenot's doctoral research in composition at Harvard University, under the guidance of **Hans Tutschku**. 
@@ -11,9 +15,10 @@ This new version, fully documented and translated into English, is part of Vince
 Developed since the beginning on macOS, MOZ'Lib and the *PWforMax* system it contains have been ported to Windows 10 in 2021 thanks to the invaluable help of [**Matteo Marson**](https://www.patreon.com/mmmt) and [**Juan Vassallo**](https://www.juanvassallo.com) :) 
 
 Using this library requires to install [Cycling’74](http://cycling74.com)’s Max 7 or 8 for Mac or Windows — it will work without a licence (Runtime mode) but you won’t be able to save new patches ! 
-MOZ’Lib makes an extensive use of the [***bach***](http://www.bachproject.net) library developed by **Daniele Ghisi** and **Andrea Agostini**, extended with the language [SBCL](http://sbcl.org) (Steel Bank Common LISP), which is distributed with MOZ’Lib under *GNU licence*.
+MOZ’Lib makes an extensive use of the [***bach***](http://www.bachproject.net) package, extended by the Common LISP language through [SBCL](http://sbcl.org) (Steel Bank Common LISP), which is distributed with MOZ’Lib under *GNU licence*.
 
 MOZ’Lib will remain free and open-source, just like the many pieces of CAC software it relies on. However if you enjoy this project very much and would like to buy me a beer, a pizza or a ticket for an exuberant art show or the last blockbuster movie, you can leave me a tip [here](https://paypal.me/julienvincenot).
+You can also contact me directly if you are interested to organize private lessons or collective courses on CAC with bach and MOZ'Lib.
 
 If you want to be kept informed about future MOZ’Lib updates, just send an email to [this address](mailto:mozlib+subscribe@googlegroups.com).
 
