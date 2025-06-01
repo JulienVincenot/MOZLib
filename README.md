@@ -44,7 +44,7 @@ MOZ'Lib includes the following open-source software :
 ***ATTENTION:
 before installing/updating, make sure you don't have any past version of MOZ'Lib on your machine !***
 
-1) [Download](https://cycling74.com/downloads/) and install the latest version of Max (ideally 8 but 7 works too) for Mac or PC
+1) [Download](https://cycling74.com/downloads/) and install the latest version of Max (ideally 8 or 9 but 7 works too) for Mac or PC
 
 2) Now start Max and install the last version of the *bach*, *cage* and *dada* packages
    from Max’s Package Manager (File menu in Max) or [*bach*’s official website](http://www.bachproject.net)
@@ -53,12 +53,13 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
    
    If installing from the website, make sure to place the decompressed folders of bach / cage / dada into Max’s Packages folder
    
-   on Mac : *your_user_folder/Documents/Max 8/Packages/* (or equivalent for Max 7 or 9)
+   on Mac : *your_user_folder/Documents/Max 8/Packages/* 
+              (or equivalent for Max 7 or 9)
    
    on PC : C:\Windows\Users\your_name\Documents\Max8\Packages\
             &emsp;&emsp;&emsp;or
            C:\Windows\Users\your_name\OneDrive\Documents\Max8\Packages\
-
+              (or equivalent for Max 7 or 9)
 \
 \
 \
