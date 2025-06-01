@@ -14,7 +14,7 @@ This new version, fully documented and translated into English, is part of Vince
 
 Developed since the beginning on macOS, MOZ'Lib and the *PWforMax* system it contains have been ported to Windows 10 in 2021 thanks to the invaluable help of [**Matteo Marson**](https://www.patreon.com/mmmt) and [**Juan Vassallo**](https://www.juanvassallo.com) :) 
 
-Using this library requires to install [Cycling’74](http://cycling74.com)’s Max 7 or 8 for Mac or Windows — it will work without a licence (Runtime mode) but you won’t be able to save new patches ! 
+Using this library requires to install [Cycling’74](http://cycling74.com)’s Max 7, 8 or 9 for Mac or Windows — it will work without a licence (Runtime mode) but you won’t be able to save new patches ! 
 MOZ’Lib makes an extensive use of the [***bach***](http://www.bachproject.net) package, extended by the Common LISP language through [SBCL](http://sbcl.org) (Steel Bank Common LISP), which is distributed with MOZ’Lib under *GNU licence*.
 
 MOZ’Lib will remain free and open-source, just like the many pieces of CAC software it relies on. However if you enjoy this project very much and would like to buy me a beer, a pizza or a ticket for an exuberant art show or the last blockbuster movie, you can leave me a tip [here](https://paypal.me/julienvincenot).
@@ -53,7 +53,7 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
    
    If installing from the website, make sure to place the decompressed folders of bach / cage / dada into Max’s Packages folder
    
-   on Mac : *your_user_folder/Documents/Max 8/Packages/* (or equivalent for Max 7)
+   on Mac : *your_user_folder/Documents/Max 8/Packages/* (or equivalent for Max 7 or 9)
    
    on PC : C:\Windows\Users\your_name\Documents\Max8\Packages\
             &emsp;&emsp;&emsp;or
@@ -68,14 +68,12 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
  
   &emsp;&emsp;&emsp;**IMPORTANT:**
    
-  &emsp;&emsp;&emsp;— **If you downloaded the GitHub version**, after unzipping you got a MOZLib-master folder. 
+  &emsp;&emsp;&emsp;— **If you just downloaded the GitHub version**, after unzipping you got a MOZLib-master folder. 
   DO NOT place this one in packages ! Instead, unzip the MOZLib.zip inside of it, then place the resulting MOZLib folder in Packages.
-
-  &emsp;&emsp;&emsp;— **If you downloaded MOZLib from my website**, just unzip and place the MOZLib folder in Packages.
 
   &emsp;&emsp;&emsp;— **If your system is macOS 10.13 or later** it is possible that your Documents folder is actually located on iCloud Drive... ***PWforMax* will not work in these conditions !**
   You will need either to disable iCloud Drive (at least for Documents and Desktop) or create a dummy Documents folder in your user folder (home), with the following directory structure :
-  &emsp; *your_user_folder/Documents/Max 8/Packages/* 
+  &emsp; *your_user_folder/Documents/Max 8/Packages/* (or equivalent for Max 7 or 9)
   &emsp; (you still put MOZLib in Packages obviously)
 
 
@@ -84,7 +82,7 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
   &emsp;&emsp;&emsp;**If your computer runs macOS 10.15 (Catalina) or above**, 
   MOZ'Lib will not be able to work in Max unless you remove it from the system quarantine by entering the following command in the terminal :
   &emsp; ***xattr -rd com.apple.quarantine ~/Documents/Max\ 8/Packages/*** *
-  &emsp;(substitute 7 with 8 if you still use Max 7 — don't forget the * symbol !)
+  &emsp;(substitute 8 with 7 or 9 depending which version you use — and don't forget the * symbol !)
   This operation is mandatory to use any package not distributed on Cycling'74's Package Manager.
   
   
