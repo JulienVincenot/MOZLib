@@ -22,6 +22,9 @@ You can also contact me directly if you are interested to organize private lesso
 
 If you want to be kept informed about future MOZ’Lib updates, just send an email to [this address](mailto:mozlib+subscribe@googlegroups.com).
 
+<img src="modules-overview.png" align="center" alt="MOZ modules overview"/>
+
+
 -----
 
 # Dependencies:
