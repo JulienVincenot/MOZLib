@@ -1,0 +1,195 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red191\green191\blue191;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c74902\c74902\c74902;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww23700\viewh16620\viewkind1\viewscale195
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 VARIBLES\
+All variables are local (this will allow parallel searches in the future). Vectors are used for speed and for the possibility on expanding them with parallel engines. Also the search index is stored as a single value in a vector (parallel engines would have more than one search index)\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 Searchspace
+\f0\b0 :\
+Candidates for each variable\
+\
+#2A((1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)\
+    (1 2 3 4 5 6 7 8 9 10 11 12)) \
+\
+
+\f1\b Searchspace-state
+\f0\b0 :\
+Pointers (current no-of-candidates)\
+\
+#2A((0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12)\
+    (0 12))\
+\
+
+\f1\b Domain
+\f0\b0 \
+You can use any type of domain; you need to specify the variable type (for example integer) and what it represents:  *duration-domain*,  *absolute-rhythm-domain*,  *absolute-domain*,  *interval-domain* or *basic-domain*. The basic domain can be anything, including symbols.\
+\
+To access a variable inside a rule, you need to specify what information you want:\
+(a x) absolute value, for example time point or pitch \
+(i x) interval\
+(d x) duration\
+(b x) basic, i.e. candidates in any basic domain\
+\
+\
+
+\f1\b Solution
+\f0\b0 \
+The solution is stored internally in a 2 dimensional vector - one for absolute numerical values (for example pitches or time points) and one for distances between values (for example intervals or durations). The idea is that you can access either format inside rules without extra computation time to do the conversion.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf2 \CocoaLigature0 #2A((0 0)\
+    (0 83)\
+    (0 83)\
+    (11 94)\
+    (-11 83)\
+    (16 99)\
+    (-9 90)\
+    (4 94)\
+    (-12 82)\
+    (17 99)\
+    (-9 90)\
+    (-7 83)) 
+\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \
+If non-numerical values are used (for example symbols), they will be stored in the second dimension.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 Rules
+\f0\b0 : \
+(format-indexrule #'(lambda (x y) (= (a x) (a y))) '(1 4))    ;;; i2 i5\
+(1 4) matches the indexes for the two variables. (a x) and (a y) are absolute values\
+\
+(format-wildcardrule #'(lambda (x y) (> (abs (- (i x) (i y))) 1)) '(0 1)) 	;;; ?1 ?2\
+(0 1) is the pattern for the two variables (first needs to always be 0). (i x) and (i y) are intervals\
+\
+(format-RL-rule #'(lambda (&rest x) (progn x t))  0) 	; RL starts at i1 and shifts\
+0 indicates the index from which the rule will be valid\
+\
+
+\f1\b Heuristic rules:
+\f0\b0 \
+Heuristic rules work the same way as strict rules, but need to be formalized to output a weight. Use the functions format-heuristic-indexrule, format-heuristic-wildcardrule\
+\
+
+\f1\b Rulevector
+\f0\b0 :\
+A list of all rules (indexed from 0)\
+\
+#(#<RL-RULE \{1002DEDAF3\}> #<INDEXRULE \{1002EA8833\}>\
+  #<WILDCARDRULE \{1002F6FFF3\}>)\
+\
+
+\f1\b Rulespace
+\f0\b0 :\
+Indicates what rule should be applied on what variable (indicated by index numbers)\
+\
+#((0) (0 2) (0 2) (0 2) (0 1 2) (0 2) (0 2) (0 2) (0 2) (0 2) (0 2) (0 2))\
+\
+\
+
+\f1\b Backjump
+\f0\b0 :\
+The rule calculates back-jumping (or back-stepping) based on how the variables are spaced: a rule with variables that are neighbors (next to each other in the sequence) would want to STEP back (not jump), while if the variables are more apart (for example an index rule accessing variable 1 and 4) would want to jump. In the latter case, variable 2 and 3 would be unrelated to the rule, and it would this make sense to jump back to variable 1.\
+\
+The information on preferred backtracking is stored with the rules. The engine collects the backtracking information from rules that failed and uses this to decide how to backtrack.\
+\
+The engine will never allow backjumping all the way to the first candidate since this has a higher risk of missing a solution.\cf3 \strike \strikec3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \strike0\striked0 \
+Engine version 2 has backjumping enabled. It will always pick the shortest proposed backtrack (step before jump). A backjump will thus only be possible if no backstep is proposed. This engine stops checking the rules immediately when a fail is detected. The length of the backjump/step will be determined by ALL rules for a candidate (also those that passed or were not checked): the shortest distance will be picked to ensure that solutions are not missed. This version has the risk of skipping a solution, especially if rules allow buckjumping of different sizes.\
+\
+Engine version 3 has backjumping enabled but is more restrictive than version 2: it will only allow backjumping if all failed rules propose the same position to backjump to. If there is more than one alternative, the engine will step back. Note that only failed rules have an impact on the decision.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 Save search state to file, restart a search
+\f0\b0  (from version 3.15)\
+\
+It is possible to save the state of the search to a text file. The state will be saved as the last state before the engine stopped (i.e. at the time a solution is found or it is not able to find a solution). The purpose is to use the state to continue the search (or to go back to an index and find an alternative solution from there).\
+\
+The file stores three type of information: \
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\li720\fi-360\ri0\partightenfactor0
+\ls1\ilvl0\cf0 1.	 The search space: if the search is in random order, the search space will reflect the random order chosen. It is necessary to preserve this to know what candidates have been checked.\
+2.	 The search space state: It indicates which of the candidates have been checked and which have never been tested yet.\
+3.	 Index: The saved index indicates if the search reached the end (index = total number of variables) or was unable to find a solution (index = -1).\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \
+When restarting the search, if the full information is reloaded, the engine will know that it reached the end or did not find a solution and will thus repeat that result. By setting the index to an earlier point than the endpoint, the engine will restart from that point.\
+\
+There are three different modes for using a state from file implemented: \
+\
+\ul Mode 1\ulnone : The search state will be written to the file when the solution is found (or not).\
+ \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \ul \ulc0 Mode 2\ulnone : The engine restarts from the index in the file and continue the search until it reaches the end. In order not to repeat the previous solution, the search space is only reconstructed until the given index \'96 the following candidates will have a new random order to allow finding alternative solutions.\
+\
+\ul Mode 3\ulnone : The index in the file should be set to 0 at the first iteration. At each iteration, the engine will only advance one step (= index will increase by 1). Each time, the state is saved for the full length of the sequence. Each new iteration starts by reloading the state from the previous iteration (at index 0, the engine is creating the initial state).\
+\
+\ul Mode 4\ulnone : This is a variation of mode 2; The engine will restart from the previous state and search for the next possible state. Note that the search space will not be randomized between searches in this mode. This will allow a user to search for all possible solutions (note that backjump version 2 might not find all solutions)\
+\
+\ul Mode 5\ulnone : This combines mode 1 and 2; The engine restarts from the index in the file and continue the search until it reaches the end (= mode 2). When the new (extended) solution is found, the state of the engine is saved to the file (= mode 1).\
+\
+\ul Mode 6\ulnone : This is a version of mode 5, and can be useful when extending a search without the need for storing the full sequence. It will also keep the size of the file on disk small; The engine restarts from the index in the file and continue the search until it reaches the end (= mode 2). When the new (extended) solution is found, the last 10 indexes of the state of the engine is saved to the file (= mode 1). Note that the index number will be adjusted to start from 0 in the saved state.\
+\
+\
+The saved file is called \'93state.txt\'94 and can be found in your home directory. If no file is found, the software will ignore to read any previous information (and print a note about this in the terminal).\
+\
+[Thought/unanswered question: would it be possible to find every possible solution by not allowing the engine to regenerate the search space and state, but make it follow a new route? My guess is that we might find a few extra, but loose a few as well]\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 Calling the engine
+\f0\b0 :\
+\
+(engine_v4.04 no-variables domain var-type abs-interval? start rulelist heurrulelist mode rnd? read-write-engine-state?)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \
+- start is the first value in a solution with a domain of intervals.\
+- mode is the backjumping mode (version 1 - 3)\
+- read-write-engine-state? is the mode for how the state of the engine is written read to/from a file \
+\
+TESTEXAMPLE:\
+\
+(engine_v4.04 12 '(1 2 3 4 5 6 7 8 9 10 11 12) 'integer *absolute-domain* nil\
+	(list \
+	 (format-indexrule #'(lambda (x y) (= (- (a x) (a y)) 2)) '(1 5))\
+	 (format-wildcardrule #'(lambda (x y) (>  (- (a x) (a y))0)) '(0 2)) \
+	)\
+	nil 3 t 1)\
+\
+The solution will be a list of two sublists, the first showing the distances between values, the second the absolute values.\
+}

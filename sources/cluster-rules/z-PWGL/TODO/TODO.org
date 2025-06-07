@@ -1,0 +1,619 @@
+
+* Check out examples by Orjan
+
+  [[file:///Users/torsten/PWGL-User/User-library/cluster-rules/TODO/examplesToCheckFromOerjan/][examplesToCheckFromOerjan]]
+
+
+* Refactoring
+
+** BUG of min/max-interval
+
+   min/max-interval: weight argument gets wrong menu
+
+** Implement changes of updated cluster library			    :ARCHIVE:
+
+   - ?? extend example on metric accents -- allows for irregular beat durations
+
+   - OK r-pitch-pitch has added arg
+     format: :pitch
+
+
+
+* Profile rules 
+
+** DONE follow-profile-hr
+   CLOSED: [2013-07-14 Sun 12:18]
+
+   Additional arg: start index (i.e. profile can start later)
+
+
+** Revising follow-profile-hr
+
+   - rhythm-profile-BPF-hr depends on the number of variables
+   - If motifs are used, the number of notes can greatly exceed the number of variables, making this rule rather meaningless, because it is unknown how much of the profile is used (if we give a much greater n for the profile than the number of variables)
+
+     Solution: a variant of the existing rule set-end, which disables a rule after a certain number of notes 
+     (set-end is currently only defined for JBS constraints...)
+
+
+** Implement follow-timed-profile-hr
+
+   See [[file:~/PWGL-User/User-library/cluster-rules/sources/melody-rules.lisp::(PWGLDef%20follow-timed-profile-hr][file:~/PWGL-User/User-library/cluster-rules/sources/melody-rules.lisp::(PWGLDef follow-timed-profile-hr]]
+
+
+
+* Other rule ideas
+
+** Discuss with Orjan						    :ARCHIVE:
+
+   Agreed: difficult to fix problem
+
+   profile rules: motifs
+
+   Idea: instead of looking only at the last profile value in the heuristic constrain, always compare that whole partial solution with the profile (up to the current value)
+
+
+
+** Unconventional/algorithmic rules
+
+*** Motifs fitting exactly into one bar (Hans T)
+
+    Have a whole motifs defined so that they fit exactly into a single measure
+
+    Constrain with r-meter-note that any motif starts exactly on a bar
+
+
+*** No notes of different voices starting at same time -- onsets never coincide
+
+    cluster library, tutorial 009b.polyphonic-rhythm 
+
+
+*** Grace notes
+
+    - Control how many grace notes can occur in sequence
+
+    - Specify that grace notes should be coming from a different harmony (e.g., NOT underlying harmony)
+
+
+*** cluster rules tutorial example
+
+    Rules one voice 3: 
+    - Have a certain pitch after a rest, and after that only increase in pitch
+
+    
+
+*** Ready-made rules in cluster library
+
+    Move these into some sub menu of the cluster library menus to make clear that these are just copies from another library
+
+    E.g., rhythm/clusterlibrary/<rule>
+
+**** one voice							    :ARCHIVE:
+
+     r-mel-interval-one-voice -> melody
+
+     r-metric-hierarchy
+
+
+
+**** rules two voices						    :ARCHIVE:
+
+     r-rhythm-hierarchy
+     
+     r-canon -> counterpoint
+
+
+**** Rules of more than two voices				    :ARCHIVE:
+
+     OK r-chords -> harmony
+
+
+**** ?? All of Jacopo's PWGL rules?
+
+     r-jbs-one-voice 
+
+
+** Melodic rules 
+
+*** Max pitch within a window occurs only once
+
+*** Ballistic curve of pitches...
+
+
+** Rhythm rules 
+
+*** Syncopation
+
+    Syncopated notes shorter than notes before ...
+    ..
+
+*** Restrict rest duration
+
+    - Restrict consecutive rest durations
+    - Restrict total number of rests within a certain time window
+    - Restrict accumulated rest duration within a certain time window
+
+
+** !! Heuristic rule -- prefer scale (or chord) roots
+   
+   (Slight) preference for the scale (chord?) PC -- amount of preference controllable with an argument
+
+
+** Strasheela rules 
+
+*** ! Rhythm
+
+**** !! Re-implement Strasheela accent model in cluster engine
+
+     [[file:~/PWGL-User/User-library/cluster-rules/sources/rhythm-rules.lisp::%3B%3B%3B%20Accent%20Model][file:~/PWGL-User/User-library/cluster-rules/sources/rhythm-rules.lisp::;;; Accent Model]]
+
+     Difficult, because I have no meta constraints (no reified constraints), so constraints cannot be combined. 
+     Also, limited score contexts.
+ 
+
+**** Longish note before rest
+
+     or accent before rest..
+
+
+*** Harmony
+
+**** ! Express harmony
+
+     Include all notes of the underlying harmony. Different settings for
+     - At the beginning of the harmony
+     - Over the whole duration of the harmony
+     - For each full beat duration
+     - For each full bar duration
+
+
+**** Control inversions
+
+     Control which tone can be / must not be in the bass (chord root is the 1st tone of any underlying harmony)
+
+
+** Rules inspired by Jacopo
+
+*** !? Morphology rules 
+
+**** Multi-PCM rules
+
+***** Pattern rules
+
+      ptrn-find-rule / not-ptrn-find-rule 
+      
+
+      -> Problem: pattern rules are only checked after solution has certain length
+      
+      Is it possible to check rule partially more early already?
+
+    
+*** Harmony
+
+**** ! Control how often a harmonic interval between two voices can be repeated
+     
+     See s-pmc-not-n-consecutive-harm-int-rule
+
+
+**** ! Control how long two parts can move in the same direction
+
+     See s-pmc-not-n-same-directions-rule
+
+
+**** Avoid simply swapping PCs between voices in succession
+
+     See s-pmc-forbidden-int-relation-between-2-parts-rule
+
+
+**** Control harmonic doublings 
+
+     I.e., which PCs is occurring multiple times
+
+     See s-pmc-preferred-duplicate-rule
+     
+
+**** ? Allowed/disallowed intervals between two voices
+
+     What of this is already covered in my set-harmonic-intervals?
+
+     ? Cover all cases of the following rules?
+
+     s-pmc-intv-between-2-parts-rule, s-pmc-not-intv-between-2-parts-rule
+     s-pmc-smaller-int-between-2-parts-rule, s-pmc-bigger-int-between-2-parts-rule
+
+     (s-pmc-allowed-int-between-a-part-and-others)
+     
+
+**** ? Allowed harmonies 
+
+     Could be used without predefined underlying harmony -- which PC sets (e.g., using forte notation) to allow for in general (either absolute or including transpositions)
+     
+     See s-pmc-allowed-harm-rule
+
+
+**** ? Which harmony can follow which harmony -- quasi markov chain
+
+     See s-pmc-chords-succession-rule
+
+
+**** ?? Forbidden harmonic successions -- s-pmc-forbidden-succession-rule
+
+     A given harmonic interval I1 must not be followed by another harmonic interval I2
+
+     E.g., a tritone should not be followed by a fifth
+
+
+**** ? Restrict harmonic intervals -- s-pmc-allowed-harm-int-rule /  s-pmc-not-allowed-harm-int-rule
+
+    constraint between every part combination
+
+;; given list of allowed harmonic intervals = (0 2 5 7 12 14)
+(:TRUE/FALSE * ?1 :HARMONY
+ (?IF
+  (LET* ((HARMONY (M ?1 :COMPLETE? T))
+         (INTS (G-ABS (PATCH-WORK:FLAT (JBS-CONSTRAINTS:FIND-ALL-INTERVALS HARMONY)))))
+    (IF INTS (EVERY #'(LAMBDA (X) (MEMBER X '(0 2 5 7 12 14))) INTS) T))))
+
+
+**** !! Set min (max, equal) number of different PCs		    :ARCHIVE:
+
+     See s-pmc-all-notes-included-rule, [[file:~/PWGL-User/User-library/jbs-constraints/score-pmc-boxes.lisp::(define-box%20s-pmc-all-notes-included-rule%20((all-notes%203)][file:~/PWGL-User/User-library/jbs-constraints/score-pmc-boxes.lisp::(define-box s-pmc-all-notes-included-rule ((all-notes 3)]]
+
+     Together with constraints requiring to follow harmony this allows to require that the underlying harmony is expressed 
+     
+     ?? Implicit restriction -- max number of PCs should not be larger than number of sim voices?
+
+     When to apply constraint
+     - At any moment in the score (whenever a new note starts)
+     - For each full beat duration
+     - For each full bar duration     
+     - At the beginning of a new harmony
+     - Over the whole duration of a harmony
+
+     ? Have number of PCs controlled with BPF -- that would only work if underlying harmony allows for that, but could be useful 
+
+
+*** Melody							    :ARCHIVE:
+
+**** The [accumulative] interval between the pitches of N notes is smaller / greater than interval I
+
+     I can be controlled with BPF
+
+     ;; for N = 3 and Interval = 11
+     PWGL-> (:HEURISTIC * ?1 ?2 ?3 (?IF (IF (NOT (> (ABS (- (M ?3) (M ?1))) 11)) 1 0)))
+     PWGL-> (:TRUE/FALSE * ?1 ?2 ?3 (?IF (NOT (> (ABS (- (M ?3) (M ?1))) 11))))
+
+     Note: this implementation only works for interval between notes with distance N, but not anything in between 
+     E.g., in case N is 3, then the interval between direct neighbours can exceed the given interval
+     (this could be avoided by constraining all combinations of consecutive intervals up to N)
+
+
+**** set-intervals: No more / at least / exactly N notes of given voice(s) ascending/descending/in same direction :ARCHIVE:
+
+     s-pmc-n-ascending-rule
+
+     N can be controlled with BPF
+
+     N = 4
+     (:TRUE/FALSE * ?1 ?2 ?3 ?4 (?IF (NOT (< (M ?1) (M ?2) (M ?3) (M ?4)))))
+
+
+**** restrict-consecutive-directions: Disallow/require certain melodic intervals (intervals given as list) :ARCHIVE:
+
+     see s-pmc-allowed-interval-rule
+
+     special arg sets whether intervals are absolute (up or down) or only for given direction (pos or neg)
+
+
+     (:TRUE/FALSE * ?1 ?2 (?IF (MEMBER (ABS (- (M ?2) (M ?1))) (QUOTE (1 2 3)))))
+
+
+**** resolve-skips: Resolve skips 				    :ARCHIVE:
+
+    If there is a skip >= than set interval SKIP, then the next interval should be <= set interval RESOLUTION (in the opposite direction ?)
+ 
+;; for SKIP=5 and RESOLUTION=2   
+(:TRUE/FALSE * ?1 ?2 ?3
+ (?IF 
+  (LET ((INT1 (- (M ?2) (M ?1))) 
+        (INT2 (- (M ?3) (M ?2))))
+    (IF (< (ABS INT1) 5)
+        T
+      (AND (< (ABS INT2) 2) (NOT (= (SIGNUM INT1) (SIGNUM INT2))))))))
+
+
+*** Counterpoint						    :ARCHIVE:
+
+**** No open parallels -- S-PMC-NO-OPEN-PARALLEL-RULE		    :ARCHIVE:
+
+;; intervals here (0 7) 
+
+(:TRUE/FALSE * ?1
+ :HARMONY
+ (?IF
+  (LET ((MAT (MATRIX-ACCESS (M ?1 :VL-MATRIX T) :H)))
+    (IF MAT
+        (DESTRUCTURING-BIND (M11 M12) (FIRST MAT)
+          (IF (/= M11 M12)
+              (NOT (FIND-IF #'(LAMBDA (MEL2)
+                                (DESTRUCTURING-BIND (M21 M22) MEL2
+                                  (LET ((HINT1 (MOD12 (ABS (- M11 M21))))
+                                        (HINT2 (MOD12 (ABS (- M12 M22)))))
+                                    (AND (/= M21 M22)
+                                         (MEMBER HINT1 '(0 7))
+                                         (= HINT1 HINT2)))))
+                            (REST MAT)))
+            T))
+      T))))
+
+
+
+**** Hidden parallels -- s-pmc-hidden-parallel-rule		    :ARCHIVE:
+
+
+*** Utils
+
+**** Meta rule: logic or
+
+     See s-pmc-logic-or-condition
+
+
+*** Follow existing energy profile 
+
+    Implemented simply with "unification" 
+
+
+
+
+    
+* All rules already in my patches 
+
+** Collect rule ideas mentioned in TODO lists there here
+   
+   Rhythmic constraints
+   - Restrict rests, e.g.,
+     - Accent before rest
+     - Longer rests only at the very beginning
+
+
+*** Todo -- Rhythmic constraints
+
+- ! Less rigid underlying pulse. E.g., try different meter, or define underlying pulse by extra silent voice implementing some accellerating pulse. All notes of the solution must then fall onto start of a note within that extra voice.
+
+- Generalise accent constraint implementation
+- Revise/test/fix only-simple-tuplet-offs
+
+- ! Renaissance-inspired texture: 
+  - Add rest at beginning of one voice with index rule.
+  - Multiple parts controlled with similar rhythm-profile-hr
+
+
+*** Todo -- Polyphonic template
+
+- Shape melodic shapes 
+  - ? Some of Jacopo's mophology constraints? 
+    - Avoid pitch repetition, ...
+  - Prefer steps
+  - Follow BPF
+
+- Add rhythmic constraints
+
+- ? Counterpoint constraints like avoid parallel 5th
+
+- ? Restructure constraints -- somehow avoid copying PWGL boxes...
+  OK?
+
+
+*** Todo -- Renaissance-inspired texture
+
+- Layers with rhythmic offset (some voices starting with rests 
+  with index rule), 
+  but similar rhythmic profile (BPF)
+
+- Rhythm:
+  - accent before rest
+  - !? long rests only at beginning
+
+- ?? Harmonic rhythm roughly follows rhythmic profile, but much more slowly
+  Problem: how to keep chords and scales aligned? 
+  ... no problem if there is only a single scale -- use that instead for
+  restricting pitch domain
+
+- Melodic constraints
+  - OK (part of min/max-interval) ? Heuristic: prefer smaller steps (but randomise that)
+  - ? The shorter the note values the smaller the max interval
+  - ? Ballistic curve
+  - !? Control interval between local max? In particular high local max...
+
+- Shape melodic shapes 
+  - ? Some of Jacopo's mophology constraints? 
+    - Avoid pitch repetition, ...
+  - Prefer steps
+  - OK Follow BPF
+
+- ? Counterpoint constraints like avoid parallel 5th
+
+
+*** Todo -- Tintinnabuli (implemented for any harmony)
+    
+    From [[file:///Users/torsten/Compositions/0-PieceForStringOrchestra/PWGL/Sketches/Tintinnabuli.pwgl][Tintinnabuli.pwgl]] 
+
+**** Generalise tintinnabuli voice constraints
+     Doing the below in terms of software developmemt is easy -- think how to musically use this!
+    - M voice: allow for slightly larger skips (e.g., up to maj 3d?) -- concider this variable..
+    - T voice: control pitch with BPF?
+    - ! Allow T voice and M voice to be pretty independent rhythmically, e.g.,
+      - M-voice (very) slow like a cantus (i.e. stands out) -- by allowing for non-harmonic tones can form a  rich melody in terms of its [Tonvorrat]
+      - T-voice much faster, like a figuration -- accompaniment (not Paert's ideal anymore, I guess, but in my own mind allow for that) 
+      - There can be multiple somehow dependent or independent T-voices
+      - M-voice and T-voice in different beat subdivisions or otherwise clearly separate
+
+
+**** Form
+    - ! Somehow get an overall development of form (e.g., pitches for an arch)
+
+**** Rhythm
+    - Rather simple rhythm, quasi homophonic -- rhythmic hierarchy
+    - Rhythmic motifs
+    - Somehow break down into phrases 
+      (use this patch to generate single phrase?)
+
+**** Accent constraints
+    - Have dissonances on 1st beats of bars
+    - ? Allow/force irregular meter changes
+
+**** Melodic constraints
+    - ? pitch profile?
+    - OK No repetition of pitches within three successive mel notes
+    - OK Limit max step size for T voices
+    - Limit max (min?) pitch (which voices??), and require that this pitch is included towards the end 
+
+**** Constraint between parts
+    - ? Closely restrict range of intervals allowed between parts (9th-10th in case of Pärt)
+    - ?? Counterpoint rules like no parallel 5th?
+
+
+**** Texture 
+    - when going beyond 2 voices -- consider some texture dependencies (imitations), e.g., defined with heuristic profiles
+
+
+**** OLD
+
+- Rhythm:
+  - accent before rest
+  - !? long rests only at beginning
+
+- ?? Harmonic rhythm roughly follows rhythmic profile, but much more slowly
+  Problem: how to keep chords and scales aligned? 
+  ... no problem if there is only a single scale -- use that instead for
+  restricting pitch domain
+
+- Melodic constraints
+  - ? Heuristic: prefer smaller steps (but randomise that)
+  - ? The shorter the note values the smaller the max interval
+  - ? Ballistic curve
+  - !? Control interval between local max? In particular high local max...
+
+- ? Shape melody 
+  - ? Some of Jacopo's mophology constraints? 
+    - Avoid pitch repetition, ...
+  - Prefer steps
+  - Follow BPF
+
+- ? Counterpoint constraints like avoid parallel 5th
+
+
+***** Harmony
+     - OK Avoid empty 5th and 4th in two-voice counterpoint
+
+
+** DONE Collect all rules listed there here centrally
+   CLOSED: [2013-06-20 Thu 16:57]
+
+   in [[file:///Users/torsten/Compositions/0-PieceForStringOrchestra/PWGL/Sketches/Tintinnabuli.pwgl][Tintinnabuli.pwgl]]
+
+   - rhythmic-profile-poly (so far I only included the monophonic version)
+
+   - OK start-with-rest
+
+   - OK durations-control-intervals: [[file:~/PWGL-User/User-library/cluster-rules/sources/melody-rules.lisp::(PWGLDef%20durations-control-intervals%20((voices%200)][file:~/PWGL-User/User-library/cluster-rules/sources/melody-rules.lisp::(PWGLDef durations-control-intervals ((voices 0)]]
+
+   - OK no-empty-sim-consonances-2parts: [[file:~/PWGL-User/User-library/cluster-rules/sources/harmony-rules.lisp::#|%20%3B%3B%20unfinished][file:~/PWGL-User/User-library/cluster-rules/sources/harmony-rules.lisp::#| ;; unfinished]]
+
+   - OK tintinnabuli-rules-T-poly
+   - OK tintinnabuli-rules-M-poly
+   - OK no-repetition
+
+
+
+* ! Define rule(s) for following list of values
+
+** TODO Allow rhythms/pitches from given score to be transformed in various ways
+
+   Ways to compress music by reducing number of notes, e.g., removing 
+   - shorter notes
+   - lower notes
+   - ? last note of voice or each bar 
+   - ... (condition defined by function)
+
+   ? Ways to expand music -- opposite of above    
+   
+   !? Slight randomisation
+
+   Bending (e.g., adding/multiplying some BPF value to either rhythmic values or pitches)
+
+
+** DONE Interface sketch
+   CLOSED: [2013-06-20 Thu 16:47]
+
+   name: follow values
+
+   [values]: 
+   either 
+   - list of numbers (ints, floats or ratios)
+   - list of list of numbers
+   - (part of a?) score -- either give it part/voice number or extract that voice
+   - BPF (including multiple BPF)
+
+   params: menu with entries rhythms, pitches, and rhythms+pitches
+
+   n: int -- only first n elements are used, rest is ignored. For BPF arg, this is used for sampling BPF
+
+   Key args:
+
+   heuristic/strict: default is heuristic
+   weight 
+
+   map: function or abstraction expecting a number and returning a number
+   transform: function or abstraction expecting a list and returning a list
+   constrain: menu: values, intervals, directions  
+
+   If both pitch and rhythm should be followed and the args map, transform or constrain should be used, then consider using two instances of this constraint to control pitches and rhythms independently
+
+
+** DONE Either pitches, rhythm or both follow a given list of pitches/rhythms 
+   CLOSED: [2013-06-20 Thu 16:46]
+
+   - Heuristic rule: the closer the pitch/rhythmic value in solution voice is to given voice the better 
+
+   - More abstract variants: heuristic rules where
+     - pitch / rhythmic value intervals follow intervals of given list
+     - directions (contour) follow directions 
+
+
+** DONE Voice of a given score extracted and transformed into list as above   
+   CLOSED: [2013-06-20 Thu 16:46]
+
+
+* !! Define rule to follow underlying irregular metric grid
+
+  See draft at [[file:///Users/torsten/PWGL-User/User-library/cluster-rules/TODO/accent-model-over-rhythm-voice.pwgl][accent-model-over-rhythm-voice.pwgl]]
+
+  Metric grid defined by extra voice in resulting score: each note represents a strong beat (even different strength of beat could be represented with different pitches)
+
+  Rule implements (simplified form) of accent model where accents fall on strong beats are represented by that extra voice
+
+  See also [[*!!%20Re-implement%20Strasheela%20accent%20model%20in%20cluster%20engine][!! Re-implement Strasheela accent model in cluster engine]]
+
+** Old								    :ARCHIVE:
+
+  First check out Orjan's already existing ways to tweak the accent structure of certain time signatures. 
+  -> Different beat duration can be defined, but beat dur is always regular
+
+  However, likely this is not flexible enough (e.g., for different claves different accent structures of the same time signature are needed).
+
+
+* Incorporate Orjan's test-seq-follows-markov-chain? as rule
+
+  Code already in clusterengine
+
+
+
+* Update terminology: rules..
+
+  rules, rule applicators and applied rules
+
+  - Explain terminology in doc
+  - Document each def what it is..
+
+

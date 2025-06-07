@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+harmony-rules</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="melody-rules.html">
+Prev:&nbsp;melody-rules</a>
+<br/>
+<a href="counterpoint-rules.html">
+Next:&nbsp;counterpoint-rules</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+harmony-rules</b>
+<br/>
+<a href="../index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+harmony-rules
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181795">
+chord-pc-at-1st-tone-hack</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (chords nil) (voices 2) (input-mode :position-for-pitches) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181794">
+chord-tone-before/after-rest</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181797">
+chord-tone-follows-non-chord-tone</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181790">
+in-harmony?</a>
+</td>
+<td class="summary">
+pitches</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181793">
+long-notes-chord-pcs</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 2) (max-nonharmonic-dur 1) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181802">
+min/max-harmonic-interval</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices '(0 1)) (min-interval nil) (max-interval nil) (input-mode :beat) (combinations :consecutive-voices) (gracenotes? :include-gracenotes) (timepoints '(0)) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181800">
+number-of-sim-pcs</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (pc-number 2) (condition :min) (rests-mode :reduce-no) (voices '(0 1)) (timepoints '(0)) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181792">
+only-chord-pcs</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181791">
+only-scale-pcs</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (scale-voice 0)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181789">
+pc-member</a>
+</td>
+<td class="summary">
+pitch1 pitches2</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181801">
+set-harmonic-intervals</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices '(0 1)) (intervals nil) (pcs? :pitches) (exclude/only :only-given) (combinations :over-bass) (input-mode :beat) (gracenotes? :include-gracenotes) (timepoints '(0)) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181796">
+stepwise-non-chord-tone-resolution</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 2) (step-size 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181803">
+tintinnabuli-m-voice</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (max-interval 2) (rule-type :true/false) (weight 1) (scale-voice 0)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181804">
+tintinnabuli-t-voice</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (min-interval 0) (max-interval 12) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181799">
+unequal-sim-pcs</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="harmony-rules.html#_g181798">
+unequal-sim-pcs-aux</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1)</td>
+</tr>
+</table>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181789">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+pc-member&nbsp;&nbsp;</td>
+<td class="lambda-list">
+pitch1 pitches2</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns T if the PC of pitch1 is a member in the PC set of pitches2. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181790">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+in-harmony?&nbsp;&nbsp;</td>
+<td class="lambda-list">
+pitches</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+The PC of (first pitches) is in the PCs of (second pitches). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181791">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+only-scale-pcs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (scale-voice 0)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Tones (PC) in the given voice must be a member of the underlying scale (its PCs). The scale is represented as a simultaneous chord in another voice (voice 0 by default). I is either given directly to the clusterengine's pitch domain of that scale voice, or using read-harmony-file, or controlled with other constraints on that voice. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the voice(s) to which this constraint is applied. 
+ </p>
+<p>
+Optional args: 
+ scale-voice (int, default 0): the voice representing the underlying scale. 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181792">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+only-chord-pcs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Tones (PC) in the given voice must be a member of the underlying chord (its PCs). The chord is represented as a simultaneous chord in another voice (voice 1 by default). I is either given directly to the clusterengine's pitch domain of that scale voice, or using read-harmony-file, or controlled with other constraints on that voice. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the voice(s) to which this constraint is applied. 
+ </p>
+<p>
+Optional args: 
+ chord-voice (int, default 1): the voice representing the underlying chord. 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. For example, it is possible to control whether this constraint should be applied to all notes, or only specific notes (input-mode). By default, it is applied to notes starting on a beat. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181793">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+long-notes-chord-pcs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 2) (max-nonharmonic-dur 1) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Every note in the given voice(s) with a duration exceeding max-nonharmonic-dur (on any metric position) must be a harmonic tone: the PC of such notes must be a member of the underlying chord (its PCs). The chord is represented as a simultaneous chord in another voice (voice 1 by default). I is either given directly to the clusterengine's pitch domain of that scale voice, or using read-harmony-file, or controlled with other constraints on that voice. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the voice(s) to which this constraint is applied. 
+ max-nonharmonic-dur (int): the maximum duration for which non-harmonic pitches are permitted. 
+ </p>
+<p>
+Optional args: 
+ chord-voice (int, default 1): the voice representing the underlying chord. 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. For example, it is possible to control whether this constraint should be applied to all notes, or only specific notes (input-mode). By default, it is applied to notes starting on a beat. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181794">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+chord-tone-before/after-rest&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Tones (PC) in the given voice(s) after a rest must be a member of the underlying chord PCs. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the voice(s) to which this constraint is applied. 
+ </p>
+<p>
+Optional args: 
+ chord-voice (int, default 1): the voice representing the underlying chord. 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181795">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+chord-pc-at-1st-tone-hack&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (chords nil) (voices 2) (input-mode :position-for-pitches) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+HACK: The very first tone (PC) in given voice(s) number must be a member of the first of the given chords (the list of list of chords from read-harmony-file). 
+ </p>
+<p>
+NOTE: an index variant for a pitch-pitch constraint (which could access the sim chord PCs) is not available, therefore this workaround. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181796">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+stepwise-non-chord-tone-resolution&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 2) (step-size 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Every tone (PC) that is not a chord tone (member of sim chord PCs, in voice 1 by default) is reached/left by a step of the given step size. 
+ </p>
+<p>
+Args: 
+ step-size (int): maximum interval considered a step. 
+ voices (int or list of ints): the voice(s) to which this constraint is applied. 
+ </p>
+<p>
+Optional args: 
+ chord-voice (int, default 1): the voice representing the underlying chord. 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181797">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+chord-tone-follows-non-chord-tone&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 2) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Every tone (PC) that is not a chord tone (member of sim chord PCs, in voice 1 by default) is followed by a chord tone. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the voice(s) to which this constraint is applied. 
+ </p>
+<p>
+Optional args: 
+ chord-voice (int, default 1): the voice representing the underlying chord. 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181798">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+unequal-sim-pcs-aux&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+[Quasi aux def] The PCs of the 1st given voice are unequal to the sim PCs of the remaining voices. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181799">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+unequal-sim-pcs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Sim PCs in all given voices are unequal to each other. 
+ </p>
+<p>
+Arguments are inherited from r-pitch-pitch. 
+ </p>
+<p>
+TODO: Revise this definition -- can the interplay with unequal-sim-PCs-aux be simplified? 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181800">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+number-of-sim-pcs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (pc-number 2) (condition :min) (rests-mode :reduce-no) (voices '(0 1)) (timepoints '(0)) (input-mode :all) (gracenotes? :include-gracenotes) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Controls the number of simultaneous pitch classes. Useful, for example, to require that some underlying harmony is expressed. 
+ </p>
+<p>
+Args: 
+ PC-number (int): the number of the simultaneous PCs. The meaning of this setting depends on the argument condition. 
+ condition: Whether the number of simultaneous pitch classes should be at least the given PC-number (:min), or exactly that number (:equal), or at most that number (:max). 
+ rests-mode: If set to <span class="keyword">
+:reduce-no, </span>
+then the number of simultaneous pitch classes is subtracted from PC-number. For example, if there is only a single tone at a certain time and all other voices have rests, this rule can still be fulfilled. By contrast, if rests-mode is set to <span class="keyword">
+:ignore, </span>
+then the remaining simultaneous pitch classes must still fullfil the condition expressed by the arguments PC-number and condition. 
+ voices: the list of voices to which the rule is applied. 
+ 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181801">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+set-harmonic-intervals&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices '(0 1)) (intervals nil) (pcs? :pitches) (exclude/only :only-given) (combinations :over-bass) (input-mode :beat) (gracenotes? :include-gracenotes) (timepoints '(0)) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts the harmonic intervals between all combinations of the given voices to only (or not) those intervals specified. For example, 'empty' perfect consonances in two-voice counterpoint can be excluded with this rule. 
+ </p>
+<p>
+Args: 
+ intervals (list of ints): Specified intervals. 
+ pcs?: whether absolute intervals or PC intervals should be used. 
+ exclude/only: Controls whether to only use the given intervals (:only-given), or whether to only use intervals that are not given (:exclude-given). 
+ combinations: Controls whether to constrain only intervals between the bass and a higher voice (:over-bass), between pairs of consecutive voices such as soprano-alto, alto-tenor etc. (:consecutive-voices), or between all voice combinations (:all-combinations). 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181802">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+min/max-harmonic-interval&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices '(0 1)) (min-interval nil) (max-interval nil) (input-mode :beat) (combinations :consecutive-voices) (gracenotes? :include-gracenotes) (timepoints '(0)) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Limit the minimum/maximum harmonic interval of simultaneous notes between given voices. 
+ </p>
+<p>
+Args: 
+ voices (list of ints): the voices to constrain. 
+ min-interval (number or NIL): minimum interval in semitones. Ignored if NIL. 
+ max-interval (number or NIL): maximum interval in semitones. Ignored if NIL. 
+ combinations: Controls whether to constrain only intervals between the voice with highest note number and other voices (:over-bass), between pairs of consecutive voices such as soprano-alto, alto-tenor etc. (:consecutive-voices), or between all voice combinations (:all-combinations). 
+ </p>
+<p>
+Other arguments are inherited from r-pitch-pitch. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181803">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+tintinnabuli-m-voice&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (max-interval 2) (rule-type :true/false) (weight 1) (scale-voice 0)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Rules for a tintinnabuli M-voice, inspired by Arvo Pärt (slightly generalised, because this rule is applicable over any harmony). The voice consists only of scale ;TODO: ones that move stepwise (max interval is whole tone). 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the number of the voice(s) to constrain. 
+ </p>
+<p>
+Optional: 
+ max-interval (default 2): maximum interval in semitones. 
+ scale-voice (default 0): the voice representing the underlying scale. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181804">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+tintinnabuli-t-voice&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (min-interval 0) (max-interval 12) (rule-type :true/false) (weight 1) (chord-voice 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Rules for a tintinnabuli T-voice, inspired by Arvo Pärt (slightly generalised, because this rule is applicable over any harmony). The voice consists only of chord tones, and the minimum/maximum interval size can be controlled. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): the number of the voice(s) to constrain. 
+ </p>
+<p>
+Key args: 
+ min-interval (default 3): minimum interval in semitones. 
+ max-interval (default 12): maximum interval in semitones. 
+ chord-voice (default 1): the voice representing the underlying chord. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2017-08-26 22:25:25</div>
+</body>
+</html>

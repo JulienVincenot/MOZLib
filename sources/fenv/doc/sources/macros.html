@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+macros</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="make-package.html">
+Prev:&nbsp;make-package</a>
+<br/>
+<a href="fenv.html">
+Next:&nbsp;fenv</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+macros</b>
+<br/>
+<a href="../index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+macros
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232578">
+constant-segements-fenv-fn</a>
+</td>
+<td class="summary">
+points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232576">
+expon-fenv-fn</a>
+</td>
+<td class="summary">
+points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232570">
+linear-fenv-fn</a>
+</td>
+<td class="summary">
+points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232572">
+sin-fenv-fn</a>
+</td>
+<td class="summary">
+points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232574">
+sin-fenv1-fn</a>
+</td>
+<td class="summary">
+points</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Macro summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232579">
+constant-segements-fenv</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232577">
+expon-fenv</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232571">
+linear-fenv</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232573">
+sin-fenv</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> points</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="macros.html#_g232575">
+sin-fenv1</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> points</td>
+</tr>
+</table>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232570">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+linear-fenv-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+points</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232572">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+sin-fenv-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+points</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a fenv which interpolates the given points by a sin function. Using only the intervals [0,pi/2] and [pi, 3pi/4] results in edges. Expects a list of x-y-pairs as (0 y1) ... (1 yn). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232574">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+sin-fenv1-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+points</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a fenv which interpolates the given points by a sin function without clear edges. Expects a list of x-y-pairs as (0 y1) ... (1 yn). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232576">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+expon-fenv-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+points</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a fenv described be exponential functions. Expects a list of x-y-pairs as (0 y1) ... (1 yn). y values can not be negative. 
+ </p>
+<p>
+BUG: Definition wrong -- slope completely bogus! 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232578">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+constant-segements-fenv-fn&nbsp;&nbsp;</td>
+<td class="lambda-list">
+points</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232571">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+linear-fenv&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> points</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines an fenv which interpolates the given points by a linear function. Expects a list of x-y-pairs as (0 y1) ... (1 yn) 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232573">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+sin-fenv&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> points</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines an fenv which interpolates the given points by a sin function. Using only the intervals [0,pi/2] and [pi, 3pi/4] results in edges. Expects a list of x-y-pairs as (0 y1) ... (1 yn). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232575">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+sin-fenv1&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> points</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines an fenv which interpolates the given points by a sin function without clear edges. Expects a list of x-y-pairs as (0 y1) ... (1 yn). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232577">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+expon-fenv&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> points</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines an envelope described be exponential functions. Expects a list of x-y-pairs as (0 y1) ... (1 yn). y values can not be negative. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g232579">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+constant-segements-fenv&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> points</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Defines an fenv that consists of constant segments, like a steps function or sample and hold. Expects a list of x-y-pairs as (0 y1) ... (1 yn). 
+ </p>
+<p>
+NOTE: The last y value is ignored. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2018-11-01 16:42:53</div>
+</body>
+</html>

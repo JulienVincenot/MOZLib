@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+melody-rules</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="rhythm-rules.html">
+Prev:&nbsp;rhythm-rules</a>
+<br/>
+<a href="harmony-rules.html">
+Next:&nbsp;harmony-rules</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+melody-rules</b>
+<br/>
+<a href="../index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+melody-rules
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181777">
+compose-functions</a>
+</td>
+<td class="summary">
+<em>&amp;rest</em> funs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181785">
+durations-control-intervals</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (rel-factor 32) (acc-factor 2) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181776">
+follow-profile-hr</a>
+</td>
+<td class="summary">
+profiles <em>&amp;key</em> (voices 0) (n 0) (mode :pitch) (constrain :profile) (start 0) (weight-offset 0)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181775">
+follow-timed-profile-hr</a>
+</td>
+<td class="summary">
+profile <em>&amp;key</em> (voices 0) (profile-duration 1) (start 0) (end nil) (mode :pitch) (constrain :profile) (gracenotes? :normal) (interpolate-score? :no) (weight-offset 0)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181778">
+mp-add-offset</a>
+</td>
+<td class="summary">
+offset</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181779">
+mp-multiply</a>
+</td>
+<td class="summary">
+factor</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181781">
+no-direct-repetition</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181782">
+no-repetition</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (window 2) (mode :pitches) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181787">
+resolve-skips</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (skip-size 6) (resolution-size 2) (repetition? :disallow) (voices 0) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181786">
+restrict-consecutive-directions</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (n 4) (direction :either) (voices 0) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181784">
+set-intervals</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (intervals nil) (absolute? :absolute) (mode :only-given) (voices 0) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181783">
+set-pitches</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (pitches nil) (pcs? :pitches) (mode :only-given) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181774">
+total-omn-duration</a>
+</td>
+<td class="summary">
+sequence</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181780">
+trfm-reverse</a>
+</td>
+<td class="summary">
+min max</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181773">
+_direction-int</a>
+</td>
+<td class="summary">
+x1 x2</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="melody-rules.html#_g181772">
+_number-list?</a>
+</td>
+<td class="summary">
+x</td>
+</tr>
+</table>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181772">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+_number-list?&nbsp;&nbsp;</td>
+<td class="lambda-list">
+x</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+[aux fun] Returns T if x is a list of numbers. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181773">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+_direction-int&nbsp;&nbsp;</td>
+<td class="lambda-list">
+x1 x2</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+[aux fun] Encodes the direction of the interval between x1 and x2 as integer. An interval 'upwards' (the predecessor is smaller than the successor) is represented by 2, an 'horizontal' interval (the predecessor and the successor are equal) is represented by 1, and an interval 'downwards' by 0. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181774">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+total-omn-duration&nbsp;&nbsp;</td>
+<td class="lambda-list">
+sequence</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns the total duration (length) of `sequence', i.e. the sum of the length of all its notes and rests. 
+ </p>
+<p>
+Example: 
+ </p>
+<pre>
+    (total-duration '((h c4 q) (q h tie) (h.))) 
+     =&gt; 9/4 </pre>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181775">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+follow-timed-profile-hr&nbsp;&nbsp;</td>
+<td class="lambda-list">
+profile <em>&amp;key</em> (voices 0) (profile-duration 1) (start 0) (end nil) (mode :pitch) (constrain :profile) (gracenotes? :normal) (interpolate-score? :no) (weight-offset 0)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Heuristic rule. The pitches or rhythmic values of the resulting music follow the given profile, taking the timing of the profile into account. For example, with profile-duration set to 2 the profile (a fenv) ranges from 0 to 2 so that the fenv describes a profile over 2 whole notes. 
+ </p>
+<p>
+Args: 
+ </p>
+<ul>
+<li>
+<p>
+profile (a list of numbers, a fenv or -- when using Opusmodus -- an OMN sequence): Specifies the profile that should be followed. A list of numbers is translated into a fenv with equidistant points. If an OMN expression contains chords, then only the first chord note is extracted. If a list of profiles is specified, then these are used to constrain multiple given different voices. In this case, the number of profiles, and the number of specified voices to constrain must match. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+voices (int or list of ints): The voice(s) to which the constraint is applied. If multiple profiles are given, then a different voice for each profile should be specified. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+profile-duration (number): The overall duration of the profile. Even if the profile is specified as OMN expression with rhythmic values, by default the profile lasts for a whole tone (1/1) -- all rhythmic values are streched/shrinked accordingly. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+start / end (number or list of numbers): At which time point to start / end applying this rule. A start time greater zero has the effect that the profile is shifted in time to start at the specified time. An end time smaller than the duration of the profile has the effect that the part of the profile behind the set end is cut off. If end is NIL (the default) then the full profile duration is used. 
+ start and end can both also be a list of start/end values to specify different values for different voices. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+mode: Select whether to constrain the rhythmic values (rhythm) or the pitches (pitch). If you want to constrain both, then simply use two instances of this rule with different mode settings. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+constrain: Select whether pitch/rhythm should follow the profile directly, or whether pitch/rhythm intervals should follow the intervals between profile, or pitch/rhythm directions should follow the directions of profile intervals. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+interpolate-score? (only relevant if profile is an OMN expression): Specifies whether score pitches or durations should be hold for their whole duration in the profile (sample-and-hold format), or whether between these values should be interpolated (zick-zack format). 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+weight-offset (int): offset to the heuristic weight of this rule (the higher the offset, the more important this rule becomes compared with other heuristic rules). 
+ </p>
+</li>
+</ul>
+<p>
+Other arguments are inherited from hr-rhythm-pitch-one-voice. 
+ </p>
+<p>
+Note: If this rule is used with pitch/rhythm motifs, then only the selection of the 1st motif note is controlled by the rule. 
+ </p>
+<p>
+BUG: 
+ A profile as OMN expression with leading rests not yet properly supported. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181776">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+follow-profile-hr&nbsp;&nbsp;</td>
+<td class="lambda-list">
+profiles <em>&amp;key</em> (voices 0) (n 0) (mode :pitch) (constrain :profile) (start 0) (weight-offset 0)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Heuristic rule. The pitches or rhythmic values of the resulting music follow the given profile. 
+ </p>
+<p>
+Args: 
+ </p>
+<p>
+</p>
+<ul>
+<li>
+<p>
+profile (a list of numbers, a fenv, or -- when using Opusmodus -- an OMN sequence, or a list of any of these): Specifies the profile to be followed. In case an OMN sequence contains chords, then only the first chord note is extracted. In case a fenv is given, then that fenv is sampled (n equidistant samples) and the y values are used. If multiple profiles are given, they are applied to the given voices in the same order. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+voices (int or list of ints): The voice(s) to which the constraint is applied. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+n (int): The first n notes are affected (if n is greater than the length of profile, then that length is taken). If 0, then n is disregarded and the full length of the profile is used. NOTE: if the profile is a fenv then make sure n is greater than 0. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+mode: Select whether to constrain either the rhythmic values (rhythm) or the pitches (pitch). If you want to constrain both, then simply use two instances of this rule with different mode settings. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+constrain: Select whether pitch/rhythm should follow the profile directly, or whether pitch/rhythm intervals should follow the intervals between profile, or pitch/rhythm directions should follow the directions of profile intervals. 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+start (int): At which note position to start applying this rule (zero-based). 
+ </p>
+</li>
+</ul>
+<ul>
+<li>
+<p>
+weight-offset (int): offset to the heuristic weight of this rule (the higher the offset, the more important this rule becomes compared with other heuristic rules). 
+ </p>
+</li>
+</ul>
+<p>
+Note: If this rule is used with pitch/rhythm motifs, then only the selection of the 1st motif note is controlled by the rule (in future it would be nice to control the average pitch/rhythm of motifs, but that would require different rule applicators). 
+ </p>
+<p>
+BUG: mode <span class="keyword">
+:rhythm </span>
+not yet working. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181777">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+compose-functions&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;rest</em> funs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Expects any number of mapping or transformation functions and composes these into a single function that can be given to pitch-profile-hr or rhythm-profile-hr. The functions will be called in their given order. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181778">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mp-add-offset&nbsp;&nbsp;</td>
+<td class="lambda-list">
+offset</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a mapping function for pitch-profile-hr or rhythm-profile-hr. offset is added to the original value. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181779">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mp-multiply&nbsp;&nbsp;</td>
+<td class="lambda-list">
+factor</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a mapping function for pitch-profile-hr or rhythm-profile-hr. factor is multiplied to the original value. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181780">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+trfm-reverse&nbsp;&nbsp;</td>
+<td class="lambda-list">
+min max</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a transformation function for pitch-profile-hr or rhythm-profile-hr. The original value sequence is reversed. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181781">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-direct-repetition&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Disallows any direct pitch repetition. 
+ </p>
+<p>
+Args: 
+ voices: the number of the voice(s) to constrain. 
+ </p>
+<p>
+Optional arguments are inherited from r-pitches-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181782">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-repetition&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (window 2) (mode :pitches) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Disallows pitch repetitions within a window of a give number of notes. 
+ </p>
+<p>
+Args: 
+ voices: the number of the voice(s) to constrain. 
+ window: the number of notes among which no repetition should happen (if this is larger than the currently available number, then simply the available notes are taken). 
+ mode: whether to disallow repeated pitches (:pitches) or pitch classes (:pcs). 
+ </p>
+<p>
+Optional arguments are inherited from r-pitches-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181783">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+set-pitches&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (pitches nil) (pcs? :pitches) (mode :only-given) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts the pitches to the pitches or PCs specified. 
+ </p>
+<p>
+Args: 
+ pitches (list of ints): Specified pitches. 
+ pcs?: use absolute pitches or pitch classes? 
+ mode: Controls whether to only use the given intervals (:only-given), or whether to only use intervals that are not given (:exclude-given). 
+ </p>
+<p>
+Other arguments are inherited from R-pitches-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181784">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+set-intervals&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (intervals nil) (absolute? :absolute) (mode :only-given) (voices 0) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts the melodic intervals to those intervals specified. 
+ </p>
+<p>
+Args: 
+ intervals (list of ints): Specified intervals. 
+ absolute?: Controls whether the direction of the intervals is taken into account. The direction can be specified with a sign (positive for upwards, negative for downwards). If absolute? is set to <span class="keyword">
+:absolute, </span>
+then the specified intervals can be used for any direction. By contrast, <span class="keyword">
+:up/down </span>
+takes the sign of the given intervals into account. 
+ mode: Controls whether to only use the given intervals (:only-given), or whether to only use intervals that are not given (:exclude-given). 
+ </p>
+<p>
+Other arguments are inherited from R-pitches-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181785">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+durations-control-intervals&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (rel-factor 32) (acc-factor 2) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Pitch intervals and durations are lineary related. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): The voice(s) to which the rule is applied. 
+ </p>
+<p>
+rel-factor (relation factor): the interval is about the duration times rel-factor. 
+ </p>
+<p>
+acc-factor (accuracy factor): factor how much the interval can deviate from that relation above and below. 
+ </p>
+<p>
+Examples: If rel-factor is 1 and acc-factor is also one, then the duration of a note would need to be the same as the interval starting at it (e.g., duration = 2 and interval is 2). If rel-factor is 32 and acc-factor is 2 (the defaults) the the interval can be any value between duration*32/2 and duration*32*2. 
+ </p>
+<p>
+Optional arguments are inherited from r-rhythm-pitch-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181786">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+restrict-consecutive-directions&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (n 4) (direction :either) (voices 0) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This rule controls how many consecutive intervals can be ascending or descending. At most n notes can be connected by intervals of the same direction. 
+ </p>
+<p>
+Args: 
+ n (int): How many consecutive notes are taken into account? 
+ direction: Which interval direction is taken into account? For example, <span class="keyword">
+:ascending </span>
+means that the rule only looks at consecutive ascending intervals. Without the ending -strict, note repetitions are also counted as the same direction. 
+ </p>
+<p>
+In case of intermitting rests the rule is not applied. 
+ </p>
+<p>
+Other arguments are inherited from R-pitches-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181787">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+resolve-skips&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (skip-size 6) (resolution-size 2) (repetition? :disallow) (voices 0) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Resolve any skip larger than skip-size by an interval in the opposite direction. 
+ </p>
+<p>
+Args: 
+ skip-size: The minimum interval size (in semitones) that triggers this rule. 
+ resolution-size: The maximum interval size that is allowed as a resolution. 
+ repetition?: Whether or not tone repetitions are allowed as resolution. 
+ </p>
+<p>
+Other arguments are inherited from R-pitches-one-voice. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2017-08-26 22:25:25</div>
+</body>
+</html>

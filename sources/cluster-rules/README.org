@@ -1,0 +1,68 @@
+* cluster-rules
+
+  The library cluster-rules is an extension of the music constraint solver [[https://github.com/tanders/cluster-engine][Cluster Engine]] by [[http://sandred.com/][Örjan Sandred]]. Like Cluster Engine, this code was originally a PWGL library, but the present version is plain Common Lisp. 
+
+
+* Installation
+
+  The instructions below use git for the installation. Even though it is a bit more involved at first, it allows for convenient updates later, and you can even contribute to the development. 
+
+  Install [[https://git-scm.com][git]] (if you have not done already). Also, you should register at [[https://github.com][GitHub]].
+    
+  Download the present software with git into a directory where [[https://common-lisp.net/project/asdf/][ASDF]] can find the software, e.g., [[https://common-lisp.net/project/asdf/asdf/Quick-start-summary.html#Quick-start-summary][~/common-lisp/]]. For example, on UNIX incl. OS X you can enter the following commands at the command line (after you created the directory =~/common-lisp/=). Note that =$= is the terminal prompt here, you do not need to enter that :)
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp
+$ git clone https://github.com/tanders/cluster-rules.git
+#+end_src
+
+  You will be asked for your GitHub username and password.
+  
+  This library depends on two other libraries, which you can install in the same way.
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp
+$ git clone https://github.com/tanders/cluster-engine.git
+$ git clone https://github.com/tanders/ta-utilities.git
+#+end_src
+
+
+** Updating your software
+
+   If there are [[https://github.com/tanders/cluster-rules/commits/master][changes]], you can update your software later at the terminal in the following way. Make sure you update the dependencies likewise.
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp/cluster-rules
+$ git pull
+#+end_src
+
+  
+
+* Usage
+
+  This library is an [[https://common-lisp.net/project/asdf/][ASDF]] system (ASDF is the de facto standard for building Common Lisp software), and you can load it into your Lisp compiler as follows. All dependency libraries (such as cluster-engine) are loaded automatically as well. 
+   
+#+begin_src lisp :tangle yes
+(require :cluster-rules)
+#+end_src  
+
+
+  The library cluster-rules provides predefined rules and some utilities for [[https://github.com/tanders/cluster-engine][Cluster Engine]]. Below is a minimal example that disallows pitch repetitions and syncopations in a monophonic line with two rules from the present library.
+
+#+begin_src lisp :tangle yes    
+(cr:cluster-engine
+  20 
+  ;; rules
+  (ce::rules->cluster (cr::no-syncopation :metric-structure :beats)
+                      (cr::no-repetition))
+  '((3 4)) 
+  '(((1/4) (1/8))
+    ((60) (61))))
+#+end_src
+
+
+* License
+
+  Distributed under the GNU General Public License.
+  
+  Copyright © 2017 Torsten Anders

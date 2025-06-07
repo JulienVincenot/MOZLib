@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+utils</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="package.html">
+Prev:&nbsp;package</a>
+<br/>
+<a href="rhythm-rules.html">
+Next:&nbsp;rhythm-rules</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+utils</b>
+<br/>
+<a href="../index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+utils
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181736">
+cluster-engine</a>
+</td>
+<td class="summary">
+no-of-variables rules metric-domain list-of-domains <em>&amp;key</em> (rnd? t) (debug? nil)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181739">
+file-in-this-directory</a>
+</td>
+<td class="summary">
+filename</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181742">
+map-pairwise</a>
+</td>
+<td class="summary">
+fn xs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181743">
+mappend</a>
+</td>
+<td class="summary">
+func <em>&amp;rest</em> inlists</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181741">
+pprint-to-file</a>
+</td>
+<td class="summary">
+path expr</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181740">
+read-lisp-file</a>
+</td>
+<td class="summary">
+path</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="utils.html#_g181737">
+scale-&gt;pitchdomain</a>
+</td>
+<td class="summary">
+scale-pitches <em>&amp;key</em> (min 60) (max 72)</td>
+</tr>
+</table>
+<div class="defparam">
+<div class="defunsignatures">
+<a id="_g181738">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+*current-directory*&nbsp;&nbsp;</td>
+<td class="lambda-list">
+</td>
+<td class="symbol-type">
+&nbsp;[Variable]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181736">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+cluster-engine&nbsp;&nbsp;</td>
+<td class="lambda-list">
+no-of-variables rules metric-domain list-of-domains <em>&amp;key</em> (rnd? t) (debug? nil)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Slight variant of function cluster-engine::clusterengine where the order of variables is rearranged for shorter function calls. See the orig definition for further documentation. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181737">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+scale-&gt;pitchdomain&nbsp;&nbsp;</td>
+<td class="lambda-list">
+scale-pitches <em>&amp;key</em> (min 60) (max 72)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Expects a list of pitches representing a scale (either pitch classes or absolute pitches), and a minimum and maximum pitch. Returns a pitch domain for clusterengine that contains all pitches between the min and max in the scale. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181739">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+file-in-this-directory&nbsp;&nbsp;</td>
+<td class="lambda-list">
+filename</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns a file in the same directory as the patch with the given filename (a string). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181740">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+read-lisp-file&nbsp;&nbsp;</td>
+<td class="lambda-list">
+path</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Expects a path name to a lisp file and returns the read (but not evaluated) content of the file. For example, if the file ; contains (1 2 3) then the list (1 2 3) is return (i.e., not a string, but a list, but 1 is not called as a function). Note that only the 1st Lisp form in path is returned. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181741">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+pprint-to-file&nbsp;&nbsp;</td>
+<td class="lambda-list">
+path expr</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Pretty-prints to the given path. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181742">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+map-pairwise&nbsp;&nbsp;</td>
+<td class="lambda-list">
+fn xs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Collects the result of applying the binary function gn on all pairwise combinations of elements in xs, i.e.,11 ((fn xs1 xs2) .. (fn xs1 xsN) (fn xs2 xs3) .. (fn xsN-1 xsN)). 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181743">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mappend&nbsp;&nbsp;</td>
+<td class="lambda-list">
+func <em>&amp;rest</em> inlists</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Apply func to each element of inlist and append the result. 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2017-08-26 22:25:25</div>
+</body>
+</html>

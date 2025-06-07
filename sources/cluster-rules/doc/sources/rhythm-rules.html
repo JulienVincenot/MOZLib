@@ -1,0 +1,1124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="../cludg.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>
+rhythm-rules</title>
+</head>
+<body>
+<div id="navbar">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<colgroup span="3">
+<col width="0*"/>
+<col width="0*"/>
+<col width="1*"/>
+</colgroup>
+<tr>
+<td align="left" valign="baseline">
+<a href="utils.html">
+Prev:&nbsp;utils</a>
+<br/>
+<a href="melody-rules.html">
+Next:&nbsp;melody-rules</a>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="left" valign="baseline">
+<span class="upchain">
+<b>
+rhythm-rules</b>
+<br/>
+<a href="../index.html">
+Index</a>
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+<div class="cludg-doc-body">
+<h2>
+rhythm-rules
+</h2>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Function summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181767">
+accent-longer-than-neighbours-ar</a>
+</td>
+<td class="summary">
+d_offs1 d_offs2 d_offs3</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181765">
+accent-longer-than-predecessor-ar</a>
+</td>
+<td class="summary">
+d_offs1 d_offs2 d_offs3</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181766">
+accent-longer-than-predecessor-strict-ar</a>
+</td>
+<td class="summary">
+d_offs1 d_offs2</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181764">
+accents-in-other-voice</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 1) (accents-voice 0) (accent-rule :longer-than-predecessor) (strictness :note) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181747">
+is-grace-note?</a>
+</td>
+<td class="summary">
+dur</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181746">
+is-note?</a>
+</td>
+<td class="summary">
+dur</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181745">
+is-rest?</a>
+</td>
+<td class="summary">
+dur</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181753">
+is-syncopation</a>
+</td>
+<td class="summary">
+dur offs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181756">
+max-multiple</a>
+</td>
+<td class="summary">
+int <em>&amp;optional</em> (multiple-candidates '(2 3 5 7))</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181763">
+metric-accents</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (accent-rule :longer-than-predecessor) (strictness :note) (gracenote-mode :normal) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181760">
+metric-offset-of-motif</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (metric-offset 0) (voices 0) (metric-structure :1st-beat) (grid 1/4) (min-motif-length nil) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181770">
+mk-accent-&gt;-prep-and-&gt;=-dur-ar</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (duration-threshold 1/4)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181769">
+mk-accent-&gt;-prep-or-&gt;=-dur-ar</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (min-duration 1/4)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181768">
+mk-accent-has-at-least-duration-ar</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (min-duration 1/4)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181751">
+no-syncopation</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181750">
+no-syncopation-rule</a>
+</td>
+<td class="summary">
+offs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181752">
+no-syncopation-unless-accented</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (accent-rule :longer-than-predecessor) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181749">
+no-two-consecutive-syncopations</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181748">
+no-two-consecutive-syncopations-rule</a>
+</td>
+<td class="summary">
+offs1 offs2</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181755">
+only-simple-syncopations</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (gracenote-mode :normal) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181754">
+only-simple-syncopations-rule</a>
+</td>
+<td class="summary">
+d_offs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181758">
+only-simple-tuplet-offs</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices 0) (gracenote-mode :normal) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181757">
+only-simple-tuplet-offs-rule</a>
+</td>
+<td class="summary">
+d_offs</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181761">
+similar-sim-durations</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (voices '(0 1)) (max-factor 1) (rest-mode :constrain) (rule-type :true/false) (weight 1)</td>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181759">
+start-with-rest</a>
+</td>
+<td class="summary">
+<em>&amp;key</em> (rest-dur 0) (voices 0) (rule-type :true/false) (weight 1)</td>
+</tr>
+</table>
+<table style="width: 100%;" class="summary-table">
+<tr class="table-heading-color">
+<th class="summary" colspan="2">
+Macro summary</th>
+</tr>
+<tr class="table-row-color">
+<td class="summary-name">
+<a href="rhythm-rules.html#_g181762">
+accent-strictness</a>
+</td>
+<td class="summary">
+strictness accented-note? on-position?</td>
+</tr>
+</table>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181745">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+is-rest?&nbsp;&nbsp;</td>
+<td class="lambda-list">
+dur</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+dur is a rest -- a negative number 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181746">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+is-note?&nbsp;&nbsp;</td>
+<td class="lambda-list">
+dur</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+dur is a note -- a positive number 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181747">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+is-grace-note?&nbsp;&nbsp;</td>
+<td class="lambda-list">
+dur</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+dur is a grace note with duration = 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181748">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-two-consecutive-syncopations-rule&nbsp;&nbsp;</td>
+<td class="lambda-list">
+offs1 offs2</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+For any two consecutive beats, at least one notes must start on a beat (has an offset = 0). Constraint intended for r-meter-note applied to beats with input model <span class="keyword">
+:offset. </span>
+
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181749">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-two-consecutive-syncopations&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+For any two consecutive beats/bars, at least one notes must start on a beat. All arguments are inherited from r-meter-note. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181750">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-syncopation-rule&nbsp;&nbsp;</td>
+<td class="lambda-list">
+offs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+On the given beat a note must start. Constraint intended for r-meter-note applied to either 1st beats of bars or beats with input model offs. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181751">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-syncopation&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+For any two consecutive beats/bars, at least one notes must start on a beat. All arguments are inherited from r-meter-note. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181752">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+no-syncopation-unless-accented&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (accent-rule :longer-than-predecessor) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts syncopations (of level metric-structure) to notes accented according to accent-rule. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): The numbers of voice(s) to constrain. 
+ </p>
+<p>
+accent-rule (menu item or function): A function returning true if an accent is expressed and nil otherwise. The function expects one of more arguments, all in the form (dur offs), where dur is the duration of a note and offs is the offset to the following accent (i.e. the duration until the following accent). Example: '(1/4 -1/8). A note is 'on' the accent if its offset = 0. 
+ Some accent rules are predefined and can be simply selected in the menu of the argument. Other predefined accent rules expect additional arguments controlling their effect. These are available under the Cluster Rules sub menu rhythm - accent rules. 
+ </p>
+<p>
+Other arguments are inherited from r-rhythm-rhythm. 
+ </p>
+<p>
+TMP: doc 
+ BUG: Still not working. See example ShiftedMetricAccents (for CIM paper). 
+ I included debugging format instruction, but seeminlgy this is not printed for every note. Double-check for which notes this is skipped. 
+ Anyway, I may be close with this one... 
+ </p>
+<p>
+TODO: Include in rhythm menu, once finished 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181753">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+is-syncopation&nbsp;&nbsp;</td>
+<td class="lambda-list">
+dur offs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+[Aux def] Returns boolean whether or not the note starting at offs1 constitutes a syncopation, i.e., whether it crosses a reference offset 0. 
+ Note: long notes that exceed the duration of a beat and start on a beat are not recognised. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181754">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+only-simple-syncopations-rule&nbsp;&nbsp;</td>
+<td class="lambda-list">
+d_offs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts syncopations over beats to certain relatively simple cases. For example, the only possible syncopation allowed for a note value 1/4 is 1/8 before a beat. 
+ Intended for r-note-meter with format d_offs on beats. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181755">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+only-simple-syncopations&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (gracenote-mode :normal) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts syncopations over beats to certain relatively simple cases. For example, the only possible syncopation allowed for a note value 1/4 is 1/8 before a beat. All arguments are inherited from r-note-meter. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181756">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+max-multiple&nbsp;&nbsp;</td>
+<td class="lambda-list">
+int <em>&amp;optional</em> (multiple-candidates '(2 3 5 7))</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Aux def 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181757">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+only-simple-tuplet-offs-rule&nbsp;&nbsp;</td>
+<td class="lambda-list">
+d_offs</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts the rhythmic position of notes to relatively simple cases. For example, triplet notes can only be part of a triplet. 
+ Intended for r-note-meter with format d_offs on beats. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181758">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+only-simple-tuplet-offs&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (gracenote-mode :normal) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts the rhythmic position of notes to relatively simple cases. For example, triplet notes can only be part of a triplet. All arguments are inherited from r-note-meter. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181759">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+start-with-rest&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (rest-dur 0) (voices 0) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Start the given voice(s) with a rest of the given duration (either an int or a list of ints indicating a domain) If rest-dur is NIL then this means a rest of any duration is acceptable. 
+ </p>
+<p>
+Hint: make sure you included rests in your rhythm domain (as negative integers). 
+ </p>
+<p>
+Other optional arguments are inherited from r-index-rhythms-one-voice. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181760">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+metric-offset-of-motif&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (metric-offset 0) (voices 0) (metric-structure :1st-beat) (grid 1/4) (min-motif-length nil) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Motifs must start metric-offset away from set beat. Motifs starting with rests are not constrained. 
+ </p>
+<p>
+Args: 
+ metric-offset (ratio): How far should motifs be shifted with respect to the metric-structure? For example, if metric-offset is -1/8, then motifs will be shifted to start an eighths note before the beat (or bar). 
+ grid (ratio): Motifs could be longer than a beat (or bar) so that this rule would be checked more than once. If a motif is longer than the set grid, it will only be checked at its beginning whether its metric offset is as set. 
+ </p>
+<p>
+Optional arg: 
+ min-motif-length (int): motifs with a length below this setting are uneffected. 
+ </p>
+<p>
+Other arguments are inherited from R-meter-note. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181761">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+similar-sim-durations&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices '(0 1)) (max-factor 1) (rest-mode :constrain) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+This rule restricts the maximum difference between simultaneous note durations. Together with the rule r-rhythm-hierarchy (from library cluster engine) this rule allows to enforce a homophonic texture and also almost homophonic textures. 
+ </p>
+<p>
+Note that grace notes are ignored by this rule. 
+ </p>
+<p>
+Args: 
+ voices (a list of ints): The list of voices affected by this constraint. The first given voice is used as a reference: notes of all other voices are compared to this voice. NOTE: if the reference voice is not the voice with the lowest number, then the search is slowed down. 
+ max-factor (a ratio): If max-factor is 1, then the simultaneous durations always have exactly the same duration (however, neither the size of the duration nor whether they start together is constrained). If max-factor is larger (or smaller) than one then this factor defines the largest possible quotient between simultaneous durations. For example, if max-factor is 2 then any note can be at most the double and at least halve of the simultaneous note (note that the rule behaves the same whether max-factor is 1/2 or 2). 
+ rest-mode: Whether or not to also constrain rests or not. If rests are constrained, then all simultaneous notes must be notes and simultaneous rests must be rests. 
+ </p>
+<p>
+Other args are inherited from R-rhythm-rhythm. 
+ </p>
+<p>
+BUG: Arg factor seemingly not fully working as documented yet if factor &gt; 1. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181763">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+metric-accents&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 0) (metric-structure :1st-beat) (accent-rule :longer-than-predecessor) (strictness :note) (gracenote-mode :normal) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts where metric accents occur depending on the underlying meter. If an accent occurs, then it is on the position defined. 
+ </p>
+<p>
+Args: 
+ metric-structure: Position where accents are controlled (on any beat or the first beat of a measure). 
+ </p>
+<p>
+accent-rule (menu item or function): A function returning true if an accent is expressed and nil otherwise. The function expects one of more arguments, all in the form (dur offs), where dur is the duration of a note and offs is the offset to the following accent (i.e. the duration until the following accent). Example: '(1/4 -1/8). A note is 'on' the accent if its offset = 0. 
+ Some accent rules are predefined and can be simply selected in the menu of the argument. Other predefined accent rules expect additional arguments controlling their effect. These are available under the Cluster Rules sub menu rhythm - accent rules. 
+ </p>
+<p>
+Some accent rules are predefined and can be simply selected in the menu of the argument. 
+ :longer-than-predecessor: Accented notes are longer than the preceeding note and at least as long as the succeeding note. BUG: not constrained for first and last 2 notes! (fixing that needs more flexible rule applicators) 
+ :longer-than-neighbours: Accented notes are longer than the preceeding and the succeeding note. BUG: not constrained for first and last 2 notes! 
+ </p>
+<p>
+Other predefined accent rules expect additional arguments controlling their effect. These are available under the Cluster Rules sub menu rhythm - accent rules. 
+ </p>
+<p>
+strictness: Controls how events are constrained. There are three different cases. 
+ </p>
+<p>
+:note: if an event meets the accent-rule, then it must be on a specified metric position (see metric-structure). However, there can be such metric positions without notes meeting the accent-rule. 
+ :position: if an event is on a specified metric position (see metric-structure) then it must meet the accent-rule. However, there can be accentuated notes at other metric positions. Also, if a note continues sounding at the specified position that started earlier (syncopation) then no accent at that position can be enforced (because only notes are checked, not metric positions). 
+ :note-n-position: if an event meets the accent-rule, then it must be on a specified metric position -- and vice versa. 
+ 
+ Other arguments are inherited from r-note-meter. 
+ </p>
+<p>
+</p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181764">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+accents-in-other-voice&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (voices 1) (accents-voice 0) (accent-rule :longer-than-predecessor) (strictness :note) (rule-type :true/false) (weight 1)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Restricts where metric accents occur depending on the note onsets defined in an 'accents voice'. If an accent occurs, then it is on the position defined. 
+ </p>
+<p>
+Args: 
+ voices (int or list of ints): The numbers of voice(s) to constrain. 
+ </p>
+<p>
+accent-rule (menu item or function): A function returning true if an accent is expressed and nil otherwise. The function expects one of more arguments, all in the form (dur offs), where dur is the duration of a note and offs is the offset to the following accent (i.e. the duration until the following accent). Example: '(1/4 -1/8). A note is 'on' the accent if its offset = 0. 
+ Some accent rules are predefined and can be simply selected in the menu of the argument. Other predefined accent rules expect additional arguments controlling their effect. These are available under the Cluster Rules sub menu rhythm - accent rules. 
+ </p>
+<p>
+strictness: Controls how events are constrained. There are three different cases. 
+ </p>
+<p>
+:note: if an event meets the accent-rule, then it must be on accented position (there is a simultaneous note onset in the accent-voice). However, there can be such accented positions without notes meeting the accent-rule. 
+ :position: if an event is on an accented position then it must meet the accent-rule. However, there can be accentuated notes at other positions. Also, if a note continues sounding at the accented position that started earlier then no accent at that position can be enforced (because only notes in voices are checked, not in accents-voice). 
+ :note-n-position: if an event meets the accent-rule, then it must be on a specified accented position -- and vice versa. 
+ </p>
+<p>
+Optional args: 
+ </p>
+<p>
+accents-voice: the number of the voice that defines accents. Each note onset in accents-voice is taken as an accent for the given voices. 
+ </p>
+<p>
+Other arguments are inherited from r-rhythm-rhythm. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181765">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+accent-longer-than-predecessor-ar&nbsp;&nbsp;</td>
+<td class="lambda-list">
+d_offs1 d_offs2 d_offs3</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Accent rule for metric-accents or accents-in-other-voice. Accented notes are longer than the preceeding note and at least as long as the succeeding note. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181766">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+accent-longer-than-predecessor-strict-ar&nbsp;&nbsp;</td>
+<td class="lambda-list">
+d_offs1 d_offs2</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Accent rule for metric-accents or accents-in-other-voice. Accented notes are longer than the preceeding note. A successor note after the note in question is not relevant. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181767">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+accent-longer-than-neighbours-ar&nbsp;&nbsp;</td>
+<td class="lambda-list">
+d_offs1 d_offs2 d_offs3</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Accent rule for metric-accents or accents-in-other-voice. Accented notes are longer than the preceeding and the succeeding note. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181768">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mk-accent-has-at-least-duration-ar&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (min-duration 1/4)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns an accent rule for metric-accents or accents-in-other-voice. Accented notes are at least min-duration long. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181769">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mk-accent-&gt;-prep-or-&gt;=-dur-ar&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (min-duration 1/4)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns an accent rule for metric-accents or accents-in-other-voice. Accented notes are EITHER longer than the preceeding note and at least as long as the succeeding note, OR at least min-duration long. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181770">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+mk-accent-&gt;-prep-and-&gt;=-dur-ar&nbsp;&nbsp;</td>
+<td class="lambda-list">
+<em>&amp;key</em> (duration-threshold 1/4)</td>
+<td class="symbol-type">
+&nbsp;[Function]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+Returns an accent rule for metric-accents or accents-in-other-voice. Accented notes are longer than the preceeding note. Additionally, if the succeeding note is of the same length or longer, then they are at least duration-threshold long to count as accented. 
+ </p>
+</div>
+</div>
+<div class="defun">
+<div class="defunsignatures">
+<a id="_g181762">
+</a>
+<table cellpadding="0" cellspacing="0" width="100%">
+<colgroup span="3">
+<col width="0*"/>
+<col width="1*"/>
+<col width="0*"/>
+</colgroup>
+<tbody>
+<tr>
+<td class="symbol-name">
+accent-strictness&nbsp;&nbsp;</td>
+<td class="lambda-list">
+strictness accented-note? on-position?</td>
+<td class="symbol-type">
+&nbsp;[Macro]</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="doc-body">
+<p>
+[Aux def] Controls which constrain is applied between accented-note? (Boolean whether note follows accent constraint) and on-position? (Boolean whether note is on the position of a metric accent). 
+ </p>
+<p>
+Arg strictness is a keyword switching bewtween three cases. 
+ </p>
+<p>
+<span class="keyword">
+:note </span>
+-- any accented note is situated on a metric accent (but there can be metric accents without a note) 
+ <span class="keyword">
+:position </span>
+-- any metric accent has an accented note (but there can accented notes also elsewhere) 
+ <span class="keyword">
+:note-n-position </span>
+-- any accented note is situated on a metric accent and any metric accent has an accented note 
+ </p>
+</div>
+</div>
+</div>
+<div class="cludg-footer">
+Generated by&nbsp;<a href="mailto:ihatchondo@common-lisp.net" lang="en">
+CLDOC</a>
+- 2017-08-26 22:25:25</div>
+</body>
+</html>

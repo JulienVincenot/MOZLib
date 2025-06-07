@@ -1,0 +1,135 @@
+* Fenv
+
+  This is a Common Lisp library providing highly flexible envelopes for algorithmic composition. The software represents envelopes as numerical functions, called fenvs. It provides a rich set of functions to generate, combine and transform these envelopes. 
+  
+  I am currently using Fenv within [[http://opusmodus.com/][Opusmodus]].
+
+
+* Installation
+
+  *For all projects for which there exists an internal Aiva development continuation, replace the git repository paths with the Aiva repository.*
+  
+  The instructions below use git for the installation. Even though it is a bit more involved at first, it allows for convenient updates later, and you can even contribute to the development. 
+
+  Install [[https://git-scm.com][git]] (if you have not done already). Also, you should register at [[https://github.com][GitHub]].
+    
+  Download the present software with git into a directory where [[https://common-lisp.net/project/asdf/][ASDF]] can find the software, e.g., [[https://common-lisp.net/project/asdf/asdf/Quick-start-summary.html#Quick-start-summary][~/common-lisp/]]. For example, on UNIX incl. OS X you can enter the following commands at the command line (after you created the directory =~/common-lisp/=). Note that =$= is the terminal prompt here, you do not need to enter that :)
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp
+$ git clone https://github.com/tanders/fenv.git
+#+end_src
+
+  You will be asked for your GitHub username and password.
+  
+  Fenv depends on my utilities library ta-utilities, which you can install in the same way.
+
+#+begin_src bash :tangle yes
+$ git clone https://github.com/tanders/ta-utilities.git
+#+end_src
+
+
+** COMMENT Customisation for Opusmodus
+
+   If you are using Opusmodus, I recommend that you drag and drop the newly created directory =~/common-lisp/fenv/= into the Opusmodus navigator (left hand pane) of your project. Then you can conveniently open the documentation HTML pages within Opusmodus, and evaluate documentation examples.
+  
+
+** Updating your software
+
+   If there are [[https://github.com/tanders/fenv/commits/master][changes]], you can update your software later at the terminal in the following way.
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp/fenv
+$ git pull
+#+end_src
+
+  
+
+* Usage
+
+  Fenv is an [[https://common-lisp.net/project/asdf/][ASDF]] system (ASDF is the de facto standard for building Common Lisp software), and you can load it into your Lisp compiler as follows.
+
+#+begin_src lisp :tangle yes
+(require :fenv)
+#+end_src  
+
+  Now everything should be ready. 
+
+  Fenv provides various functions and some macros to create envelopes; =linear-fenv= creates an envelope from x-y pairs. The following envelope starts at 1 at the x value 0, then raises to 2 at the x value 0.7 and finally goes down to -1 at the x value 1. The function =fenv->list= samples this envelope into a list of numbers (y values over evenly spaced x values). 
+
+#+begin_src lisp :tangle yes
+(fenv:fenv->list (fenv:linear-fenv (0 1) (0.7 2) (1 -1)))
+; -> (1.0 1.01443 1.02886 1.04329 1.0577201 1.0721501 1.08658 1.1010101 1.1154401 1.1298702 1.1443001 1.1587301 1.1731602 1.1875902 1.2020202 1.2164502 1.2308803 1.2453103 1.2597402 1.2741703 1.2886003 1.3030303 1.3174603 1.3318903 1.3463204 1.3607503 1.3751804 1.3896104 1.4040403 1.4184704 1.4329004 1.4473305 1.4617605 1.4761906 1.4906205 1.5050505 1.5194805 1.5339105 1.5483406 1.5627706 1.5772007 1.5916306 1.6060606 1.6204906 1.6349206 1.6493506 1.6637807 1.6782107 1.6926408 1.7070707 1.7215006 1.7359307 1.7503607 1.7647908 1.7792208 1.7936509 1.8080808 1.8225108 1.8369408 1.8513708 1.8658009 1.8802309 1.894661 1.909091 1.9235209 1.937951 1.952381 1.966811 1.981241 1.995671 1.9292928 1.8282826 1.7272724 1.6262628 1.5252526 1.4242425 1.3232322 1.222222 1.1212118 1.0202022 0.91919196 0.81818175 0.71717155 0.61616135 0.51515114 0.41414165 0.31313133 0.21212125 0.111110926 0.0101008415 -0.09090948 -0.19191909 -0.29292917 -0.39393926 -0.49494958 -0.59595966 -0.69697 -0.7979796 -0.8989897 -1.0)
+#+end_src  
+
+  Note that in Opusmodus you can conveniently plot this envelope with the keyboard shortkey Ctrl-1. Try changing the points of the envelope and immediately see the effect when updating the plot. 
+
+  Instead of linearly interpolating the points of your envelope, how about interpolating them with a sin function? The optional argument of fenv->list specifies the number of points to generate when sampling the envelope (effectively the resolution).
+
+#+begin_src lisp :tangle yes
+(fenv:fenv->list (fenv:sin-fenv (0 1) (0.7 2) (1 -1))
+		 10)
+; -> (1.0D0 1.246757405971349D0 1.4782539936306505D0 1.680172773721679D0 1.8400259416956517D0 1.9479273821390986D0 1.9972038045110896D0 0.8117603388997996D0 -0.5064635428528179D0 -1.0D0)
+#+end_src  
+
+
+  A fenv (function envelope) is an envelope that internally is defined by a numeric function. You can turn arbitrary numeric functions into an envelope with the function =make-fenv=. Here is the function f(x)=x.
+
+#+begin_src lisp :tangle yes
+(fenv:v (fenv:make-fenv #'(lambda (x) x)))
+#+end_src  
+
+  We also replaced the function =fenv->list= with =v=, which is a shorthand version of the function =fenv->vector=. Vectors are a standard format for such numerical data in Opusmodus. For brevity, we are skipping the numeric result.
+
+  IMPORTANT: In order to be able to freely combine fenvs, every fenv is only defined for x-values between 0 and 1. However, when creating fenvs from functions, we can stretch or shrink a function into that range by specifying its minimum and maximum values.
+
+#+begin_src lisp :tangle yes
+(fenv:v (fenv:make-fenv #'sin :min (- pi) :max pi))
+#+end_src  
+
+
+  We can also concatenate multiple functions or arbitrary other fenvs into a single envelope. The numeric values between the fenvs specify the x-values where the respecting fenvs start/end. Internally, envelopes like =linear-fenv= and =sin-fenv= are defined this way. 
+
+#+begin_src lisp :tangle yes
+(fenv:v (fenv:fenv-seq (fenv:make-fenv #'sin :max pi)
+		       0.2 (fenv:make-fenv #'identity)
+		       0.6 (fenv:make-fenv #'sin :max pi)))
+#+end_src  
+
+
+  If you want to form a fenv that repeats some other fenv multiple times, you can use =osciallator=. The following defines a saw wave with 5 periods. 
+
+#+begin_src lisp :tangle yes
+(fenv:v (fenv:osciallator (fenv:make-fenv #'identity) 5))
+#+end_src  
+
+
+  Now, the real fun starts when you combine multiple fenvs with another function. For example, how about adding multiple fenvs. That way, we can easily generate pretty complex envelopes with very good control over the final shape. 
+
+#+begin_src lisp :tangle yes
+(fenv:v (fenv:combine-fenvs #'+
+			    10
+			    (fenv:linear-fenv (0 0) (1 2))
+			    (fenv:make-fenv #'sin :max (* pi 2))
+			    (fenv:make-fenv #'sin :max pi)))
+#+end_src  
+
+
+
+  The [[./doc/index.html][documentation]] briefly explains the various functions (at Github, this link currently only shows the HTML sources of the documentation, but if you installed the software you can browse the documentation itself). There are also more examples in this [[./tests/test-fenv.lisp][test file]].
+
+
+* Contribute
+  
+  Once you understand the general format of fenvs, it should be easy to come up with new ideas for how to define and transform such envelopes and to extend this library. For example, what about new functions to interpolate between given points in new ways?
+
+  Your contribution is welcome!
+  
+  For posting ideas, discussions and bug reports please use GitHub issues.
+
+
+* License
+
+  Distributed under the GNU General Public License.
+  
+  Copyright © 2017 Torsten Anders

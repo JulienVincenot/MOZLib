@@ -1,0 +1,48 @@
+﻿:title "fv-morphologie"
+:subtitle "Représenter des graphes à l'aide du format 'dot'"
+
+:bodytext
+"    Dessiner automatiquement et de manière agréable et lisible des graphes qui représentent de grands ensembles de données est un problème complexe qui fait toujours l'objet de recherches en informatique théorique.
+Le langage 'dot', qui est une manière de décrire des graphes (orientés ou non) à l'aide de fichiers en mode texte (.dot), est un format utilisé par plusieurs programmes libres disponibles pour différentes plateformes informatiques (Unix, GNU-Linux, Mac OSX, MS Windows...)"
+
+:bodytext
+"    La fonction graph>dot converti un graphe non-orienté représenté (en Lisp) par une liste de listes de la forme : ( (noeud-A noeud-B distance) ...).
+Cf. 5.2.0/1 : graph>dot."
+
+:subtitle "Programmes et logiciels : dot, neato et Graphviz"
+
+:bodytext
+"    'dot'..."
+
+:bodytext
+"    'webdot'..."
+
+:bodytext
+"    'neato' est un programme Unix libre et ouvert développé en 2004 (Stephen C. North) par les laboratoires de ATT pour dessiner des graphes non-orientés. Il est intégré aux programmes 'dot' et 'webdot'.
+    Ce programme est fondé sur des algorithmes de modélisation physique permettant de trouver, de manière itérative, des équilibres stables ou métastables entre des forces répulsives associées aux différents noeuds d'un graphe (cf. Kamada and Kawai, Information Processing Letters 31:1, April 1989); le calcul peut donc être long et, selon la complexité de celui-ci et son état initial - aléatoire, le dessin résultant de chaque calcul n'est pas nécessairement toujours le même.
+    Comme dot, neato permet de créer des fichiers graphiques aux formats png, gif ou svg (notamment).
+    Pour des graphes complexes dotés de nombreux noeuds, le format svg pourra être préféré lors de ressources limitées en mémoire RAM."
+
+:bodytext
+"    Le logiciel Graphviz propose une interface graphique fondée sur les programmes dot et neato. Cependant, à ce jour  (fin 2009), ce logiciel contient des bugs, notamment lors du rendu de fichiers représentant des graphes non-orientés selon le format dot : il est donc conseillé de recourir autant que possible au programme Unix neato.
+"
+
+:subtitle "Liens"
+
+:link
+"http://www.graphviz.org/"
+:protocol :http
+:link-text
+"Graphviz pour Mac OSX, versions 10.5 et supérieures"
+
+:link
+"http://www.ryandesign.com/graphviz/"
+:protocol :http
+:link-text
+"Autres versions de Graphviz"
+
+:link
+"http://www.graphviz.org/pdf/neatoguide.pdf"
+:protocol :http
+:link-text
+"Documentation de neato"

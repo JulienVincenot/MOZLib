@@ -1,0 +1,53 @@
+:title "fv-morphologie"
+:subtitle "Menu"
+
+:bodytext
+" "
+
+:bodytext
+ "	Les différents outils d'analyse morphologique sont présentés selon cinq types de processus :"
+ :bodytext
+" "
+
+:figure "../pictures/menu-0.png"
+
+:bodytext
+ "Les trois premiers types de processus, différenciation, évaluation, délinéation, constituent le corps de l'analyse morphologique. Les deux suivants permettent l'encodage, l'importation et l'exportation de données."
+
+:bodytext
+ "	Chacun de ces principaux processus permettent différentes méthodes  (mesures de distance, classification, grahique, etc) adaptées à la structure et à la nature - symbolique ou numérique - des données.
+ Dans le menu, à chaque méthode est associé un préfixe particulier (par exemple 'int-' pour intensités, 'class-' pour classification, etc."
+ 
+:bodytext
+" "
+
+:bodytext
+ "  - le menu <Différenciation> regroupe différentes fonctions :
+pour l'étude des variations d'intensité (int-*), pour l'analyse constrastive (mark-*), pour la recherche de motifs par répétition (motif-*), pour la classification automatique par partitionnement (class-*)..."
+
+:figure "../pictures/menu-1.png"
+
+
+:bodytext
+ "  - le menu <Evaluation> propose différents outils permettant de comparer des séquences, notamment selon leur distance ou ressemblance (dist-*), ou certaines proriétés d'ordre statistique ou informationnel (pas de préfixe particulier)."
+
+
+:figure "../pictures/menu-2.png"
+
+:bodytext
+ "  - le menu <Délinéation> propose un ensemble d'outils de représentation ou de projection schématiques, arborescentes ou rhizomatiques, éventuellement graphiques, des diverses relations propres aux séquences étudiées selon les outils de fv-morphologie, en faisant notamment appel à la théorie des graphes (graph-*)."
+
+:figure "../pictures/menu-3.png"
+
+:bodytext
+ "  - le menu <Encodage> propose différentes manières de représentation symbolique ou numérique de valeurs et séquences : encodage, transcodage (infixe *>*), ou de filtrage de séquences (filt-*)."
+
+
+:figure "../pictures/menu-4.png"
+
+ :bodytext
+ "	- enfin, le menu <In-Out> regroupe les fonctions d'importation et d'exportation de données."
+
+:figure "../pictures/menu-5.png"
+
+

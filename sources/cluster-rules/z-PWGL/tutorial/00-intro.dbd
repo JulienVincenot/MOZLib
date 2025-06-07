@@ -1,0 +1,24 @@
+:title "Cluster Rules"
+:bodytext
+"The library Cluster Rules defines rules (constraints) for the library Cluster Engine by Orjan Sandred. This documentation assumes that you already read the documentation of Cluster Engine. This tutorial is currently only demonstrating a subset of the rules provided by this library.
+"
+
+:bodytext
+"In addition to the tutorial patches available here, there are also a range of test patches located in the test directory of this library. Those patches demonstrate various rules, but are simply lacking documentation so far and were therefore not included here.
+
+Nevertheless, reference documentation is provided for all boxes of this library (remember: select the box and press d to see that documentation). By reading the reference documentation the test patches should makes sense. 
+Note that the reference documentation often refers to the documentation of other boxes -- those are always boxes from the library Cluster Engine. 
+"
+
+:subtitle "Some brief notes on terminology"
+
+:bodytext
+"Cluster Engine uses the term rules for several slightly different definitions. Rules are (i) definitions given to boxes like r-pitches-one-voice, r-pitch-pitch etc., (ii) the boxes r-pitches-one-voice, r-pitch-pitch etc. themselves, and (iii) the value returned by these boxes.
+
+This library uses the term rule only for the cases (i) and (iii). For clarity we refer to Cluster Engine boxes like r-pitches-one-voice and r-pitch-pitch as rule applicators. If we want to be specific, we call values returned by such Cluster Engine boxes applied rules.
+
+This library defines primarily applied rules (as a rule of thumb, if we are saying 'rule' in the documentation we usually mean applied rules). Such rules you can directly connect to the box rules->cluster.
+
+Some applied rules are already defined in the library Cluster Engine and for convenience are linked in the menu of this library (for clarity in submenus called Cluster Engine.
+"
+

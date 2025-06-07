@@ -1,0 +1,2 @@
+* this goes into an infitie loop:
+(pmc:pmc '((1 nil) (2 3)) nil :sols-mode :all)

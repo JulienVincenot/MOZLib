@@ -1,0 +1,11 @@
+:title "Fenv"
+
+:bodytext
+"This PWGL library defines ways to use numerical functions as envelopes, called fenvs. It provides a rich set of functions to generate, combine and transform these envelopes. The library also supports transforming BPFs from PWGL into fenvs and vice versa.
+"
+
+:subtitle "Documentation of boxes"
+
+:bodytext
+"Most boxes (functions) are documented in the code with a doc string. Unfortunately, a PWGL application currently does not show this documentation. So, for now please check the documentation in the source code. Virtually all these functions are defined in the file sources/fenv.lisp.
+" 

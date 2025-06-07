@@ -1,0 +1,39 @@
+* ta-utilities
+
+This library provides a collection of general Common Lisp utilities.
+
+
+* Installation
+
+  *For all projects for which there exists an internal Aiva development continuation, replace the git repository paths with the Aiva repository.*
+  
+  The instructions below use git for the installation. Even though it is a bit more involved at first, it allows for convenient updates later, and you can even contribute to the development. 
+
+  Install [[https://git-scm.com][git]] (if you have not done already). Also, you should register at [[https://github.com][GitHub]].
+    
+  Download the present software with git into a directory where [[https://common-lisp.net/project/asdf/][ASDF]] can find the software, e.g., [[https://common-lisp.net/project/asdf/asdf/Quick-start-summary.html#Quick-start-summary][~/common-lisp/]]. For example, on UNIX incl. OS X you can enter the following commands at the command line (after you created the directory =~/common-lisp/=). Note that =$= is the terminal prompt here, you do not need to enter that :)
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp
+$ git clone https://github.com/tanders/ta-utilities.git
+#+end_src
+
+  You will be asked for your GitHub username and password.
+  
+
+** Updating your software
+
+   If there are [[https://github.com/tanders/ta-utilities/commits/master][changes]], you can update your software later at the terminal in the following way.
+
+#+begin_src bash :tangle yes
+$ cd ~/common-lisp/ta-utilities
+$ git pull
+#+end_src
+
+  
+* License
+
+  Distributed under the GNU General Public License.
+  
+  Copyright © 2017 Torsten Anders
+

@@ -1,0 +1,33 @@
+﻿:title "fv-morphologie : graph>dot / neato"
+:subtitle
+"Ex 1: Dessiner un arbre de recouvrement minimal (ARM) avec le format dot et le programme neato"
+
+:bodytext
+" (1) soit, dans PWGL, une liste représentant un ARM (cf. exemple : 5.1.1_span-tree)"
+:code
+"((8 10 0) (1 8 1) (7 9 0) (7 11 1) (1 4 0) (1 11 1) (2 11 1) (2 6 0) (2 5 0) (2 3 0) (0 2 1))"
+:bodytext
+" (2) dans PWGL, utiliser graph>dot pour générer l'arbre selon le format dot :"
+:code
+"graph G {
+ 0 -- 2 [w=0,len= 1.0];
+ 2 -- 3 [w=0,len= 0.01];
+ 2 -- 5 [w=0,len= 0.01];
+ 2 -- 6 [w=0,len= 0.01];
+ 2 -- 11 [w=0,len= 1.0];
+ 1 -- 11 [w=0,len= 1.0];
+ 1 -- 4 [w=0,len= 0.01];
+ 7 -- 11 [w=0,len= 1.0];
+ 7 -- 9 [w=0,len= 0.01];
+ 1 -- 8 [w=0,len= 1.0];
+ 8 -- 10 [w=0,len= 0.01];
+}"
+:bodytext
+" (3) copier ce texte dans un fichier au format texte, puis exécuter dans un shell Unix, par exemple :"
+:code
+"neato -Tgif fichier.dot > fichier.gif"
+
+:figure "./span-tree.bmp"
+:caption "Dessin d'un arbre de recouvrement minimal à l'aide du programme neato"
+
+

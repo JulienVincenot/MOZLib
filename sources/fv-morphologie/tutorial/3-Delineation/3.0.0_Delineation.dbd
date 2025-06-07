@@ -1,0 +1,41 @@
+:window-documentation "Delineation"
+:title "fv-morphologie"
+:subtitle
+"Delineation : utilisation de graphes pour l'analyse musicale"
+
+:bodytext
+"
+"
+
+:bodytext
+"Graphs are a very convenient and powerfull way to represent and study large sets of data.
+Graphs are usefull to study relationships and classification of arbitrary objects.
+This is a development of first version of morphologie lib."
+
+:bodytext
+"Dans fv-morphologie, les segments (ou arêtes) sont représentés par une liste constituée (de gauche à droite) d'un noeud, d'un autre noeud et de la distance qui les sépare, comme par exemple :"
+:code
+"(A B 1.5)"
+
+:bodytext
+"Un graphe est donc représenté par une liste de segments :"
+
+:code
+"( (A B 1.5) (B C 2.1) (B D 3.2) ...)"
+
+:subtitle
+"Calcul et étude de graphes"
+
+:items
+:list-style :french
+- "graph-span"
+- "graph-hierarc"
+
+:subtitle "Dessiner un graphe non-orienté"
+:items
+:list-style :french
+- "graph>dot"
+
+:bodytext
+"  "
+
