@@ -1,0 +1,1512 @@
+	[ Welcome
+		[ filename 1-Welcome-to-MOZLib ]
+		[ title "Welcome to MOZ'Lib !" ]
+	]
+
+
+	[ "MOZ'Lib Intro"
+
+		[ Quickdemo
+			[ filename 2-Quick-demo ]
+			[ title "Quick Demo" ]
+		]	
+		[ Fantasticmodules
+			[ filename 3-Fantastic-modules ]
+			[ title "Fantastic modules..." ]
+		]
+		[ Collapsology
+			[ filename 4-Collapsology ]
+			[ title "Little manual of collapsology..." ]
+		]
+		[ Program-flow&callback
+			[ filename 5-Program-flow&callback ]
+			[ title "Program flow and the “callback” button" ]
+		]
+
+		[ "LISP inside !"
+			[ 6a-Lisp-inside
+				[ filename 6a-Lisp-inside ]
+				[ title "But what is Lisp to begin with?" ]
+			]
+			[ 6b-Lisp-inside
+				[ filename 6b-Lisp-inside ]
+				[ title "Lisp in Max: why and how" ]
+			]
+		]
+
+		[ Beyond-MOZLib
+			[ filename 7-Beyond-MOZLib ]
+			[ title "Beyond MOZ'Lib" ]
+		]
+	]
+
+
+
+
+
+	[ "PWforMax Intro"
+
+		[ PW-for-Max? 
+			[ filename 1-PW-for-Max ] 
+			[ title "PatchWork for Max ?!" ]
+		]
+		[ pw-eval-box
+			[ filename 2-pw-eval-box ] 
+			[ title "pw.eval-box" ]
+		]
+		[ save-lisp-and-die
+			[ filename 3-save-lisp-and-die ] 
+			[ title "Save Lisp and Die..." ]
+		]
+
+		[ "Basics of Max Lisping"
+			[ Static-Lisping
+				[ filename 4-Static-Lisping ] 
+				[ title "Static Lisping" ]
+			]
+			[ Dynamic-Lisping
+				[ filename 5-Dynamic-Lisping ] 
+				[ title "Dynamic Lisping" ]
+			]
+			[ Backquote
+				[ filename 6-Backquote&Macros ] 
+				[ title "Backquote (& Macros)" ]
+			]
+			[ Dynamic-Lisping-reg&replace
+				[ filename 5b-Dynamic-Lisping-reg&replace ] 
+				[ title "Tips: Make your code dynamic easily !" ]
+			]
+		]
+		
+		[ "Lisp scripting boxes..."
+			[ lisp.quickeval
+				[ filename 7a-lisp.quickeval ] 
+				[ title "lisp.quickeval" ]
+			]
+			[ @randompath
+				[ filename 7b-randompath ] 
+				[ title "lisp.quickeval @randompath" ]
+			]
+			[ code_snippets
+				[ filename 7c-code_snippets ] 
+				[ title "lisp.quickeval code_snippets" ]
+			]
+			[ BPfs&pw.sample
+				[ filename 7d-BPFs&pw.sample ] 
+				[ title "BPFs & pw.sample" ]
+			]
+			[ lisp.expr
+				[ filename 7e-lisp.expr ] 
+				[ title "lisp.expr" ]
+			]
+			[ lisp.lambda
+				[ filename 7f-lisp.lambda ] 
+				[ title "lisp.lambda" ]
+			]
+			[ lisp.quote&backquote
+				[ filename 7g-lisp.quote&backquote ] 
+				[ title "Don't forget your quotes...!" ]
+			]
+			[ utilities
+				[ filename 7h-docstring&print ] 
+				[ title "Utilities: lisp.print & lisp.docstring" ]
+			]
+		]
+		[ and-more-modules
+			[ filename 9-and-more-modules ] 
+			[ title "...and a few more modules !" ]
+		]
+
+		[ PWConstraints-intro
+			[ filename 10-PWConstraints-intro ] 
+			[ title "PWConstraints Intro" ]
+		]
+		
+		[ "Iterate tools"
+			[ Dont-loop-iterate 
+				[ filename 8a-dont-loop-iterate ] 
+				[ title "Don't Loop, Iterate !" ]
+			]
+			[ @quote
+				[ filename 8a2-@quote ] 
+				[ title "The problem with quotes..." ]
+			]
+			[ Parallel-iterations
+				[ filename 8b-parallel-iterations ] 
+				[ title "Parallel iterations" ]
+			]
+			[ for-previous-a-case-study
+				[ filename 8c-for-previous-a-case-study ] 
+				[ title "for-previous: a case study" ]
+			]
+			[ for-wind
+				[ filename 8d-for-wind ] 
+				[ title "for-wind" ]
+			]
+			[ in-circular-list
+				[ filename 8e-in-circular-list ] 
+				[ title "in-circular-list" ]
+			]
+			[ conditionals
+				[ filename 8f-conditionals ] 
+				[ title "Conditionals (with WHEN)" ]
+			]
+			[ a-few-more-examples
+				[ filename 8g-few-more-examples ] 
+				[ title "A few more Iterate features" ]
+			]
+			[ PMC-through-iterate-a
+				[ filename 8h-PMC-through-Iterate-a ] 
+				[ title "PMC through iterate (a)" ]
+			]
+			[ PMC-through-iterate-b
+				[ filename 8i-PMC-through-Iterate-b ] 
+				[ title "PMC through iterate (b)" ]
+			]
+		]
+
+		[ PC-set-theory
+			[ filename 11-PC-set-theory ] 
+			[ title "PC-set-theory" ]
+		]
+
+		[ "Debugging tips"
+			[ Debug-a 
+				[ filename 12a-debugging-tools-trace ] 
+				[ title "Trace" ]
+			]
+			[ Debug-b 
+				[ filename 12b-debugging-tools-dtrace ] 
+				[ title "Dtrace" ]
+			]
+		]
+		
+	]
+
+
+
+
+
+	[ "PWforMax Libraries"
+		
+
+
+		[ PWLibraries-Intro
+			[ filename PWLibraries-Intro ] 
+			[ title "Introduction to guest libraries" ]
+		]
+
+
+
+
+
+		[ "Chréode & Transkaija (TODO)"
+			[ Chreode&Transkaija-Intro
+				[ filename _Chreode&Transkaija-Introduction ] 
+				[ title "Introduction" ]
+			]
+
+
+			[ Chreode-Intro
+				[ filename Chreode-0-A-few-words ] 
+				[ title "A few words on Chréode" ]
+			]
+
+
+			[ Chreode&Transkaija-Intro
+				[ filename Transkaija-0-A-few-words ] 
+				[ title "A few words on Transkaija" ]
+			]
+		]
+
+
+
+
+		[ "CLUSTERengine"
+			[ ClusterIntro
+				[ filename Cluster_1a-1-Intro ] 
+				[ title "Introduction" ]
+			]
+			[ ChainedCluster
+				[ filename Cluster_1a-2-chained ] 
+				[ title "chained?!" ]
+			]
+			[ "demos"
+				[ Demo-a
+					[ filename Cluster_1a-3-demo-a ] 
+					[ title "demo [a]" ]
+				]
+				[ Demo-b
+					[ filename Cluster_1a-4-demo-b ] 
+					[ title "demo [b]" ]
+				]
+				[ Demo-c
+					[ filename Cluster_1a-5-demo-c ] 
+					[ title "demo [c]" ]
+				]
+			]
+			[ under-the-hood
+				[ filename Cluster_1a-6-under-the-hood ] 
+				[ title "under the hood..." ]
+			]
+
+			[ "CLUSTERengine module"
+				[ ce_main-interface
+					[ filename Cluster_1b-1-Main-interface ] 
+					[ title "Main engine interface" ]
+				]
+				[ ce_stop-rules
+					[ filename Cluster_1b-2-stop-rules ] 
+					[ title "stop rules" ]
+				]
+				[ ce_code-snippets
+					[ filename Cluster_1b-3-code-snippets ] 
+					[ title "code snippets" ]
+				]
+
+			]
+
+			[ "Domains"
+				[ ce_domain-modules
+					[ filename Cluster_1c-1-Domain-modules ] 
+					[ title "Domain Intro" ]
+				]
+				[ ce_rhythm-domain
+					[ filename Cluster_1c-2-Rhythm-domain ] 
+					[ title "Rhythm domain" ]
+				]
+				[ ce_pitch-domain
+					[ filename Cluster_1c-3-Pitch-domain ] 
+					[ title "Pitch domain" ]
+				]
+				[ ce_interval-motifs
+					[ filename Cluster_1c-4-Interval-motifs ] 
+					[ title "Interval motifs" ]
+				]
+				[ ce_metric-domain
+					[ filename Cluster_1c-5-Metric-domain ] 
+					[ title "Metric domain" ]
+				]
+				[ ce_chaining-domains
+					[ filename Cluster_1c-6-Chaining-domains ] 
+					[ title "Chaining domains" ]
+				]
+				[ "Motifs selectors"
+					[ ce_rtm-motifs-selector
+						[ filename Cluster_1c-7a-Rhythm-motifs-selector ] 
+						[ title "Rhythm motifs selector" ]
+					]
+					[ ce_pitch-motifs-selector
+						[ filename Cluster_1c-7b-Pitch-motifs-selector ] 
+						[ title "Pitch motifs selector" ]
+					]
+					[ ce_motifs-selectors-example
+						[ filename Cluster_1c-7c-Motifs-selectors-example ] 
+						[ title "Motifs selectors example" ]
+					]
+				]
+
+			]
+			[ "Rules Interface"
+				[ ce_rules-interface
+					[ filename Cluster_1d-1-Rules-interface ] 
+					[ title "Rules Intro" ]
+				]
+				[ ce_rules-in-pure-lisp
+					[ filename Cluster_1d-2-writing-rules-in-pure-Lisp ] 
+					[ title "Writing rules in pure Lisp" ]
+				]
+				[ ce_rules-in-scripting-boxes
+					[ filename Cluster_1d-3-writing-rules-with-scripting-boxes ] 
+					[ title "Writing rules with scripting boxes" ]
+				]
+				[ ce_accessor-scopes
+					[ filename Cluster_1d-4-accessor-scopes ] 
+					[ title "Accessor scopes" ]
+				]
+				[ ce_accessor-parameters
+					[ filename Cluster_1d-5-accessor-parameters ] 
+					[ title "Accessor parameters" ]
+				]
+				[ ce_rule-mode
+					[ filename Cluster_1d-6-rule-mode ] 
+					[ title "mode?" ]
+				]
+				[ ce_print-is-always-pretty
+					[ filename Cluster_1d-7-print-is-always-pretty ] 
+					[ title "Print is always pretty" ]
+				]
+				[ ce_rule-tester
+					[ filename Cluster_1d-8-lambda-rule-tester ] 
+					[ title "Lambda-rule tester" ]
+				]
+				[ ce_cluster-collect
+					[ filename Cluster_1d-9-loop&collect ] 
+					[ title "Loop & Collect" ]
+				]
+
+				
+			]
+
+			[ "Debugging Tools"
+				[ ce_debug-modules
+					[ filename Cluster_1e-1-Debugging-modules ] 
+					[ title "Debug Intro" ]
+				]
+				[ ce_debug-snippets-advanced
+					[ filename Cluster_1e-2-code-snippets-advanced ] 
+					[ title "code snippets (advanced)" ]
+				]
+				[ ce_debug-cluster
+					[ filename Cluster_1e-3-CLUSTERdebug ] 
+					[ title "CLUSTERdebug" ]
+				]
+				[ ce_debug-prefs
+					[ filename Cluster_1e-4-CLUSTERpreferences ] 
+					[ title "CLUSTERpreferences" ]
+				]
+				
+
+			]
+
+
+			[ "Rules for one engine"
+				[ "Index rules (one engine)"
+					[ ce_index-one-engine-intro
+						[ filename Cluster_2a-1-Index-rules-one-engine-intro ] 
+						[ title "Index rules Intro (one engine)" ]
+					]
+					[ ce_index-one-engine-example-a
+						[ filename Cluster_2a-2-Index-rules-one-engine-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_index-one-engine-example-b
+						[ filename Cluster_2a-3-Index-rules-one-engine-example-b ] 
+						[ title "example [b]" ]
+					]
+					[ ce_index-one-engine-example-c
+						[ filename Cluster_2a-4-Index-rules-one-engine-example-c ] 
+						[ title "example [c]" ]
+					]
+
+				]
+				[ "Wildcard rules (one engine)"
+					[ ce_wildcard-one-engine-intro
+						[ filename Cluster_2b-1-Wildcard-rules-one-engine-intro ] 
+						[ title "Wildcard rules Intro (one engine)" ]
+					]
+					[ ce_wildcard-one-engine-example-a
+						[ filename Cluster_2b-2-Wildcard-rules-one-engine-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_wildcard-one-engine-example-b
+						[ filename Cluster_2b-3-Wildcard-rules-one-engine-example-b ] 
+						[ title "example [b]" ]
+					]
+					[ ce_wildcard-one-engine-example-c
+						[ filename Cluster_2b-4-Wildcard-rules-one-engine-example-c ] 
+						[ title "example [c]" ]
+					]
+
+				]
+				[ "Timepoints rules"
+					[ ce_timepoints-one-engine-intro
+						[ filename Cluster_2c-1-Timepoints-rules-one-engine-intro ] 
+						[ title "Timepoints rules Intro (one engine)" ]
+					]
+					[ ce_timepoints-one-engine-example
+						[ filename Cluster_2c-2-Timepoints-rules-one-engine-example ] 
+						[ title "example" ]
+					]
+
+				]
+				[ "only-m-motifs"
+					[ ce_only-m-motifs-intro
+						[ filename Cluster_2d-1-only-m-motifs-one-engine-intro ] 
+						[ title "only-m-motifs Intro (one engine)" ]
+					]
+					[ ce_only-m-motifs-example
+						[ filename Cluster_2d-2-only-m-motifs-one-engine-example ] 
+						[ title "example" ]
+					]
+
+				]
+				[ "predefine-meter"
+					[ ce_predefine-meter-intro
+						[ filename Cluster_2e-1-predefine-meter-one-engine-intro ] 
+						[ title "predefine-meter Intro (one engine)" ]
+					]
+					[ ce_predefine-meter-example
+						[ filename Cluster_2e-2-predefine-meter-one-engine-example ] 
+						[ title "example" ]
+					]
+
+				]
+				[ "PMC rules"
+					[ ce_PMC-rules-intro
+						[ filename Cluster_2f-1-PMC-rules-one-engine-intro ] 
+						[ title "PMC rules Intro (one engine)" ]
+					]
+					[ ce_PMC-rules-example-a
+						[ filename Cluster_2f-2-PMC-rules-one-engine-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_PMC-rules-example-b
+						[ filename Cluster_2f-3-PMC-rules-one-engine-example-b ] 
+						[ title "example [b]" ]
+					]
+
+				]
+
+			]
+
+			[ "Rules for one voice"
+				[ "Index rules"
+					[ ce_index-one-voice-intro
+						[ filename Cluster_3a-1-Index-rules-one-voice-intro ] 
+						[ title "Index rules Intro (one voice)" ]
+					]
+					[ ce_index-one-voice-example
+						[ filename Cluster_3a-2-Index-rules-one-voice-example ] 
+						[ title "example" ]
+					]
+
+				]
+				[ "Wildcard rules"
+					[ ce_wildcard-one-voice-intro
+						[ filename Cluster_3b-1-Wildcard-rules-one-voice-intro ] 
+						[ title "Wildcard rules Intro (one voice)" ]
+					]
+					[ ce_wildcard-one-voice-example-a
+						[ filename Cluster_3b-2-Wildcard-rules-one-voice-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_wildcard-one-voice-example-b
+						[ filename Cluster_3b-3-Wildcard-rules-one-voice-example-b ] 
+						[ title "example [b]" ]
+					]
+					[ ce_wildcard-one-voice-example-c
+						[ filename Cluster_3b-4-Wildcard-rules-one-voice-example-c ] 
+						[ title "example [c]" ]
+					]
+
+				]
+				[ "mel-interval"
+					[ ce_mel-interval-one-voice-intro
+						[ filename Cluster_3c-1-mel-interval-one-voice-intro ] 
+						[ title "mel-interval Intro (one voice)" ]
+					]
+					[ ce_mel-interval-one-voice-example
+						[ filename Cluster_3c-2-mel-interval-one-voice-example ] 
+						[ title "example" ]
+					]
+
+				]
+				[ "Metric rules"
+					[ ce_metric-rules-one-voice-intro
+						[ filename Cluster_3d-1-Metric-rules-one-voice-intro ] 
+						[ title "Metric rules Intro (one voice)" ]
+					]
+					[ ce_metric-rules-one-voice-example-a
+						[ filename Cluster_3d-2-Metric-rules-one-voice-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_metric-rules-one-voice-example-b
+						[ filename Cluster_3d-3-Metric-rules-one-voice-example-b ] 
+						[ title "example [b]" ]
+					]
+					[ ce_metric-rules-one-voice-example-c
+						[ filename Cluster_3d-4-Metric-rules-one-voice-example-c ] 
+						[ title "example [c]" ]
+					]
+					[ ce_metric-rules-one-voice-example-d
+						[ filename Cluster_3d-5-Metric-rules-one-voice-example-d ] 
+						[ title "example [d]" ]
+					]
+					[ ce_metric-rules-one-voice-example-e
+						[ filename Cluster_3d-6-Metric-rules-one-voice-example-e ] 
+						[ title "example [e]" ]
+					]
+					[ ce_metric-rules-one-voice-example-f
+						[ filename Cluster_3d-7-Metric-rules-one-voice-example-f ] 
+						[ title "example [f]" ]
+					]
+
+				]
+
+			]
+
+			[ "Rules between voices"
+				[ "Pitch vs. Pitch"
+					[ ce_pitch-vs-pitch-multiple-voices-intro
+						[ filename Cluster_4a-1-pitch-vs-pitch-multiple-voices-intro ] 
+						[ title "Pitch vs. Pitch Intro (multiple voices)" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-a
+						[ filename Cluster_4a-2-pitch-vs-pitch-multiple-voices-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-b
+						[ filename Cluster_4a-3-pitch-vs-pitch-multiple-voices-example-b ] 
+						[ title "example [b]" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-c
+						[ filename Cluster_4a-4-pitch-vs-pitch-multiple-voices-example-c ] 
+						[ title "example [c]" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-d
+						[ filename Cluster_4a-5-pitch-vs-pitch-multiple-voices-example-d ] 
+						[ title "example [d]" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-e
+						[ filename Cluster_4a-6-pitch-vs-pitch-multiple-voices-example-e ] 
+						[ title "example [e]" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-f
+						[ filename Cluster_4a-7-pitch-vs-pitch-multiple-voices-example-f ] 
+						[ title "example [f]" ]
+					]
+					[ ce_pitch-vs-pitch-multiple-voices-example-g
+						[ filename Cluster_4a-8-pitch-vs-pitch-multiple-voices-example-g ] 
+						[ title "example [g]" ]
+					]
+
+				]
+				[ "Rhythm vs. Rhythm"
+					[ ce_rhythm-vs-rhythm-multiple-voices-intro
+						[ filename Cluster_4b-1-rhythm-vs-rhythm-multiple-voices-intro ] 
+						[ title "Rhythm vs. Rhythm Intro (multiple voices)" ]
+					]
+					[ ce_rhythm-vs-rhythm-multiple-voices-example-a
+						[ filename Cluster_4b-2-rhythm-vs-rhythm-multiple-voices-example-a ] 
+						[ title "example [a]" ]
+					]
+					[ ce_rhythm-vs-rhythm-multiple-voices-example-b
+						[ filename Cluster_4b-3-rhythm-vs-rhythm-multiple-voices-example-b ] 
+						[ title "example [b]" ]
+					]
+					[ ce_rhythm-vs-rhythm-multiple-voices-example-c
+						[ filename Cluster_4b-4-rhythm-vs-rhythm-multiple-voices-example-c ] 
+						[ title "example [c]" ]
+					]
+					[ ce_rhythm-vs-rhythm-multiple-voices-example-d
+						[ filename Cluster_4b-5-rhythm-vs-rhythm-multiple-voices-example-d ] 
+						[ title "example [d]" ]
+					]
+					[ ce_rhythm-vs-rhythm-multiple-voices-example-e
+						[ filename Cluster_4b-6-rhythm-vs-rhythm-multiple-voices-example-e ] 
+						[ title "example [e]" ]
+					]
+
+				]
+				[ "List-all-events"
+					[ ce_list-all-events-multiple-voices-intro
+						[ filename Cluster_4c-1-list-all-events-multiple-voices-intro ] 
+						[ title "List-all-events Intro (multiple voices)" ]
+					]
+					[ ce_list-all-events-multiple-voices-example
+						[ filename Cluster_4c-2-list-all-events-multiple-voices-example ] 
+						[ title "example" ]
+					]
+
+				]
+				[ "Multidomains Intro"
+					[ ce_multidomains-multiple-voices-intro
+						[ filename Cluster_4d-1-Multidomains-multiple-voices-intro ] 
+						[ title "Multidomains Intro (multiple voices)" ]
+					]
+					[ ce_multidomains-multiple-voices-example-a
+						[ filename Cluster_4d-2-Multidomains-multiple-voices-real-voice ] 
+						[ title "real voices?" ]
+					]
+					[ ce_multidomains-multiple-voices-example-b
+						[ filename Cluster_4d-3-Multidomains-multiple-voices-example ] 
+						[ title "example" ]
+					]
+
+				]
+			]
+
+			[ "Utilities"
+				
+				[ ce_keytrig
+					[ filename Cluster_1f-1-key_trigger ] 
+					[ title "key_trigger" ]
+				]
+				[ ce_moztextfield
+					[ filename Cluster_1f-2-moz.textfield ] 
+					[ title "moz.textfield" ]
+				]
+				[ ce_mozmutescore
+					[ filename Cluster_1f-3-moz.mute_score_filter ] 
+					[ title "moz.mute_score_filter" ]
+				]
+				[ ce_lispdomaingen
+					[ filename Cluster_1f-4-Lisp-domain-generators ] 
+					[ title "Lisp domain generators" ]
+				]
+				[ ce_multiple-code-snippets
+					[ filename Cluster_1f-5-multiple_code_snippets ] 
+					[ title "Multiple code snippets" ]
+				]
+
+			]
+
+
+
+			
+
+
+
+		]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		[ "JBScmi"
+			[ Start-here
+				[ filename JBScmi_0-Start-here ] 
+				[ title "Introduction to JBScmi" ]
+			]
+
+
+			[ "Write music entities"
+				[ Write-entities-00
+					[ filename JBScmi_1-Intro ] 
+					[ title "About the Max port" ]
+				]
+				[ Write-entities-01
+					[ filename JBScmi_1a-Write-music-entities ] 
+					[ title "Write music entities" ]
+				]
+				[ Write-entities-02
+					[ filename JBScmi_1b-Write-music-entities-slots ] 
+					[ title "Write music entities with slots" ]
+				]
+				[ Write-entities-03
+					[ filename JBScmi_1c-Write-music-entities-loop ] 
+					[ title "Loop example (a)" ]
+				]
+				[ Write-entities-04
+					[ filename JBScmi_1d-Write-music-entities-loop2 ] 
+					[ title "Loop example (b)" ]
+				]
+			]
+
+
+			[ "Pitch"
+				[ Pitch-01
+					[ filename JBScmi_2a-Harmonic-fields ] 
+					[ title "Harmonic fields" ]
+				]
+				[ Pitch-02
+					[ filename JBScmi_2b-Answer ] 
+					[ title "Tonal answer" ]
+				]
+				[ Pitch-03
+					[ filename JBScmi_2c-Find-all-intervals ] 
+					[ title "Find-all-intervals" ]
+				]
+			]
+
+
+			[ "Matrix"
+				[ Matrix-01
+					[ filename JBScmi_3a-numeric-comment ] 
+					[ title "Numeric comment" ]
+				]
+				[ Matrix-02
+					[ filename JBScmi_3b-numeric-comment-sort ] 
+					[ title "Numeric comment sort" ]
+				]
+				[ Matrix-03
+					[ filename JBScmi_3c-all-to-one_all-to-x ] 
+					[ title "All to one / All to X" ]
+				]
+				[ Matrix-04
+					[ filename JBScmi_3d-all-matrix-readings ] 
+					[ title "All matrix readings" ]
+				]
+				[ Matrix-05
+					[ filename JBScmi_3e-print-lists_print-matrix ] 
+					[ title "Print lists / Print matrix" ]
+				]
+			]
+
+
+			[ "Special combinations"
+				[ Special-combinations-01
+					[ filename JBScmi_4a-All-possibilities ] 
+					[ title "All possibilities" ]
+				]
+				[ Special-combinations-02
+					[ filename JBScmi_4b-Circular-pitch-permutations ] 
+					[ title "Circular pitch permutations" ]
+				]
+				[ Special-combinations-03
+					[ filename JBScmi_4c-Circular-groups-permutations ] 
+					[ title "Circular groups permutations" ]
+				]
+			]
+
+
+			[ "Grouping"
+				[ Grouping-01
+					[ filename JBScmi_5a-Groups—group-list ] 
+					[ title "Groups: group-list" ]
+				]
+				[ Grouping-02
+					[ filename JBScmi_5b-Groups—group-equals ] 
+					[ title "Groups: group-equals" ]
+				]
+				[ Grouping-03
+					[ filename JBScmi_5c-Groups—all-sub-groups ] 
+					[ title "Groups: all-sub-groups" ]
+				]
+				[ Grouping-04
+					[ filename JBScmi_5d-Groups—all-given-sub-groups ] 
+					[ title "Groups: all-given-sub-groups" ]
+				]
+				[ Grouping-05
+					[ filename JBScmi_5e-Groups—grouping-inex-cluding-given-element ] 
+					[ title "Groups: grouping-in/excluding-given-element" ]
+				]
+				[ Grouping-06
+					[ filename JBScmi_5f-Groups—all-groups-by-all-elements ] 
+					[ title "Groups: all-groups-by-all-elements" ]
+				]
+				[ Grouping-07
+					[ filename JBScmi_5g-Groups—chaining-groups ] 
+					[ title "Groups: chaining-groups" ]
+				]
+				[ Grouping-08
+					[ filename JBScmi_5h-Segmentations—min-max-segmentations ] 
+					[ title "Segmentations: min-max-segmentations" ]
+				]
+				[ Grouping-09
+					[ filename JBScmi_5i-Segmentations—on-newORold-segmentations ] 
+					[ title "Segmentations: on-new-old-segmentations" ]
+				]
+				[ Grouping-10
+					[ filename JBScmi_5j-Segmentations—on-newORold-new-old-segmentations ] 
+					[ title "Segmentations: on-new-old-new/old-segmentations" ]
+				]
+			]
+
+
+			[ "Utilities"
+				[ Utilities-a
+					[ filename JBScmi_6a-Utilities-a ] 
+					[ title "Utilities (a) List elements" ]
+				]
+				[ Utilities-b
+					[ filename JBScmi_6b-Utilities-b ] 
+					[ title "Utilities (b) Members in sublists" ]
+				]
+				[ Utilities-c
+					[ filename JBScmi_6c-Utilities-c ] 
+					[ title "Utilities (c) List readings" ]
+				]
+				[ Utilities-d
+					[ filename JBScmi_6d-Utilities-d ] 
+					[ title "Utilities (d) Index-substitute" ]
+				]
+				[ Utilities-e
+					[ filename JBScmi_6e-Utilities-e ] 
+					[ title "Utilities (e) Numerical series" ]
+				]
+				[ Utilities-f
+					[ filename JBScmi_6g-Utilities-f ] 
+					[ title "Utilities (f) Get-index" ]
+				]
+				[ Utilities-g
+					[ filename JBScmi_6h-Utilities-g ] 
+					[ title "Utilities (g) Identity-index" ]
+				]
+			]
+
+		]
+
+
+
+
+
+
+
+
+
+
+		[ "JBSprofile"
+
+
+			[ Start-here
+				[ filename JBSprofile_0-Start-here ] 
+				[ title "Introduction to JBSprofile" ]
+			]
+		
+			[ "Perturbations"
+				[ Alea-perturb
+					[ filename JBSprofile_1a-Alea-Perturbation ] 
+					[ title "Alea-perturbation" ]
+				]
+				[ Alea-perturb
+					[ filename JBSprofile_1b-Control-Perturbation ] 
+					[ title "Control-perturbation" ]
+				]
+				[ Alea-perturb
+					[ filename JBSprofile_1c-Compression-Expansion ] 
+					[ title "Compression-expansion" ]
+				]
+				[ Alea-perturb
+					[ filename JBSprofile_1d-Hybridating-Profile ] 
+					[ title "Hybridating-profile" ]
+				]
+			]
+		
+
+			[ "Reflexions"
+				[ Reflexion
+					[ filename JBSprofile_2a-Reflexion ] 
+					[ title "Reflexion" ]
+				]
+				[ Double-reflexion
+					[ filename JBSprofile_2b-Double-reflexion ] 
+					[ title "Double-reflexion" ]
+				]
+				[ Multi-reflexion
+					[ filename JBSprofile_2c-Multi-reflexion ] 
+					[ title "Multi-reflexion" ]
+				]
+			]
+		
+
+			[ "Derivations"
+				[ Arithmetic-derivation
+					[ filename JBSprofile_3a-Arithmetic-derivation ] 
+					[ title "Arithmetic-derivation" ]
+				]
+				[ Mean-derivation
+					[ filename JBSprofile_3b-Mean-derivation ] 
+					[ title "Mean-derivation" ]
+				]
+				[ Average-derivation
+					[ filename JBSprofile_3c-Average-derivation ] 
+					[ title "Average-derivation" ]
+				]
+				[ Barycentre-derivation
+					[ filename JBSprofile_3d-Barycentre-derivation ] 
+					[ title "Barycentre-derivation" ]
+				]
+				[ Min-Max-points
+					[ filename JBSprofile_3e-Min-Max-points ] 
+					[ title "Min-Max-points" ]
+				]
+			]
+		
+
+			[ "Integrations"
+				[ Arithmetic-integration
+					[ filename JBSprofile_4a-Arithmetic-integration ] 
+					[ title "Arithmetic-integration" ]
+				]
+				[ Geometric-integration
+					[ filename JBSprofile_4b-Geometric-integration ] 
+					[ title "Geometric-integration" ]
+				]
+				[ Barycentre-integration
+					[ filename JBSprofile_4c-Barycentre-integration ] 
+					[ title "Barycentre-integration" ]
+				]
+			]
+		
+
+			[ "Interpolations"
+				[ Dynamic-interpolation
+					[ filename JBSprofile_5a-Dynamic-interpolation ] 
+					[ title "Dynamic-interpolation" ]
+				]
+				[ Multi-interpolation
+					[ filename JBSprofile_5b-Multi-interpolation ] 
+					[ title "Multi-interpolation" ]
+				]
+				[ BPF-interpolation
+					[ filename JBSprofile_5c-BPF-interpolation ] 
+					[ title "BPF-interpolation" ]
+				]
+				[ Profile-interpolation
+					[ filename JBSprofile_5d-Profile-interpolation ] 
+					[ title "Profile-interpolation" ]
+				]
+			]
+		
+
+			[ "Utilities"
+				[ Notes-change
+					[ filename JBSprofile_6a-Notes-change ] 
+					[ title "Notes-change" ]
+				]
+				[ Mean-derivation
+					[ filename JBSprofile_6b-Range-approx ] 
+					[ title "Range-approx" ]
+				]
+				[ Average-derivation
+					[ filename JBSprofile_6c-Weight-average ] 
+					[ title "Weight-average" ]
+				]
+				[ Barycentre-derivation
+					[ filename JBSprofile_6d-BPF-collector ] 
+					[ title "BPF-collector" ]
+				]
+				[ Min-Max-points
+					[ filename JBSprofile_6e-Four-forms ] 
+					[ title "Four-forms" ]
+				]
+			]
+		]
+		
+
+
+
+
+
+
+
+
+
+		[ "JBSconstraints (cleanup in progress)"
+			[ Start-here
+				[ filename JBSconstraints_0-Start-here ] 
+				[ title "Introduction to JBSconstraints" ]
+			]
+
+
+			[ "Introduction to constraints"
+				[ 1a-chainedPMC
+					[ filename JBSconstraints_1a-chainedPMC ] 
+					[ title "chainedPMC" ]
+				]
+				[ 1b-Create-candidates
+					[ filename JBSconstraints_1b-Create-candidates ] 
+					[ title "Create candidates" ]
+				]
+				[ 1c-Rules
+					[ filename JBSconstraints_1c-Rules ] 
+					[ title "Rules" ]
+				]
+				[ 1d-Logical-conflict&heuristic-rules
+					[ filename JBSconstraints_1d-Logical-conflict&heuristic-rules ] 
+					[ title "Logical conflict & heuristic rules" ]
+				]
+				[ 1e-First-musical-example
+					[ filename JBSconstraints_1e-First-musical-example ] 
+					[ title "First musical example" ]
+				]
+				[ 1f-Specific-candidates
+					[ filename JBSconstraints_1f-Specific-candidates ] 
+					[ title "Specific candidates" ]
+				]
+				[ 1g-Heuristic-rules
+					[ filename JBSconstraints_1g-Heuristic-rules ] 
+					[ title "Heuristic rules" ]
+				]
+				[ 1h-Heuristic-rules&weights
+					[ filename JBSconstraints_1h-Heuristic-rules&weights ] 
+					[ title "Heuristic rules & weights" ]
+				]
+				[ 1i-Heuristic-rules&several-weights
+					[ filename JBSconstraints_1i-Heuristic-rules&several-weights ] 
+					[ title "Heuristic rules & several weights" ]
+				]
+				[ 1j-Ergonomic-disposition
+					[ filename JBSconstraints_1j-Ergonomic-disposition_JBSrules ] 
+					[ title "Ergonomic disposition [a] : JBSrules" ]
+				]
+				[ 1j-Ergonomic-disposition_alt
+					[ filename JBSconstraints_1k-Ergonomic-disposition_JBScollect ] 
+					[ title "Ergonomic disposition [b] : JBScollect" ]
+				]
+			]
+
+
+			[ "Generic rules"
+				[ 2a-Generic-rules
+					[ filename JBSconstraints_2a-Generic-rules ] 
+					[ title "Generic rules" ]
+				]
+				[ 2b-Generic-rules-with-chainedPMC
+					[ filename JBSconstraints_2b-Generic-rules-with-chainedPMC ] 
+					[ title "Generic rules with chainedPMC" ]
+				]
+				[ 2c-Generic-rules-candidates
+					[ filename JBSconstraints_2c-Generic-rules-candidates ] 
+					[ title "Generic rules: pitch candidates" ]
+				]
+				[ 2d-Several-no-repetition-rules-on-durations
+					[ filename JBSconstraints_2d-Several-no-repetition-rules-on-durations ] 
+					[ title "Several no-repetition rules on durations" ]
+				]
+				[ 2e-Several-no-repetition-rules-on-intervals
+					[ filename JBSconstraints_2e-Several-no-repetition-rules-on-intervals ] 
+					[ title "Several no-repetition rules on intervals" ]
+				]
+				[ 2f-Modulo-x-repetition-rules
+					[ filename JBSconstraints_2f-Modulo-x-repetition-rules ] 
+					[ title "Modulo-x-repetition rules" ]
+				]
+				[ 2g-Not-consecutive-rules
+					[ filename JBSconstraints_2g-Not-consecutive-rules ] 
+					[ title "Not-consecutive rules" ]
+				]
+				[ 2h-Not-repeated-element-sub-group-rule
+					[ filename JBSconstraints_2h-Not-repeated-element-sub-group-rule ] 
+					[ title "Not-repeated-element-sub-group rule" ]
+				]
+				[ 2i-Not-repeated-list-sub-group-rule
+					[ filename JBSconstraints_2i-Not-repeated-list-sub-group-rule ] 
+					[ title "Not-repeated-list-sub-group rule" ]
+				]
+				[ 2j-Item-sub-group-member-rule
+					[ filename JBSconstraints_2j-Item-sub-group-member-rule ] 
+					[ title "Item-sub-group-member rule" ]
+				]
+				[ 2k-Allowed-chain-rules
+					[ filename JBSconstraints_2k-Allowed-chain-rules ] 
+					[ title "Allowed-chain rules" ]
+				]
+				[ 2l-Length-rules
+					[ filename JBSconstraints_2l-Length-rules ] 
+					[ title "Length rules" ]
+				]
+				[ 2m-Index-rules
+					[ filename JBSconstraints_2m-Index-rules ] 
+					[ title "Index rules" ]
+				]
+				[ 2n-Index-length-rule
+					[ filename JBSconstraints_2n-Index-length-rule ] 
+					[ title "Index-length rule" ]
+				]
+				[ 2o-Index-nth-rule
+					[ filename JBSconstraints_2o-Index-nth-rule ] 
+					[ title "Index-Nth rule" ]
+				]
+				[ 2p-Index-applied-sum-rule
+					[ filename JBSconstraints_2p-Index-applied-sum-rule ] 
+					[ title "Index-applied-sum rule" ]
+				]
+				[ 2q-Member-rules
+					[ filename JBSconstraints_2q-Member-rules ] 
+					[ title "Member rules" ]
+				]
+				[ 2r-Not-higher-lower-than-rules
+					[ filename JBSconstraints_2r-Not-higher-lower-than-rules ] 
+					[ title "Not-higher/lower-than rules" ]
+				]
+				[ 2s-Count-common-elements-rule
+					[ filename JBSconstraints_2s-Count-common-elements-rule ] 
+					[ title "Count-common-elements rule" ]
+				]
+				[ 2t-Count-any-element-rule
+					[ filename JBSconstraints_2t-Count-any-element-rule ] 
+					[ title "Count-any-element rule" ]
+				]
+			]
+
+
+			[ "Interval rules"
+				[ 3a-Interval-rules
+					[ filename JBSconstraints_3a-Interval-rules ] 
+					[ title "Interval rules" ]
+				]
+				[ 3b-Several-no-interval-repetition-rules
+					[ filename JBSconstraints_3b-Several-no-interval-repetition-rules ] 
+					[ title "Several no-interval-repetition rules" ]
+				]
+				[ 3c-Several-allowed-intervals-rules
+					[ filename JBSconstraints_3c-Several-allowed-intervals-rules ] 
+					[ title "Several allowed-intervals rules" ]
+				]
+				[ 3d-No-consecutive-equal-intervals-rule
+					[ filename JBSconstraints_3d-No-consecutive-equal-intervals-rule ] 
+					[ title "No-consecutive-equal-intervals rule" ]
+				]
+				[ 3e-Obliged-interval-chain-rules
+					[ filename JBSconstraints_3e-Obliged-interval-chain-rules ] 
+					[ title "Obliged-interval-chain rules" ]
+				]
+				[ 3f-Repeat-interval-rule
+					[ filename JBSconstraints_3f-Repeat-interval-rule ] 
+					[ title "Repeat-interval rule" ]
+				]
+				[ 3g-Repeat-resulting-interval-rule
+					[ filename JBSconstraints_3g-Repeat-resulting-interval-rule ] 
+					[ title "Repeat-resulting-interval rule" ]
+				]
+				[ 3h-Index-interval-rules
+					[ filename JBSconstraints_3h-Index-interval-rules ] 
+					[ title "Index-interval rules" ]
+				]
+				[ 3i-Not-bigger-smaller-interval-rules
+					[ filename JBSconstraints_3i-Not-bigger-smaller-interval-rules ] 
+					[ title "Not-bigger/smaller-interval rules" ]
+				]
+				[ 3j-Resulting-interval-rules
+					[ filename JBSconstraints_3j-Resulting-interval-rules ] 
+					[ title "Resulting-interval rules" ]
+				]
+				[ 3k-Jump-resolution-rule
+					[ filename JBSconstraints_3k-Jump-resolution-rule ] 
+					[ title "Jump-resolution rule" ]
+				]
+				[ 3l-Do-reach-that-interval-rule
+					[ filename JBSconstraints_3l-Do-reach-that-interval-rule ] 
+					[ title "Do-reach-that-interval rule" ]
+				]
+				[ 3m-Apply-interval-sum-rule
+					[ filename JBSconstraints_3m-Apply-interval-sum-rule ] 
+					[ title "Apply-interval-sum rule" ]
+				]
+				[ 3n-Apply-interval-global-sum-rule
+					[ filename JBSconstraints_3n-Apply-interval-global-sum-rule ] 
+					[ title "Apply-interval-global-sum rule" ]
+				]
+				[ 3o-Not-complementary-interval-rule
+					[ filename JBSconstraints_3o-Not-complementary-interval-rule ] 
+					[ title "Not-complementary-interval rule" ]
+				]
+				[ 3p-Interval-structure-rules
+					[ filename JBSconstraints_3p-Interval-structure-rules ] 
+					[ title "Interval-structure rules" ]
+				]
+				[ 3q-count-positive-negative-interval-rules
+					[ filename JBSconstraints_3q-Count-positive-negative-interval-rules ] 
+					[ title "Count-positive/negative-intervals rules" ]
+				]
+			]
+
+
+			[ "Pitch rules"
+				[ 4a-Pitch-rules
+					[ filename JBSconstraints_4a-Pitch-rules ] 
+					[ title "Pitch rules" ]
+				]
+				[ 4b-Allowed-pitch-rules
+					[ filename JBSconstraints_4b-Allowed-pitch-rules ] 
+					[ title "Allowed-pitch rules" ]
+				]
+				[ 4c-Allowed-pitch-structure&class-rules
+					[ filename JBSconstraints_4c-Allowed-pitch-structure&class-rules ] 
+					[ title "Allowed-pitch-structure/class rules" ]
+				]
+				[ 4d-Not-allowed-pitch-structure&class-rules
+					[ filename JBSconstraints_4d-Not-allowed-pitch-structure&class-rules ] 
+					[ title "Not-allowed-pitch-structure/class rules" ]
+				]
+				[ 4e-Index-pitch-rules
+					[ filename JBSconstraints_4e-Index-pitch-rules ] 
+					[ title "Index-pitch rules" ]
+				]
+				[ 4f-Any-note-repeated-rule
+					[ filename JBSconstraints_4f-Any-note-repeated-rule ] 
+					[ title "Any-note-repeated rule" ]
+				]
+				[ 4g-Count-this-note-modulo-rules
+					[ filename JBSconstraints_4g-Count-this-note-modulo-rules ] 
+					[ title "Count-this-note/modulo rules" ]
+				]
+				[ 4h-Not-repeated-modulo12-rules
+					[ filename JBSconstraints_4h-Not-repeated-modulo12-rules ] 
+					[ title "Not-repeated-modulo12 rules" ]
+				]
+				[ 4i-Mk-profile-pitch-rule
+					[ filename JBSconstraints_4i-Mk-profile-pitch-rule ] 
+					[ title "Mk-profile-pitch rule" ]
+				]
+				[ 4j-Mk-profile-pitch-modulo-rule
+					[ filename JBSconstraints_4j-Mk-profile-pitch-modulo-rule ] 
+					[ title "Mk-profile-pitch-modulo rule" ]
+				]
+			]
+
+
+			[ "Shaping rules"
+				[ 5a-Shaping-rules
+					[ filename JBSconstraints_5a-Shaping-rules ] 
+					[ title "Shaping rules" ]
+				]
+				[ 5b-Ascending-descending-rules
+					[ filename JBSconstraints_5b-Ascending-descending-rules ] 
+					[ title "Ascending/descending rules" ]
+				]
+				[ 5c-Ascending-descending-sub-group-rules
+					[ filename JBSconstraints_5c-Ascending-descending-sub-group-rules ] 
+					[ title "Ascending/descending-sub-group rules" ]
+				]
+				[ 5d-Mk-fix-profile-rule
+					[ filename JBSconstraints_5d-Mk-fix-profile-rule ] 
+					[ title "Mk-fix-profile rule" ]
+				]
+				[ 5e-Mk-profile-rule
+					[ filename JBSconstraints_5e-Mk-profile-rule ] 
+					[ title "Mk-profile rule" ]
+				]
+				[ 5f-Sub-group-mk-profile-rule
+					[ filename JBSconstraints_5f-Sub-group-mk-profile-rule ] 
+					[ title "Sub-group-mk-profile rule" ]
+				]
+				[ 5g-Direct-analysis-rule
+					[ filename JBSconstraints_5g-Direct-analysis-rule ] 
+					[ title "Direct-analysis rule" ]
+				]
+				[ 5h-Energy-profile-rule
+					[ filename JBSconstraints_5h-Energy-profile-rule ] 
+					[ title "Energy-profile rule" ]
+				]
+			]
+
+
+			[ "Pattern rules"
+				[ 6a-Pattern-rules
+					[ filename JBSconstraints_6a-Pattern-rules ] 
+					[ title "Pattern rules" ]
+				]
+				[ 6b-Ptrn-find-rules
+					[ filename JBSconstraints_6b-Ptrn-find-rules ] 
+					[ title "Ptrn-find rules" ]
+				]
+				[ 6c-Find-this-ptrn-n-times-rule
+					[ filename JBSconstraints_6c-Find-this-ptrn-n-times-rule ] 
+					[ title "Find-this-ptrn-n-times rule" ]
+				]
+				[ 6d-No-shape-pattern-lcl-repetition-rule
+					[ filename JBSconstraints_6d-No-shape-pattern-lcl-repetition-rule ] 
+					[ title "No-shape-pattern-lcl-repetition rule" ]
+				]
+				[ 6e-More-first-repeated-than-second-rule
+					[ filename JBSconstraints_6e-More-first-repeated-than-second-rule ] 
+					[ title "More-first-repeated-than-second rule" ]
+				]
+				[ 6f-Repeated-pattern-rule
+					[ filename JBSconstraints_6f-Repeated-pattern-rule ] 
+					[ title "Repeated-pattern rule" ]
+				]
+				[ 6g-Always-more-little-included-rule
+					[ filename JBSconstraints_6g-Always-more-little-included-rule ] 
+					[ title "Always-more-little-included rule" ]
+				]
+			]
+
+
+			[ "Distance rules"
+				[ 7a-Distance-rules
+					[ filename JBSconstraints_7a-Distance-rules ] 
+					[ title "Distance rules" ]
+				]
+				[ 7b-Distance-rule
+					[ filename JBSconstraints_7b-Distance-rule ] 
+					[ title "Distance rule" ]
+				]
+				[ 7c-Dynamic-distance-rule
+					[ filename JBSconstraints_7c-Dynamic-distance-rule ] 
+					[ title "Dynamic distance rule" ]
+				]
+				[ 7d-Resemblance-rule
+					[ filename JBSconstraints_7d-Resemblance-rule ] 
+					[ title "Resemblance rule" ]
+				]
+			]
+
+
+			[ "Structure rules"
+				[ 8a-Structure-rules
+					[ filename JBSconstraints_8a-Structure-rules ] 
+					[ title "Structure rules" ]
+				]
+				[ 8b-Mk-symbol-structure-rule
+					[ filename JBSconstraints_8b-Mk-symbol-structure-rule ] 
+					[ title "Mk-symbol-structure rule" ]
+				]
+				[ 8c-Find-apply-sum-rules
+					[ filename JBSconstraints_8c-Find-apply-sum-rules ] 
+					[ title "Find-apply-sum rules" ]
+				]
+				[ 8d-Length-sub-group-applied-sum-rule
+					[ filename JBSconstraints_8d-Length-sub-group-applied-sum-rule ] 
+					[ title "Length-sub-group-applied-sum rule" ]
+				]
+				[ 8e-Structured-order-sum-rule
+					[ filename JBSconstraints_8e-Structured-order-sum-rule ] 
+					[ title "Structured-order-sum rule" ]
+				]
+				[ 8f-Count-positive-negative-rules
+					[ filename JBSconstraints_8f-Count-positive-negative-rules ] 
+					[ title "Count-positive/negative rules" ]
+				]
+				[ 8g-No-consecutive-rests-pulses-rules
+					[ filename JBSconstraints_8g-No-consecutive-rests-pulses-rules ] 
+					[ title "No-consecutive-rests/pulses rules" ]
+				]
+				[ 8h-Alternating-positive-negative-rule
+					[ filename JBSconstraints_8h-Alternating-positive-negative-rule ] 
+					[ title "Alternating-positive/negative rule" ]
+				]
+				[ 8i-Alternating-plus-minus-first-or-last-elmt-rules
+					[ filename JBSconstraints_8i-Alternating-plus-minus-first-or-last-elmt-rules ] 
+					[ title "Alternating-plus/minus-first-or-last-elmt rules" ]
+				]
+			]
+
+
+			[ "Matrix rules"
+				[ 9a-Matrix-rules
+					[ filename JBSconstraints_9a-Matrix-rules ] 
+					[ title "Matrix rules" ]
+				]
+				[ 9b-Mk-latin-matrix-rule
+					[ filename JBSconstraints_9b-Mk-latin-matrix-rule ] 
+					[ title "Mk-latin-matrix rule" ]
+				]
+				[ 9c-Chain-common-element-lists-rule
+					[ filename JBSconstraints_9c-Chain-common-element-lists-rule ] 
+					[ title "Chain-common-element-lists rule" ]
+				]
+				[ 9d-Chain-more-little-included-common-lists-rule
+					[ filename JBSconstraints_9d-Chain-more-little-included-common-lists-rule ] 
+					[ title "Chain-more-little-included-common-lists rule" ]
+				]
+			]
+
+
+
+			[ "Utilities"
+				[ 10a-Utilities-a
+					[ filename JBSconstraints_10a-Utilities-a ] 
+					[ title "Utilities (a)" ]
+				]
+				[ 10b-Utilities-b
+					[ filename JBSconstraints_10b-Utilities-b ] 
+					[ title "Utilities (b)" ]
+				]
+				[ 10c-Utilities-c
+					[ filename JBSconstraints_10c-Utilities-c ] 
+					[ title "Utilities (c)" ]
+				]
+			]
+
+
+			[ "Examples"
+				[ "Special combinations"
+					[ 11-1-Example-a
+						[ filename JBSconstraints_11-1-Example-a ] 
+						[ title "Always 3 given elements (a)" ]
+					]
+					[ 11-1-Example-b
+						[ filename JBSconstraints_11-1-Example-b ] 
+						[ title "Always 3 given elements (b)" ]
+					]
+					[ 11-1-Example-c
+						[ filename JBSconstraints_11-1-Example-c ] 
+						[ title "Always 3 given elements (c)" ]
+					]
+				]
+
+					[ 11-2-Example
+						[ filename JBSconstraints_11-2-Structure-2 ] 
+						[ title "Structure 2" ]
+					]
+				
+			]
+
+		]
+
+
+
+
+
+
+
+
+
+
+		[ "FVmorphologie (TODO)"
+			[ TBD
+				[ filename TBD ] 
+				[ title "To be done..." ]
+			]
+		]
+		[ "JVcomponents (TODO)"
+			[ TBD
+				[ filename TBD ] 
+				[ title "To be done..." ]
+			]
+		]
+	]
+
+
+
+[ "MOZ Tools"
+
+		[ Intro
+			[ filename MOZ-Tools-Intro ]
+			[ title "Intro" ]
+		]	
+
+		[ "Analysis"
+
+			[ "Self-similarity matrix"
+				[ 1a-SSM-Intro
+					[ filename 1a-SSM-Intro ]
+					[ title "Intro Self-similarity matrix" ]
+				]
+				[ 1b-SSM-Lambda
+					[ filename 1b-SSM-Lambda ]
+					[ title "Equality lambdas" ]
+				]
+			]
+
+			[ "Dynamic time warping"
+				[ 2a-DTW-Intro
+					[ filename 2a-DTW-Intro ]
+					[ title "Intro Dynamic time warping" ]
+				]
+				[ 2b-DTW-Profile-interpolation
+					[ filename 2b-DTW-Profile-interpolation ]
+					[ title "DTW Profile interpolation" ]
+				]
+				[ 2c-DTW-Chord-interpolation
+					[ filename 2c-DTW-Chord-interpolation ]
+					[ title "DTW Chord interpolation" ]
+				]
+				[ 2d-DTW-Pitch-profile-interpolation
+					[ filename 2d-DTW-Pitch-profile-interpolation ]
+					[ title "DTW Pitch profile interpolation" ]
+				]
+				[ 2e-DTW-Melodic-interpolation
+					[ filename 2e-DTW-Melodic-interpolation ]
+					[ title "DTW Melodic interpolation (pitch & rhythm)" ]
+				]
+			]
+		]
+
+		[ "Score processing"
+			[ 1-Score-proc_moz.rebeam
+					[ filename moz.rebeam.maxhelp ]
+					[ title "moz.rebeam" ]
+			]
+			[ 2-Score-proc_moz.score_rot
+					[ filename moz.score_rot.maxhelp ]
+					[ title "moz.score_rot" ]
+			]
+		]
+	]

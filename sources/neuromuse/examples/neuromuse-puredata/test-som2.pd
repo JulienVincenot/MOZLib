@@ -1,0 +1,431 @@
+#N struct template1 float x float y float z float q;
+#N canvas 75 66 837 737 10;
+#X msg 197 331 disconnect;
+#X obj 106 353 netsend 1;
+#X obj 54 145 tgl 25 0 empty empty send_formes 0 -6 0 10 -262144 -1
+-1 0 1;
+#X obj 106 260 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 116 330 prepend send;
+#X obj 54 208 i;
+#X obj 54 234 sel 1 0, f 18;
+#X floatatom 105 167 5 0 0 1 period - -;
+#X obj 69 371 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X msg 106 279 connect 127.0.0.1 12001;
+#X floatatom 483 140 6 0 0 1 neurone# - -;
+#X obj 483 119 route float;
+#X obj 483 73 list split 1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array output 20 float 3;
+#A 0 0.172 0.119 0.181 0.314 0.295 0.244 0.157 0.116 0.061 0.2 0.242
+0.342 0.351 0.308 0.251 0.209 0.137 0.159 0.071 0.118;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 368 51 graph;
+#X obj 483 50 netreceive 12003 1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array forme1 20 float 3;
+#A 0 0.821429 0.8 0.778572 0.757144 0.742858 0.714287 0.692859 0.664287
+0.635716 0.614288 0.578574 0.564288 0.521432 0.485718 0.450004 0.392862
+0.357148 0.314291 0.271434 0.200007;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 79 410 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array forme2 20 float 3;
+#A 0 0.15 0.164285 0.178571 0.207142 0.228571 0.249999 0.271427 0.307141
+0.342855 0.392855 0.449997 0.514282 0.571424 0.614281 0.657137 0.692851
+0.728565 0.764279 0.785708 0.799993;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 184 410 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array forme3 20 float 3;
+#A 0 0.257142 0.335713 0.392855 0.478569 0.528568 0.58571 0.628567
+0.671424 0.721423 0.76428 0.814279 0.828565 0.76428 0.707138 0.649996
+0.607139 0.549997 0.492854 0.421426 0.235714;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 290 410 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array forme4 20 float 3;
+#A 0 0.8 0.742858 0.685716 0.650002 0.585717 0.535717 0.464289 0.392861
+0.342862 0.292863 0.300005 0.357148 0.421433 0.478575 0.535717 0.592859
+0.635716 0.685716 0.721429 0.764286;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 395 410 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array forme5 20 float 3;
+#A 0 0.357141 0.407141 0.471426 0.542854 0.528568 0.449997 0.335713
+0.257142 0.285713 0.364284 0.485711 0.528568 0.564282 0.542854 0.485711
+0.428569 0.371427 0.32857 0.285713 0.271428;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 500 410 graph;
+#N canvas 1 56 450 300 (subpatch) 0;
+#X array forme6 20 float 3;
+#A 0 0.514287 0.464288 0.421431 0.364289 0.357146 0.407145 0.478573
+0.528573 0.600001 0.528573 0.435717 0.328575 0.292861 0.307146 0.371431
+0.435717 0.485716 0.535715 0.571429 0.635714;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 606 410 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array stimulus 20 float 3;
+#A 0 0.628572 0.514286 0.471429 0.378572 0.292858 0.200001 0.228573
+0.314287 0.350001 0.457144 0.564286 0.664286 0.685715 0.571429 0.464287
+0.37143 0.242858 0.150001 0.135716 0.178573;
+#X coords 0 0 20 1 100 140 1 0 0;
+#X restore 265 51 graph;
+#X obj 116 307 r tosom;
+#N canvas 416 356 550 324 template1 0;
+#X text 4 164 The filledpolygon's arguments are interior color \, border
+color \, border width \, and then the points of the polygon. Arguments
+which are symbols ("q" and "z" in this case) mean to take the values
+from the data structure. Other values are constant. The position of
+the object is automatically controlled by fields named "x" and "y".
+;
+#X obj 60 21 struct template1 float x float y float z float q;
+#X text 3 67 This subpatch acts as a template which describes the data
+structure. The "struct" specifies four floating point values named
+x \, y \, z \, and q. The "filledpolygon" is a drawing instruction.
+Templates should have only one template object but may have any number
+of drawing instructions.;
+#X obj 60 46 filledpolygon 900 q 5 0 0 20 z 40 0;
+#X restore 645 693 pd template1;
+#N canvas 470 530 440 501 stuff 0;
+#X obj 193 404 pointer;
+#X obj 52 428 append template1 x y z q;
+#X obj 52 20 inlet;
+#X obj 52 278 * 10;
+#X obj 102 290 * 10;
+#X obj 52 308 pack;
+#X msg 52 391 \$2 \$1 30 9;
+#X obj 52 344 t l b b;
+#X obj 153 260 inlet;
+#X msg 195 340 \; pd-winner clear;
+#X msg 193 382 traverse pd-winner \, bang;
+#X obj 52 51 t f f, f 9;
+#X obj 102 131 / 20;
+#X obj 102 154 int;
+#X floatatom 102 179 5 0 0 0 - - -;
+#X obj 52 153 int;
+#X floatatom 52 177 5 0 0 0 - - -;
+#X obj 52 130 % 20;
+#X obj 52 216 swap;
+#X obj 209 85 loadbang;
+#X msg 209 108 \; w-scale 30;
+#X obj 142 39 inlet;
+#X obj 101 198 expr $f2 - $f1;
+#X connect 0 0 1 4;
+#X connect 2 0 11 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 1;
+#X connect 5 0 7 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 7 1 10 0;
+#X connect 7 2 9 0;
+#X connect 8 0 4 1;
+#X connect 8 0 3 1;
+#X connect 10 0 0 0;
+#X connect 11 0 17 0;
+#X connect 11 1 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 22 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 15 0;
+#X connect 18 0 3 0;
+#X connect 18 1 4 0;
+#X connect 19 0 20 0;
+#X connect 21 0 17 1;
+#X connect 21 0 12 1;
+#X connect 21 0 22 1;
+#X connect 22 0 18 1;
+#X restore 483 180 pd stuff;
+#X floatatom 567 188 5 0 0 1 scale w-scale -;
+#N canvas 928 59 883 859 winner 1;
+#X scalar template1 392 560 30 9 \;;
+#X restore 307 338 pd winner;
+#X f 12;
+#X text 55 3 Exemple to be played with som-test2.lisp;
+#N canvas 883 102 450 476 random-vect 0;
+#X obj 189 65 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X obj 189 110 t b;
+#X obj 189 156 / 1000;
+#X obj 189 265 list prepend;
+#X obj 189 288 t l l l;
+#X obj 230 326 list length;
+#X obj 230 372 sel 1;
+#X obj 230 395 t b b;
+#X obj 151 354 list store;
+#X obj 230 349 >= 100;
+#X obj 189 84 repeat 100;
+#X obj 189 40 inlet;
+#X obj 372 40 inlet;
+#X obj 150 435 array set stimulus;
+#X obj 35 124 array get stimulus;
+#X obj 35 147 s tosom;
+#X obj 35 67 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 117 28 loadbang;
+#X obj 35 37 inlet;
+#X obj 35 99 metro 1000;
+#X obj 77 50 r stimul;
+#X obj 189 133 random 1000;
+#X connect 0 0 10 0;
+#X connect 1 0 21 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 8 1;
+#X connect 4 2 3 1;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 7 1 3 1;
+#X connect 8 0 13 0;
+#X connect 9 0 6 0;
+#X connect 10 0 1 0;
+#X connect 11 0 0 0;
+#X connect 12 0 10 1;
+#X connect 12 0 9 1;
+#X connect 14 0 15 0;
+#X connect 16 0 19 0;
+#X connect 17 0 0 0;
+#X connect 18 0 16 0;
+#X connect 19 0 14 0;
+#X connect 20 0 16 0;
+#X connect 21 0 2 0;
+#X restore 501 337 pd random-vect;
+#X obj 541 273 bng 25 250 50 0 empty empty new 0 -8 0 10 -262144 -1
+-1;
+#X floatatom 582 313 5 0 0 0 size - -;
+#X obj 582 263 loadbang;
+#X msg 582 286 100;
+#X obj 61 636 prepend send;
+#X obj 61 678 netsend 1;
+#X msg 305 660 disconnect;
+#X obj 61 700 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X msg 166 619 temp \$1;
+#X floatatom 166 601 5 0 0 0 - - -;
+#X obj 169 583 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -258699
+-1 -1 1400 1;
+#X floatatom 61 583 5 0 0 0 - - -;
+#X obj 64 565 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -24198
+-1 -1 0 1;
+#X msg 61 601 learn-fact \$1;
+#X floatatom 308 601 5 0 0 0 - - -;
+#X obj 311 583 hsl 128 15 0.001 2 0 0 empty empty empty -2 -6 0 8 -62784
+-1 -1 0 1;
+#X msg 308 619 attention \$1;
+#X floatatom 445 601 5 0 0 0 - - -;
+#X obj 448 583 hsl 128 15 0 0.5 0 0 empty empty empty -2 -6 0 8 -250685
+-1 -1 4800 1;
+#X msg 445 619 latence \$1;
+#X floatatom 585 601 5 0 0 0 - - -;
+#X obj 610 578 hradio 20 1 0 10 empty empty empty 0 -6 0 8 -24198 -258699
+-258699 7;
+#X msg 585 619 radius \$1;
+#N canvas 1 86 178 194 (subpatch) 0;
+#X obj 60 30 inlet;
+#X obj 60 153 outlet;
+#X obj 60 82 + 1;
+#X obj 111 32 loadbang;
+#X msg 111 55 0;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X restore 585 581 pd;
+#X text 313 555 SOM control;
+#X obj 44 565 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 135 660 connect 127.0.0.1 12002;
+#X obj 54 186 metro 100;
+#X msg 105 146 100;
+#N canvas 662 327 366 663 stimuli 1;
+#X floatatom 67 129 5 0 0 0 - - -;
+#X obj 174 245 sprintf symbol forme%ld;
+#X obj 15 36 inlet;
+#X obj 67 161 + 1;
+#X obj 67 581 s tosom;
+#X obj 67 17 r next;
+#X obj 169 111 random 6;
+#X obj 154 17 inlet;
+#X msg 144 146 set \$1;
+#X obj 144 171 s select-forme;
+#X obj 169 70 spigot 0;
+#X obj 67 71 spigot 1;
+#X obj 125 71 == 0;
+#X obj 94 263 array size;
+#X floatatom 94 286 5 0 0 0 - - -;
+#X obj 94 308 t b f;
+#X obj 94 331 repeat;
+#X obj 145 434 array get;
+#X obj 94 416 t f f;
+#X msg 170 407 1;
+#X obj 170 381 loadbang;
+#X obj 94 468 pack;
+#X obj 29 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 94 216 t b f b;
+#X obj 94 354 f 1;
+#X obj 143 355 f -1;
+#X obj 94 377 + 1;
+#X obj 94 441 / 20;
+#X obj 94 523 list;
+#X obj 94 500 list append;
+#X obj 67 184 t b f;
+#X obj 67 555 list;
+#X connect 0 0 3 0;
+#X connect 0 0 8 0;
+#X connect 1 0 13 1;
+#X connect 1 0 17 2;
+#X connect 2 0 0 0;
+#X connect 3 0 30 0;
+#X connect 5 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 0 0;
+#X connect 7 0 10 1;
+#X connect 7 0 12 0;
+#X connect 8 0 9 0;
+#X connect 10 0 6 0;
+#X connect 11 0 0 0;
+#X connect 12 0 11 1;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 1 16 1;
+#X connect 15 1 27 1;
+#X connect 16 0 24 0;
+#X connect 17 0 21 1;
+#X connect 18 0 26 1;
+#X connect 18 0 27 0;
+#X connect 18 1 17 0;
+#X connect 19 0 17 1;
+#X connect 20 0 19 0;
+#X connect 21 0 29 0;
+#X connect 22 0 0 0;
+#X connect 23 0 13 0;
+#X connect 23 1 1 0;
+#X connect 23 2 25 0;
+#X connect 23 2 29 1;
+#X connect 24 0 26 0;
+#X connect 25 0 26 1;
+#X connect 26 0 18 0;
+#X connect 27 0 21 0;
+#X connect 28 0 29 1;
+#X connect 28 0 31 1;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 30 1 23 0;
+#X connect 31 0 4 0;
+#X restore 297 279 pd stimuli;
+#X f 18;
+#X obj 297 258 hradio 15 1 0 6 empty select-forme pattern_select. 0
+-8 0 10 -262144 -1 -1 4;
+#X obj 54 257 s next;
+#X obj 501 305 tgl 25 0 empty empty send 0 -8 0 10 -262144 -1 -1 0
+1;
+#X obj 402 258 tgl 15 0 empty empty random_mode 0 -8 0 10 -262144 -1
+-1 1 1;
+#X text 295 317 open to see winner;
+#X text 493 697 Fred Voisin \, 2021;
+#X obj 248 51 tgl 15 0 stimul empty send -26 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 567 163 5 0 0 0 - - -;
+#X obj 580 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 35 204 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 692 122 loadbang;
+#X msg 692 145 30;
+#N canvas 1 56 495 450 output 0;
+#X obj 86 31 inlet;
+#X obj 141 270 array set output;
+#X obj 168 210 list;
+#X obj 168 187 list append;
+#X obj 141 242 list;
+#X obj 45 110 until;
+#X obj 58 193 list store;
+#X obj 45 135 f;
+#X msg 97 110 0, f 2;
+#X obj 71 77 t b b l b;
+#X obj 83 136 + 2;
+#X msg 44 164 get \$1 2;
+#X msg 88 228 \$2;
+#X connect 0 0 9 0;
+#X connect 2 0 3 1;
+#X connect 2 0 4 1;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 12 0;
+#X connect 6 1 5 1;
+#X connect 6 1 4 0;
+#X connect 7 0 11 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 1;
+#X connect 9 0 5 0;
+#X connect 9 1 8 0;
+#X connect 9 2 6 1;
+#X connect 9 3 3 1;
+#X connect 10 0 7 1;
+#X connect 11 0 6 0;
+#X connect 12 0 3 0;
+#X restore 517 96 pd output;
+#X msg 29 584 0;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 56 0;
+#X connect 3 0 9 0;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 60 0;
+#X connect 6 1 3 0;
+#X connect 7 0 56 1;
+#X connect 8 0 5 1;
+#X connect 9 0 1 0;
+#X connect 10 0 24 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 0;
+#X connect 12 1 71 0;
+#X connect 14 0 12 0;
+#X connect 14 0 67 0;
+#X connect 22 0 4 0;
+#X connect 25 0 24 2;
+#X connect 29 0 28 1;
+#X connect 30 0 28 2;
+#X connect 31 0 32 0;
+#X connect 32 0 30 0;
+#X connect 33 0 34 0;
+#X connect 34 0 36 0;
+#X connect 35 0 34 0;
+#X connect 37 0 33 0;
+#X connect 38 0 37 0;
+#X connect 39 0 38 0;
+#X connect 40 0 42 0;
+#X connect 41 0 40 0;
+#X connect 42 0 33 0;
+#X connect 43 0 45 0;
+#X connect 44 0 43 0;
+#X connect 45 0 33 0;
+#X connect 46 0 48 0;
+#X connect 47 0 46 0;
+#X connect 48 0 33 0;
+#X connect 49 0 51 0;
+#X connect 50 0 52 0;
+#X connect 51 0 33 0;
+#X connect 52 0 49 0;
+#X connect 54 0 40 0;
+#X connect 55 0 34 0;
+#X connect 56 0 5 0;
+#X connect 56 0 68 0;
+#X connect 57 0 7 0;
+#X connect 59 0 58 0;
+#X connect 61 0 28 0;
+#X connect 62 0 58 1;
+#X connect 66 0 24 1;
+#X connect 69 0 70 0;
+#X connect 70 0 66 0;
+#X connect 72 0 40 0;

@@ -1,0 +1,10 @@
+Introduction to the PW package
+
+The PW package contains a selection of functions that belong to the PatchWork family\, and therefore exist either in Open Music and PWGL
+
+Some of them have a slightly different name between OM and PWGL\, in that case this is shown in their name. For instance : OM+ in Open Music is strictly equivalent to G+ in PWGL
+
+In addition to those\, the kernel also includes obviously all of CommonLISP as well as the ITERATE library\, see https://common-lisp.net/project/iterate/
+
+Note : Several functions you might expect from OM or PWGL are not present\, either because I could not localize the source code\, or it didn't seem meaningful to have them present in Max.
+For instance\, many functions dealing with score editors or BPF objects are useless outside those specific environments\, they simply don't in Max although we have some equivalents\, like bach.roll and bach.score. The pw-sample and pw-sample-xy functions are also here to help you control BPFs and curves in Lisp from the function editor in Max.

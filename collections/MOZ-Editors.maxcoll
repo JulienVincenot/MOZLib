@@ -1,0 +1,5 @@
+{
+	"name" : "MOZ Editors",
+	"type" : "filelist",
+	"contents" : [ "moz.chord_view.maxsnip", "moz.score_view.maxsnip", "moz.time_view.maxsnip", "moz.graph_view.maxsnip", "moz.meta_view.maxsnip" ]
+}

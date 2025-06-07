@@ -1,0 +1,217 @@
+#+TITLE: Simple Neural Network
+#+AUTHOR: Guillaume Le Vaillant
+#+DATE: 2022-11-06
+#+EMAIL: glv@posteo.net
+#+LANGUAGE: en
+#+OPTIONS: num:nil toc:nil html-postamble:nil html-scripts:nil
+#+HTML_DOCTYPE: html5
+
+The active repository is at https://codeberg.org/glv/simple-neural-network
+
+* Description
+
+*simple-neural-network* is a Common Lisp library for creating, training and
+using basic neural networks. The networks created by this library are
+feedforward neural networks trained using backpropagation. The activation
+function used by the neurons is ~A(x) = 1.7159 * tanh(0.66667 * x)~.
+
+*simple-neural-network* depends on the *cl-store* and *lparallel* libraries.
+
+* License
+
+*simple-neural-network* is released under the GPL-3 license. See the [[file:LICENSE][LICENSE]]
+file for details.
+
+* API
+
+The functions are in the /simple-neural-network/ package. You can use the
+shorter /snn/ nickname if you prefer.
+
+The library works with double floats. Your inputs and targets must therefore be
+vectors of ~double-float~ numbers. For better results, they should also be
+normalized to contain values between -1 and 1. The ~find-normalization~ helper
+function can be used to generate normalization and denormalization functions
+from sample inputs, but it might not be adapted to every use case.
+
+If ~lparallel:*kernel*~ is set or bound, some computations will be done in
+parallel. This is only useful if the network is big enough, because the
+overhead of task management can instead slow things down for small networks.
+
+
+#+BEGIN_SRC lisp
+(create-neural-network input-size output-size &rest hidden-layers-sizes)
+#+END_SRC
+
+Create a neural network having /input-size/ inputs, /output-size/ outputs, and
+optionally some intermediary layers whose sizes are specified by
+/hidden-layers-sizes/. The neural network is initialized with random weights
+and biases.
+
+
+#+BEGIN_SRC lisp
+(train neural-network inputs targets learning-rate
+       &key batch-size momentum-coefficient)
+#+END_SRC
+
+Train the /neural-network/ with the given /learning-rate/ and
+/momentum-coefficient/ using some /inputs/ and /targets/. The weights are
+updated every /batch-size/ inputs.
+
+
+#+BEGIN_SRC lisp
+(predict neural-network input &optional output)
+#+END_SRC
+
+Return the output computed by the /neural-network/ for a given /input/. If
+/output/ is not ~nil~, the output is written in it, otherwise a new vector is
+allocated.
+
+
+#+BEGIN_SRC lisp
+(store neural-network place)
+#+END_SRC
+
+Store the /neural-network/ to /place/, which must be a stream or
+a pathname-designator.
+
+
+#+BEGIN_SRC lisp
+(restore place)
+#+END_SRC
+
+Restore the neural network stored in /place/, which must be a stream or
+a pathname-designator.
+
+
+#+BEGIN_SRC lisp
+(copy neural-network)
+#+END_SRC
+
+Return a copy of the /neural-network/.
+
+
+#+BEGIN_SRC lisp
+(index-of-max-value values)
+#+END_SRC
+
+Return the index of the greatest value in /values/.
+
+
+#+BEGIN_SRC lisp
+(same-category-p output target)
+#+END_SRC
+
+Return ~t~ if calls to ~index-of-max-value~ on /output/ and /target/ return the
+same value, and ~nil~ otherwise. This function is only useful when the neural
+network was trained to classify the inputs in several categories (when targets
+contain a 1 for the correct category and and -1 for all the other categories).
+
+
+#+BEGIN_SRC lisp
+(accuracy neural-network inputs targets &key test)
+#+END_SRC
+
+Return the rate of good guesses computed by the /neural-network/ when testing
+it with some /inputs/ and /targets/. /test/ must be a function taking an output
+and a target returning ~t~ if the output is considered to be close enough to
+the target, and ~nil~ otherwise. ~same-category-p~ is used by default.
+
+
+#+BEGIN_SRC lisp
+(mean-absolute-error neural-network inputs targets)
+#+END_SRC
+
+Return the mean absolute error on the outputs computed by the /neural-network/
+when testing it with some /inputs/ and /targets/.
+
+
+#+BEGIN_SRC lisp
+(find-normalization inputs)
+#+END_SRC
+
+Return four values. The first is a normalization function taking an input and
+returning a normalized input. Applying this normalization function to the
+inputs gives a data set in which each variable has mean 0 and standard
+deviation 1. The second is a denormalization function that can compute the
+original input from the normalized one. The third is the code of the
+normalization function. The fourth is the code of the denormalization function.
+
+
+#+BEGIN_SRC lisp
+(find-learning-rate neural-network inputs targets
+                    &key batch-size momentum-coefficient epochs
+                         iterations minimum maximum)
+#+END_SRC
+
+Return the best learing rate found in /iterations/ steps of dichotomic search
+(between /minimum/ and /maximum/). In each step, the /neural-network/ is
+trained /epochs/ times using some /inputs/, /targets/, /batch-size/ and
+/momentum-coefficient/.
+
+#+BEGIN_SRC lisp
+(neural-network-layers neural-network)
+(neural-network-weights neural-network)
+(neural-network-biases neural-network)
+#+END_SRC
+
+These functions are SETFable. They can be used to get or set the neuron values,
+the weights and the biases of the /neural-network/, which are represented as
+a list of vectors where each vector contains the values (~double-float~) for
+a layer.
+
+* Examples
+
+Neural network for the XOR function:
+
+#+BEGIN_SRC lisp
+(asdf:load-system "simple-neural-network")
+
+(defun normalize (input)
+  (map 'vector (lambda (x) (if (= x 1) 1.0d0 -1.0d0)) input))
+
+(defun denormalize (output)
+  (if (plusp (aref output 0)) 1 0))
+
+(defvar inputs (mapcar #'normalize '(#(0 0) #(0 1) #(1 0) #(1 1))))
+(defvar targets (mapcar #'normalize '(#(0) #(1) #(1) #(0))))
+(defvar nn (snn:create-neural-network 2 1 4))
+(dotimes (i 1000)
+  (snn:train nn inputs targets 0.1))
+
+(denormalize (snn:predict nn (normalize #(0 0))))
+-> 0
+
+(denormalize (snn:predict nn (normalize #(1 0))))
+-> 1
+
+(denormalize (snn:predict nn (normalize #(0 1))))
+-> 1
+
+(denormalize (snn:predict nn (normalize #(1 1))))
+-> 0
+#+END_SRC
+
+
+Neural network for the MNIST dataset, using parallelism (2 threads):
+
+#+BEGIN_SRC lisp
+;; Note: the mnist-load function used below is defined in "tests/tests.lisp".
+
+(setf lparallel:*kernel* (lparallel:make-kernel 2))
+(defvar nn (snn:create-neural-network 784 10 128))
+(multiple-value-bind (inputs targets) (mnist-load :train)
+  (dotimes (i 3)
+    (snn:train nn inputs targets 0.003d0)))
+
+(multiple-value-bind (inputs targets) (mnist-load :test)
+  (snn:accuracy nn inputs targets))
+-> 1911/2000
+#+END_SRC
+
+* Tests
+
+The tests require the *fiveam* and *chipz* libraries. They can be run with:
+
+#+BEGIN_SRC lisp
+(asdf:test-system "simple-neural-network")
+#+END_SRC

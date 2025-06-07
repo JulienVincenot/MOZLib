@@ -1,0 +1,23 @@
+{
+	"name" : "MOZ λ-Chreode",
+	"type" : "filelist",
+	"contents" : 
+	[ "chreode.arithm-ser.maxsnip",
+	  "chreode.chord_view.maxsnip",
+	  "chreode.eval-chreodes.maxsnip",
+	  "chreode.ezmidi_micro.maxsnip",
+	  "chreode.get-durs.maxsnip",
+	  "chreode.get-symbolic-space.maxsnip",
+	  "chreode.get-values.maxsnip",
+	  "chreode.make-chreode.maxsnip",
+	  "chreode.make-flip.maxsnip",
+	  "chreode.make-symbolic-space.maxsnip",
+	  "chreode.make-tab-norm.maxsnip",
+	  "chreode.make-tab.maxsnip",
+	  "chreode.make-transformer.maxsnip",
+	  "chreode.pitchfilter.maxsnip",
+	  "chreode.plot_view.maxsnip",
+	  "chreode.score_import.maxsnip",
+	  "chreode.score_quantize.maxsnip",
+	  "chreode.time_view.maxsnip" ]
+}

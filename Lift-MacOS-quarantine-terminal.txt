@@ -2,5 +2,9 @@ Here's the terminal command to use to lift the quarantine from all packages loca
 
 sudo xattr -rd com.apple.quarantine ~/Documents/Max\ 8/Packages/*
 
+Or for Max 9, simply change to :
+sudo xattr -rd com.apple.quarantine ~/Documents/Max\ 9/Packages/*
+
 Then type your admin password.
+
 You should enter this whenever you install new packages (you can trust !) which are not coming from the Package Manager.

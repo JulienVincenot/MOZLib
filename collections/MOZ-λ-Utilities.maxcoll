@@ -1,0 +1,10 @@
+{
+	"name" : "MOZ λ-Utilities",
+	"type" : "filelist",
+	"contents" : 
+	[ "lisp.edit.maxsnip", 
+	  "lisp.lore.maxsnip",
+	  "lisp.iterate+for-fromto.maxsnip",
+      "lisp.iterate+for-in.maxsnip"
+	]
+}

@@ -1,0 +1,84 @@
+{
+	"pattrstorage" : 	{
+		"name" : "chreode",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"number" : [ 0 ],
+					"number[1]" : [  ],
+					"chreode.make-chreode[1]::number" : [ 16 ],
+					"chreode.make-chreode[1]::number[1]" : [ 36.0 ],
+					"chreode.make-chreode[1]::number[2]" : [ 20.0 ],
+					"chreode.make-chreode[1]::umenu" : [ 1 ],
+					"chreode.make-chreode[1]::umenu[1]" : [ 0 ],
+					"chreode.make-chreode::number" : [ 124 ],
+					"chreode.make-chreode::number[1]" : [ 36.0 ],
+					"chreode.make-chreode::number[2]" : [ 20.0 ],
+					"chreode.make-chreode::umenu" : [ 0 ],
+					"chreode.make-chreode::umenu[1]" : [ 0 ],
+					"chreode.arithm-ser::number" : [ 0.0 ],
+					"chreode.arithm-ser::number[1]" : [ 1.0 ],
+					"chreode.arithm-ser::number[2]" : [ 0.001 ],
+					"chreode.make-plot::number" : [ 0.85 ],
+					"chreode.make-plot::umenu" : [ 2 ],
+					"chreode.make-plot::umenu[1]" : [ 0 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"number" : [ 0 ],
+					"number[1]" : [ 0.0 ],
+					"chreode.make-chreode[1]::number" : [ 39 ],
+					"chreode.make-chreode[1]::number[1]" : [ 36.0 ],
+					"chreode.make-chreode[1]::number[2]" : [ 20.0 ],
+					"chreode.make-chreode[1]::umenu" : [ 1 ],
+					"chreode.make-chreode[1]::umenu[1]" : [ 0 ],
+					"chreode.make-chreode::number" : [ 135 ],
+					"chreode.make-chreode::number[1]" : [ 56.283997 ],
+					"chreode.make-chreode::number[2]" : [ 20.0 ],
+					"chreode.make-chreode::umenu" : [ 1 ],
+					"chreode.make-chreode::umenu[1]" : [ 0 ],
+					"chreode.arithm-ser::number" : [ 0.0 ],
+					"chreode.arithm-ser::number[1]" : [ 1.0 ],
+					"chreode.arithm-ser::number[2]" : [ 0.001 ],
+					"chreode.make-plot::number" : [ 0.85 ],
+					"chreode.make-plot::umenu" : [ 2 ],
+					"chreode.make-plot::umenu[1]" : [ 1 ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"data" : 				{
+					"number" : [ 0 ],
+					"number[1]" : [ 0.0 ],
+					"chreode.make-chreode[1]::number" : [ 3 ],
+					"chreode.make-chreode[1]::number[1]" : [ 36.0 ],
+					"chreode.make-chreode[1]::number[2]" : [ 20.0 ],
+					"chreode.make-chreode[1]::umenu" : [ 1 ],
+					"chreode.make-chreode[1]::umenu[1]" : [ 0 ],
+					"chreode.make-chreode::number" : [ 135 ],
+					"chreode.make-chreode::number[1]" : [ 56.283997 ],
+					"chreode.make-chreode::number[2]" : [ 20.0 ],
+					"chreode.make-chreode::umenu" : [ 1 ],
+					"chreode.make-chreode::umenu[1]" : [ 0 ],
+					"chreode.arithm-ser::number" : [ 0.0 ],
+					"chreode.arithm-ser::number[1]" : [ 1.0 ],
+					"chreode.arithm-ser::number[2]" : [ 0.001 ],
+					"chreode.make-plot::number" : [ 0.85 ],
+					"chreode.make-plot::umenu" : [ 2 ],
+					"chreode.make-plot::umenu[1]" : [ 1 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}

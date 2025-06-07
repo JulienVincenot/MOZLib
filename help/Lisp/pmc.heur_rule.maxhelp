@@ -1,0 +1,1 @@
+/Users/julienvincenot/Documents/Max 8/Packages/MOZLib/help/Lisp/pmc.rule.maxhelp

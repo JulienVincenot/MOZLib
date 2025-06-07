@@ -95,7 +95,7 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 \
 **Windows 10 or 11 install**
 
-3) Install on Windows is slightly more complicated but following this separate [install instructions pdf](https://github.com/JulienVincenot/MOZLib/raw/master/windows/MOZLib_Windows_Instructions.pdf) very carefully will ensure that everything works, including PWforMax and ~99% of Lisp-based functionalities.
+3) Install on Windows is slightly more complicated but following this separate [install instructions pdf](https://github.com/JulienVincenot/MOZLib/raw/master/forWindows/MOZLib_Windows_Instructions.pdf) very carefully will ensure that everything works, including PWforMax and ~99% of Lisp-based functionalities.
 
 &emsp;&emsp;&emsp;***The whole install can take time, be patient it's a one time thing !*** **;)**
 

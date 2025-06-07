@@ -1,0 +1,75 @@
+{
+	"patcher" : 	{
+		"fileversion" : 1,
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 3,
+			"revision" : 1,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "box",
+		"rect" : [ 109.0, 154.0, 640.0, 480.0 ],
+		"bglocked" : 0,
+		"openinpresentation" : 0,
+		"default_fontsize" : 12.0,
+		"default_fontface" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
+		"gridsize" : [ 15.0, 15.0 ],
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
+		"statusbarvisible" : 2,
+		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
+		"boxanimatetime" : 200,
+		"enablehscroll" : 1,
+		"enablevscroll" : 1,
+		"devicewidth" : 0.0,
+		"description" : "122 x 39, containing 1 object",
+		"digest" : "",
+		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
+		"boxes" : [ 			{
+				"box" : 				{
+					"bgmode" : 1,
+					"border" : 1,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-1",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "chreode.ezmidi_micro.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 10.0, 10.0, 142.0, 66.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+ ],
+		"lines" : [  ],
+		"dependency_cache" : [  ],
+		"snippetinfo" : 		{
+			"name" : "piano-mix-micro",
+			"objects" : "bpatcher",
+			"tags" : "",
+			"description" : "122 x 39, containing 1 object",
+			"image" : "iVBORw0KGgoAAAANSUhEUgAAAI4AAABCCAYAAACB1+7HAAAABHNCSVQICAgIfAhkiAAAANBJREFUeJzt0kENAzEQwMC9qizCH1pwXDHUnyjSDAI//MzMO/Cn78zM3vt0BxdZa83ndAR3Mg6JcUiMQ2IcEuOQGIfEOCTGITEOiXFIjENiHBLjkBiHxDgkxiExDolxSIxDYhwS45AYh8Q4JMYhMQ6JcUiMQ2IcEuOQGIfEOCTGITEOiXFIjENiHBLjkBiHxDgkxiExDolxSIxDYhwS45AYh8Q4JMYhMQ6JcUiMQ2IcEuOQGIfEOCTGITEOiXFIjENiHBLjkBiH5JmZ93QE9/kBnZAFg7ZUxh8AAAAASUVORK5CYII="
+		}
+,
+		"autosave" : 0
+	}
+
+}
