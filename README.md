@@ -3,8 +3,9 @@ MOZ’Lib
 ==============
 
 **MOZ’Lib** is a **Max** package dedicated to **computer-aided composition** (or CAC).
-Its main purpose is to introduce the various problematics of CAC, programming and creation in general to young musicians between 9 and 99 years old.
-The library is made of several modules (or bpatchers) largely based on the [***bach***](http://www.bachproject.net) ecosystem created by **Andrea Agostini** and **Daniele Ghisi**. Each of these modules represents a compositional idea or technique, allowing the user to interact through various graphical interfaces.
+Its main purpose is to introduce the various problematics of CAC, programming and creation in general to young musicians for ages 9 to 99.
+The library is made of several modules (or bpatchers) largely based on the [***bach***](http://www.bachproject.net) ecosystem created by **Andrea Agostini** and **Daniele Ghisi**. 
+Each of these modules represents a compositional idea or technique, allowing the user to interact through various graphical interfaces.
 
 **But that's just the tip of the iceberg !**
 In addition to those main modules, MOZ’Lib includes a system called ***PWforMax***. Previously hidden in the background, *PWforMax* allows users to generate and run Lisp code in Max, and to work in real time with any library from the PatchWork / OpenMusic / PWGL family !

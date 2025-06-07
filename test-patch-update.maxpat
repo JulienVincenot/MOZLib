@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 234.0, 83.0, 62.0, 62.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 37.300277170282094,
+					"id" : "obj-1",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 247.0, 251.0, 40.0, 48.0 ],
+					"text" : ">"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 37.300277170282094,
 					"id" : "obj-4",
 					"maxclass" : "comment",
