@@ -4,7 +4,7 @@ MOZ’Lib
 
 **MOZ’Lib** is a **Max** package dedicated to **computer-aided composition** (or CAC).
 Its main purpose is to introduce the various problematics of CAC, programming and creation in general to young musicians from ages 9 to 99.
-The library is made of several modules (or bpatchers) largely based on the [***bach***](http://www.bachproject.net){:target="_blank" rel="noopener"} ecosystem created by **Andrea Agostini** and **Daniele Ghisi**. 
+The library is made of several modules (or bpatchers) largely based on the [***bach***](http://www.bachproject.net) ecosystem created by **Andrea Agostini** and **Daniele Ghisi**. 
 Each of these modules represents a compositional idea or technique, allowing the user to interact through various graphical interfaces.
 
 **But that's just the tip of the iceberg !**
