@@ -77,15 +77,13 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 
    No more action is needed, install process has been simplified since June 2025 !
 
-  &emsp;&emsp;&emsp;***IMPORTANT:***
-  &emsp;&emsp;&emsp;— **If your system is macOS 10.13 or later** it is possible that your Documents folder is actually located on iCloud Drive... ***PWforMax* will not work in these conditions !**
+  &emsp;&emsp;&emsp;***IMPORTANT:***  &emsp;&emsp;&emsp;**If your system is macOS 10.13 or later** it is possible that your Documents folder is actually located on iCloud Drive... ***PWforMax* will not work in these conditions !**
   You will need either to disable iCloud Drive (at least for Documents and Desktop) or create a dummy Documents folder in your user folder (home), with the following directory structure :
   &emsp; *your_user_folder/Documents/Max 8/Packages/* (or equivalent for Max 7 or 9)
   &emsp; (you still put MOZLib in Packages obviously)
 
 
-  &emsp;&emsp;&emsp;***VERY IMPORTANT:***
-  &emsp;&emsp;&emsp;**If your computer runs macOS 10.15 (Catalina) or above**, 
+  &emsp;&emsp;&emsp;***VERY IMPORTANT:***  &emsp;&emsp;&emsp;**If your computer runs macOS 10.15 (Catalina) or above**, 
   MOZ'Lib will not be able to work in Max unless you remove it from the system quarantine by entering the following command in the terminal :
   &emsp; ***xattr -rd com.apple.quarantine ~/Documents/Max\ 8/Packages/*** *
   &emsp;(substitute 8 with 7 or 9 depending which version you use — and don't forget the * symbol !)
@@ -100,17 +98,15 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 \
 **Windows 10 or 11 install**
 
-3) Install on Windows is slightly more complicated but following this separate [install instructions pdf](https://github.com/JulienVincenot/MOZLib/raw/master/forWindows/MOZLib_Windows_Instructions.pdf) very carefully will ensure that everything works, including PWforMax and ~99% of Lisp-based functionalities.
+4) Install on Windows is slightly more complicated but following this separate [install instructions pdf](https://github.com/JulienVincenot/MOZLib/raw/master/forWindows/MOZLib_Windows_Instructions.pdf) very carefully will ensure that everything works, including PWforMax and ~99% of Lisp-based functionalities.
 
 &emsp;&emsp;&emsp;***The whole install can take time, be patient it's a one time thing !*** **;)**
 
 Unlike previous attempts to build a full installer for Windows user, tests on multiple machines and setups proved this project completely out of our reach. This is why we prefer now to ask users to be responsible for their own install of **WSL - Windows subsystem for Linux)** and SBCL. This way, installing future updates of MOZ'lib will also require a minimal effort !
 
-&emsp;&emsp;&emsp;**VERY IMPORTANT:** 
+&emsp;&emsp;&emsp;***VERY IMPORTANT:*** At some point in the procedure you will need to choose a username and password for WSL. Keep those preciously, you will need them later to compile and install SBCL as well as some other small install actions.
 
-At some point in the procedure you will need to choose a username and password for WSL. Keep those preciously, you will need them later to compile and install SBCL as well as some other small install actions.
-
-
+5) After following the pdf to the very last page carefully, restart Max and go to **Extras menu -> MOZ'Lib -> PWforMax LISP Test** to check everything went well.  
 
 
 \
@@ -118,4 +114,4 @@ At some point in the procedure you will need to choose a username and password f
 \
 **...and finally**
 
-5) Go to the *MOZ’Lib Intro* patch in the Extras menu and… **HAVE FUN !**
+6) Go to the *MOZ’Lib Intro* patch in the Extras menu and… **HAVE FUN !**
