@@ -17,6 +17,7 @@ Among new features :
 
 - many tutorials have been updated since last number updated, so much that it would be impossible to keep track... keep exploring the overview to see more !
 
+- the new module CLUSTERcollect allows to easily include one or more rules either from Lisp functions (for instance Torsten Ander's Cluster-Rules) or from accessor modules. This allows for instance to generate x variants of a same rule (ex: Index rules) with bach.iter and collect / apply all those rules at once. See the "Loop & Collect" example in the Overview (PWforMax Libraries > CLUSTERengine > Rules Interface).
 
 
 v.1.2.8
