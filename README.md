@@ -7,13 +7,17 @@ Its main purpose is to introduce the various problematics of CAC, programming an
 The library is made of several modules (or bpatchers) largely based on the [***bach***](http://www.bachproject.net) ecosystem created by **Andrea Agostini** and **Daniele Ghisi**. 
 Each of these modules represents a compositional idea or technique, allowing the user to interact through various graphical interfaces.
 
+<img src="https://github.com/JulienVincenot/MOZLib/raw/master/media/easy-moz.png" align="center" alt="MOZ example"/>
+
 **But that's just the tip of the iceberg !**
 In addition to those main modules, MOZ’Lib includes a system called ***PWforMax***. Previously hidden in the background, *PWforMax* allows users to generate and run Lisp code in Max, and to work in real time with any library from the PatchWork / OpenMusic / PWGL family !
 
+Developed since the beginning on macOS, MOZ'Lib and the *PWforMax* system it contains have been ported to Windows 10 in 2021 thanks to the invaluable help of [**Matteo Marson**](https://www.patreon.com/mmmt) and [**Juan Vassallo**](https://www.juanvassallo.com) :) 
+
+<img src="https://github.com/JulienVincenot/MOZLib/raw/master/media/pw-vs-max.png" align="center" alt="PWforMax example"/>
+
 MOZ’Lib is developed by composer [**Julien Vincenot**](http://julienvincenot.com), initially as a commission from the project *Ariane#*, directed by the DRAC (Regional Directorate of Cultural Affairs) of Franche-Comté region and piloted by the **Conservatory of Montbéliard**. The initial project was conceived in close interaction with composer and pedagogist [**Gaja Maffezzoli**](https://www.gajamaffezzoli.fr/bio/)
 The current version, fully documented and translated into English since 2020, was part of Vincenot's doctoral research in composition at Harvard University, under the guidance of [**Hans Tutschku**](https://tutschku.com/).
-
-Developed since the beginning on macOS, MOZ'Lib and the *PWforMax* system it contains have been ported to Windows 10 in 2021 thanks to the invaluable help of [**Matteo Marson**](https://www.patreon.com/mmmt) and [**Juan Vassallo**](https://www.juanvassallo.com) :) 
 
 Using this library requires to install [Cycling’74](http://cycling74.com)’s Max 7, 8 or 9 for Mac or Windows — it will work without a licence (Runtime mode) but you won’t be able to save new patches ! 
 
