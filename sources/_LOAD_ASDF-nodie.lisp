@@ -16,7 +16,7 @@
     ; ("fenv/" :fenv) 
     ; ("cluster-rules/" :cluster-rules)
 
-    ("pmc/" :pmc)
+    ;; ("pmc/" :pmc)
     
     ; ("neuromuse/" :neuromuse)
     ; ("fv-morphologie/" "fv-morphologie")
