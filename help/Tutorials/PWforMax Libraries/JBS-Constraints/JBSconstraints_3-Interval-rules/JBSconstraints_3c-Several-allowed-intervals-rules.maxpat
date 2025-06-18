@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 237.0, 79.0, 954.0, 590.0 ],
+		"rect" : [ 34.0, 79.0, 954.0, 590.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,8 +47,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 320.0, 333.0, 536.0, 104.0 ],
-					"presentation_linecount" : 7,
+					"patching_rect" : [ 321.0, 348.0, 536.0, 104.0 ],
 					"text" : "The distance is described by giving the index of the first and last notes\nin the 'candidates' list. For instance, if 'candidates' is set to [1 3], \nthis means that the sum of intervals between the first and third notes \nof the sequence has to be a member of the list of given 'intervals'. \nIn other words, the actual interval between the first and third note must\nbe among allowed intervals. Don't forget, here the distance is expressed\nin term of notes, not intervals !"
 				}
 
@@ -61,7 +60,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 345.0, 474.0, 442.0, 20.0 ],
+					"patching_rect" : [ 382.0, 474.0, 442.0, 20.0 ],
 					"text" : "The bach.x2dx shows intervals between notes in the solution."
 				}
 
@@ -1151,7 +1150,7 @@
 					"numoutlets" : 2,
 					"offset" : [ -65.0, -114.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 9.0, 119.118644067796595, 107.0, 47.0 ],
+					"patching_rect" : [ 9.0, 119.0, 107.0, 47.0 ],
 					"varname" : "bp1265454024814",
 					"viewvisibility" : 1
 				}
@@ -1189,7 +1188,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 284.0, 119.118644067796595, 610.0, 48.0 ],
-					"presentation_linecount" : 3,
 					"text" : "1) 'allowed-intervals-rule' only allows intervals given in the 'intervals' list. \nIf you set -3 in the :up/down mode, this means that only descending minor thirds\nwill be allowed. In :absolute mode, any minor thirds (up or down) will be allowed."
 				}
 
@@ -1204,7 +1202,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 203.0, 216.0, 610.0, 34.0 ],
-					"presentation_linecount" : 2,
 					"text" : "2) 'not-allowed-intervals-rule’ forbids intervals given in the 'intervals' list.\nHere the absolute? menu works the same way as with the previous rule."
 				}
 
@@ -1219,7 +1216,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 250.0, 292.0, 644.0, 34.0 ],
-					"presentation_linecount" : 3,
 					"text" : "3) 'allowed-distant-intervals-rule' allows certain intervals between the first\nand last note of a given sequence. Allowed intervals are given in the 'intervals' list. "
 				}
 
@@ -1355,10 +1351,13 @@
 		"parameters" : 		{
 			"obj-15::obj-13::obj-184::obj-120" : [ "textedit[2]", "textedit", 0 ],
 			"obj-15::obj-13::obj-188::obj-120" : [ "textedit[3]", "textedit", 0 ],
+			"obj-15::obj-13::obj-64" : [ "live.text[6]", "live.text", 0 ],
 			"obj-15::obj-13::obj-85" : [ "live.text[2]", "live.text", 0 ],
 			"obj-15::obj-2::obj-184::obj-120" : [ "textedit[5]", "textedit", 0 ],
+			"obj-15::obj-2::obj-64" : [ "live.text[3]", "live.text", 0 ],
 			"obj-15::obj-2::obj-85" : [ "live.text[5]", "live.text", 0 ],
 			"obj-15::obj-9::obj-184::obj-120" : [ "textedit[1]", "textedit", 0 ],
+			"obj-15::obj-9::obj-64" : [ "live.text[4]", "live.text", 0 ],
 			"obj-15::obj-9::obj-85" : [ "live.text[1]", "live.text", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
@@ -1370,12 +1369,20 @@
 			}
 ,
 			"parameter_overrides" : 			{
+				"obj-15::obj-13::obj-64" : 				{
+					"parameter_longname" : "live.text[6]"
+				}
+,
 				"obj-15::obj-13::obj-85" : 				{
 					"parameter_longname" : "live.text[2]"
 				}
 ,
 				"obj-15::obj-2::obj-85" : 				{
 					"parameter_longname" : "live.text[5]"
+				}
+,
+				"obj-15::obj-9::obj-64" : 				{
+					"parameter_longname" : "live.text[4]"
 				}
 ,
 				"obj-15::obj-9::obj-85" : 				{
@@ -1390,14 +1397,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "bach.+.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.approx.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1412,7 +1419,7 @@
 , 			{
 				"name" : "bach.belong.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1435,21 +1442,21 @@
 , 			{
 				"name" : "bach.ezmidiplay.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.filter.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.filternull.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1464,7 +1471,7 @@
 , 			{
 				"name" : "bach.gcd.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1479,7 +1486,7 @@
 , 			{
 				"name" : "bach.interp.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1510,7 +1517,7 @@
 , 			{
 				"name" : "bach.lookup.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1541,7 +1548,7 @@
 , 			{
 				"name" : "bach.prepend.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1560,14 +1567,14 @@
 , 			{
 				"name" : "bach.repeat.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.rminus.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1578,7 +1585,7 @@
 , 			{
 				"name" : "bach.round.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1589,7 +1596,7 @@
 , 			{
 				"name" : "bach.sum.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1604,7 +1611,7 @@
 , 			{
 				"name" : "bach.times.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1623,238 +1630,252 @@
 , 			{
 				"name" : "bach.x2dx.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../Max 8/Packages/bach/patchers",
+				"patcherrelativepath" : "../../../../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bpatcher-resize-gizmo.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bpatcher-resize.js",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cluster.get_doc.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_cluster-engine/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_cluster-engine/utilities",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_cluster-engine/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "help.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/media",
+				"patcherrelativepath" : "../../../../../media",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jbs.rule_switch.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_jbs",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_jbs",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_jbs",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jbs_block_code-bypass.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jbs_block_list.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jbs_block_null.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "jbs_block_umenu_absolute.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "key_trigger.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.backquote.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.expr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.lighteval.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.quote.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mac_or_win.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "make_path_once.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz.init-unless.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.maxverbang.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz.reconstruct-lllls-from-print.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz.resolution-helpfiles-moz.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz.textfield.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.update-ui.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz_helpnum.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz_one.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/media",
+				"patcherrelativepath" : "../../../../../media",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz_three.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/media",
+				"patcherrelativepath" : "../../../../../media",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz_two.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/media",
+				"patcherrelativepath" : "../../../../../media",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmc.domain.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmc.engine.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmc.jbs_rules.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmc.thinking-engine_UI.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmcyes.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/media",
+				"patcherrelativepath" : "../../../../../media",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pw.backquote.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_code_generators_legacy",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pw.eval-box.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pw.quote.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_code_generators_legacy",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "rule_number_splitter.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../../Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}

@@ -335,7 +335,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 382.0, 334.0, 536.0, 76.0 ],
+					"patching_rect" : [ 382.0, 334.0, 564.0, 76.0 ],
 					"text" : "NOTE : Very often in this library you will find rules with different\nnames, belonging to different categories (generic, interval, pitch, etc.)\nthat are based on the same Lisp code or a very similar one.\nThese rules are redundant on purpose, in order to help you better \nunderstand the musical concepts behind them."
 				}
 
@@ -381,6 +381,7 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-2::obj-64" : [ "live.text[3]", "live.text", 0 ],
 			"obj-2::obj-85" : [ "live.text", "live.text", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
@@ -639,7 +640,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.maxverbang.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.resolution-helpfiles-moz.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.update-ui.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
