@@ -40,6 +40,18 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-47",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 60.914827988813158, 468.0, 619.0, 22.0 ],
+					"text" : "/usr/local/bin/sbcl --script \\\"/Users/julienvincenot/Documents/Max 8/Packages/MOZLib/sources/_LOAD_ASDF.lisp\\\""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontsize" : 8.0,
 					"hidden" : 1,
 					"id" : "obj-99",
@@ -231,7 +243,7 @@
 				"box" : 				{
 					"border" : 2.0,
 					"id" : "obj-1",
-					"linecolor" : [ 1.0, 0.490196078431373, 0.262745098039216, 1.0 ],
+					"linecolor" : [ 1.0, 0.490196, 0.262745, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -329,7 +341,7 @@
 					}
 ,
 					"text" : "clear all",
-					"textcolor" : [ 1.0, 0.490196078431373, 0.262745098039216, 1.0 ]
+					"textcolor" : [ 1.0, 0.490196, 0.262745, 1.0 ]
 				}
 
 			}
@@ -354,7 +366,7 @@
 				"box" : 				{
 					"border" : 2.0,
 					"id" : "obj-36",
-					"linecolor" : [ 1.0, 0.490196078431373, 0.262745098039216, 1.0 ],
+					"linecolor" : [ 1.0, 0.490196, 0.262745, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -436,6 +448,7 @@
 					"patching_rect" : [ 434.0, 532.0, 220.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 469.0, 254.0, 19.0 ],
+					"text" : "Results is : 3",
 					"textcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 1.0 ]
 				}
 
@@ -545,6 +558,17 @@
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 589.0, 742.0, 100.0, 22.0 ]
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-112",
 									"maxclass" : "newobj",
@@ -699,7 +723,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 283.0, 767.0, 95.0, 22.0 ],
-									"text" : "r #2_maxver"
+									"text" : "r #0_maxver"
 								}
 
 							}
@@ -3493,7 +3517,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 96.0, 404.0, 290.0, 22.0 ],
-					"text" : "make_path_once /sources/_LOAD_ASDF.lisp 12"
+					"text" : "make_path_once /sources/_LOAD_ASDF.lisp #0"
 				}
 
 			}
@@ -3580,6 +3604,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
+					"order" : 1,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-47", 1 ],
+					"order" : 0,
 					"source" : [ "obj-21", 0 ]
 				}
 

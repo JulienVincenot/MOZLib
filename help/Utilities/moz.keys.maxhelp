@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 949.0, 717.0 ],
+		"rect" : [ 86.0, -876.0, 949.0, 717.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -125,7 +125,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 548.0, 505.0, 45.0, 22.0 ],
+					"patching_rect" : [ 548.0, 505.0, 133.0, 22.0 ],
 					"text" : "3 2 1 2"
 				}
 
@@ -152,7 +152,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 607.5, 277.5, 292.0, 31.0 ],
-					"presentation_linecount" : 2,
 					"text" : "You can of course specify some default\nkey-value pairs llll as argument if needed."
 				}
 
@@ -275,7 +274,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 50.5, 318.0, 391.0, 31.0 ],
-					"presentation_linecount" : 4,
 					"text" : "Note that if a key is not found in the key-value pairs,\nby default the object will return a <none> symbol instead."
 				}
 
@@ -290,7 +288,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 96.0, 392.0, 378.0, 44.0 ],
-					"presentation_linecount" : 14,
 					"text" : "moz.keys can also be useful to replace multiple elements\nin a complex llll or s-expression on the fly, \nwhich is normally not allowed by bach.replace... :)"
 				}
 
@@ -304,7 +301,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 298.5, 215.0, 108.0, 19.0 ],
-					"presentation_linecount" : 5,
 					"text" : "key-value pairs"
 				}
 
@@ -341,8 +337,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 104.0, 630.0, 240.0, 22.0 ],
-					"text" : "( defun test ( x ) ( - a ( / ( * ( + x a ) b ) c ) ) )"
+					"patching_rect" : [ 104.0, 630.0, 280.0, 22.0 ],
+					"text" : "( defun test ( x ) ( - 1.5 ( / ( * ( + x 1.5 ) 6.2 ) 5/8 ) ) )"
 				}
 
 			}
@@ -427,7 +423,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 104.0, 466.0, 200.0, 22.0 ],
-					"presentation_linecount" : 3,
 					"text" : "(defun test (x) (- a (/ (* (+ x a) b) c)))"
 				}
 
@@ -551,7 +546,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-26", 1 ],
-					"midpoints" : [ 113.5, 615.0, 334.5, 615.0 ],
+					"midpoints" : [ 113.5, 615.0, 374.5, 615.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -685,7 +680,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-55", 1 ],
-					"midpoints" : [ 557.5, 497.5, 583.5, 497.5 ],
+					"midpoints" : [ 557.5, 497.5, 671.5, 497.5 ],
 					"source" : [ "obj-59", 0 ]
 				}
 
