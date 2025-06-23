@@ -3,8 +3,6 @@
 ;;;;;;;;;; THIS VERSION of FV-MORPHOLOGIE ONLY FOR TESTS WITH GRAPH-SPAN
 
 
-
-
  ;;;; fv-morphologie.lisp
 ;;;;
 ;;;; Lisp tools to analyse sequences of symbols or signs wich represent music,
@@ -642,6 +640,23 @@ Optional argument is the amount randomness if <n> a float (0.0 to 1.0) or the nu
     (if mode lm (remove-if #'(lambda (x) (zerop (cadr x))) lm))))
 
 
+(defmethod int-primitives ((seq t)  &optional (out :prim) (thres nil))
+  "Returns the sequence of primitives describing the sequence <seq>.
+Optional menu <out> defines the output type:
+ :prim for primitives only
+ :pos for primitives and their positions in <seq>
+ :amp for primitives, their positions and amplitudes.
+Last optional argument <thres> fixes the minimum treshold for detecting a primitive according to its amplitude."
+  (fv-morphologie::primitives seq out thres))
+
+
+
+
+
+
+
+
+
 ;; d'après Fink & Gandhi 2004 (Important Extrema of Time Series)
 (defun output-ext (seq left right type res)
   (if (= left right)
@@ -833,6 +848,27 @@ If a and b are lists with not same size (i.e points with not same dimensions),
       (loop for j from (1+ i) to (1- (length a))
             do (push (list i j (dist-euclid (nth i a) (nth j a))) r)))))
 
+(defmethod dist-euclidian ((a t) (b t))
+  "Euclidian distance between points a and b.
+Point coordinates are represented by a list of values in any euclidian space with n dimensions (n integer > 0).
+The dimensionality of the euclidian space is defined by the list representing <a> and <b>.
+ If a is a list of coordinates (lists) and b null,
+output is the list of distances for all points to all others ;
+ if a or b is a number, consider b or a as list of numbers (1 dim).
+If a and b are lists with not same size (i.e points with not same dimensions),
+ returns NIL (no distance)."
+  (fv-morphologie::dist-euclid a b))
+
+
+
+
+
+
+
+
+
+
+
 (defgeneric city-bloc (a b)
   (:documentation "City-bloc distance between a and b in euclidian space with n dimensions (with integer n > 0)."))
 
@@ -849,6 +885,21 @@ If a and b are lists with not same size (i.e points with not same dimensions),
     (dotimes (i (length a) (nreverse (remove 'nil r)))
       (loop for j from (1+ i) to (1- (length a)) do
 	 (push (list i j (city-bloc (nth i a) (nth j a))) r)))))
+
+(defmethod dist-citybloc ((a t) (b t))
+ "City-bloc distance between <x> and <y> which represent 'points' into kind of euclidian space.
+If <y> is null, <x> may represent a list of points, then the output is the list of city-bloc distances for all points to all others."
+  (fv-morphologie::city-bloc a b))
+
+
+
+
+
+
+
+
+
+
 
 (defgeneric close-p (a b thresh &optional dist)
   (:documentation "Tests if a and b are close according to their distance."))
@@ -895,6 +946,21 @@ If a and b are lists with not same size (i.e points with not same dimensions),
     (dotimes (i (1- (length v1)) (nreverse r))
       (dotimes (j (- (length v1) i 1))
         (push (list i (+ 1 j i) (hamming-dist (nth i v1) (nth (+ 1 j i) v1) norm test)) r)))))
+
+
+(defmethod dist-hamming ((a t) (b t) &optional (norm t) (test #'eq))
+  "Hamming distance between list a and list b."
+  (fv-morphologie::hamming-dist a b norm test))
+
+
+
+
+
+
+
+
+
+
 
 ;; 2. 'Editing distance' (Distance d'edition)
 ;; I have red a paper on genomic analysis on ADN using, as I remember, also used by a unix text commande.
@@ -1116,6 +1182,24 @@ By symbolic dimensions, I consider a structured list of 'arbitrary' symbols desc
         (push (list i (+ i j 1) (multi-edit-dist (nth i seq1) (nth (+ i j 1) seq1) wgth
                                                  :change change :insert insert :delete delete :inex inex :test test)) r)))))
 
+
+(defmethod dist-edit ((seq1 t) (seq2 t)
+          &key (sub 1) (ins 1) (del 1) (uncom 0) (norm NIL) (test #'equalp))
+  (fv-morphologie::edit-dist seq1 seq2 sub ins del uncom norm test))
+
+(defmethod dist-multi-edit ((seq1 t) (seq2 t) (wgth number)
+          &key (sub 1) (ins 1) (del 1) (uncom 0) (test #'equalp))
+  (fv-morphologie::multi-edit-dist seq1 seq2 wgth sub ins del uncom test))
+
+
+
+
+
+
+
+
+
+
 (defgeneric match (a b))
 
 (defmethod match ((a symbol) (b symbol)) (if (equalp a b) 1 0))
@@ -1157,6 +1241,15 @@ w-rep: weigth for 'repetition' structure."))
 	(push (list i (+ i j 1)
 		    (struct-dist (nth i a) (nth (+ i j 1) a) w-occ w-rep test))
 	      r)))))
+
+(defmethod dist-structure  ((a t) (b t) &key (w-occ 1.) (w-rep 1.) (test #'equalp))
+  (fv-morphologie::struct-dist a b w-occ w-rep test))
+
+
+
+
+
+
 
 ;;; CONTRAST ANALYSIS - ANALYSE CONTRASTIVE (structure1 in previous version of morphologie)
 ; rewritten and optimized, thank's to lispme :)
@@ -1284,6 +1377,31 @@ test: condition of identity for marks, for instance (lambda (x y) (< x y)) (defa
 ;(mark-strct '(a b a c a d a e f g h a b a c a k a m n o) :raw .5)
 ;(mark-strct '(1 2 1 3 1 4 1 5 6 7 8 1 2 1 3 1 9 1 10 11 12) :raw .5 t (lambda (x y) (< (- y x) 2)))
 
+
+(defmethod mark-structure  ((seq t) (out t) &key (diss 0) (rem-loc-dup t) (test #'equalp))
+  "Returns possible structures of input <seq> based on marks retrieved from <seq>.
+The output is sorted by structures's length.
+Use output menu <out> to define result form:
+:struct lists all possible structures according to different marks of <seq>
+:pos each structure is consed to the list of positions for each segment followed by the list of the segments themselves
+:raw each structure is consed to the list of each segment with its positions in <seq>.
+Option :diss defines the dissemblance threshold to consider different segment as the same.
+Option :test defines the test function to consider the marks."
+  (when not out (setf out :struct))
+  (fv-morphologie::mark-strct seq out diss rem-loc-dup test))
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;;; mark analysis redone again - analyse contrastive autrement
 ;;; (as a state automaton : a machine mark run A or non-A if A or non-A...)
 ;;; with A and non-A changing differently state of machine mark...
@@ -1360,6 +1478,33 @@ ident: test to compare resulting subsequences, for instance: #'equalp."))
 
 ; (mark-pos '(a b a a a b b a c a a d e f a a b a a c c c a k l l m) 'b #'equalp)
 
+(defmethod mark-list ((seq t) (mark t) &key (mark-t #'equalp) (seg-t #'equalp))
+  "Returns the list of all segments and their position in <seq> beginning with some marks defined with argument <mark>.
+If no argument mark (nil), considers all different symbols in <seq>.
+Option :mark-t defines the test function for searching the marks (equalp by default).
+Option :group-t defines the test function for comparing the different segments."
+  (when (and (symbolp mark-t) (not (boundp mark-t))) (setf mark-t (eval `(function ,mark-t))))
+  (when (and (symbolp seg-t) (not (boundp seg-t))) (setf group-t (eval `(function ,seg-t))))
+  (fv-morphologie::mark-pos seq mark mark-t seg-t))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ;;;
 ;; contrasts-all-lev from Paolo Aralla rewritten
 
@@ -1390,6 +1535,18 @@ Cf. also Baboni-Schilingi, Giacomo Platini."))
   (mapcar #'abs (dx (mapcar #'abs (cons 0 (new-old-analysis seq test))))))
 
 ; (mark-dynamic '(a b a c a d a e f g h a b a c a k a m n o))
+
+
+(defmethod  inner-dynamic ((seq t) &optional (test #'equalp))
+  (fv-morphologie::mark-dynamic seq test))
+
+
+
+
+
+
+
+
 
 (defun cutifback (seq &key (test #'equalp))
 "Yet another trivial cut following more or less an established general idea,
@@ -1469,6 +1626,21 @@ Optional arguments:
 ; (time (find-pos  '(a b c) '(t x a b c y t a e b c k r a b c) .25 .34))
 ; (time (find-pos  '(a b c) '(t x a b c y t a e b c k r a b c) .25 .2 1 0 1 0))
 
+(defmethod motif-find ((motif t) (seq t) &key (diss 0) (l-var 0) (change 1) (insert 1) (delete 1) (uncom 0) (test #'equalp))
+  "Returns all the positions of the segment <motif> into sequence <seq>.
+Argument :diss is a threshold (from 0 to 1.0) of dissimilarity according to the normalized editing distance under which two different segments are considered to be the same ;
+argument :l-var is the threshold for variation in length of the motifs to be compared ;
+arguments :change :ins/sup :uncom and :test for tuning the editing distance (see dist-edit)."
+  (fv-morphologie::find-pos motif seq diss l-var change insert delete uncom test))
+
+
+
+
+
+
+
+
+
 (defun subseq-p (subseq seq &optional (test #'equalp))
   "tests if <subseq> is a subsequence of sequence <seq>."
   (let ((ls (length subseq))
@@ -1481,6 +1653,23 @@ Optional arguments:
 ;(subseq-p '(a b c) '(x y a b c z))
 ;(subseq-p '(a b c) '(x y a b z))
 ;(subseq-p '(a b c) '(x y a c d z) #'(lambda (a b) (<= (- (char-code (elt (string a) 0)) (char-code (elt (string b) 0))) 1)))
+
+
+(defmethod motif-subseq ((motif t) (seq t) &optional (test #'equalp))
+  "Tests if a motif is a subsequence of a sequence.
+The test is based on the editing distance where each elements are compared to others according to the optional argument <test>."
+  (fv-morphologie::subseq-p motif seq test))
+
+
+
+
+
+
+
+
+
+
+
 
 (defun whenlooploopwhenwhen (seq diss l-var n change insert delete inex test)
   (let ((r (list))
@@ -1542,6 +1731,23 @@ Optional arguments:
 ;(print (find-self '(t x a  b c y  t a e  b c k  r t x  a t x  a b c  i y t  a e c  e i b  c k r) :length) )
 ;(print (find-self '(t x a  b c y  t a e  b c k  r t x  a t x  a b c  i y t  a e c  e i b  c k r) :length  0 0 nil 1 0 0 1 #'equalp) )
 
+
+(defmethod motif-list ((seq t) (out t)
+           &key (diss 0) (l-var 0) (n nil) (change 1) (insert 1) (delete 1) (uncom 0) (test #'equalp))
+  "Returns the list of all motifs found into <seq> where a motif is any segment repeted at least one time according to editing distance.
+Output can be sorted according to the length of segment (:length) or to their frequency (:freq).
+Argument :diss is a threshold (from 0 to 1.0) of dissimilarity according to the normalized editing distance under which two different segments are considered to be the same ;
+argument :l-var is the threshold for variation in length of the segments to be compared ;
+argument :n is the maxinum length of segments to be compared ;
+arguments :change :ins/sup :uncom and :test for tuning the editing distance (see dist-edit)."
+  (when (not out) (set out :length))
+  (fv-morphologie::find-self seq out diss l-var n change insert delete uncom test))
+
+
+
+
+
+
 (defgeneric rep-strct (seq)
   (:documentation "Possibles structures of seq based of automatically found patterns (plist)."))
 
@@ -1551,6 +1757,10 @@ Optional arguments:
 (defun permut-p (l1 l2)
   (not (or (member 'nil (mapcar #'(lambda (x) (member x l1)) l2))
 	   (member 'nil (mapcar #'(lambda (x) (member x l2)) l1)))))
+
+(defmethod  motif-structure ((seq t))
+  "To be set"
+  (fv-morphologie::rep-strct seq))
 
 
 ;;; TREES AND GRAPHS
@@ -1652,6 +1862,14 @@ Algorithm from: E. Diday & all, 1982 : Elements d'analyse de donnees, Dunod, Par
 
 (defmethod minimum-spanning-tree ((graph list))
   (sort (prim-tree graph) '< :key #'car))
+
+(defmethod graph-span ((mat-dist t))
+  (fv-morphologie::minimum-spanning-tree mat-dist))
+
+
+
+
+
 
 (defun lul (l1 l2)
   (cond ((equalp (car (last l1)) (car l2)) (append (butlast l1) l2))
@@ -1760,6 +1978,13 @@ Algorithm from: E. Diday & all, 1982 : Elements d'analyse de donnees, Dunod, Par
                                  :test #'equalp))
 	  from))
 
+
+(defmethod graph-path ((from t) (to t) (tree t))
+  (fv-morphologie::tree-path from to tree))
+
+
+
+
 ;; a tree is a list of list of edges each defined by two vertices, such as: ( (a b) (b c) (b d) (c e)...) 
 ; any edge can be defined by some properties in the rest of the list of its vertices ;
 ; for instance: (a b .1 2 z) is an edge between vertices a and b with (.12 z) as properties of the edge.
@@ -1779,6 +2004,14 @@ Algorithm from: E. Diday & all, 1982 : Elements d'analyse de donnees, Dunod, Par
 (defmethod tree-minlen ((tree list))
   (min-total-length tree))
 
+(defmethod graph-len ((graph t))
+  (fv-morphologie::tree-minlen graph))
+
+
+
+
+
+
 (defun tree-degree (vertex tree)
   (length (remove-if-not #'(lambda (x) (member vertex (butlast x))) tree)))
 
@@ -1794,6 +2027,14 @@ Algorithm from: E. Diday & all, 1982 : Elements d'analyse de donnees, Dunod, Par
 (defmethod tree-deg ((vertex null) (tree list))
   (tree-deg (all-vertices tree) tree))
 
+(defmethod graph-deg ((node t) (graph t))
+  (fv-morphologie::tree-deg node graph))
+
+
+
+
+
+
 (defun nodes (tree &optional (min-degree 2))
   (let* ((e  (mapcar #'butlast (remove-if #'(lambda (x) (zerop (caddr x))) tree)))  ;; remove if dist = 0
          (v (remove-duplicates (apply #'append e)))
@@ -1807,6 +2048,15 @@ Algorithm from: E. Diday & all, 1982 : Elements d'analyse de donnees, Dunod, Par
 
 (defmethod tree-nodes ((tree list) &optional (min-deg 2))
   (nodes tree min-deg))
+
+(defmethod graph-nodes ((graph t))
+  (fv-morphologie::tree-nodes graph))
+
+
+
+
+
+
 
 (defun leaves (tree)
   (let* ((e  (mapcar #'butlast tree))
@@ -1839,6 +2089,14 @@ Algorithm from: E. Diday & all, 1982 : Elements d'analyse de donnees, Dunod, Par
 
 (defmethod tree-dist ((vertex1 t) (vertex2 null) (tree list))
   (mapcar #'(lambda (x) (length (tree-path vertex1 x tree))) (remove vertex1 (all-vertices tree) :test #'equalp)))
+
+(defmethod dist-graph ((v1 t) (v2 t) (graph t))
+  (fv-morphologie::tree-dist v1 v2 graph))
+
+
+
+
+
 
 ;;Strahler number
 
@@ -2116,6 +2374,26 @@ The second argument <dist> is the distance function (#'dist-euclid by default).
                             nil fct)))
     (values x)))
 
+
+(defmethod class-num ((data t) (classes integer) (mode symbol) &key (iter nil) (dist nil))
+  "Classify a set (list) of points <data> into different <classes> into s space with n dimensions (n integer > 0),
+where each point is represented as a list of values into each dimension.
+Argument :mode defines the algorithm used for partioning the points.
+:centroids for centroids algorithm (in french : nuees dynamiques.
+Keyword argument :iter to set the maximum iterations to run for partitioning ;
+:dist to set the distance or metric to be used (by default: euclidian distance)."
+  (case mode
+    (nil (fv-morphologie::n-class data classes iter dist))
+    (:centroids (fv-morphologie::n-class data classes iter dist))
+    (:1d-centroids (fv-morphologie::1d-class data classes (if dist dist #'identity))) 
+     (t nil)))
+
+
+
+
+
+
+
 (defun -reverse (list r)
   "A special working reverse for dotted lists."
     (if (listp list)
@@ -2303,6 +2581,15 @@ If no key (by default), the test apply to the element itself."))
     (:distance (part-tree-dist graph t))
     (t (message "Actually one mode is avalaible, please use :distance"))))
   
+(defmethod graph-part ((graph t) &optional (mode :distance))
+  "Partition a graph according according to edges which have maximum length."
+  (fv-morphologie::part-graph graph mode))
+
+
+
+
+
+
 
 (defun mmax (&rest x)
   (if x (apply #'max (remove nil x)) x))
@@ -2370,7 +2657,42 @@ If no key (by default), the test apply to the element itself."))
                 (position (cadr k) fixed :test #'equalp)
               (+ f-length (pop c-data)))))))
 
+
+(defmethod class-sym ((data t) (classes integer) (mode symbol) &key (uncom .5) (ins 1) (del 1) (change 1) (excluded nil) (mst nil))
+  "Classify a set of segments or sequences into different classes according to their editing distance to each other and
+by partitioning the resulting spanning tree (see class-graph).
+The output is a list of numbers (from zero) as instances of the different classes retrieved.
+Keyword arguments :uncom :ins/del :change for tuning editing distance (see dist-edit).
+The argument :excluded is a list of elements of data excluded from classification ;
+in the output, the numbering of the different instances begins by numbering these elements first (from zero), 
+in the order defined with the argument :excluded."
+  (if (not excluded)
+      (cond ((or (eq mode :edit-nn) (not mode))
+             (fv-morphologie::s-class data classes nil change ins del uncom mst))
+            ((eq mode :edit-norm)
+             (fv-morphologie::s-class data classes t change ins del uncom mst))
+            (t nil))
+    (cond ((eq mode :edit-nn)
+           (fv-morphologie::s-class-with-fixed data classes excluded nil nil nil change ins del uncom mst))
+          ((eq mode :edit-norm)
+           (fv-morphologie::s-class-with-fixed data classes excluded nil nil t change ins del uncom mst))
+          (t nil))))
+
+
+
+
+
+
+
+
+
+
+
 ;;;
+
+
+;;; 2.2 DESCRIPTION - STATS - INFORMATION
+
 ;; stats
 
 (defun histogramme (data &key (test #'equalp) (thes nil))
@@ -2384,8 +2706,23 @@ If no key (by default), the test apply to the element itself."))
       (sort histo '> :key 'cadr))))
 
 
+(defgeneric histogram (data &key test thes))
+
+(defmethod histogram ((data t) &key (test #'=) (thes nil))
+  (fv-morphologie::histogramme data :test test :thes thes))
+
+
+
+
+
+
+
+
+
+
+
 ;;;
-;; info theory
+;; information theory - Shannon Entropy
 
 (defparameter *e* 2.7182818284590452353602874) ; (/ 848456353 312129649) = (exp 1)
 
@@ -2494,6 +2831,33 @@ Shannon entropy value may be between 0 and (log n base)."
       (windowed-entropie-cond data (floor (/ (length data) samples)) base test)
       (kind-of-entropie-conditionnelle data base test)))
 
+(defmethod entropy ((data t) &optional (mode nil) (samples nil))
+  (cond 
+    ((not mode)
+     (message "Entropy: using 'shannon-2 mode (default).")
+     (shannon-entropy data 2 samples))
+    ((eql mode :shannon-2)
+     (shannon-entropy data 2 samples))
+    ((eql mode :shannon-e)
+     (shannon-entropy data (exp 1) samples))
+    ((eql mode :shannon-n)
+     (shannon-entropy data nil samples))
+    ((eql mode :cond-sh)
+     (entropie-conditionnelle data nil samples))
+    (t (message "Entropy: unknown mode. Avalaible modes are: 'shannon-2, 'shannon-n, shannon-e."))))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (defgeneric self-info (data elt &optional test)
   (:documentation "Amount of information of each element <elt> in data.
@@ -2513,7 +2877,23 @@ sorted in decreasing order of amount of information in data."))
   (let ((elts (remove-duplicates data :test #'equalp)))
     (sort (mapcar #'(lambda (x) (list x (self-info data x test))) elts) '> :key #'second)))
 
+
+(defmethod elt-info ((data t) (elt t) &optional (test #'equalp))
+  (fv-morphologie::self-info data elt test))
+
+
+
+
+
+
 ;; (defun redondance
+
+;(defmethod redundancy ((data t))
+;  :non-generic t
+;  :class morphologie-box
+;  (fv-morphologie::redondance data))
+
+
 
 
 ;;; series

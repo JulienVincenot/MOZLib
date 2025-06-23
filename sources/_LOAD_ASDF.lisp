@@ -41,7 +41,7 @@
 		("pmc/" :pmc) ;;; Kilian Sprotte
 
 		; ("neuromuse/" :neuromuse)
-		("fv-morphologie/" "fv-morphologie")
+		("fv-morphologie/" :fv-morphologie) ;; "fv-morphologie")
 
 		("alexandria-master/" :alexandria) ("global-vars-master/" :global-vars)
 		("trivial-features-master/" :trivial-features) ("trivial-garbage-master/" :trivial-garbage)

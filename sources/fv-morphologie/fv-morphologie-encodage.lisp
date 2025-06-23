@@ -17,7 +17,7 @@
 ;(mapcar #'(lambda (x) (read-from-string (symbol-name (car x)))) *very-minimalist-midi-notes*)
 
 (defgeneric transcode (seq table &optional test)
-  (:documentation "trqnscoding seq according to the list table with lists (a b) wher each symbol a of seq is changed to b.
+  (:documentation "transcoding seq according to the list table with lists (a b) wher each symbol a of seq is changed to b.
 By default test is #'eq."))
 
 (defmethod transcode ((seq list) (symlist list) &optional (test #'eq))
@@ -25,6 +25,8 @@ By default test is #'eq."))
         collect (let* ((a (pop seq))
                        (b (assoc a symlist :test test)))
                   (if b (cadr b) a))))
+
+
 
 (defgeneric alphatonum (char) ;;; should be renamed 2asciicode !
   (:documentation ""))

@@ -1658,7 +1658,7 @@ If a and b are lists with not same size (i.e points with not same dimensions),
 This predicates verifies if between two given sets of coordinates in any euclidian space, a and b, the distance is below a given threshold.
 In a way, the two points described will be considered equal or similar, in the same 'family'.
 
-This function relies on fv-morphologie function dist-euclid, by Frdric Voisin."
+This function relies on fv-morphologie function dist-euclid, by Frederic Voisin."
 ()
 (my-dist-euclid-p treshold a b))
 

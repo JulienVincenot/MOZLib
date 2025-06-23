@@ -50,9 +50,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
                (:file "morphologie")
 
-              ;;; (:file "fv-morphologie") ;;;; only for testing, unofficial support
-                                 ;;;;;;;; real port with Fred Voisin coming soon !
-
                (:file "jbs-profile/profile-to-core")
   	           (:file "jbs-profile/profile_all")
 
