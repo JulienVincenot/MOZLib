@@ -424,18 +424,18 @@ if a string, it defines the pathname of the output. Type of file define output.
       (fv-morphologie::exponential-smoothing seq alpha)
     (fv-morphologie::double-exponential-smoothing seq alpha gamma)))
 
-(define-box filt-local-rep ((seq nil) &optional (mode nil) (test equalp))
-  "Delete identical values or symbols."
-  :non-generic t
-  :class morphologie-box
-  :menu (mode (:delete ":delete") (:linear ":interp"))
-  (cond ((eq mode :delete)
-         (fv-morphologie::rem-local-rep seq test))
-        ((eq mode :linear)
-         (if (not (member 'nil (mapcar #'numberp seq)))
-             (fv-morphologie::nocons= seq test)
-           (filt-local-rep seq :delete test)))
-        (t (filt-local-rep seq :delete test))))
+; (define-box filt-local-rep ((seq nil) &optional (mode nil) (test equalp))
+;   "Delete identical values or symbols."
+;   :non-generic t
+;   :class morphologie-box
+;   :menu (mode (:delete ":delete") (:linear ":interp"))
+;   (cond ((eq mode :delete)
+;          (fv-morphologie::rem-local-rep seq test))
+;         ((eq mode :linear)
+;          (if (not (member 'nil (mapcar #'numberp seq)))
+;              (fv-morphologie::nocons= seq test)
+;            (filt-local-rep seq :delete test)))
+;         (t (filt-local-rep seq :delete test))))
 
 (define-box filt-noise ((seq nil) &optional (mode :nozero) (val 0.1))
   "Add noise into seq seq"

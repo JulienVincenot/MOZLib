@@ -38,9 +38,8 @@
 		("fenv/" :fenv) 
 		("cluster-rules/" :cluster-rules)
 
-		("pmc/" :pmc) ;;; Kilian Sprotte
-
 		; ("neuromuse/" :neuromuse)
+		
 		("fv-morphologie/" :fv-morphologie) ;; "fv-morphologie")
 
 		("alexandria-master/" :alexandria) ("global-vars-master/" :global-vars)
@@ -53,6 +52,10 @@
 		("split-sequence-master/" :split-sequence)
 
 		("" :mozlib) ;;;; MOZ'Lib vanilla (incl. OM stuff, JBS libraries, Jv-components, Chreodes&Transkaija, etc )
+
+
+
+
 	)
 )
 

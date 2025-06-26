@@ -1,10 +1,47 @@
 (defpackage omcs
   (:use :common-lisp :pw :iterate :sb-ext)) ; 
 
+
+
+
 (in-package cl)
 
 (defsetf nthcdr (n lst) (new-val) 
    `(setf (cdr (nthcdr (1- ,n) ,lst)) ,new-val))
+
+
+
+; (in-package :cl)
+
+; (defun set-nthcdr (index list new-value)
+;   "If INDEX is 0, just return NEW-VALUE."
+;   (if (not (zerop index))
+;     (rplacd (nthcdr (1- index) list)
+;             new-value))
+;   new-value)
+
+; (defun set-nthcdr (index list new-value)
+;   "Redéfinit la cdr du (index-1)-ième élément de LIST avec NEW-VALUE.
+;    Si index = 0, retourne simplement new-value (sans modifier list)."
+;   (cond
+;     ((zerop index) new-value)
+;     ((and (consp list)
+;           (nthcdr (1- index) list))
+;      (rplacd (nthcdr (1- index) list) new-value)
+;      new-value)
+;     (t
+;      (format t "~%[ERROR] set-nthcdr: index=~a is out of bounds for list=~a~%" index list)
+;      new-value)))
+
+; (defsetf nthcdr set-nthcdr)
+
+
+
+
+
+
+
+
 
 (in-package omcs)
 

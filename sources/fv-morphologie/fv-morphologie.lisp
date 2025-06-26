@@ -275,6 +275,10 @@ Optional argument is the amount randomness if <n> a float (0.0 to 1.0) or the nu
         (t (message "not yet.")
            list)))))
 
+(defmethod filt-noise ((seq t) &optional (mode :nozero) (val 0.1))
+  "Add noise into seq seq"
+  (fv-morphologie::fnoise seq mode val))
+
 #|
 ; deep-tree to do
 (defmethod fnoise ((x list) &optional (quasi-zero .001))
@@ -362,6 +366,23 @@ Optional argument is the amount randomness if <n> a float (0.0 to 1.0) or the nu
   (declare (ignore test)) 
   seq)
 
+
+(defmethod filt-local-rep ((seq t) &optional (mode nil) (test #'equalp))
+  "Delete identical values or symbols."
+  (cond ((eq mode :delete)
+         (fv-morphologie::rem-local-rep seq test))
+        ((eq mode :linear)
+         (if (not (member 'nil (mapcar #'numberp seq)))
+             (fv-morphologie::nocons= seq test)
+           (fv-morphologie::filt-local-rep seq :delete test)))
+        ((eq mode :interp) 
+          (fv-morphologie::filt-local-rep seq :linear test))
+
+        (t (fv-morphologie::filt-local-rep seq :delete test))))
+
+
+
+
 (defun sort-list-char (list &optional fct) ;; todo
   "ascending sort of characters and numbers."
   (sort list '<	:key #'(lambda (x)
@@ -432,6 +453,15 @@ Optional argument is the amount randomness if <n> a float (0.0 to 1.0) or the nu
     (message (format nil "~&> median-filter : window size set to ~S" window)))
   (median-simple seq window))
 
+(defmethod filt-median ((seq t) (window number))
+  "median filter"
+  (fv-morphologie::median-filter seq window))
+
+
+
+
+
+
 (defun exponential-smoothing (data alpha)
   (let ((r (list (car data))))
     (dolist (x (cdr data) (reverse r))
@@ -445,6 +475,13 @@ Optional argument is the amount randomness if <n> a float (0.0 to 1.0) or the nu
       (push st r)
       (setf st (+ (* alpha x) (* (1- alpha) (+ (car r) b))))
       (setf b (+ (* gamma (- st (car r))) (* (1- gamma) b))))))
+
+
+(defmethod filt-exponential ((seq t) (alpha number) &optional (gamma nil))
+  "Low-pass filter"
+  (if (not gamma)
+      (fv-morphologie::exponential-smoothing seq alpha)
+    (fv-morphologie::double-exponential-smoothing seq alpha gamma)))
 
 
 ;; TOOLS for NUMERIC SERIES
@@ -1484,7 +1521,7 @@ If no argument mark (nil), considers all different symbols in <seq>.
 Option :mark-t defines the test function for searching the marks (equalp by default).
 Option :group-t defines the test function for comparing the different segments."
   (when (and (symbolp mark-t) (not (boundp mark-t))) (setf mark-t (eval `(function ,mark-t))))
-  (when (and (symbolp seg-t) (not (boundp seg-t))) (setf group-t (eval `(function ,seg-t))))
+  (when (and (symbolp seg-t) (not (boundp seg-t))) (setf seg-t (eval `(function ,seg-t))))
   (fv-morphologie::mark-pos seq mark mark-t seg-t))
 
 
@@ -1740,7 +1777,8 @@ Argument :diss is a threshold (from 0 to 1.0) of dissimilarity according to the 
 argument :l-var is the threshold for variation in length of the segments to be compared ;
 argument :n is the maxinum length of segments to be compared ;
 arguments :change :ins/sup :uncom and :test for tuning the editing distance (see dist-edit)."
-  (when (not out) (set out :length))
+  ;(when (not out) (set out :length)) ;;;;; temporary fix for SBCL (JV)
+
   (fv-morphologie::find-self seq out diss l-var n change insert delete uncom test))
 
 

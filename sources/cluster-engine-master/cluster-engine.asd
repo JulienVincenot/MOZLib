@@ -1,3 +1,5 @@
+;;; -*- Mode:Lisp; Syntax:ANSI-Common-Lisp; -*-
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;
 ;;; ClusterEngine Library
