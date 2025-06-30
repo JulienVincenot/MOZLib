@@ -40,13 +40,37 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-47",
+					"id" : "obj-49",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.914827988813158, 468.0, 619.0, 22.0 ],
-					"text" : "/usr/local/bin/sbcl --script \\\"/Users/julienvincenot/Documents/Max 8/Packages/MOZLib/sources/_LOAD_ASDF.lisp\\\""
+					"patching_rect" : [ 162.0, 577.5, 123.0, 35.0 ],
+					"text" : ";\rmax clearmaxwindow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 121.0, 576.0, 29.5, 22.0 ],
+					"text" : "t l b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 11.0, 584.0, 32.0, 22.0 ],
+					"text" : "print"
 				}
 
 			}
@@ -59,7 +83,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 440.0, 39.0, 141.0, 17.0 ],
+					"patching_rect" : [ 360.0, 11.0, 141.0, 17.0 ],
 					"text" : "moz.resolution-helpfiles-moz 934 616"
 				}
 
@@ -73,7 +97,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 440.0, 62.0, 48.0, 17.0 ],
+					"patching_rect" : [ 360.0, 34.0, 48.0, 17.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"text" : "thispatcher"
 				}
@@ -84,11 +108,11 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-41",
-					"linecount" : 4,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 80.0, 108.0, 287.0, 58.0 ],
+					"patching_rect" : [ 307.0, 93.5, 385.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 80.0, 96.0, 730.0, 32.0 ],
@@ -101,11 +125,11 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-35",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 138.0, 280.0, 71.0 ],
+					"patching_rect" : [ 476.0, 143.0, 329.0, 58.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 179.0, 130.0, 618.0, 32.0 ],
@@ -122,7 +146,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 21.0, 176.0, 280.0, 32.0 ],
+					"patching_rect" : [ 523.5, 203.0, 280.0, 32.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 269.0, 164.0, 426.0, 19.0 ],
 					"text" : "Well, they are technically Max packages, but here's the twist :"
@@ -138,7 +162,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 169.0, 163.0, 280.0, 32.0 ],
+					"patching_rect" : [ 559.5, 252.0, 280.0, 32.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 404.0, 181.0, 505.0, 19.0 ],
 					"text" : "they contain a \"sources\" folder where to keep all the Lisp files you need !"
@@ -153,7 +177,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 647.0, 463.0, 114.0, 19.0 ],
+					"patching_rect" : [ 739.0, 366.0, 19.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 639.0, 426.0, 19.0, 19.0 ],
 					"text" : "V"
@@ -168,7 +192,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 625.0, 453.0, 114.0, 19.0 ],
+					"patching_rect" : [ 739.0, 352.0, 19.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 639.0, 415.0, 19.0, 19.0 ],
 					"text" : "|"
@@ -183,7 +207,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 646.0, 443.0, 114.0, 19.0 ],
+					"patching_rect" : [ 757.0, 341.0, 55.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 645.0, 403.0, 55.0, 19.0 ],
 					"text" : "_______"
@@ -195,11 +219,11 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-24",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 655.0, 386.0, 220.0, 109.0 ],
+					"patching_rect" : [ 680.0, 412.0, 234.0, 96.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 7,
 					"presentation_rect" : [ 698.0, 406.0, 234.0, 96.0 ],
@@ -215,7 +239,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 624.0, 364.0, 145.0, 22.0 ],
+					"patching_rect" : [ 690.0, 382.0, 145.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 548.0, 443.0, 143.0, 22.0 ],
 					"text" : "(mzut::ultimate_question)"
@@ -230,7 +254,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 881.399999999999977, 81.0, 141.0, 18.0 ],
+					"patching_rect" : [ 132.0, 115.0, 117.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 111.0, 292.0, 117.0, 18.0 ],
 					"text" : "(one at a time...)",
@@ -247,7 +271,7 @@
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 298.0, 468.0, 5.0, 100.0 ],
+					"patching_rect" : [ 559.5, 241.0, 99.0, 6.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 344.0, 181.0, 23.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
@@ -265,11 +289,11 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-2",
-					"linecount" : 6,
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 801.900000000000091, 697.0, 300.0, 83.0 ],
+					"patching_rect" : [ 233.585172011186842, 290.0, 687.0, 45.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 119.0, 214.0, 737.0, 32.0 ],
@@ -285,7 +309,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 1089.0, 214.0, 34.0, 22.0 ],
+					"patching_rect" : [ 403.0, 229.0, 34.0, 22.0 ],
 					"text" : "sel 1"
 				}
 
@@ -300,7 +324,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1089.0, 186.0, 37.0, 19.763053894042969 ],
+					"patching_rect" : [ 403.0, 201.0, 37.0, 19.763053894042969 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 182.0, 447.0, 42.5, 23.03614616394043 ]
 				}
@@ -314,7 +338,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 722.200000000000045, 195.0, 48.0, 19.0 ],
+					"patching_rect" : [ 36.0, 210.0, 48.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 74.0, 426.0, 48.0, 19.0 ],
 					"text" : "reload"
@@ -330,7 +354,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1018.0, 192.0, 68.0, 19.0 ],
+					"patching_rect" : [ 332.0, 207.0, 68.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 172.0, 426.0, 68.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
@@ -350,11 +374,11 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-37",
-					"linecount" : 6,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 801.0, 376.858978271484375, 280.0, 83.0 ],
+					"patching_rect" : [ 14.0, 54.0, 710.0, 32.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 11.0, 62.0, 730.0, 32.0 ],
@@ -370,7 +394,7 @@
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 287.0, 468.0, 5.0, 100.0 ],
+					"patching_rect" : [ 520.0, 536.0, 126.0, 5.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 437.0, 527.0, 209.0, 6.0 ],
 					"saved_attribute_attributes" : 					{
@@ -388,15 +412,15 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-30",
-					"linecount" : 5,
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 55.0, 498.358978271484375, 220.0, 71.0 ],
+					"patching_rect" : [ 43.0, 444.0, 439.0, 32.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 3,
-					"presentation_rect" : [ 387.0, 347.0, 353.0, 45.0 ],
-					"text" : "This will contain all the standard Lisp functions\nused by MOZ'Lib \nas well as the ones defined in your user libraries !",
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 387.0, 347.0, 439.0, 32.0 ],
+					"text" : "This will contain all the standard Lisp functions used by MOZ'Lib\nas well as the ones defined in your user libraries !",
 					"textcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 1.0 ]
 				}
 
@@ -417,7 +441,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 2.0, 3.0 ],
-					"patching_rect" : [ 827.399999999999977, 53.0, 25.170344022373683, 25.71795654296875 ],
+					"patching_rect" : [ 66.0, 97.0, 25.170344022373683, 25.71795654296875 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 21.0, 273.0, 25.170344022373683, 25.71795654296875 ],
 					"viewvisibility" : 1
@@ -432,7 +456,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 514.0, 488.0, 79.0, 22.0 ],
+					"patching_rect" : [ 583.0, 464.0, 79.0, 22.0 ],
 					"text" : "loadmess set"
 				}
 
@@ -445,10 +469,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 434.0, 532.0, 220.0, 19.0 ],
+					"patching_rect" : [ 503.0, 501.0, 220.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 469.0, 254.0, 19.0 ],
-					"text" : "Results is : 3",
 					"textcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 1.0 ]
 				}
 
@@ -460,7 +483,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 434.0, 462.0, 115.0, 22.0 ],
+					"patching_rect" : [ 503.0, 438.0, 115.0, 22.0 ],
 					"text" : "prepend Results is :"
 				}
 
@@ -472,26 +495,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 434.0, 488.0, 72.0, 22.0 ],
+					"patching_rect" : [ 503.0, 464.0, 72.0, 22.0 ],
 					"text" : "prepend set"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Menlo Regular",
-					"fontsize" : 11.0,
-					"id" : "obj-34",
-					"linecount" : 5,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 198.414827988813158, 617.0, 386.0, 71.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 5,
-					"presentation_rect" : [ 361.0, 538.0, 386.0, 71.0 ],
-					"text" : "It contains a bach.reg @embed 1 that will memorize \nthe name and paths of all the libraries previously added.\n\nYou can come back here later to add more libraries,\nupdate your .core file, save again, and so on...",
-					"textcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 1.0 ]
 				}
 
 			}
@@ -505,7 +510,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 776.200000000000045, 190.0, 29.0, 29.0 ],
+					"patching_rect" : [ 90.0, 205.0, 29.0, 29.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 83.0, 443.0, 29.733317375183105, 30.699996948242188 ]
 				}
@@ -1381,7 +1386,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 331.0, 255.0, 117.0, 22.0 ],
-									"reg_data_0000000000" : [ "null" ],
+									"reg_data_0000000000" : [ "Julintosh:/Users/julienvincenot/Documents/Max 8/Packages/MOZ_moz-user-test/", "Julintosh:/Users/julienvincenot/Documents/Max 8/Packages/MOZ_NeuralConstraints/" ],
 									"reg_data_count" : [ 1 ],
 									"saved_object_attributes" : 									{
 										"embed" : 1,
@@ -2003,7 +2008,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 698.0, 247.0, 410.0, 22.0 ],
+					"patching_rect" : [ 12.0, 262.0, 410.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2024,7 +2029,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 694.0, 290.0, 201.0, 19.0 ],
+					"patching_rect" : [ 8.0, 290.0, 201.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 74.0, 488.0, 201.0, 19.0 ],
 					"text" : "User-libraries to be loaded :"
@@ -2036,12 +2041,15 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-10",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 698.0, 312.0, 148.0, 19.0 ],
+					"patching_rect" : [ 12.0, 312.0, 148.0, 45.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 74.0, 514.0, 241.5, 19.0 ],
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 74.0, 514.0, 241.5, 32.0 ],
+					"text" : "- MOZ_moz-user-test\r- MOZ_NeuralConstraints",
 					"textcolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ]
 				}
 
@@ -2055,7 +2063,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 871.0, 196.0, 141.0, 30.0 ],
+					"patching_rect" : [ 185.0, 211.0, 141.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 60.0, 382.0, 219.0, 18.0 ],
 					"text" : "(one after the other also works...)",
@@ -2073,7 +2081,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 891.0, 143.0, 108.0, 58.0 ],
+					"patching_rect" : [ 201.0, 152.0, 110.0, 58.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
 					"presentation_rect" : [ 98.0, 327.0, 134.0, 45.0 ],
@@ -2089,7 +2097,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 879.0, 135.0, 124.0, 61.0 ],
+					"patching_rect" : [ 193.0, 150.0, 124.0, 61.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 89.0, 319.0, 151.0, 61.0 ]
 				}
@@ -2103,7 +2111,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 884.399999999999977, 57.0, 181.0, 19.0 ],
+					"patching_rect" : [ 123.0, 101.0, 114.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 74.0, 278.0, 114.0, 19.0 ],
 					"text" : "Load one library"
@@ -2118,7 +2126,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 854.399999999999977, 55.0, 24.0, 24.0 ],
+					"patching_rect" : [ 93.0, 99.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 48.0, 274.0, 24.0, 24.0 ]
 				}
@@ -3198,7 +3206,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 698.0, 154.5, 71.0, 22.0 ],
+					"patching_rect" : [ 12.0, 170.0, 71.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -3258,7 +3266,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 2.0, 3.0 ],
-					"patching_rect" : [ 191.414827988813158, 592.0, 25.170344022373683, 25.71795654296875 ],
+					"patching_rect" : [ 419.0, 518.0, 25.170344022373683, 25.71795654296875 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 334.0, 507.0, 25.170344022373683, 25.71795654296875 ],
 					"viewvisibility" : 1
@@ -3281,7 +3289,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 2.0, 3.0 ],
-					"patching_rect" : [ 435.0, 336.0, 25.170344022373683, 25.71795654296875 ],
+					"patching_rect" : [ 504.0, 342.0, 25.170344022373683, 25.71795654296875 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 334.0, 415.0, 25.170344022373683, 25.71795654296875 ],
 					"viewvisibility" : 1
@@ -3304,7 +3312,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 2.0, 3.0 ],
-					"patching_rect" : [ 69.0, 372.0, 25.170344022373683, 25.71795654296875 ],
+					"patching_rect" : [ 94.0, 490.0, 25.170344022373683, 25.71795654296875 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 334.0, 322.0, 25.170344022373683, 25.71795654296875 ],
 					"viewvisibility" : 1
@@ -3327,7 +3335,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 2.0, 3.0 ],
-					"patching_rect" : [ 32.0, 192.0, 25.170344022373683, 25.71795654296875 ],
+					"patching_rect" : [ 43.0, 338.0, 25.170344022373683, 25.71795654296875 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 334.0, 273.0, 25.170344022373683, 25.71795654296875 ],
 					"viewvisibility" : 1
@@ -3343,7 +3351,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 462.0, 339.0, 108.0, 32.0 ],
+					"patching_rect" : [ 531.0, 345.0, 108.0, 32.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 418.0, 167.0, 19.0 ],
 					"text" : "Make a quick Lisp test :"
@@ -3357,7 +3365,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 485.0, 364.0, 129.0, 22.0 ],
+					"patching_rect" : [ 554.0, 370.0, 129.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 412.0, 443.0, 129.0, 22.0 ],
 					"text" : "(pw::arithm-ser 1 1 10)"
@@ -3371,7 +3379,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 434.0, 364.0, 44.0, 22.0 ],
+					"patching_rect" : [ 503.0, 370.0, 44.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 443.0, 44.0, 22.0 ],
 					"text" : "(+ 1 2)"
@@ -3385,7 +3393,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 434.0, 404.0, 125.0, 22.0 ],
+					"patching_rect" : [ 503.0, 410.0, 125.0, 22.0 ],
 					"text" : "lisp.quickeval @out m"
 				}
 
@@ -3398,7 +3406,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 85.0, 195.0, 214.0, 19.0 ],
+					"patching_rect" : [ 75.0, 341.0, 214.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 387.0, 276.0, 174.0, 19.0 ],
 					"text" : "Backup current .core file"
@@ -3412,7 +3420,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 298.0, 72.0, 22.0 ],
+					"patching_rect" : [ 11.0, 444.0, 29.5, 22.0 ],
 					"text" : "join"
 				}
 
@@ -3424,7 +3432,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 326.0, 72.0, 22.0 ],
+					"patching_rect" : [ 11.0, 481.0, 72.0, 22.0 ],
 					"text" : "prepend mv"
 				}
 
@@ -3435,7 +3443,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 358.0, 248.0, 207.0, 20.0 ],
+					"patching_rect" : [ 113.5, 399.0, 207.0, 20.0 ],
 					"text" : "alt version with date for core backup !"
 				}
 
@@ -3447,7 +3455,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 112.0, 268.0, 364.0, 22.0 ],
+					"patching_rect" : [ 22.0, 415.0, 364.0, 22.0 ],
 					"text" : "make_path_once-core_date_variant /sbcl/moz-complete-BKP— #0",
 					"textcolor" : [ 1.0, 0.709803921568627, 0.0, 1.0 ]
 				}
@@ -3461,7 +3469,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 220.414827988813158, 596.0, 300.0, 19.0 ],
+					"patching_rect" : [ 448.0, 518.0, 300.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 510.0, 300.0, 19.0 ],
 					"text" : "Finally... don't forget to save this patch !"
@@ -3476,7 +3484,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 122.0, 375.0, 181.0, 19.0 ],
+					"patching_rect" : [ 147.0, 493.0, 181.0, 19.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 387.0, 326.0, 181.0, 19.0 ],
 					"text" : "Make new moz-complete.core"
@@ -3490,7 +3498,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 96.0, 431.0, 188.0, 22.0 ],
+					"patching_rect" : [ 121.0, 549.0, 188.0, 22.0 ],
 					"text" : "prepend /usr/local/bin/sbcl --script"
 				}
 
@@ -3503,7 +3511,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 96.0, 373.0, 24.0, 24.0 ],
+					"patching_rect" : [ 121.0, 491.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 323.0, 24.0, 24.0 ]
 				}
@@ -3516,7 +3524,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 96.0, 404.0, 290.0, 22.0 ],
+					"patching_rect" : [ 121.0, 522.0, 267.0, 22.0 ],
 					"text" : "make_path_once /sources/_LOAD_ASDF.lisp #0"
 				}
 
@@ -3529,7 +3537,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 59.0, 193.0, 24.0, 24.0 ],
+					"patching_rect" : [ 11.0, 339.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 361.0, 274.0, 24.0, 24.0 ]
 				}
@@ -3542,7 +3550,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 59.0, 236.0, 290.0, 22.0 ],
+					"patching_rect" : [ 11.0, 382.0, 290.0, 22.0 ],
 					"text" : "make_path_once /sbcl/moz-complete.core #0"
 				}
 
@@ -3554,7 +3562,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 59.0, 468.0, 100.0, 22.0 ],
+					"patching_rect" : [ 11.0, 551.0, 33.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"shell" : "(default)"
 					}
@@ -3563,8 +3571,33 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"fontname" : "Menlo Regular",
+					"fontsize" : 11.0,
+					"id" : "obj-34",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 417.5, 543.0, 386.0, 71.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 5,
+					"presentation_rect" : [ 361.0, 538.0, 386.0, 71.0 ],
+					"text" : "It contains a bach.reg @embed 1 that will memorize \nthe name and paths of all the libraries previously added.\n\nYou can come back here later to add more libraries,\nupdate your .core file, save again, and so on...",
+					"textcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 1.0 ]
+				}
+
+			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"order" : 1,
@@ -3603,16 +3636,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"order" : 1,
-					"source" : [ "obj-21", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-47", 1 ],
-					"order" : 0,
+					"destination" : [ "obj-48", 0 ],
+					"midpoints" : [ 130.5, 573.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -3620,7 +3645,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
-					"midpoints" : [ 523.5, 519.0, 443.5, 519.0 ],
+					"midpoints" : [ 592.5, 495.0, 512.5, 495.0 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -3665,6 +3690,21 @@
 				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"midpoints" : [ 130.5, 600.0, 54.0, 600.0, 54.0, 537.0, 20.5, 537.0 ],
+					"source" : [ "obj-48", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-48", 1 ]
 				}
 
 			}
@@ -3741,6 +3781,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-26", 2 ],
+					"midpoints" : [ 102.5, 191.75, 177.900000000000006, 191.75 ],
 					"source" : [ "obj-97", 0 ]
 				}
 
@@ -4035,6 +4076,9 @@
 			}
 , 			{
 				"boxes" : [ "obj-1", "obj-32", "obj-33" ]
+			}
+, 			{
+				"boxes" : [ "obj-27", "obj-36" ]
 			}
  ]
 	}

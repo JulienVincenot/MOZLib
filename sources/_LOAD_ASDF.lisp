@@ -17,12 +17,9 @@
 				(string (char *this-file* (+ start (length marker))))
 				"version_not_found"))))
 
-(format t "This version of MOZ'Lib is currently using Max ~A.~%" *max-version*)
-
 (defun moz-relative-path (subpath)
 	"The function goes from Documents to MOZLib included"
 	(format nil "Documents/Max ~A/Packages/MOZLib/~A" *max-version* subpath))
-
 
 ;;;; load $HOME OR $WINHOME home directory
 
@@ -40,7 +37,7 @@
 
 		; ("neuromuse/" :neuromuse)
 		
-		("fv-morphologie/" :fv-morphologie) ;; "fv-morphologie")
+		("fv-morphologie/" :fv-morphologie)
 
 		("alexandria-master/" :alexandria) ("global-vars-master/" :global-vars)
 		("trivial-features-master/" :trivial-features) ("trivial-garbage-master/" :trivial-garbage)
@@ -52,10 +49,6 @@
 		("split-sequence-master/" :split-sequence)
 
 		("" :mozlib) ;;;; MOZ'Lib vanilla (incl. OM stuff, JBS libraries, Jv-components, Chreodes&Transkaija, etc )
-
-
-
-
 	)
 )
 
@@ -63,37 +56,84 @@
 
 (defun init-moz-asdf-systems (platform)
 	(progn 
+
+		(format t "Running MOZ'Lib on Max ~A (~A).~%" *max-version* (nth-value 1 (uiop::operating-system)))
+		
+		(format t "Now generating a new SBCL .core with the following libraries :~%" *max-version* (nth-value 1 (uiop::operating-system)))
+		;;;;; load libraries
 		(loop for i in *list-asdf-paths*
-			do (setf asdf:*central-registry*
-				(list*     
-					(merge-pathnames 
-						(concatenate 'string 
-					(moz-relative-path "sources/") ;;; "Documents/Max 8/Packages/MOZLib/sources/" 
-					(first i))
-						(probe-file (sb-unix::posix-getenv platform)))			                 
-					asdf:*central-registry*))
-			do (asdf:operate 'asdf:load-op (second i)))
+
+			do (format t "———> now loading : ~s........." (string-downcase (symbol-name (second i))))
+			
+			do (progn 
+					
+				
+					(setf asdf:*central-registry*
+						(list*     
+							(merge-pathnames 
+								(concatenate 'string 
+							(moz-relative-path "sources/") ;;; "Documents/Max 8/Packages/MOZLib/sources/" 
+							(first i))
+								(probe-file (sb-unix::posix-getenv platform)))			                 
+							asdf:*central-registry*))
+
+					(asdf:operate 'asdf:load-op (second i))
+
+					(format t " OK:~%")
+					)
+			
+			)
+			
+
+		
 
 		;;;;; locate and load user-libraries
-		(defparameter *list-asdf-paths-userlibs* 
-			(let* ((path (namestring 
-				(merge-pathnames 
-								(moz-relative-path "sources/_LOAD_user-libraries.lisp") ;;; "Documents/Max 8/Packages/MOZLib/sources/_LOAD_user-libraries.lisp" 
-								(probe-file (sb-unix::posix-getenv platform))))))
-			(if (probe-file (print path))
-				(read-from-string 
-					(with-open-file (stream path :direction :input)
-						(let ((content (make-string (file-length stream))))
-							(read-sequence content stream)
-							content))))))
-					
+		(defparameter *list-asdf-paths-userlibs*
+			(let* ((path 
+					(namestring 
+						(merge-pathnames 
+							(moz-relative-path "sources/_LOAD_user-libraries.lisp") ;;; "Documents/Max 8/Packages/MOZLib/sources/_LOAD_user-libraries.lisp" 
+							(probe-file (sb-unix::posix-getenv platform))))))
+			
+
+			(if (probe-file path)
+				(progn 
+					(format t "Found PWforMax User-libraries registry at~%~s.~%" path)
+					(format t "Now adding user-libraries :~%")
+					(read-from-string 
+						(with-open-file (stream path :direction :input)
+							(let ((content (make-string (file-length stream))))
+								(read-sequence content stream)
+								content))))
+				nil
+				)))
+		
+		
+		
+		;;;;; load user-libraries
+		(loop for i in *list-asdf-paths-userlibs*
+			do (setf asdf:*central-registry* (list* (probe-file (first i)) asdf:*central-registry*))
+
+			do (format t "———> now loading : ~s........." (string-downcase (symbol-name (second i))))
+			do (asdf:operate 'asdf:load-op (second i))
+			do (format t " OK:~%")
+			)
+
+		
+
 		;;;;; + when done filling *central-registry*, define *sladpath* :
 		(setf *sladpath* 
 			(namestring (merge-pathnames 
 				(moz-relative-path "sbcl/moz-complete.core") ;;; "Documents/Max 8/Packages/MOZLib/sbcl/moz-complete.core" 
 				(probe-file (sb-unix::posix-getenv platform)))))
+
+
+
+
+
 	)
 )
+
 
 
 
@@ -126,14 +166,18 @@
 ; )
 
 
-(loop for i in *list-asdf-paths-userlibs*
-	do (setf asdf:*central-registry* (list* (probe-file (first i)) asdf:*central-registry*))
+; (loop for i in *list-asdf-paths-userlibs*
+; 	do (setf asdf:*central-registry* (list* (probe-file (first i)) asdf:*central-registry*))
 
-	do (asdf:operate 'asdf:load-op (second i)))
+; 	do (asdf:operate 'asdf:load-op (second i)))
 
 
 (setf sb-ext:*muffled-warnings* 'style-warning)
 
+(format t "SBCL .core generated successfully !~%")
+
 (if *save-lisp-and-die?*
 	(save-lisp-and-die *sladpath*)) ;;;;  this is the current user directory !
+
+
 
