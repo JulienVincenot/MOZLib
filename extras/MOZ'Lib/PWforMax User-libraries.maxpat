@@ -564,17 +564,6 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-8",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 589.0, 742.0, 100.0, 22.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-112",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1026,7 +1015,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 851.0, 386.0, 138.0, 22.0 ],
+									"patching_rect" : [ 837.0, 378.0, 138.0, 22.0 ],
 									"text" : "sprintf \\\\\\\"%ssources/\\\\\\\""
 								}
 
@@ -1088,12 +1077,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-2",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "int" ],
-									"patching_rect" : [ 861.0, 347.0, 79.0, 35.0 ],
+									"patching_rect" : [ 837.0, 349.0, 128.0, 22.0 ],
 									"text" : "conformpath max boot"
 								}
 
@@ -1130,7 +1118,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 519.0, 434.0, 71.0, 22.0 ],
+									"patching_rect" : [ 489.0, 426.0, 71.0, 22.0 ],
 									"text" : "fromsymbol"
 								}
 
@@ -1142,7 +1130,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 519.0, 462.0, 60.0, 22.0 ],
+									"patching_rect" : [ 489.0, 454.0, 60.0, 22.0 ],
 									"text" : "prepend -"
 								}
 
@@ -1308,7 +1296,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "list" ],
-									"patching_rect" : [ 519.0, 490.0, 40.0, 22.0 ],
+									"patching_rect" : [ 489.0, 482.0, 40.0, 22.0 ],
 									"text" : "atoi"
 								}
 
@@ -1320,7 +1308,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 519.0, 519.0, 65.0, 22.0 ],
+									"patching_rect" : [ 489.0, 511.0, 65.0, 22.0 ],
 									"text" : "append 13"
 								}
 
@@ -1332,7 +1320,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "int" ],
-									"patching_rect" : [ 519.0, 392.0, 55.0, 22.0 ],
+									"patching_rect" : [ 489.0, 397.0, 55.0, 22.0 ],
 									"text" : "strippath"
 								}
 
