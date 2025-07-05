@@ -30,23 +30,28 @@
 
 (defparameter *list-asdf-paths*
 	'(
-		("cluster-engine-master/" :cluster-engine)
-		("ta-utilities/" :ta-utilities)
-		("fenv/" :fenv) 
-		("cluster-rules/" :cluster-rules)
-
-		; ("neuromuse/" :neuromuse)
-		
-		("fv-morphologie/" :fv-morphologie)
-
 		("alexandria-master/" :alexandria) ("global-vars-master/" :global-vars)
 		("trivial-features-master/" :trivial-features) ("trivial-garbage-master/" :trivial-garbage)
 		("bordeaux-threads-master/" :bordeaux-threads) ("cl-store-master/" :cl-store) ("lparallel-master/" :lparallel)
 		("asdf-flv-master/" :NET.DIDIERVERNA.ASDF-FLV) ("trivial-backtrace/" :trivial-backtrace)
 		("fiveam-master/" :fiveam) ("chipz-master/" :chipz)
 		("simple-neural-network-master/" :simple-neural-network)
-
 		("split-sequence-master/" :split-sequence)
+
+		("iterate/" :iterate)
+		("screamer-master/" :screamer)
+		("ompw-master/" :ompw)
+		("ompw-utils-master/" :ompw-utils)
+		("smc/" :smc)
+
+		("cluster-engine-master/" :cluster-engine)
+		("ta-utilities/" :ta-utilities)
+		("fenv/" :fenv) 
+		("cluster-rules/" :cluster-rules)
+
+		; ("neuromuse/" :neuromuse)		
+		("fv-morphologie/" :fv-morphologie)
+
 
 		("" :mozlib) ;;;; MOZ'Lib vanilla (incl. OM stuff, JBS libraries, Jv-components, Chreodes&Transkaija, etc )
 	)

@@ -1,0 +1,70 @@
+OMPW provides an abstraction layer for writing Lisp libraries
+that can be used in "pure" Common Lisp, but also in the OpenMusic[1]
+or PWGL[2] environments.
+
+You can always download the latest version via the link:
+http://github.com/kisp/ompw/tarball/master
+
+It defines a macro DEFINE-BOX that expands differently
+depending on the current system being used.
+
+For instance
+
+(define-box myadd ((a 1) (b 1))
+  "Add A + B."
+  (+ a b))
+
+will become:
+
+In pure Common Lisp:
+
+(progn (export 'myadd)
+       (defgeneric myadd (a b))
+       (defmethod myadd (a b) "add a + b." (+ a b)))
+
+In OM:
+
+(progn (export 'myadd)
+       (om::defmethod! myadd (a b)
+	 :doc "Add A + B."
+	 :initvals '(1 1)
+	 :icon 128
+	 (+ a b)))
+
+In PWGL:
+
+(progn (export 'myadd)
+       (system::pwgldef myadd ((a '1) (b '1))
+			"add a + b."
+			nil
+			(+ a b)))
+
+See the file examples.lisp for more options.
+
+Have fun,
+  Kilian Sprotte
+
+
+Footnotes: 
+[1]  http://recherche.ircam.fr/equipes/repmus/OpenMusic/
+
+[2]  http://www.siba.fi/PWGL/
+
+--------------------------------------------------------------------------------
+
+This file is part of ompw.
+
+Copyright (c) 2007 - 2011, Kilian Sprotte. All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.

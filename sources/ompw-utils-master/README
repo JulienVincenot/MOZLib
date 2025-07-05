@@ -1,0 +1,11 @@
+OMPW-UTILS provides some utility functions that can be used
+in "pure" Common Lisp, but also in the OpenMusic or PWGL
+environments. It depends on OMPW, which makes the definition
+of functions ("boxes") for multiple environments possible.
+
+You can always download the latest version via the link:
+http://github.com/kisp/ompw-utils/tarball/master
+
+For downloading a specific version or if you prefer a zip archive,
+take a look at:
+http://github.com/kisp/ompw-utils/archives/master

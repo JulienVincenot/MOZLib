@@ -1,0 +1,116 @@
+diff --git a/lisp/current/smc/smc.lisp b/lisp/current/smc/smc.lisp
+index 7d0d705..8219245 100644
+--- a/lisp/current/smc/smc.lisp
++++ b/lisp/current/smc/smc.lisp
+@@ -394,8 +394,14 @@
+       (with l = (cons :start nil))
+       (with ltail = l)
+       (with rl = nil)
++      (with xxx = nil)
+       (with rl-dummy-head = (cons :unknown nil))
+-      (with solution-p* = (if solution-p solution-p (constantly nil)))
++      (with solution-p* = (if solution-p
++                              (lambda (i v l rl)
++                                (catch 'screamer::fail
++                                  (funcall solution-p i v l rl)
++                                  t))
++                              (constantly nil)))
+       ;; (declare ((integer 0 ,(1- var-num)) i))
+       (declare (fixnum i) (function solution-p*))
+       (for c = (a-member-of
+@@ -406,13 +412,14 @@
+       (setf (aref v i) c)
+       (setf (cdr rl-dummy-head) rl)
+       (funcall predicate-fn i v l rl-dummy-head)
++      (setq xxx (funcall solution-p* i v l rl-dummy-head))
+       (local
+         (let ((cell (cons c nil)))
+           (setf (cdr ltail) cell)
+           (setf ltail cell))
+         (push c rl))
+       (local (incf i))
+-      (until (or (= i var-num) (funcall solution-p* i (cdr l) rl)))
++      (until (or (= i var-num) xxx))
+       (finally (return #+nil
+                        ;; TODO maybe clean this up - or make it an option
+                        ;; first version: if VAR-NUM limit is reached
+@@ -427,7 +434,7 @@
+                        ;; second version: SOLUTION-P strict at end
+                        (progn
+                          (when solution-p
+-                           (unless (funcall solution-p i (cdr l) rl)
++                           (unless xxx
+                              (fail)))
+                          (iter
+                            (for j from 0 below i)
+diff --git a/lisp/current/smc/test-smc.lisp b/lisp/current/smc/test-smc.lisp
+index d3ff6d8..c94c256 100644
+--- a/lisp/current/smc/test-smc.lisp
++++ b/lisp/current/smc/test-smc.lisp
+@@ -180,7 +180,7 @@
+            (smc '(1 2 3)
+                 '((* ?1 ?2 (pmc:?if (/= ?1 ?2))))
+                 nil 24
+-                #'(lambda (i l rl) (declare (ignore l rl)) (= 5 i))
++                #'(lambda (i v l rl) (declare (ignore v l rl)) (unless (= 5 (1+ i)) (fail)))
+                 nil
+                 1))
+   T)
+@@ -190,7 +190,7 @@
+            (smc '(1 2 3)
+                 '((* ?1 ?2 (pmc:?if (/= ?1 ?2))))
+                 nil 24
+-                #'(lambda (i l rl) (declare (ignore i rl)) (<= 6 (apply #'+ l)))
++                #'(lambda (i v l rl) (declare (ignore v i rl)) (unless (<= 6 (apply #'+ l)) (fail)))
+                 nil 1))
+   T)
+ 
+@@ -199,7 +199,7 @@
+          (smc '(1 2 3)
+               '((* ?1 ?2 (pmc:?if (/= ?1 ?2))))
+               nil 5
+-              #'(lambda (i l rl) (declare (ignore i rl)) (= 32.2 (apply #'+ l)))
++              #'(lambda (i v l rl) (declare (ignore v i rl)) (unless (= 32.2 (apply #'+ l)) (fail)))
+               nil
+               1))
+   t)
+@@ -277,6 +277,26 @@
+     '(1 2 3) 5 '((* ?1 ?2 (pmc:?if (/= ?1 ?2)))
+                  (* ?1 ?2 ?3 (pmc:?if (/= ?1 ?3)))
+                  (i4 i5 (pmc:?if (< i5 i4)))))
++
++
++;;; 
++
++(rtest:deftest foo
++    (set-equal
++     (remove-if-not (lambda (list)
++                      (< (nth (- (length list) 2) list)
++                         (nth (- (length list) 1) list)))
++                    (loop for n from 2 to 4
++                       appending (smc '(1 2 3) nil nil n nil nil 5000)))
++     (smc '(1 2 3) nil nil 4
++          (make-true-false-function '((* ?1 ?2 (?if (< ?1 ?2)))
++                                      (* ?1 (?if (>= (length l) 2))))) nil 5000)
++     :test #'equal)
++  t)
++
++
++
++
+ #+nil
+ (rtest:do-tests)
+ #+nil
+diff --git a/org/privat.org b/org/privat.org
+index 5ae7552..72d7950 100644
+--- a/org/privat.org
++++ b/org/privat.org
+@@ -149,6 +149,8 @@ g
+ ** <2009-06-30 Di 21:00>--<2009-06-30 Di 23:30> bei tutu
+ ** <2009-07-01 Mi 09:00>--<2009-07-01 Mi 17:00> im DFKI anstatt Donnerstag
+ ** <2009-07-02 Do 09:00>--<2009-07-02 Do 17:00> im DFKI anstatt Freitag
++** <2010-02-24 Mi>--<2010-02-28 So> PRISMA Plymouth
++** <2010-07-01 Do>--<2010-07-05 Mo> PRISMA Montbeliard
+ * Tasks
+ ** finish guy math thesis [100%]
+    :PROPERTIES:

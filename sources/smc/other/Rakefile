@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+
+require 'rake/packagetask'
+
+def smc_version
+  File.open("smc.asd") do |file|
+    m = /version +"([^"]+)"/.match(file.read)
+    if m then
+      m[1]
+    else
+      raise "Cannot determine version by looking at smc.asd"
+    end
+  end
+end
+
+Rake::PackageTask.new("smc", smc_version()) do |p|
+  p.need_tar = true
+  p.need_zip = true
+  p.package_files.include("smc.asd")
+  # lisp
+  p.package_files.include("api.lisp")
+  p.package_files.include("packages.lisp")
+  p.package_files.include("screamer-additions.lisp")
+  p.package_files.include("smc.lisp")
+  # tutorial  
+  p.package_files.include("tutorial/**/*.{pwgl,txt,bdb}")
+end
+
+task :default => ["package"]
+
+task :tasks do |t|
+  puts Rake.application.tasks
+end

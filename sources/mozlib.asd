@@ -40,7 +40,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
   :serial t 
   
   :components (
-               (:file "iter")
+               ; (:file "iter")
 
                (:file "pw-common-language")
                (:file "pw_profile_functions")
