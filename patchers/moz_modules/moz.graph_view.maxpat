@@ -64,7 +64,7 @@
 					"numoutlets" : 3,
 					"out" : "nn",
 					"outlettype" : [ "", "", "bang" ],
-					"patching_rect" : [ 1185.0, 390.0, 508.0, 178.0 ],
+					"patching_rect" : [ 1229.0, 351.0, 508.0, 178.0 ],
 					"pointradius" : 3.2,
 					"presentation" : 1,
 					"presentation_rect" : [ 2.0, 33.416671999999998, 665.0, 180.0 ],
@@ -8123,6 +8123,20 @@
 							}
 , 							{
 								"box" : 								{
+									"id" : "obj-62",
+									"linecount" : 3,
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1185.0, 360.0, 100.0, 0.0 ],
+									"text" : "receive #0_1_bachgraph_fs",
+									"varname" : "#0_1_sendbachgraph_fs"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-44",
 									"linecount" : 3,
 									"maxclass" : "newobj",
@@ -8150,7 +8164,41 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-62",
+									"axiscolor" : [ 0.996, 0.996, 0.996, 0.0 ],
+									"bgcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+									"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
+									"clickedcolor" : [ 0.996, 0.133, 0.133, 1.0 ],
+									"fontface" : 0,
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"graphcolor" : [ 0.953, 0.565, 0.098, 0.59 ],
+									"graphtype" : 3,
+									"gridcolor" : [ 0.702, 0.702, 0.702, 0.0 ],
+									"id" : "obj-63",
+									"linewidth" : 2.2,
+									"maxclass" : "bach.graph",
+									"modify" : 0,
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"out" : "nn",
+									"outlettype" : [ "", "", "bang" ],
+									"patching_rect" : [ 1185.0, 390.0, 508.0, 178.0 ],
+									"pointradius" : 3.2,
+									"presentation" : 1,
+									"presentation_rect" : [ -1.0, 0.0, 1373.0, 444.0 ],
+									"showmode" : 2,
+									"showxylabels" : 0,
+									"textcolor" : [ 0.996, 0.996, 0.996, 0.0 ],
+									"varname" : "#0_1_bachgraph_fs[2]",
+									"versionnumber" : 80900,
+									"whole_graph_data_0000000000" : [ "null" ],
+									"whole_graph_data_count" : [ 1 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-64",
 									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -8158,7 +8206,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1185.0, 360.0, 100.0, 0.0 ],
 									"text" : "receive #0_1_bachgraph_fs",
-									"varname" : "#0_1_sendbachgraph_fs"
+									"varname" : "#0_1_sendbachgraph_fs[2]"
 								}
 
 							}
@@ -10810,16 +10858,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
-									"order" : 1,
-									"source" : [ "obj-56", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
-									"order" : 0,
 									"source" : [ "obj-56", 0 ]
 								}
 
@@ -10828,6 +10867,13 @@
 								"patchline" : 								{
 									"destination" : [ "obj-56", 0 ],
 									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"source" : [ "obj-9", 0 ]
 								}
 
 							}
@@ -11078,11 +11124,24 @@
 			}
 , 			{
 				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1322.0, 287.0, 141.0, 22.0 ],
+					"text" : "receive #0_1_bachgraph",
+					"varname" : "#0_1_sendbachgraph"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1429.0, 579.0, 125.0, 22.0 ],
+					"patching_rect" : [ 1464.0, 563.0, 125.0, 22.0 ],
 					"text" : "send #0_graphclicked",
 					"varname" : "#0_sendclicked"
 				}
@@ -11095,22 +11154,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1366.0, 360.0, 146.0, 22.0 ],
+					"patching_rect" : [ 1565.0, 292.0, 146.0, 22.0 ],
 					"text" : "receive #0_all_bachgraph",
 					"varname" : "#0_graphallreceive"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-45",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1185.0, 360.0, 141.0, 22.0 ],
-					"text" : "receive #0_1_bachgraph",
-					"varname" : "#0_1_sendbachgraph"
 				}
 
 			}

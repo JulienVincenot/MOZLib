@@ -278,12 +278,11 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-7",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.5, 68.6875, 650.0, 135.0 ],
-					"presentation_linecount" : 10,
+					"patching_rect" : [ 12.5, 68.6875, 816.0, 122.0 ],
 					"saved_attribute_attributes" : 					{
 						"textcolor" : 						{
 							"expression" : "themecolor.theme_textcolor"
@@ -292,7 +291,6 @@
 					}
 ,
 					"text" : "This module, just like its equivalent in the CLUSTERengine library 'cluster.lambda-rule-tester'                           \nallows to test the behavior of a given rule (written with the original PMC syntax) by providing it with the expected arguments.\n\nThe module will check first if the number of argument(s) provided manually — through the second inlet or in the module's input box — matches or not with the lambda code. In the latter case it will return an error message.\n\nOtherwise, the module will show if the test succeeded or not (√ or x) and return the actual result through its second outlet (either T, NIL or a numerical value for heuristic rules).",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest"
 				}
 
@@ -314,7 +312,6 @@
 					}
 ,
 					"text" : "tester",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[2]"
 				}
 
@@ -336,7 +333,6 @@
 					}
 ,
 					"text" : "rule",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[1]"
 				}
 
@@ -358,7 +354,6 @@
 					}
 ,
 					"text" : "PMC",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[3]"
 				}
 
@@ -489,7 +484,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 884.0, 634.0, 50.0, 22.0 ],
-					"text" : "30"
+					"text" : "0"
 				}
 
 			}
@@ -600,25 +595,13 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-81",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 720.5, 563.0, 127.0, 22.0 ],
-					"text" : "bach.llll 62222"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-80",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 697.0, 444.0, 150.0, 22.0 ],
-					"text" : "bach.llll 63477"
+					"patching_rect" : [ 619.0, 445.28204345703125, 85.0, 22.0 ],
+					"text" : "bach.llll 16860"
 				}
 
 			}
@@ -660,9 +643,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "pmc.rule.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "", "", "bang" ],
 					"patching_rect" : [ 542.0, 356.0, 305.0, 79.0 ],
 					"varname" : "pmc.rule[3]",
 					"viewvisibility" : 1
@@ -676,7 +659,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 542.5, 659.0, 89.0, 22.0 ],
+					"patching_rect" : [ 543.0, 671.0, 89.0, 22.0 ],
 					"text" : "72 71 72 71 72"
 				}
 
@@ -704,7 +687,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 542.5, 626.5, 93.0, 22.0 ],
+					"patching_rect" : [ 543.0, 639.0, 93.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"versionnumber" : 80005
 					}
@@ -729,7 +712,7 @@
 					"numoutlets" : 2,
 					"offset" : [ -2.0, -4.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 542.0, 558.0, 161.0, 60.0 ],
+					"patching_rect" : [ 542.0, 570.0, 161.0, 60.0 ],
 					"varname" : "bp425977513224",
 					"viewvisibility" : 1
 				}
@@ -770,9 +753,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "pmc.heur_rule.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "", "", "bang" ],
 					"patching_rect" : [ 542.0, 473.0, 305.0, 79.0 ],
 					"varname" : "pmc.rule[2]",
 					"viewvisibility" : 1
@@ -1006,7 +989,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 1 ],
-					"midpoints" : [ 552.0, 653.75, 622.0, 653.75 ],
+					"midpoints" : [ 552.5, 665.75, 622.5, 665.75 ],
 					"source" : [ "obj-25", 0 ]
 				}
 
@@ -1052,6 +1035,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-95", 0 ],
+					"midpoints" : [ 694.5, 442.0, 870.0, 442.0, 870.0, 351.0, 893.5, 351.0 ],
 					"order" : 1,
 					"source" : [ "obj-41", 1 ]
 				}
@@ -1076,7 +1060,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-110", 0 ],
-					"order" : 1,
+					"midpoints" : [ 694.5, 560.0, 870.0, 560.0, 870.0, 540.0, 893.5, 540.0 ],
 					"source" : [ "obj-76", 1 ]
 				}
 
@@ -1085,14 +1069,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
 					"source" : [ "obj-76", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-81", 1 ],
-					"order" : 0,
-					"source" : [ "obj-76", 1 ]
 				}
 
 			}
@@ -1393,6 +1369,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.prepend-or-null.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../patchers/pw4m_pmc",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.reconstruct-lllls-from-print.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../patchers/utilities",
@@ -1488,13 +1471,6 @@
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
 				"patcherrelativepath" : "../../patchers/pw4m_pmc",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pmcno.png",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../media",
-				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{

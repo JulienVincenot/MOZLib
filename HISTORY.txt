@@ -13,6 +13,8 @@ Among new features :
 
 - a few experimental modules : PMClooper and CLUSTERlooper (both based on lisp.iterate) which hugely simplify iterative processes involving constraints
 
+- a new engine joins the PWConstraints menu : Kilian Sprotte's SMCengine, based on Screamer, which accepts every rule modules compatible with PMC syntax (true/false, heuristic, JBS-rules...)
+
 - visuals of the original MOZ modules as well as basic PWforMax (PMC etc.) are now compatible with the default (dark) theme of Max 9. This means that everything incl. the bpatcher modules, help files and tutorials will display correctly everywhere, and adapt to your theme.
 
 - many tutorials have been updated since last number updated, so much that it would be impossible to keep track... keep exploring the overview to see more !

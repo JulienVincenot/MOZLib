@@ -39,7 +39,8 @@
 		("split-sequence-master/" :split-sequence)
 
 		("iterate/" :iterate)
-		("screamer-master/" :screamer)
+		("screamer/" :screamer)
+		("screamer+/" :screamer+)
 		("ompw-master/" :ompw)
 		("ompw-utils-master/" :ompw-utils)
 		("smc/" :smc)

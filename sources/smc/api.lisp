@@ -90,10 +90,14 @@ TODO doc"
              (search-all domain var-num predicate-fn heuristic-fn solution-p random))
             (t (search-n number domain var-num predicate-fn heuristic-fn solution-p random)))
         (setq after-search (get-internal-run-time))
-        (format t "Comp ~,3F + Search ~,3F = ~,3F~%"
-                (/ (- before-search before-comp) (float internal-time-units-per-second))
-                (/ (- after-search before-search) (float internal-time-units-per-second))
-                (/ (- after-search before-comp) (float internal-time-units-per-second)))))))
+        
+        ;;; muted the print JV
+        ; (format t "Comp ~,3F + Search ~,3F = ~,3F~%"
+        ;         (/ (- before-search before-comp) (float internal-time-units-per-second))
+        ;         (/ (- after-search before-search) (float internal-time-units-per-second))
+        ;         (/ (- after-search before-comp) (float internal-time-units-per-second)))
+
+        ))))
 
 ;; (define-compiler-macro smc (&whole form &environment env
 ;;                                 domain rules heuristic-rules

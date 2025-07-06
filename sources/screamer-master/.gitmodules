@@ -1,3 +1,0 @@
-[submodule "tools/htmlize.sh"]
-	path = tools/htmlize.sh
-	url = git://github.com/vy/htmlize.sh.git

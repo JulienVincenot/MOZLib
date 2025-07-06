@@ -9,6 +9,8 @@
 	  "pmc.jbs_rules.maxsnip",
 	  "pmc.jbs_collect.maxsnip",
 	  "pmc.looper.maxsnip",
-	  "pmc.rule-tester.maxsnip"
+	  "pmc.rule-tester.maxsnip",
+	  "smc.engine.maxsnip",
+	  "smc.stop-rule.maxsnip"
     ]
 }

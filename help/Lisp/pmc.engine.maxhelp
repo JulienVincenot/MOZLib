@@ -59,7 +59,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 34.0, 105.0, 954.0, 671.0 ],
+						"rect" : [ 0.0, 26.0, 954.0, 671.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -107,8 +107,7 @@
 
 									}
 ,
-									"text" : "The moz.bell module is typically \nuseful for that kind of situation...",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "The moz.bell module is typically \nuseful for that kind of situation..."
 								}
 
 							}
@@ -194,8 +193,7 @@
 
 									}
 ,
-									"text" : "Sometimes, when using the PMC, you might end up in a situation where the search space \nand rules are such that calculations seem to get stuck forever. It is perfectly normal, \ndue to the very nature of constraints systems...\n\nThis example was kindly shared by composer Juan Sebastián Vassallo, to help demonstrate the issue. \nHere the candidates provided in the domain and the dedicated rules work fine for a small number \nof variables, but above a certain length of solution, the search time often gets out of control. \nIt is a typical, fairly complex situation you might encounter.\n\nA way to manage this problem is to implement a \"stop rule\" which will interrupt the PMC evaluation \nafter a certain amount of time, i.e. seconds or minutes, decided by the user.",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "Sometimes, when using the PMC, you might end up in a situation where the search space \nand rules are such that calculations seem to get stuck forever. It is perfectly normal, \ndue to the very nature of constraints systems...\n\nThis example was kindly shared by composer Juan Sebastián Vassallo, to help demonstrate the issue. \nHere the candidates provided in the domain and the dedicated rules work fine for a small number \nof variables, but above a certain length of solution, the search time often gets out of control. \nIt is a typical, fairly complex situation you might encounter.\n\nA way to manage this problem is to implement a \"stop rule\" which will interrupt the PMC evaluation \nafter a certain amount of time, i.e. seconds or minutes, decided by the user."
 								}
 
 							}
@@ -243,8 +241,7 @@
 
 									}
 ,
-									"text" : "kill",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "kill"
 								}
 
 							}
@@ -508,8 +505,7 @@
 
 									}
 ,
-									"text" : "OR",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "OR"
 								}
 
 							}
@@ -673,9 +669,9 @@
 													"maxclass" : "bpatcher",
 													"name" : "pmc.rule.maxpat",
 													"numinlets" : 2,
-													"numoutlets" : 2,
+													"numoutlets" : 3,
 													"offset" : [ 0.0, 0.0 ],
-													"outlettype" : [ "", "" ],
+													"outlettype" : [ "", "", "bang" ],
 													"patching_rect" : [ 50.0, 459.0, 305.0, 79.0 ],
 													"varname" : "pmc.rule[1]",
 													"viewvisibility" : 1
@@ -717,9 +713,9 @@
 													"maxclass" : "bpatcher",
 													"name" : "pmc.rule.maxpat",
 													"numinlets" : 2,
-													"numoutlets" : 2,
+													"numoutlets" : 3,
 													"offset" : [ 0.0, 0.0 ],
-													"outlettype" : [ "", "" ],
+													"outlettype" : [ "", "", "bang" ],
 													"patching_rect" : [ 50.0, 288.0, 305.0, 79.0 ],
 													"varname" : "pmc.rule[2]",
 													"viewvisibility" : 1
@@ -751,9 +747,9 @@
 													"maxclass" : "bpatcher",
 													"name" : "pmc.rule.maxpat",
 													"numinlets" : 2,
-													"numoutlets" : 2,
+													"numoutlets" : 3,
 													"offset" : [ 0.0, 0.0 ],
-													"outlettype" : [ "", "" ],
+													"outlettype" : [ "", "", "bang" ],
 													"patching_rect" : [ 50.0, 109.0, 305.0, 79.0 ],
 													"varname" : "pmc.rule[3]",
 													"viewvisibility" : 1
@@ -1033,8 +1029,7 @@
 
 									}
 ,
-									"text" : "The stop rule relies of the code_snippet message (see the dedicated tab to know more).",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "The stop rule relies of the code_snippet message (see the dedicated tab to know more)."
 								}
 
 							}
@@ -1054,8 +1049,7 @@
 
 									}
 ,
-									"text" : "minutes",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "minutes"
 								}
 
 							}
@@ -1100,8 +1094,7 @@
 
 									}
 ,
-									"text" : "This rule will always return T unless the \"end\" time (set via code_snippet) is inferior to current time.",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "This rule will always return T unless the \"end\" time (set via code_snippet) is inferior to current time."
 								}
 
 							}
@@ -1121,8 +1114,7 @@
 
 									}
 ,
-									"text" : "double click to see what's inside",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "double click to see what's inside"
 								}
 
 							}
@@ -1159,8 +1151,7 @@
 
 									}
 ,
-									"text" : "seconds",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+									"text" : "seconds"
 								}
 
 							}
@@ -1238,9 +1229,9 @@
 									"maxclass" : "bpatcher",
 									"name" : "pmc.rule.maxpat",
 									"numinlets" : 2,
-									"numoutlets" : 2,
+									"numoutlets" : 3,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "" ],
+									"outlettype" : [ "", "", "bang" ],
 									"patching_rect" : [ 9.0, 324.0, 305.0, 79.0 ],
 									"varname" : "pmc.rule[3]",
 									"viewvisibility" : 1
@@ -1744,7 +1735,6 @@
 									}
 ,
 									"text" : "—————>",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[9]"
 								}
 
@@ -1767,7 +1757,6 @@
 									}
 ,
 									"text" : "|\n|\n|",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[10]"
 								}
 
@@ -1804,7 +1793,6 @@
 									}
 ,
 									"text" : "—————",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[8]"
 								}
 
@@ -1827,7 +1815,6 @@
 									}
 ,
 									"text" : "|\n|\nV",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[7]"
 								}
 
@@ -1850,7 +1837,6 @@
 									}
 ,
 									"text" : "3) How is that possible? If you look inside that bach.reg, \nyou will see I defined a very simple Lisp function, \nthe \"included-chords\" we were missing before.\n\nIf you send this code (as an llll) with the code_snippet prefix, this code is added on top of the Lisp evaluation, \ntherefore the function defined will be known by the system and can be used in PMC rules :)\n\nNote : if none of the random chords happens to have a common note, the result for the search will still be an error, because the rule failed.",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[6]"
 								}
 
@@ -1873,7 +1859,6 @@
 									}
 ,
 									"text" : "2) Now click on this button and try re-evaluating. It works !\nIf you observe the result, you will see that those random chords \ncandidates (generated in the n-random-chords subpatch) \nare  arranged only in sequence where successive chords\nhave one (and only one) note in common.",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[5]"
 								}
 
@@ -1909,7 +1894,6 @@
 									}
 ,
 									"text" : "click here to re-evaluate with same candidates and rules",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[3]"
 								}
 
@@ -1932,7 +1916,6 @@
 									}
 ,
 									"text" : "Click to\nevaluate:",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[4]"
 								}
 
@@ -1980,7 +1963,6 @@
 									}
 ,
 									"text" : "1) Try evaluating this patch first... you should get an error. Why is that? Because the code inside the PMC rule uses an unknown function, \"included-chords\".",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[1]"
 								}
 
@@ -2146,7 +2128,6 @@
 									}
 ,
 									"text" : "To know more about code snippets, see the dedicated subpatch of the \"Lisp scripting boxes\" tab in",
-									"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 									"varname" : "autohelp_top_digest[2]"
 								}
 
@@ -2502,9 +2483,9 @@
 									"maxclass" : "bpatcher",
 									"name" : "pmc.rule.maxpat",
 									"numinlets" : 2,
-									"numoutlets" : 2,
+									"numoutlets" : 3,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "" ],
+									"outlettype" : [ "", "", "bang" ],
 									"patching_rect" : [ 24.0, 175.0, 305.0, 79.0 ],
 									"varname" : "pmc.rule[1]",
 									"viewvisibility" : 1
@@ -2990,8 +2971,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 158.0, 45.961586712163786, 88.0, 32.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 69.0, 23.104476928710938, 131.0, 32.0 ],
 					"saved_attribute_attributes" : 					{
 						"textcolor" : 						{
 							"expression" : "themecolor.theme_textcolor"
@@ -2999,8 +2978,7 @@
 
 					}
 ,
-					"text" : "engine",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+					"text" : "engine"
 				}
 
 			}
@@ -3159,7 +3137,6 @@
 					}
 ,
 					"text" : "Note also that any PRINT function inside the body of a rule \nwill be automatically return its result to the Max Window.\nTry replacing the second ?1 by (PRINT ?1) inside the PMCrule,\nthen click on any candidate and observe the Max Window :\nall those numbers are the potential candidates that are tested\nby the PMC for this variable in order to produce a solution !",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[5]"
 				}
 
@@ -3199,7 +3176,6 @@
 					}
 ,
 					"text" : "The second outlet returns the full code sent to pw.eval-box internally. You can observe it, nicely formatted by double clicking on the bach.reg :)",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[4]"
 				}
 
@@ -3222,7 +3198,6 @@
 					}
 ,
 					"text" : "Before anything else, try changing how many variables you want in your domain. The chainedPMC module will blink in red, to remind you to define some candidates !",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[2]"
 				}
 
@@ -3244,8 +3219,7 @@
 
 					}
 ,
-					"text" : "Studying the outputs of the JBSrules module\ncan also be very helpful, as it includes\nmany examples of very musical rules. ",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+					"text" : "Studying the outputs of the JBSrules module\ncan also be very helpful, as it includes\nmany examples of very musical rules. "
 				}
 
 			}
@@ -3292,8 +3266,7 @@
 
 					}
 ,
-					"text" : "and in Mikael Laurson's dissertation :",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+					"text" : "and in Mikael Laurson's dissertation :"
 				}
 
 			}
@@ -3341,8 +3314,7 @@
 
 					}
 ,
-					"text" : "To learn more about the PMC syntax, \na great start is the dedicated chapters\nin the PWGL Book — see chapter 1.3.5 (page 120)",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ]
+					"text" : "To learn more about the PMC syntax, \na great start is the dedicated chapters\nin the PWGL Book — see chapter 1.3.5 (page 120)"
 				}
 
 			}
@@ -3399,9 +3371,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "pmc.rule.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 2,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
+					"outlettype" : [ "", "", "bang" ],
 					"patching_rect" : [ 36.0, 298.0, 305.0, 79.0 ],
 					"varname" : "pmc.rule[1]",
 					"viewvisibility" : 1
@@ -3557,7 +3529,6 @@
 					}
 ,
 					"text" : "chained",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[1]"
 				}
 
@@ -3579,7 +3550,6 @@
 					}
 ,
 					"text" : "PMC",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest[3]"
 				}
 
@@ -3602,7 +3572,6 @@
 					}
 ,
 					"text" : "The PMC engine as designed by Mikael Laurson for PatchWork then PWGL.\n\nThe chainedPMC module, slightly different from the original PMC, \nmust receive a chain made of a domain and one or more rules, \neither true/false (strictly applied) or heuristic (applied as much as possible).\nTo see a more complex example, see the PWforMax Overview.",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
 					"varname" : "autohelp_top_digest"
 				}
 
@@ -4172,6 +4141,13 @@
 				"name" : "moz.play_hover_title.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.prepend-or-null.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}

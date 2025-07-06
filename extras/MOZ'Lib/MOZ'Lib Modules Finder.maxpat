@@ -290,7 +290,7 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 753.0, 394.0, 156.0, 184.0 ],
-					"tabs" : [ "pmc.domain", "pmc.engine", "pmc.rule", "pmc.jbs_rules", "pmc.looper", "pmc.rule-tester" ],
+					"tabs" : [ "pmc.domain", "pmc.engine", "pmc.rule", "pmc.jbs_rules", "pmc.looper", "pmc.rule-tester", "smc.engine" ],
 					"truncate" : 0
 				}
 
@@ -310,9 +310,9 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 753.0, 182.0, 145.0, 184.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 512.5, 88.0, 159.0, 129.0 ],
+					"presentation_rect" : [ 512.5, 88.0, 159.0, 141.0 ],
 					"tabcolor" : [ 0.345098039215686, 0.345098039215686, 0.345098039215686, 1.0 ],
-					"tabs" : [ "PMCdomain", "chainedPMC", "PMCrules", "JBSrules", "PMClooper", "PMCrule-tester" ],
+					"tabs" : [ "PMCdomain", "chainedPMC", "PMCrules", "JBSrules", "PMClooper", "PMCrule-tester", "SMCengine" ],
 					"truncate" : 0
 				}
 
