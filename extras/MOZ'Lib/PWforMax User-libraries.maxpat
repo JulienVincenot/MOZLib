@@ -84,6 +84,8 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 360.0, 11.0, 141.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 360.0, 11.0, 141.0, 17.0 ],
 					"text" : "moz.resolution-helpfiles-moz 934 616"
 				}
 
@@ -91,7 +93,6 @@
 , 			{
 				"box" : 				{
 					"fontsize" : 8.0,
-					"hidden" : 1,
 					"id" : "obj-46",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -1374,7 +1375,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 331.0, 255.0, 117.0, 22.0 ],
-									"reg_data_0000000000" : [ "Julintosh:/Users/julienvincenot/Documents/Max 8/Packages/MOZ_moz-user-test/", "Julintosh:/Users/julienvincenot/Documents/Max 8/Packages/MOZ_NeuralConstraints/" ],
+									"reg_data_0000000000" : [ "null" ],
 									"reg_data_count" : [ 1 ],
 									"saved_object_attributes" : 									{
 										"embed" : 1,
@@ -2029,15 +2030,12 @@
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
 					"id" : "obj-10",
-					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 12.0, 312.0, 148.0, 45.0 ],
+					"patching_rect" : [ 12.0, 312.0, 148.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 74.0, 514.0, 241.5, 32.0 ],
-					"text" : "- MOZ_moz-user-test\r- MOZ_NeuralConstraints",
+					"presentation_rect" : [ 74.0, 514.0, 241.5, 19.0 ],
 					"textcolor" : [ 0.482352941176471, 0.482352941176471, 0.482352941176471, 1.0 ]
 				}
 
