@@ -2538,7 +2538,7 @@
 					"patching_rect" : [ 1273.0, 841.0, 147.228942999999987, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 174.0, 64.0, 108.04925537109375, 21.0 ],
-					"text" : "13 results found",
+					"text" : "2 results found",
 					"textcolor" : [ 0.463, 0.459, 0.459, 0.0 ],
 					"textjustification" : 2
 				}
@@ -3295,7 +3295,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 506.205840500000022, 909.01953125, 343.0, 22.0 ],
-					"text" : "7i-lisp.antenna"
+					"text" : "1-Welcome-to-MOZLib"
 				}
 
 			}
@@ -3447,7 +3447,7 @@
 					"preventedit" : 1,
 					"textcolor" : [ 0.349019607843137, 0.349019607843137, 0.349019607843137, 1.0 ],
 					"textdecayfactor" : 0.94,
-					"tree_openstate_data_0000000000" : [ 0, "[", 0, 0, 0, 0, 0, 0, "[", 0, 0, 0, 0, "]", 0, "]", "[", 1, 0, 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, "]", "[", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", 0, "[", 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "[", 0, 0, 0, 0, 0, "]", 0, "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, "[", 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, "[", 0, 0, 0, 0, 0, "]", 0, "]", "]", "[", 0, 0, 0, "]", "[", 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, 0, "]", "]" ],
+					"tree_openstate_data_0000000000" : [ 0, "[", 0, 0, 0, 0, 0, 0, "[", 0, 0, 0, 0, "]", 0, "]", "[", 0, 0, 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", 0, "[", 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "[", 0, 0, 0, 0, 0, "]", 0, "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, "[", 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, "]", "[", 0, 0, "[", 0, 0, 0, 0, 0, "]", 0, "]", "]", "[", 0, 0, 0, "]", "[", 0, 0, 0, "]", "]", "[", 0, 0, 0, "[", 0, 0, "[", 0, 0, 0, 0, "]", "[", 0, 0, 0, 0, 0, 0, 0, "]", "]", "[", 0, 0, 0, 0, "]", "]" ],
 					"tree_openstate_data_count" : [ 1 ],
 					"versionnumber" : 80900,
 					"whole_tree_data_0000000000" : [ "Welcome to MOZ'Lib !", "[", "MOZ'Lib Intro", "Quick Demo", "Fantastic modules...", "Little manual of collapsology...", "Program flow and the “callback” button", "[", "LISP inside !", "But what is Lisp to begin with?", "Lisp in Max: why and how", "]", "Beyond MOZ'Lib", "]", "[", "PWforMax Intro", "PatchWork for Max ?!", "pw.eval-box", "Save Lisp and Die...", "[", "Basics of Max Lisping", "Static Lisping", "Dynamic Lisping", "Backquote (& Macros)", "Tips: Make your code dynamic easily !", "]", "[", "Lisp scripting boxes...", "lisp.quickeval", "lisp.quickeval @randompath", "lisp.quickeval code_snippets", "BPFs & pw.sample", "lisp.expr", "lisp.lambda", "Don't forget your quotes...!", "Old style evaluation : lisp.antenna 🤯", "Utilities: lisp.print & lisp.docstring", "]", "...and a few more modules !", "PWConstraints Intro", "[", "Iterate tools", "Don't Loop, Iterate !", "The problem with quotes...", "Parallel iterations", "for-previous: a case study", "for-wind", "in-circular-list", "Conditionals (with WHEN)", "A few more Iterate features", "PMC through iterate (a)", "PMC through iterate (b)", "]", "PC-set-theory", "[", "Debugging tips", "Trace", "Dtrace", "]", "]", "[", "PWforMax Libraries", "Introduction to guest libraries", "[", "Chréode & Transkaija (TODO)", "Introduction", "A few words on Chréode", "A few words on Transkaija", "]", "[", "CLUSTERengine", "Introduction", "chained?!", "[", "demos", "demo [a]", "demo [b]", "demo [c]", "]", "under the hood...", "[", "CLUSTERengine module", "Main engine interface", "stop rules", "code snippets", "]", "[", "Domains", "Domain Intro", "Rhythm domain", "Pitch domain", "Interval motifs", "Metric domain", "Chaining domains", "[", "Motifs selectors", "Rhythm motifs selector", "Pitch motifs selector", "Motifs selectors example", "]", "]", "[", "Rules Interface", "Rules Intro", "Writing rules in pure Lisp", "Writing rules with scripting boxes", "Accessor scopes", "Accessor parameters", "mode?", "Print is always pretty", "Lambda-rule tester", "Loop & Collect", "]", "[", "Debugging Tools", "Debug Intro", "code snippets (advanced)", "CLUSTERdebug", "CLUSTERpreferences", "]", "[", "Rules for one engine", "[", "Index rules (one engine)", "Index rules Intro (one engine)", "example [a]", "example [b]", "example [c]", "]", "[", "Wildcard rules (one engine)", "Wildcard rules Intro (one engine)", "example [a]", "example [b]", "example [c]", "]", "[", "Timepoints rules", "Timepoints rules Intro (one engine)", "example", "]", "[", "only-m-motifs", "only-m-motifs Intro (one engine)", "example", "]", "[", "predefine-meter", "predefine-meter Intro (one engine)", "example", "]", "[", "PMC rules", "PMC rules Intro (one engine)", "example [a]", "example [b]", "]", "]", "[", "Rules for one voice", "[", "Index rules", "Index rules Intro (one voice)", "example", "]", "[", "Wildcard rules", "Wildcard rules Intro (one voice)", "example [a]", "example [b]", "example [c]", "]", "[", "mel-interval", "mel-interval Intro (one voice)", "example", "]", "[", "Metric rules", "Metric rules Intro (one voice)", "example [a]", "example [b]", "example [c]", "example [d]", "example [e]", "example [f]", "]", "]", "[", "Rules between voices", "[", "Pitch vs. Pitch", "Pitch vs. Pitch Intro (multiple voices)", "example [a]", "example [b]", "example [c]", "example [d]", "example [e]", "example [f]", "example [g]", "]", "[", "Rhythm vs. Rhythm", "Rhythm vs. Rhythm Intro (multiple voices)", "example [a]", "example [b]", "example [c]", "example [d]", "example [e]", "]", "[", "List-all-events", "List-all-events Intro (multiple voices)", "example", "]", "[", "Multidomains Intro", "Multidomains Intro (multiple voices)", "real voices?", "example", "]", "]", "[", "Utilities", "key_trigger", "moz.textfield", "moz.mute_score_filter", "Lisp domain generators", "Multiple code snippets", "]", "]", "[", "JBScmi", "Introduction to JBScmi", "[", "Write music entities", "About the Max port", "Write music entities", "Write music entities with slots", "Loop example (a)", "Loop example (b)", "]", "[", "Pitch", "Harmonic fields", "Tonal answer", "Find-all-intervals", "]", "[", "Matrix", "Numeric comment", "Numeric comment sort", "All to one / All to X", "All matrix readings", "Print lists / Print matrix", "]", "[", "Special combinations", "All possibilities", "Circular pitch permutations", "Circular groups permutations", "]", "[", "Grouping", "Groups: group-list", "Groups: group-equals", "Groups: all-sub-groups", "Groups: all-given-sub-groups", "Groups: grouping-in/excluding-given-element", "Groups: all-groups-by-all-elements", "Groups: chaining-groups", "Segmentations: min-max-segmentations", "Segmentations: on-new-old-segmentations", "Segmentations: on-new-old-new/old-segmentations", "]", "[", "Utilities", "Utilities (a) List elements", "Utilities (b) Members in sublists", "Utilities (c) List readings", "Utilities (d) Index-substitute", "Utilities (e) Numerical series", "Utilities (f) Get-index", "Utilities (g) Identity-index", "]", "]", "[", "JBSprofile", "Introduction to JBSprofile", "[", "Perturbations", "Alea-perturbation", "Control-perturbation", "Compression-expansion", "Hybridating-profile", "]", "[", "Reflexions", "Reflexion", "Double-reflexion", "Multi-reflexion", "]", "[", "Derivations", "Arithmetic-derivation", "Mean-derivation", "Average-derivation", "Barycentre-derivation", "Min-Max-points", "]", "[", "Integrations", "Arithmetic-integration", "Geometric-integration", "Barycentre-integration", "]", "[", "Interpolations", "Dynamic-interpolation", "Multi-interpolation", "BPF-interpolation", "Profile-interpolation", "]", "[", "Utilities", "Notes-change", "Range-approx", "Weight-average", "BPF-collector", "Four-forms", "]", "]", "[", "JBSconstraints (cleanup in progress)", "Introduction to JBSconstraints", "[", "Introduction to constraints", "chainedPMC", "Create candidates", "Rules", "Logical conflict & heuristic rules", "First musical example", "Specific candidates", "Heuristic rules", "Heuristic rules & weights", "Heuristic rules & several weights", "Ergonomic disposition [a] : JBSrules", "Ergonomic disposition [b] : JBScollect", "]", "[", "Generic rules", "Generic rules", "Generic rules with chainedPMC", "Generic rules: pitch candidates", "Several no-repetition rules on durations", "Several no-repetition rules on intervals", "Modulo-x-repetition rules", "Not-consecutive rules", "Not-repeated-element-sub-group rule", "Not-repeated-list-sub-group rule", "Item-sub-group-member rule", "Allowed-chain rules", "Length rules", "Index rules", "Index-length rule", "Index-Nth rule", "Index-applied-sum rule", "Member rules", "Not-higher/lower-than rules", "Count-common-elements rule", "Count-any-element rule", "]", "[", "Interval rules", "Interval rules", "Several no-interval-repetition rules", "Several allowed-intervals rules", "No-consecutive-equal-intervals rule", "Obliged-interval-chain rules", "Repeat-interval rule", "Repeat-resulting-interval rule", "Index-interval rules", "Not-bigger/smaller-interval rules", "Resulting-interval rules", "Jump-resolution rule", "Do-reach-that-interval rule", "Apply-interval-sum rule", "Apply-interval-global-sum rule", "Not-complementary-interval rule", "Interval-structure rules", "Count-positive/negative-intervals rules", "]", "[", "Pitch rules", "Pitch rules", "Allowed-pitch rules", "Allowed-pitch-structure/class rules", "Not-allowed-pitch-structure/class rules", "Index-pitch rules", "Any-note-repeated rule", "Count-this-note/modulo rules", "Not-repeated-modulo12 rules", "Mk-profile-pitch rule", "Mk-profile-pitch-modulo rule", "]", "[", "Shaping rules", "Shaping rules", "Ascending/descending rules", "Ascending/descending-sub-group rules", "Mk-fix-profile rule", "Mk-profile rule", "Sub-group-mk-profile rule", "Direct-analysis rule", "Energy-profile rule", "]", "[", "Pattern rules", "Pattern rules", "Ptrn-find rules", "Find-this-ptrn-n-times rule", "No-shape-pattern-lcl-repetition rule", "More-first-repeated-than-second rule", "Repeated-pattern rule", "Always-more-little-included rule", "]", "[", "Distance rules", "Distance rules", "Distance rule", "Dynamic distance rule", "Resemblance rule", "]", "[", "Structure rules", "Structure rules", "Mk-symbol-structure rule", "Find-apply-sum rules", "Length-sub-group-applied-sum rule", "Structured-order-sum rule", "Count-positive/negative rules", "No-consecutive-rests/pulses rules", "Alternating-positive/negative rule", "Alternating-plus/minus-first-or-last-elmt rules", "]", "[", "Matrix rules", "Matrix rules", "Mk-latin-matrix rule", "Chain-common-element-lists rule", "Chain-more-little-included-common-lists rule", "]", "[", "Utilities", "Utilities (a)", "Utilities (b)", "Utilities (c)", "]", "[", "Examples", "[", "Special combinations", "Always 3 given elements (a)", "Always 3 given elements (b)", "Always 3 given elements (c)", "]", "Structure 2", "]", "]", "[", "FVmorphologie (TODO)", "To be done...", "]", "[", "JVcomponents (TODO)", "To be done...", "]", "]", "[", "MOZ Tools", "Intro", "[", "Analysis", "[", "Self-similarity matrix", "Intro Self-similarity matrix", "Equality lambdas", "]", "[", "Dynamic time warping", "Intro Dynamic time warping", "DTW Profile interpolation", "DTW Chord interpolation", "DTW Pitch profile interpolation", "DTW Melodic interpolation (pitch & rhythm)", "]", "]", "[", "Score processing", "moz.rebeam", "moz.score_rot", "]", "]" ],
@@ -4107,7 +4107,7 @@
 					"lockeddragscroll" : 0,
 					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "7i-lisp.antenna.maxpat",
+					"name" : "1-Welcome-to-MOZLib.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
@@ -5040,10 +5040,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "bach.arithmser.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "bach.belong.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
 				"patcherrelativepath" : "../../../bach/patchers",
@@ -5155,10 +5151,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "bach.print.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "bach.read.mxo",
 				"type" : "iLaX"
 			}
@@ -5222,10 +5214,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "bach.write.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "get_object-coord.js",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../patchers/utilities",
@@ -5248,6 +5236,34 @@
 			}
 , 			{
 				"name" : "lisp.expr.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_scripting_boxes",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "lisp.for-fromto.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_scripting_boxes",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "lisp.for-in.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_scripting_boxes",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "lisp.iterate.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../../patchers/pw4m_lisp_scripting_boxes",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "lisp.print.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
 				"patcherrelativepath" : "../../patchers/pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
