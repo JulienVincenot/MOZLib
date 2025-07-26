@@ -107,10 +107,16 @@
 				[ filename 7g-lisp.quote&backquote ] 
 				[ title "Don't forget your quotes...!" ]
 			]
+			[ list.antenna
+				[ filename 7i-lisp.antenna ]
+				[ title "Old style evaluation : lisp.antenna 🤯"]
+			]
 			[ utilities
 				[ filename 7h-docstring&print ] 
 				[ title "Utilities: lisp.print & lisp.docstring" ]
 			]
+			
+
 		]
 		[ and-more-modules
 			[ filename 9-and-more-modules ] 

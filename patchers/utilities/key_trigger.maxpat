@@ -45,7 +45,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 364.0, 539.0, 292.0, 33.0 ],
+					"patching_rect" : [ 301.0, 545.0, 292.0, 33.0 ],
 					"text" : "Huge thanks to SOURCE AUDIO from the Max forum\nfor sharing the trick to deal with tabs :)"
 				}
 
@@ -237,7 +237,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-19",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -465,7 +465,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-43",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -850,12 +850,6 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "bach.eq.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "MOZ-numint",
 				"default" : 				{

@@ -13,6 +13,8 @@ Among new features :
 
 - a few experimental modules : PMClooper and CLUSTERlooper (both based on lisp.iterate) which hugely simplify iterative processes involving constraints
 
+- lisp.antenna ! If you like to use Lisp scripting boxes for patching in Lisp, you need to check it out.
+
 - a new engine joins the PWConstraints menu : Kilian Sprotte's SMCengine, based on Screamer, which accepts every rule modules compatible with PMC syntax (true/false, heuristic, JBS-rules...)
 
 - visuals of the original MOZ modules as well as basic PWforMax (PMC etc.) are now compatible with the default (dark) theme of Max 9. This means that everything incl. the bpatcher modules, help files and tutorials will display correctly everywhere, and adapt to your theme.
