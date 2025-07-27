@@ -970,7 +970,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 805.5, 459.0, 29.5, 22.0 ],
-					"text" : "40"
+					"text" : "30"
 				}
 
 			}
@@ -1442,7 +1442,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 226.0, 257.0, 21.0 ],
+									"patching_rect" : [ 24.0, 226.0, 292.0, 21.0 ],
 									"text" : "script connect  #0_portal 0 #0_detect_antenna 0"
 								}
 
@@ -1468,7 +1468,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 370.0, 181.0, 287.0, 21.0 ],
+									"patching_rect" : [ 435.0, 189.0, 306.0, 21.0 ],
 									"text" : "script newdefault #0_portal 50 130 bach.portal @out p"
 								}
 
@@ -1482,7 +1482,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 138.75, 185.0, 223.0, 21.0 ],
+									"patching_rect" : [ 138.75, 185.0, 255.0, 21.0 ],
 									"text" : "script connect  #0_bachjoin 0 #0_portal 0 "
 								}
 
@@ -1490,11 +1490,10 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-6",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 138.75, 302.0, 124.0, 35.0 ],
+									"patching_rect" : [ 138.75, 302.0, 138.0, 35.0 ],
 									"text" : "s #0_do_the_scripting"
 								}
 
@@ -2662,7 +2661,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 192.0, 582.0, 428.0, 35.0 ],
-									"text" : "script newdefault 242692_bachjoin 50 70 bach.join 2 @set start 1 @outwrap 1 @triggers 0"
+									"text" : "script newdefault 25616_bachjoin 50 70 bach.join 3 @set + 1 2 @outwrap 1 @triggers 0"
 								}
 
 							}
@@ -3491,148 +3490,8 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
-					"id" : "obj-89",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1250.0, 10.0, 30.0, 30.0 ],
-					"varname" : "31_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-91",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1290.0, 10.0, 30.0, 30.0 ],
-					"varname" : "32_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-93",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1330.0, 10.0, 30.0, 30.0 ],
-					"varname" : "33_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-95",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1370.0, 10.0, 30.0, 30.0 ],
-					"varname" : "34_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-97",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1410.0, 10.0, 30.0, 30.0 ],
-					"varname" : "35_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-99",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1450.0, 10.0, 30.0, 30.0 ],
-					"varname" : "36_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-101",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1490.0, 10.0, 30.0, 30.0 ],
-					"varname" : "37_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-103",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1530.0, 10.0, 30.0, 30.0 ],
-					"varname" : "38_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-106",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1570.0, 10.0, 30.0, 30.0 ],
-					"varname" : "39_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-108",
-					"index" : 0,
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1610.0, 10.0, 30.0, 30.0 ],
-					"varname" : "40_inlet"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "full Lisp s-expression packing arguments and/or messages from corresponding inlets (the first argument determines only the Lisp function name)",
-					"id" : "obj-110",
+					"id" : "obj-89",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,

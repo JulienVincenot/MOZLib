@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 104.0, 409.0, 547.0 ],
+		"rect" : [ 383.0, 106.0, 409.0, 547.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 244.0, 269.0, 80.0, 22.0 ],
+					"text" : "speedlim 100"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 150.0, 126.0, 54.0, 22.0 ],
+					"patching_rect" : [ 119.0, 106.0, 54.0, 22.0 ],
 					"text" : "deferlow"
 				}
 
@@ -57,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 208.0, 100.0, 58.0, 22.0 ],
+					"patching_rect" : [ 230.0, 65.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -69,7 +81,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 222.0, 242.0, 33.25, 22.0 ],
+					"patching_rect" : [ 244.0, 240.0, 33.25, 22.0 ],
 					"text" : "join"
 				}
 
@@ -83,7 +95,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 208.0, 186.0, 32.5, 23.0 ],
+					"patching_rect" : [ 230.0, 184.0, 32.5, 23.0 ],
 					"text" : "poll"
 				}
 
@@ -97,7 +109,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "int", "int", "int", "int", "int" ],
-					"patching_rect" : [ 208.0, 213.0, 76.0, 23.0 ],
+					"patching_rect" : [ 230.0, 211.0, 76.0, 23.0 ],
 					"text" : "mousestate"
 				}
 
@@ -109,7 +121,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 50.0, 138.0, 85.0, 22.0 ],
+					"patching_rect" : [ 20.0, 106.0, 85.0, 22.0 ],
 					"text" : "t l b"
 				}
 
@@ -120,7 +132,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 116.0, 398.0, 93.0, 22.0 ],
+					"patching_rect" : [ 86.0, 397.0, 93.0, 22.0 ],
 					"text" : "s print_lisp.expr"
 				}
 
@@ -132,7 +144,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 116.0, 315.0, 125.0, 22.0 ],
+					"patching_rect" : [ 138.0, 311.0, 125.0, 22.0 ],
 					"text" : "moz.mouse-is-inside?"
 				}
 
@@ -144,7 +156,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 187.0, 47.0, 22.0 ],
+					"patching_rect" : [ 86.0, 186.0, 47.0, 22.0 ],
 					"text" : "getsize"
 				}
 
@@ -156,7 +168,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 368.0, 32.0, 22.0 ],
+					"patching_rect" : [ 86.0, 367.0, 32.0, 22.0 ],
 					"text" : "gate",
 					"varname" : "36760_lispquick_gate"
 				}
@@ -166,12 +178,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ]
+					"patching_rect" : [ 20.0, 39.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -179,12 +191,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-10",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 116.0, 40.0, 30.0, 30.0 ]
+					"patching_rect" : [ 138.0, 223.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -192,16 +204,23 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-13",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 116.0, 480.0, 30.0, 30.0 ]
+					"patching_rect" : [ 86.0, 261.0, 30.0, 30.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-43", 1 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-43", 0 ],
 					"source" : [ "obj-10", 0 ]
@@ -224,7 +243,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-43", 1 ],
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -255,7 +274,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 1 ],
-					"midpoints" : [ 59.5, 361.0, 138.5, 361.0 ],
+					"midpoints" : [ 29.5, 360.0, 108.5, 360.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -319,7 +338,22 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "moz.mouse-is-inside?.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

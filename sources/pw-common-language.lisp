@@ -130,14 +130,27 @@
 (defmacro while (form &body body)
   `(loop while ,form do (progn ,@body)))
 
-(defun repeat-n  (self n) 
-"Repeats <n> times the evaluation of <self> and collects the <n> results into a list.
 
-Ex. (repeat-n (+ 1 1) 4) ==> (2 2 2 2)"
-  (let (rep)
-    (loop for i from 1 to n do
-          (push self rep))
-    (reverse rep)))
+(defmacro repeat-n (expr n)
+  "Repeats <n> times the evaluation of <self> and collects the <n> results into a list.
+
+This macro re-evaluates <expr> at each iteration,
+allowing for different outcomes if <expr> contains randomness or side effects.
+
+Example:
+  (repeat (random 10) 5) => (3 7 0 9 2)"
+  `(loop repeat ,n collect ,expr))
+
+
+
+; (defun repeat-n  (self n) 
+; "Repeats <n> times the evaluation of <self> and collects the <n> results into a list.
+
+; Ex. (repeat-n (+ 1 1) 4) ==> (2 2 2 2)"
+;   (let (rep)
+;     (loop for i from 1 to n do
+;           (push self rep))
+;     (reverse rep)))
 
 
 ;;;;;;;;;;;;;;;;; eZ write to file
