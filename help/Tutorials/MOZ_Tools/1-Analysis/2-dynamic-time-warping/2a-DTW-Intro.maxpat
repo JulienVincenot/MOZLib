@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 17.0, 85.0, 54.0, 22.0 ],
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Menlo Regular",
 					"fontsize" : 11.0,
@@ -100,7 +113,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 17.0, 84.0, 58.0, 22.0 ],
+					"patching_rect" : [ 17.0, 56.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -123,7 +136,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ -8.0, -713.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -151,7 +164,32 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 246.0, 200.0, 80.0, 22.0 ],
+									"text" : "distance path"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 246.0, 228.0, 77.0, 22.0 ],
+									"text" : "lisp.expr list l"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 0,
 									"fontname" : "Menlo Regular",
@@ -161,7 +199,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 325.533261775970459, 68.733333945274353, 290.0, 186.0 ],
+									"patching_rect" : [ 339.0, 22.0, 290.0, 186.0 ],
 									"text" : "The Lisp interface of the function jv-components::fastdtw is pretty straightforward.\n\nYou just need to consider that the function returns multiple values, therefore it is mandatory to use 'multiple-value-bind' to retrieve them.\n\nAfter the Lisp part is evaluated, the result needs to be treated a little further in order to reconstitute the interpolation. This is also quite straightforward with bach objects."
 								}
 
@@ -173,7 +211,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 362.000000110908502, 285.881998984558095, 126.0, 22.0 ],
+									"patching_rect" : [ 335.0, 286.0, 126.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"versionnumber" : 80200
 									}
@@ -189,7 +227,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 312.048665015441884, 122.0, 22.0 ],
+									"patching_rect" : [ 23.0, 312.0, 122.0, 22.0 ],
 									"text" : "bach.round 0.000001"
 								}
 
@@ -1148,7 +1186,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 50.0, 285.881998984558095, 255.0, 22.0 ],
+									"patching_rect" : [ 23.0, 286.0, 255.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1167,7 +1205,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 216.5, 100.0, 88.5, 22.0 ],
+									"patching_rect" : [ 190.0, 100.0, 88.5, 22.0 ],
 									"text" : "t l l"
 								}
 
@@ -1179,7 +1217,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.5, 100.0, 99.500007033348083, 22.0 ],
+									"patching_rect" : [ 24.0, 100.0, 99.500007033348083, 22.0 ],
 									"text" : "t l l"
 								}
 
@@ -1188,10 +1226,10 @@
 								"box" : 								{
 									"id" : "obj-7",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 216.733333945274353, 205.0, 22.0 ],
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"patching_rect" : [ 23.0, 217.0, 205.0, 22.0 ],
 									"text" : "lisp.multiple-value-bind distance path"
 								}
 
@@ -1203,7 +1241,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 216.5, 137.733333945274353, 70.0, 22.0 ],
+									"patching_rect" : [ 190.0, 138.0, 70.0, 22.0 ],
 									"text" : "lisp.quote 1"
 								}
 
@@ -1215,7 +1253,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.5, 137.733333945274353, 70.0, 22.0 ],
+									"patching_rect" : [ 24.0, 138.0, 70.0, 22.0 ],
 									"text" : "lisp.quote 1"
 								}
 
@@ -1228,7 +1266,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.5, 173.0, 185.0, 35.0 ],
+									"patching_rect" : [ 24.0, 173.0, 185.0, 35.0 ],
 									"text" : "lisp.expr jv-components::fastdtw l1 l2 @triggers 1"
 								}
 
@@ -1240,7 +1278,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 244.733333945274353, 80.0, 22.0 ],
+									"patching_rect" : [ 23.0, 245.0, 80.0, 22.0 ],
 									"text" : "lisp.quickeval"
 								}
 
@@ -1254,7 +1292,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.500000110908509, 40.000001907348633, 30.0, 30.0 ]
+									"patching_rect" : [ 24.0, 40.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1267,7 +1305,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 216.499992110908522, 40.000001907348633, 30.0, 30.0 ]
+									"patching_rect" : [ 189.0, 40.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1279,7 +1317,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 362.000000110908502, 394.048646907348598, 30.0, 30.0 ]
+									"patching_rect" : [ 335.0, 394.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1291,7 +1329,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 394.048646907348598, 30.0, 30.0 ]
+									"patching_rect" : [ 23.0, 394.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1299,7 +1337,7 @@
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-134", 0 ],
-									"midpoints" : [ 59.5, 280.890990426311475, 371.500000110908502, 280.890990426311475 ],
+									"midpoints" : [ 32.5, 281.157656481037122, 344.5, 281.157656481037122 ],
 									"order" : 0,
 									"source" : [ "obj-12", 0 ]
 								}
@@ -1365,7 +1403,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-79", 1 ],
-									"midpoints" : [ 140.500007033348083, 153.107665999999995, 177.5, 153.107665999999995 ],
+									"midpoints" : [ 114.000007033348083, 153.374332054725642, 150.5, 153.374332054725642 ],
 									"source" : [ "obj-44", 1 ]
 								}
 
@@ -1386,6 +1424,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-7", 1 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-25", 0 ],
 									"source" : [ "obj-56", 0 ]
 								}
@@ -1400,8 +1445,22 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"source" : [ "obj-7", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-56", 0 ],
 									"source" : [ "obj-79", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"source" : [ "obj-8", 0 ]
 								}
 
 							}
@@ -1612,7 +1671,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 81.0, 80.0, 548.0, 58.0 ],
+					"patching_rect" : [ 81.0, 80.0, 552.0, 58.0 ],
 					"text" : "In a way, the algorithm can be compared to a hybrid between euclidian distance (for quantities) and Levenshtein distance (for symbols, cf. Morphologie library), in the sense that it tries to identify and match similarities at different scales of the objects it analyses."
 				}
 
@@ -1951,7 +2010,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
+					"destination" : [ "obj-7", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-27", 0 ]
 				}
@@ -1996,6 +2055,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
 					"midpoints" : [ 206.5, 203.999999284744263, 401.5, 203.999999284744263 ],
 					"order" : 0,
@@ -2027,10 +2094,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-32" : [ "rslider[7]", "rslider[1]", 0 ],
-			"obj-13::obj-89" : [ "rslider[8]", "rslider[1]", 0 ],
-			"obj-13::obj-9::obj-32" : [ "rslider[5]", "rslider[1]", 0 ],
-			"obj-13::obj-9::obj-89" : [ "rslider[6]", "rslider[1]", 0 ],
+			"obj-13::obj-32" : [ "rslider[1]", "rslider[1]", 0 ],
+			"obj-13::obj-89" : [ "rslider[2]", "rslider[1]", 0 ],
+			"obj-13::obj-9::obj-32" : [ "rslider[4]", "rslider[1]", 0 ],
+			"obj-13::obj-9::obj-89" : [ "rslider[3]", "rslider[1]", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
@@ -2277,6 +2344,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "help.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
 				"patcherrelativepath" : "../../../../../media",
@@ -2333,6 +2407,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.ezbpf2slot.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
@@ -2355,6 +2436,13 @@
 			}
 , 			{
 				"name" : "moz.maxverbang.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside?.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",

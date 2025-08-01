@@ -132,7 +132,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 86.0, 397.0, 93.0, 22.0 ],
+					"patching_rect" : [ 138.0, 397.0, 93.0, 22.0 ],
 					"text" : "s print_lisp.expr"
 				}
 
@@ -168,7 +168,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 86.0, 367.0, 32.0, 22.0 ],
+					"patching_rect" : [ 138.0, 367.0, 32.0, 22.0 ],
 					"text" : "gate",
 					"varname" : "36760_lispquick_gate"
 				}
@@ -178,7 +178,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -191,7 +191,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-10",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -204,7 +204,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-13",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -274,7 +274,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 1 ],
-					"midpoints" : [ 29.5, 360.0, 108.5, 360.0 ],
+					"midpoints" : [ 29.5, 360.0, 160.5, 360.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -338,22 +338,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "moz.mouse-is-inside?.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

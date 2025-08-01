@@ -48,6 +48,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
                (:file "backquote_guy-steele")
                (:file "dtrace")
 
+               ;;(:file "pseudo-bach-pitches")
+               (:file "mozlib_pitches")
+
                (:file "OMCS")
 
 

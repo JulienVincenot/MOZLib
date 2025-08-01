@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
+			"minor" : 6,
 			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 194.0, -945.0, 830.0, 911.0 ],
+		"rect" : [ -569.0, -1361.0, 1212.0, 1327.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -142,7 +142,7 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
+							"minor" : 6,
 							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
@@ -318,7 +318,7 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
+							"minor" : 6,
 							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
@@ -477,7 +477,7 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
+							"minor" : 6,
 							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
@@ -1271,7 +1271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 234.0, 590.0, 57.0, 22.0 ],
+					"patching_rect" : [ 234.0, 590.0, 103.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"versionnumber" : 80102
 					}
@@ -1287,7 +1287,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 234.0, 529.0, 53.0, 22.0 ],
+					"patching_rect" : [ 234.0, 513.0, 53.0, 22.0 ],
 					"text" : "bach.* 2"
 				}
 
@@ -1380,7 +1380,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 522.210922956466675, 57.00000274181366, 131.0, 22.0 ],
+					"patching_rect" : [ 522.210922956466675, 57.00000274181366, 137.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"versionnumber" : 80102
 					}
@@ -1464,7 +1464,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.836911499500275, 1053.333335638046265, 849.000002264976501, 22.0 ],
+					"patching_rect" : [ 36.0, 1053.0, 849.000002264976501, 22.0 ],
 					"text" : "cluster.cluster2score"
 				}
 
@@ -1927,6 +1927,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-32", 1 ],
+					"midpoints" : [ 243.5, 549.0, 327.5, 549.0 ],
 					"order" : 0,
 					"source" : [ "obj-31", 0 ]
 				}
@@ -2186,10 +2187,10 @@
 				"name" : "MOZ-numint",
 				"default" : 				{
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
+					"fontname" : [ "Menlo Regular" ],
 					"fontsize" : [ 16.95834 ],
 					"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"fontname" : [ "Menlo Regular" ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2198,8 +2199,8 @@
 , 			{
 				"name" : "MOZ-param",
 				"default" : 				{
-					"fontsize" : [ 16.0 ],
-					"fontname" : [ "Menlo Regular" ]
+					"fontname" : [ "Menlo Regular" ],
+					"fontsize" : [ 16.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2208,8 +2209,8 @@
 , 			{
 				"name" : "MOZ-title",
 				"default" : 				{
-					"fontsize" : [ 22.062093999999998 ],
-					"fontname" : [ "Andale Mono" ]
+					"fontname" : [ "Andale Mono" ],
+					"fontsize" : [ 22.062093999999998 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2219,20 +2220,20 @@
 				"name" : "MOZ-umenu",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"autogradient" : 0.0,
+						"color" : [ 0.996078, 0.996078, 0.996078, 1.0 ],
 						"color1" : [ 0.996078, 0.996078, 0.996078, 1.0 ],
 						"color2" : [ 0.2, 0.2, 0.2, 1.0 ],
-						"color" : [ 0.996078, 0.996078, 0.996078, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.5,
-						"autogradient" : 0.0
+						"type" : "color"
 					}
 ,
-					"fontface" : [ 2 ],
+					"color" : [ 0.996078, 0.996078, 0.996078, 1.0 ],
 					"elementcolor" : [ 0.996078, 0.996078, 0.996078, 1.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"fontface" : [ 2 ],
 					"fontname" : [ "Menlo Regular" ],
-					"color" : [ 0.996078, 0.996078, 0.996078, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2246,8 +2247,8 @@
 , 			{
 				"name" : "comment001",
 				"default" : 				{
-					"fontsize" : [ 18.0 ],
-					"fontname" : [ "Herculanum" ]
+					"fontname" : [ "Herculanum" ],
+					"fontsize" : [ 18.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2265,9 +2266,9 @@
 , 			{
 				"name" : "message001",
 				"default" : 				{
+					"fontname" : [ "Arial" ],
 					"fontsize" : [ 13.0 ],
-					"textcolor_inverse" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-					"fontname" : [ "Arial" ]
+					"textcolor_inverse" : [ 0.92549, 0.364706, 0.341176, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2303,21 +2304,21 @@
 , 			{
 				"name" : "orjan style",
 				"default" : 				{
+					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgcolor" : [ 0.97911, 0.963068, 0.9712, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"color2" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "gradient"
 					}
 ,
-					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"bgcolor" : [ 0.97911, 0.963068, 0.9712, 1.0 ],
+					"color" : [ 0.037449, 0.035848, 0.03644, 1.0 ],
 					"elementcolor" : [ 0.898251, 0.915112, 0.965693, 1.0 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"color" : [ 0.037449, 0.035848, 0.03644, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

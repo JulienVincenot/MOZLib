@@ -3,7 +3,7 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
+			"minor" : 6,
 			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
@@ -39,6 +39,93 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "bang" ],
+					"patching_rect" : [ 549.0, 41.256410256410248, 32.0, 22.0 ],
+					"text" : "t b b"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 746.0, 535.0, 79.0, 22.0 ],
+					"text" : "loadmess set"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 743.0, 187.0, 168.0, 22.0 ],
+					"text" : "id-index assoc-indexes full-list"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 743.0, 211.0, 77.0, 22.0 ],
+					"text" : "lisp.expr list l"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 549.0, 11.0, 54.0, 22.0 ],
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-12",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 320.0, 191.0, 168.0, 22.0 ],
+					"text" : "id-index assoc-indexes full-list"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 320.0, 215.0, 77.0, 22.0 ],
+					"text" : "lisp.expr list l"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontsize" : 8.725190243023524,
 					"hidden" : 1,
@@ -89,7 +176,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 4.666606903076172, 4.508007049560547, 640.0, 20.0 ],
+					"patching_rect" : [ 4.666606903076172, 4.508007049560547, 500.0, 20.0 ],
 					"text" : "This last section just gathers some functions you may find useful :)"
 				}
 
@@ -103,8 +190,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 760.166606903076172, 189.0, 181.0, 45.0 ],
-					"text" : "Please click the example messages to see different results."
+					"patching_rect" : [ 705.0, 275.5, 128.0, 45.0 ],
+					"text" : "Please click those\nmessages to see\ndifferent results."
 				}
 
 			}
@@ -145,7 +232,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 545.666606903076172, 59.0, 58.0, 22.0 ],
+					"patching_rect" : [ 549.0, -16.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -160,7 +247,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 628.666606903076172, 407.0, 326.0, 45.0 ],
+					"patching_rect" : [ 628.666606903076172, 424.0, 326.0, 45.0 ],
 					"text" : "Be aware that only 4 different elements have \nbeen identified by IDENTITY-INDEX here, \ntherefore indexes superior to 4 will be ignored."
 				}
 
@@ -200,7 +287,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 566.666606903076172, 323.0, 236.5, 22.0 ],
+					"patching_rect" : [ 564.0, 344.0, 236.5, 22.0 ],
 					"text" : "[ A 1 ] [ B 2 ] [ [ A B C ] 3 ] [ D 4 ]"
 				}
 
@@ -212,7 +299,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 566.666606903076172, 293.0, 103.0, 22.0 ],
+					"patching_rect" : [ 564.0, 314.0, 103.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"versionnumber" : 80105
 					}
@@ -228,7 +315,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 566.666606903076172, 266.0, 80.0, 22.0 ],
+					"patching_rect" : [ 564.0, 287.0, 80.0, 22.0 ],
 					"text" : "lisp.quickeval"
 				}
 
@@ -268,7 +355,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 545.666606903076172, 418.0, 80.0, 22.0 ],
+					"patching_rect" : [ 545.666606903076172, 435.0, 80.0, 22.0 ],
 					"text" : "lisp.quickeval"
 				}
 
@@ -280,7 +367,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 887.666606903076172, 282.0, 55.0, 22.0 ],
+					"patching_rect" : [ 889.0, 306.0, 55.0, 22.0 ],
 					"text" : "7 7 7 1 2"
 				}
 
@@ -292,7 +379,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 863.666606903076172, 255.0, 65.0, 22.0 ],
+					"patching_rect" : [ 865.0, 279.0, 65.0, 22.0 ],
 					"text" : "1 2 2 5 4 3"
 				}
 
@@ -304,7 +391,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 840.666606903076172, 228.0, 85.0, 22.0 ],
+					"patching_rect" : [ 842.0, 252.0, 85.0, 22.0 ],
 					"text" : "1 2 1 1 1 3 4 3"
 				}
 
@@ -316,7 +403,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 840.666606903076172, 320.0, 70.0, 22.0 ],
+					"patching_rect" : [ 842.0, 344.0, 70.0, 22.0 ],
 					"text" : "lisp.quote 1"
 				}
 
@@ -329,7 +416,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 545.666606903076172, 367.0, 240.0, 35.0 ],
+					"patching_rect" : [ 545.666606903076172, 384.0, 240.0, 35.0 ],
 					"text" : "lisp.expr jbs-cmi::reconstitute-from-indexes list-elmt indexes @triggers 2"
 				}
 
@@ -351,11 +438,11 @@
 					"id" : "obj-44",
 					"linecount" : 2,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 545.666606903076172, 194.0, 209.0, 35.0 ],
-					"text" : "lisp.multiple-value-bind id-index assoc-indexes full-list+assoc-indexes"
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 545.666606903076172, 194.0, 170.0, 35.0 ],
+					"text" : "lisp.multiple-value-bind id-index assoc-indexes full-list"
 				}
 
 			}
@@ -405,7 +492,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.666606903076172, 146.0, 412.0, 45.0 ],
+					"patching_rect" : [ 38.0, 146.0, 412.0, 45.0 ],
 					"text" : "The original IDENTITY-INDEX box in PWGL had multiple outputs \n(a.k.a. 'multiple values' in Lisp). To be able to retrieve \nthose separately, you must use lisp.multiple-value-bind."
 				}
 
@@ -476,11 +563,11 @@
 				"box" : 				{
 					"id" : "obj-30",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 12.666606903076172, 207.0, 377.0, 22.0 ],
-					"text" : "lisp.multiple-value-bind id-index assoc-indexes full-list+assoc-indexes"
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"patching_rect" : [ 13.0, 204.0, 293.0, 22.0 ],
+					"text" : "lisp.multiple-value-bind id-index assoc-indexes full-list"
 				}
 
 			}
@@ -509,7 +596,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 43.666606903076172, 240.0, 456.0, 160.0 ],
+					"patching_rect" : [ 38.0, 252.0, 456.0, 160.0 ],
 					"text" : "The first value of IDENTITY-INDEX is the indexes themselves. \nIn this example A becomes 1. So, each time A comes again, \n1 will take its place. Again in this example, B has become 2. \nThe following A A A will again return the number 1. \nThe sublist (A B C), which is the third different element \nentered in the list, will be associated to the number 3, etc. \n\nThe second value is the list of attribution of each element, \ni.e. the original and its associated index, without any repetition.\n\nThe third value is the complete list of elements with their associated indexes returned as sublists."
 				}
 
@@ -601,9 +688,100 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-11", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 1 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"hidden" : 1,
+					"order" : 0,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"hidden" : 1,
+					"order" : 1,
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"hidden" : 1,
+					"order" : 3,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"hidden" : 1,
+					"order" : 2,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-33", 0 ],
+					"hidden" : 1,
+					"order" : 1,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"hidden" : 1,
+					"order" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-46", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-18", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
@@ -661,6 +839,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-30", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-44", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-49", 0 ],
 					"source" : [ "obj-44", 0 ]
 				}
@@ -705,6 +897,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-30", 1 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
 					"source" : [ "obj-50", 0 ]
 				}
@@ -720,7 +919,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-50", 1 ],
-					"midpoints" : [ 850.166606903076172, 354.0, 776.166606903076172, 354.0 ],
+					"midpoints" : [ 851.5, 375.0, 776.166606903076172, 375.0 ],
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -757,7 +956,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-62", 1 ],
-					"midpoints" : [ 576.166606903076172, 318.5, 793.666606903076172, 318.5 ],
+					"midpoints" : [ 573.5, 339.5, 791.0, 339.5 ],
 					"source" : [ "obj-63", 0 ]
 				}
 
@@ -778,27 +977,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-46", 0 ],
+					"destination" : [ "obj-16", 0 ],
 					"hidden" : 1,
-					"order" : 1,
-					"source" : [ "obj-71", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
-					"hidden" : 1,
-					"order" : 0,
-					"source" : [ "obj-71", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"hidden" : 1,
-					"order" : 2,
 					"source" : [ "obj-71", 0 ]
 				}
 
@@ -923,6 +1103,13 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "lisp.expr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
 				"patcherrelativepath" : "../../../../../patchers/pw4m_lisp_scripting_boxes",
@@ -965,7 +1152,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.init-unless.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside?.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
