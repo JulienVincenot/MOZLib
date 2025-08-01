@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -9.0, -1074.0, 1372.0, 753.0 ],
+		"rect" : [ 303.0, -911.0, 892.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -2022,34 +2022,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
-					"fontname" : "Menlo Regular",
-					"id" : "obj-17",
-					"maxclass" : "textbutton",
-					"mode" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 19.0, 127.0, 71.584716796875, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 230.415283203125, 0.5, 65.584716796875, 20.0 ],
-					"saved_attribute_attributes" : 					{
-						"textoncolor" : 						{
-							"expression" : "themecolor.live_active_automation"
-						}
-
-					}
-,
-					"text" : "BYPASS",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"texton" : "BYPASSED",
-					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -2290,12 +2262,12 @@
 					"presentation_rect" : [ 42.0, 10.0, 188.415283203125, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"textcolor" : 						{
-							"expression" : "themecolor.live_active_automation"
+							"expression" : "themecolor.live_alert"
 						}
 
 					}
 ,
-					"textcolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
+					"textcolor" : [ 1.0, 0.490196, 0.262745, 1.0 ]
 				}
 
 			}
@@ -2309,11 +2281,39 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 39.0, 123.0, 83.0, 24.0 ],
+					"patching_rect" : [ 102.333333333333314, 125.0, 83.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 230.415283203125, 0.75, 65.584716796875, 19.75 ],
+					"presentation_rect" : [ 230.0, 1.0, 65.584716796875, 19.75 ],
 					"proportion" : 0.5,
 					"rounded" : 0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
+					"fontname" : "Menlo Regular",
+					"id" : "obj-17",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 19.0, 127.0, 71.584716796875, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 230.415283203125, 0.5, 65.584716796875, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"textoncolor" : 						{
+							"expression" : "themecolor.live_active_automation"
+						}
+
+					}
+,
+					"text" : "BYPASS",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"texton" : "BYPASSED",
+					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
 				}
 
 			}
@@ -2943,6 +2943,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "lisp.expr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
 				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
@@ -2950,7 +2957,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.maxverbang.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside?.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../utilities",
 				"type" : "JSON",
@@ -3120,10 +3141,13 @@
 				"multi" : 0
 			}
  ],
-		"bgcolor" : [ 0.872944, 0.878874, 0.867175, 1.0 ],
 		"saved_attribute_attributes" : 		{
 			"editing_bgcolor" : 			{
 				"expression" : "themecolor.theme_editing_bgcolor"
+			}
+,
+			"locked_bgcolor" : 			{
+				"expression" : "themecolor.theme_locked_bgcolor"
 			}
 
 		}

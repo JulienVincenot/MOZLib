@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -569.0, -1361.0, 1435.0, 960.0 ],
+		"rect" : [ 34.0, 79.0, 973.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -94,24 +94,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1256.0, 722.0, 30.0, 30.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"angle" : 270.0,
-					"bgcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 0.29 ],
-					"bordercolor" : [ 0.619607843137255, 0.745098039215686, 0.952941176470588, 0.0 ],
-					"id" : "obj-34",
-					"maxclass" : "panel",
-					"mode" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 39.0, 123.0, 83.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 230.415283203125, 0.75, 65.584716796875, 19.75 ],
-					"proportion" : 0.5,
-					"rounded" : 0
 				}
 
 			}
@@ -2038,12 +2020,12 @@
 					"presentation_rect" : [ 42.0, 10.0, 188.415283203125, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"textcolor" : 						{
-							"expression" : "themecolor.live_active_automation"
+							"expression" : "themecolor.live_alert"
 						}
 
 					}
 ,
-					"textcolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
+					"textcolor" : [ 1.0, 0.490196, 0.262745, 1.0 ]
 				}
 
 			}
@@ -2068,34 +2050,6 @@
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 20.0, 173.0, 29.5, 22.0 ],
 					"text" : "!- 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
-					"fontname" : "Menlo Regular",
-					"id" : "obj-17",
-					"maxclass" : "textbutton",
-					"mode" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 20.0, 141.0, 71.584716796875, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 230.415283203125, 0.5, 65.584716796875, 20.0 ],
-					"saved_attribute_attributes" : 					{
-						"textoncolor" : 						{
-							"expression" : "themecolor.live_active_automation"
-						}
-
-					}
-,
-					"text" : "BYPASS",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"texton" : "BYPASSED",
-					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
 				}
 
 			}
@@ -2312,6 +2266,52 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 78.0, 722.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"bgcolor" : [ 0.537254901960784, 0.537254901960784, 0.537254901960784, 0.29 ],
+					"bordercolor" : [ 0.619607843137255, 0.745098039215686, 0.952941176470588, 0.0 ],
+					"id" : "obj-34",
+					"maxclass" : "panel",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 93.584716796875, 121.0, 83.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 230.0, 0.0, 65.584716796875, 19.75 ],
+					"proportion" : 0.5,
+					"rounded" : 0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
+					"fontname" : "Menlo Regular",
+					"id" : "obj-17",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 20.0, 141.0, 71.584716796875, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 230.0, 0.0, 65.584716796875, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"textoncolor" : 						{
+							"expression" : "themecolor.live_active_automation"
+						}
+
+					}
+,
+					"text" : "BYPASS",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"texton" : "BYPASSED",
+					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
 				}
 
 			}
@@ -2948,6 +2948,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "lisp.expr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
 				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
@@ -2955,7 +2962,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.maxverbang.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside?.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../utilities",
 				"type" : "JSON",

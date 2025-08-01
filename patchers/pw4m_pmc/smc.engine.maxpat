@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -569.0, -1361.0, 2492.0, 1327.0 ],
+		"rect" : [ 34.0, 79.0, 1372.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -2078,40 +2078,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
-					"fontface" : 0,
-					"fontname" : "Menlo Regular",
-					"fontsize" : 11.0,
-					"id" : "obj-62",
-					"maxclass" : "textbutton",
-					"mode" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 2010.0, 355.0, 71.584716796875, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 104.0, 45.0, 52.7923583984375, 20.0 ],
-					"saved_attribute_attributes" : 					{
-						"textcolor" : 						{
-							"expression" : "themecolor.theme_textcolor"
-						}
-,
-						"textoncolor" : 						{
-							"expression" : "themecolor.live_active_automation"
-						}
-
-					}
-,
-					"text" : "DEBUG",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
-					"texton" : "DEBUG",
-					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -2143,40 +2109,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 527.0, 890.0, 73.0, 22.0 ],
 					"text" : "loadmess 0."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
-					"fontface" : 0,
-					"fontname" : "Menlo Regular",
-					"fontsize" : 11.0,
-					"id" : "obj-84",
-					"maxclass" : "textbutton",
-					"mode" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1723.0, 375.0, 71.584716796875, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 67.0, 45.0, 35.584716796875, 20.0 ],
-					"saved_attribute_attributes" : 					{
-						"textcolor" : 						{
-							"expression" : "themecolor.theme_textcolor"
-						}
-,
-						"textoncolor" : 						{
-							"expression" : "themecolor.live_active_automation"
-						}
-
-					}
-,
-					"text" : "ORD",
-					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
-					"texton" : "RAND",
-					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
 				}
 
 			}
@@ -3773,6 +3705,74 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
+					"fontface" : 0,
+					"fontname" : "Menlo Regular",
+					"fontsize" : 11.0,
+					"id" : "obj-62",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 2010.0, 355.0, 71.584716796875, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 104.0, 45.0, 52.7923583984375, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+,
+						"textoncolor" : 						{
+							"expression" : "themecolor.live_active_automation"
+						}
+
+					}
+,
+					"text" : "DEBUG",
+					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
+					"texton" : "DEBUG",
+					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.196078431372549, 0.196078431372549, 0.196078431372549, 0.0 ],
+					"fontface" : 0,
+					"fontname" : "Menlo Regular",
+					"fontsize" : 11.0,
+					"id" : "obj-84",
+					"maxclass" : "textbutton",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1723.0, 375.0, 71.584716796875, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 67.0, 45.0, 35.584716796875, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"textcolor" : 						{
+							"expression" : "themecolor.theme_textcolor"
+						}
+,
+						"textoncolor" : 						{
+							"expression" : "themecolor.live_active_automation"
+						}
+
+					}
+,
+					"text" : "ORD",
+					"textcolor" : [ 0.129412, 0.129412, 0.129412, 1.0 ],
+					"texton" : "RAND",
+					"textoncolor" : [ 1.0, 0.345098039215686, 0.298039215686275, 1.0 ]
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -4914,7 +4914,7 @@
 , 			{
 				"name" : "bach.belong.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../bach/patchers",
+				"patcherrelativepath" : "../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -4929,7 +4929,7 @@
 , 			{
 				"name" : "bach.filternull.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../bach/patchers",
+				"patcherrelativepath" : "../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -4968,7 +4968,7 @@
 , 			{
 				"name" : "bach.lookup.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../bach/patchers",
+				"patcherrelativepath" : "../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -4991,7 +4991,7 @@
 , 			{
 				"name" : "bach.prepend.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../bach/patchers",
+				"patcherrelativepath" : "../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -5006,7 +5006,7 @@
 , 			{
 				"name" : "bach.rminus.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../bach/patchers",
+				"patcherrelativepath" : "../../../bach/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -5029,98 +5029,119 @@
 , 			{
 				"name" : "bpatcher-resize-gizmo.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../patchers/utilities",
+				"patcherrelativepath" : "../utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bpatcher-resize.js",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.backquote.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.expr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.lambda.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.print.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "lisp.quote.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp_scripting_boxes",
+				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mac_or_win.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp",
+				"patcherrelativepath" : "../pw4m_lisp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "make_path_once.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp",
+				"patcherrelativepath" : "../pw4m_lisp",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz.init-unless.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../patchers/utilities",
+				"patcherrelativepath" : "../utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "moz.maxverbang.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../../../patchers/utilities",
+				"patcherrelativepath" : "../utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside?.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../utilities",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmc.thinking-engine_UI.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
-				"patcherrelativepath" : "../../../patchers/pw4m_pmc",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pmcyes.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../../media",
+				"patcherrelativepath" : "../../media",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pw.eval-box.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp",
-				"patcherrelativepath" : "../../../patchers/pw4m_lisp",
+				"patcherrelativepath" : "../pw4m_lisp",
 				"type" : "JSON",
 				"implicit" : 1
 			}
