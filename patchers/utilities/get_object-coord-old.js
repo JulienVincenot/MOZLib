@@ -8,30 +8,26 @@ function getsize()
 	var boxPos = this.patcher.box.rect; // [x1, y1, x2, y2]
 	var winPos = this.patcher.parentpatcher.wind.location; // [x, y, width, height]
 
-	// post(boxPos);
+
 	var zoom = this.patcher.parentpatcher.getattr("zoomfactor");
-	
 	// post("zoom factor is : " + zoom + "\n");
 
 	// post("Approximate screen position: " + winPos + "\n");
 
-	// var globalX = winPos[0] + boxPos[0] + 35;
-	// var globalY = winPos[1] + boxPos[1] + 35;
+	 var globalX = winPos[0] + boxPos[0] + 35;
+	 var globalY = winPos[1] + boxPos[1] + 35;
 
-	// scale coordinates
-  var globalX = winPos[0] + (boxPos[0] * zoom);
-  var globalY = winPos[1] + (boxPos[1] * zoom);
-
-
-	// width/height in pixels
-  var width  = (boxPos[2] - boxPos[0]) * zoom;
-  var height = (boxPos[1] - boxPos[3]) * zoom;
+	 ///post("Approximate screen position: " + globalX + ", " + globalY + "\n");
+	
+	
+	
 	
 
-	// outlet(0, [ globalX, globalX + width, globalY, globalY - height ]);
-			
-		
-	outlet(0, [ boxPos[0], boxPos[2], boxPos[1], boxPos[3] ]);
+	outlet(0, [globalX, globalX + (this.patcher.box.rect[2] - this.patcher.box.rect[0]), 
+				globalY, 
+				
+			    globalY - (this.patcher.box.rect[1] - this.patcher.box.rect[3]), ]);
+//	outlet(0, );
 
 
 	
