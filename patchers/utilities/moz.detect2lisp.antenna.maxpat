@@ -181,7 +181,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 138.0, 311.0, 125.0, 22.0 ],
-					"text" : "moz.mouse-is-inside?"
+					"text" : "moz.mouse-is-inside"
 				}
 
 			}

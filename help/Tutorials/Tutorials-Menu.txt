@@ -107,7 +107,7 @@
 				[ filename 7g-lisp.quote&backquote ] 
 				[ title "Don't forget your quotes...!" ]
 			]
-			[ list.antenna
+			[ lisp.antenna
 				[ filename 7i-lisp.antenna ]
 				[ title "Old style evaluation : lisp.antenna 🤯"]
 			]

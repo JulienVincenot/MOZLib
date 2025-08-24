@@ -1166,7 +1166,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "moz.mouse-is-inside?.maxpat",
+				"name" : "moz.mouse-is-inside.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
