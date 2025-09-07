@@ -61,8 +61,10 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 
 <img src="https://github.com/JulienVincenot/MOZLib/raw/master/media/download-release.jpg" align="center" alt="MOZ example"/>
 
-
-**macOS install**
+\
+\
+\
+# **macOS install**
 
 4) Simply copy the decompressed folder of MOZ’Lib in the Packages folder as well.
 
