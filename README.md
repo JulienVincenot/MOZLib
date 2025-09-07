@@ -32,18 +32,6 @@ You can also contact me directly if you are interested to organize private lesso
 
 -----
 
-# Dependencies:
-
-MOZ'Lib includes the following open-source software :
-- [shell](https://github.com/jeremybernstein/shell) object for Max by Jeremy Bernstein and Bill Orcutt
-- [SBCL](http://www.sbcl.org) (Steel Bank Common Lisp), an open source Common Lisp compiler 
-  Note: MOZ'Lib contains an executable of SBCL 2.5.4 pre-compiled for macOS. New versions will be compiled when needed. In June 2025, this version is compatible with macOS Mojave and onwards, on both Intel and Silicon machines.
-- the ***moz-complete.core*** used for *PWforMax* contains a modified version of several Lisp functions from **Ircam's** ***OpenMusic*** sources (based on ***PatchWork***), as well as user libraries written for either *PatchWork*, *OpenMusic* or *PWGL* by **Mikael Laurson** (*PWConstraints* a.k.a. *OMCS*), **Kilian Sprotte** (*OMPW*, *OMPW-utils* and *SMC*), **Örjan Sandred** (*Cluster-Engine*), **Jean-Baptiste Barrière** (*Chréode*), **Kaija Saariaho** (*Transkaija*), **Jacopo Baboni Schilingi** (*JBS-CMI*, *JBS-Profile* and *JBS-Constraints*), **Torsten Anders** (*Cluster-Rules*), and **Frederic Voisin** (*Morphologie*). The core also contains the [*ITERATE*](https://common-lisp.net/project/iterate/) library by **Jonathan Amsterdam** and **Andrea Fuchs** and a modified version of Guy Steele's [*BACKQUOTE*](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node367.html) implementation in Common Lisp. Other Lisp library dependencies have been added temporarily to support some ongoing development, like *Alexandria*, *Lparallel*, *Screamer*, *Split-Sequence* or **Guillaume Le Vaillant**'s *Simple-Neural-Network*, see the sources folder to see the entire list.
-
-**Note:** All those are available in the sources subfolder, allowing users to recompile the core and add other libraries if they wish. See the new "PWforMax User-libraries" feature under Extras to know more.
-
------
-
 # How to install MOZ'Lib :
 
 ***ATTENTION:
@@ -119,3 +107,17 @@ Unlike previous attempts to build a full installer for Windows user, tests on mu
 **...and finally**
 
 6) Go to the *MOZ’Lib Intro* patch in the Extras menu and… **HAVE FUN !**
+
+
+
+-----
+
+# Dependencies:
+
+MOZ'Lib includes the following open-source software :
+- [shell](https://github.com/jeremybernstein/shell) object for Max by Jeremy Bernstein and Bill Orcutt
+- [SBCL](http://www.sbcl.org) (Steel Bank Common Lisp), an open source Common Lisp compiler 
+  Note: MOZ'Lib contains an executable of SBCL 2.5.5 pre-compiled for macOS. New versions will be compiled when needed. In June 2025, this version is compatible with macOS Mojave and onwards, on both Intel and Silicon machines.
+- the ***moz-complete.core*** used for *PWforMax* contains a modified version of several Lisp functions from **Ircam's** ***OpenMusic*** sources (based on ***PatchWork***), as well as user libraries written for either *PatchWork*, *OpenMusic* or *PWGL* by **Mikael Laurson** (*PWConstraints* a.k.a. *OMCS*), **Kilian Sprotte** (*OMPW*, *OMPW-utils* and *SMC*), **Örjan Sandred** (*Cluster-Engine*), **Jean-Baptiste Barrière** (*Chréode*), **Kaija Saariaho** (*Transkaija*), **Jacopo Baboni Schilingi** (*JBS-CMI*, *JBS-Profile* and *JBS-Constraints*), **Torsten Anders** (*Cluster-Rules*), and **Frederic Voisin** (*Morphologie*). The core also contains the [*ITERATE*](https://common-lisp.net/project/iterate/) library by **Jonathan Amsterdam** and **Andrea Fuchs** and a modified version of Guy Steele's [*BACKQUOTE*](https://www.cs.cmu.edu/Groups/AI/html/cltl/clm/node367.html) implementation in Common Lisp. Other Lisp library dependencies have been added temporarily to support some ongoing development, like *Alexandria*, *Lparallel*, *Screamer*, *Split-Sequence* or **Guillaume Le Vaillant**'s *Simple-Neural-Network*, see the sources folder to see the entire list.
+
+**Note:** All those are available in the sources subfolder, allowing users to recompile the core and add other libraries if they wish. See the new "PWforMax User-libraries" feature under Extras to know more.
