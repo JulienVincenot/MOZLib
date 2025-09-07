@@ -62,8 +62,6 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 <img src="https://github.com/JulienVincenot/MOZLib/raw/master/media/download-release.jpg" align="center" alt="MOZ example"/>
 
 
-\
-\
 # **macOS install**
 
 4) Simply copy the decompressed folder of MOZ’Lib in the Packages folder as well.
@@ -89,9 +87,7 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 5) Restart Max and go to **Extras menu -> MOZ'Lib -> PWforMax LISP Test** to check everything went well.  
  
 
-\
-\
-\
+
 # **Windows 10 or 11 install**
 
 4) Install on Windows is slightly more complicated but following this separate [install instructions pdf](https://github.com/JulienVincenot/MOZLib/raw/master/forWindows/MOZLib_Windows_Instructions.pdf) very carefully will ensure that everything works, including PWforMax and ~99% of Lisp-based functionalities.
