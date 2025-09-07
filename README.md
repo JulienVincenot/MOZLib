@@ -57,13 +57,11 @@ before installing/updating, make sure you don't have any past version of MOZ'Lib
 3) Download the latest version of MOZ'Lib available on the [**releases**](https://github.com/JulienVincenot/MOZLib/releases).
 
    NOTE : Following some big change in the structuration of this Github on June 2025, it is recommended NOT to download via the green "Code" and "Download ZIP" anymore. The correct way from now on is using the releases, which also have a consistent version number !
-\
-\
-\
+
+
 <img src="https://github.com/JulienVincenot/MOZLib/raw/master/media/download-release.jpg" align="center" alt="MOZ example"/>
-\
-\
-\
+
+
 **macOS install**
 
 4) Simply copy the decompressed folder of MOZ’Lib in the Packages folder as well.
