@@ -55,6 +55,8 @@
 
 
 		("" :mozlib) ;;;; MOZ'Lib vanilla (incl. OM stuff, JBS libraries, Jv-components, Chreodes&Transkaija, etc )
+
+		("esquisse/" :esquisse)
 	)
 )
 

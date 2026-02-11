@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 2,
+			"minor" : 6,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -98,35 +98,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-43",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 600.0, 517.0, 50.0, 35.0 ],
-					"text" : "[ 1/4 ] [ 1/8 ]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-41",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 594.0, 479.299995183944702, 107.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"versionnumber" : 80200
-					}
-,
-					"text" : "bach.portal @out t"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -152,18 +123,18 @@
 , 			{
 				"box" : 				{
 					"fontface" : 1,
-					"fontname" : "Andale Mono",
+					"fontname" : "Menlo",
 					"id" : "obj-132",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 764.075000867247581, 569.0, 112.25, 47.0 ],
+					"patching_rect" : [ 764.075000867247581, 569.0, 115.0, 48.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 5.0, 51.999998561641689, 224.0, 33.0 ],
+					"presentation_rect" : [ 5.0, 51.999998561641689, 227.0, 34.0 ],
 					"text" : "INPUT TOO LONG\n(display disabled)",
-					"textcolor" : [ 0.992156862745098, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
 
@@ -187,18 +158,18 @@
 , 			{
 				"box" : 				{
 					"fontface" : 1,
-					"fontname" : "Andale Mono",
+					"fontname" : "Menlo",
 					"id" : "obj-126",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1144.500002890825272, 569.0, 112.25, 47.0 ],
+					"patching_rect" : [ 1144.500002890825272, 569.0, 115.0, 48.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 5.0, 122.999998561641689, 224.0, 33.0 ],
+					"presentation_rect" : [ 5.0, 122.999998561641689, 227.0, 34.0 ],
 					"text" : "INPUT TOO LONG\n(display disabled)",
-					"textcolor" : [ 0.992156862745098, 1.0, 0.0, 1.0 ],
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
 
@@ -341,14 +312,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 2,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ -133.0, -609.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -402,17 +373,15 @@
 							}
 , 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
 									"id" : "obj-65",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"patching_rect" : [ 54.0, 157.0, 71.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"versionnumber" : 80105
-									}
-,
-									"text" : "bach.length"
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 54.0, 157.0, 152.0, 23.0 ],
+									"text" : "zl.len @zlmaxsize 90000"
 								}
 
 							}
@@ -445,14 +414,14 @@
 									"id" : "obj-59",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 130.0, 54.0, 22.0 ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"patching_rect" : [ 54.0, 130.0, 107.0, 22.0 ],
 									"saved_object_attributes" : 									{
-										"versionnumber" : 80105
+										"versionnumber" : 80900
 									}
 ,
-									"text" : "bach.flat"
+									"text" : "bach.portal @out t"
 								}
 
 							}
@@ -765,14 +734,14 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 2,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 754.0, 79.0, 652.0, 787.0 ],
+						"rect" : [ 979.0, -957.0, 652.0, 787.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -826,17 +795,15 @@
 							}
 , 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
 									"id" : "obj-65",
 									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"patching_rect" : [ 54.0, 157.0, 71.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"versionnumber" : 80105
-									}
-,
-									"text" : "bach.length"
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 54.0, 157.0, 152.0, 23.0 ],
+									"text" : "zl.len @zlmaxsize 90000"
 								}
 
 							}
@@ -860,7 +827,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 54.0, 185.0, 52.0, 22.0 ],
-									"text" : "> 10000"
+									"text" : "> 30000"
 								}
 
 							}
@@ -869,14 +836,14 @@
 									"id" : "obj-59",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 54.0, 130.0, 54.0, 22.0 ],
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"patching_rect" : [ 54.0, 130.0, 107.0, 22.0 ],
 									"saved_object_attributes" : 									{
-										"versionnumber" : 80105
+										"versionnumber" : 80900
 									}
 ,
-									"text" : "bach.flat"
+									"text" : "bach.portal @out t"
 								}
 
 							}
@@ -1928,7 +1895,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"midpoints" : [ 591.775000289082527, 492.0, 556.525000289082527, 492.0 ],
-					"order" : 1,
 					"source" : [ "obj-112", 1 ]
 				}
 
@@ -1959,14 +1925,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
 					"source" : [ "obj-112", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
-					"order" : 0,
-					"source" : [ "obj-112", 1 ]
 				}
 
 			}
@@ -2330,13 +2288,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"source" : [ "obj-40", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-43", 1 ],
-					"source" : [ "obj-41", 0 ]
 				}
 
 			}

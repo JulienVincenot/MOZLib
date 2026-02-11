@@ -1,0 +1,1 @@
+"Esquisse is a historical library developed for Tristan Murail originally for the PatchWork environment. The main purpose of introducing this library in PWGL is - besides making it available for PWGL users - to demonstrate the main differences between PatchWork and PWGL."

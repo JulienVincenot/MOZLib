@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 104.0, 414.0, 334.0 ],
+		"rect" : [ 612.0, -435.0, 590.0, 370.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -61,12 +61,12 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 269.0, 106.0, 54.0, 22.0 ],
+					"patching_rect" : [ 269.0, 106.0, 64.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"versionnumber" : 80300
+						"versionnumber" : 80900
 					}
 ,
-					"text" : "bach.flat"
+					"text" : "bach.flat 1"
 				}
 
 			}

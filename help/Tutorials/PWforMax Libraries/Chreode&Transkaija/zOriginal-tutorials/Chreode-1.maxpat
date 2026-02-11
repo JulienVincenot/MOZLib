@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 6,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 671.0, 662.0 ],
+		"rect" : [ 34.0, 79.0, 629.0, 615.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 122.5, 145.0, 29.5, 22.0 ],
+					"patching_rect" : [ 99.0, 136.0, 29.5, 22.0 ],
 					"text" : "t b i"
 				}
 
@@ -57,7 +57,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 33.0, 160.0, 68.0, 22.0 ],
+					"patching_rect" : [ 9.0, 151.0, 68.0, 22.0 ],
 					"text" : "key_trigger"
 				}
 
@@ -70,7 +70,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 122.5, 23.5, 24.0, 24.0 ]
+					"patching_rect" : [ 99.0, 15.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -81,7 +81,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 122.5, 55.5, 56.0, 22.0 ],
+					"patching_rect" : [ 99.0, 47.0, 56.0, 22.0 ],
 					"text" : "metro 50"
 				}
 
@@ -93,7 +93,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "", "", "int" ],
-					"patching_rect" : [ 122.5, 89.5, 75.0, 22.0 ],
+					"patching_rect" : [ 99.0, 81.0, 75.0, 22.0 ],
 					"text" : "counter 4 50"
 				}
 
@@ -105,7 +105,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
-					"patching_rect" : [ 438.0, 55.5, 201.0, 22.0 ],
+					"patching_rect" : [ 414.0, 47.0, 201.0, 22.0 ],
 					"text" : "unjoin 5"
 				}
 
@@ -117,7 +117,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 438.0, 23.5, 158.0, 22.0 ],
+					"patching_rect" : [ 414.0, 15.0, 158.0, 22.0 ],
 					"text" : "loadmess 74 :incr :up 36 20"
 				}
 
@@ -129,7 +129,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
-					"patching_rect" : [ 224.0, 55.5, 201.5, 22.0 ],
+					"patching_rect" : [ 200.0, 47.0, 201.5, 22.0 ],
 					"text" : "unjoin 5"
 				}
 
@@ -141,7 +141,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.0, 23.5, 169.0, 22.0 ],
+					"patching_rect" : [ 200.0, 15.0, 169.0, 22.0 ],
 					"text" : "loadmess 100 :decr :up 36 20"
 				}
 
@@ -162,7 +162,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 330.0, 119.0, 57.0 ],
+					"patching_rect" : [ 9.0, 321.0, 119.0, 57.0 ],
 					"varname" : "bp314870972563",
 					"viewvisibility" : 1
 				}
@@ -184,7 +184,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 395.0, 214.0, 67.0 ],
+					"patching_rect" : [ 9.0, 386.0, 214.0, 67.0 ],
 					"varname" : "chreode.plot_view",
 					"viewvisibility" : 1
 				}
@@ -198,7 +198,7 @@
 					"numoutlets" : 1,
 					"numpoints" : 1001,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 472.0, 436.0, 146.0 ],
+					"patching_rect" : [ 9.0, 463.0, 436.0, 146.0 ],
 					"subplots" : [ 						{
 							"color" : [ 0.400000005960464, 0.400000005960464, 0.75, 1.0 ],
 							"thickness" : 0.850000023841858,
@@ -207,11 +207,11 @@
 							"number_style" : "none",
 							"filter" : "none",
 							"domain_start" : 0.0,
-							"domain_end" : 1.0,
+							"domain_end" : 1000.0,
 							"domain_style" : "linear",
 							"domain_markers" : [  ],
 							"domain_labels" : [  ],
-							"range_start" : 16.276882000000001,
+							"range_start" : 16.245080000000002,
 							"range_end" : 56.0,
 							"range_style" : "linear",
 							"range_markers" : [  ],
@@ -239,7 +239,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.0, 326.0, 93.0, 32.0 ],
+					"patching_rect" : [ 248.0, 317.0, 93.0, 32.0 ],
 					"varname" : "bp102929636380",
 					"viewvisibility" : 1
 				}
@@ -261,7 +261,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 346.0, 249.0, 201.0, 70.0 ],
+					"patching_rect" : [ 322.0, 240.0, 201.0, 70.0 ],
 					"varname" : "arithm-ser",
 					"viewvisibility" : 1
 				}
@@ -283,7 +283,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 272.0, 211.0, 201.0, 32.0 ],
+					"patching_rect" : [ 248.0, 202.0, 201.0, 32.0 ],
 					"varname" : "bp401617221501",
 					"viewvisibility" : 1
 				}
@@ -305,7 +305,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 438.0, 89.0, 201.0, 101.0 ],
+					"patching_rect" : [ 414.0, 80.0, 201.0, 101.0 ],
 					"varname" : "chreode.make-chreode[1]",
 					"viewvisibility" : 1
 				}
@@ -327,7 +327,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 224.0, 89.0, 201.0, 101.0 ],
+					"patching_rect" : [ 200.0, 80.0, 201.0, 101.0 ],
 					"varname" : "chreode.make-chreode",
 					"viewvisibility" : 1
 				}
@@ -337,7 +337,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 6 ],
-					"midpoints" : [ 233.5, 203.0, 338.973684210526301, 203.0 ],
+					"midpoints" : [ 209.5, 194.0, 314.973684210526301, 194.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -401,7 +401,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 1 ],
-					"midpoints" : [ 281.5, 374.0, 163.0, 374.0, 163.0, 315.0, 92.5, 315.0 ],
+					"midpoints" : [ 257.5, 365.0, 139.5, 365.0, 139.5, 306.0, 68.5, 306.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -444,7 +444,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 16 ],
-					"midpoints" : [ 447.5, 198.0, 434.763157894736878, 198.0 ],
+					"midpoints" : [ 423.5, 189.0, 410.763157894736878, 189.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -459,7 +459,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 142.5, 180.5, 211.0, 180.5, 211.0, 83.5, 233.5, 83.5 ],
+					"midpoints" : [ 119.0, 171.5, 187.5, 171.5, 187.5, 74.5, 209.5, 74.5 ],
 					"source" : [ "obj-6", 1 ]
 				}
 
@@ -467,7 +467,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-30", 0 ],
-					"midpoints" : [ 132.0, 233.75, 42.5, 233.75 ],
+					"midpoints" : [ 108.5, 224.75, 18.5, 224.75 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -687,6 +687,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "help.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
 				"patcherrelativepath" : "../../../../../media",
@@ -736,7 +743,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.init-unless.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",

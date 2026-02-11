@@ -2458,3 +2458,87 @@ percentage <percent> indicated."
 
 
 
+
+
+;;;;;;;;;;;;; for esquisse 
+
+
+
+(defun ifnot (test then &optional else)
+  "Comme IF, mais le THEN s'exécute quand TEST est NIL."
+  (if (not test)
+      then
+      else))
+
+(defun car! (thing)
+  "Returns (caa...ar <thing>).  Applies #'car as many times as possible (maybe 0)."
+  (ifnot (consp thing) thing (car! (car thing))))
+
+
+; (defun car! (thing)
+;   "Returns (caa...ar <thing>). Applies #'car repeatedly until impossible (maybe 0 times)."
+;   (if (consp thing)
+;       (car! (car thing))
+;       thing))
+
+(defun deep-mapcar (fun fun1 list? &rest args)
+  "Mapcars <fun> or applies <fun1> to <list?> <args> whether <list?> is a list or not."
+   (cond
+    ((null list?) ())
+    ((not (consp list?)) (apply fun1 list? args))
+    (t (cons (apply #'deep-mapcar fun fun1 (car list?) args)
+             (apply #'deep-mapcar fun fun1 (cdr list?) args)))))
+
+(defun double-mapcar (fun1 list1? list2? &rest args)
+  "Mapcars <fun> or applies <fun1> to <list1?> <list2?> <args>
+whether each of <list1?> <list2?> is a list or not."
+   (cond
+    ((consp list1?)
+     (if (consp list2?)
+       ;(error "cannot double-mapcar 2 lists: ~S and ~S~%." list1? list2?)
+       (mapcar #'(lambda (x1 x2) (apply fun1 x1 x2 args))
+               list1? list2?)
+       (mapcar #'(lambda (x) (apply fun1 x list2? args))
+               list1?)))
+    ((consp list2?)
+     (mapcar #'(lambda (x) (apply fun1 list1? x args))
+             list2?))
+    (t (apply fun1 list1? list2? args))))
+
+
+(defun deep-mapcar/1 (fun list? &rest args)
+  (labels ((map-structure (str accum)
+             (cond ((null str) (reverse accum))
+                   ((not (consp str))
+                    (if accum (reverse (cons (apply fun str args) accum)) (apply fun str args)))
+                   (t (map-structure (cdr str) (cons (map-structure (car str) ()) accum))))))
+    (map-structure list? nil)))
+
+(defun less-deep-mapcar (fun  list? &rest args)
+  "Applies <fun> to <list?> <args> if <list?> is a one-level list .
+   Mapcars <fun> to <list?> <args> if <list?> is a multi-level list. "
+  (cond
+    ((null list?) ())
+    ((atom (car list?)) (apply fun list? args))
+    ((atom (car (car list?))) 
+     (cons (apply fun (car list?)  args ) (apply #'less-deep-mapcar fun (cdr list?) args)))
+    (t (cons (apply #'less-deep-mapcar fun  (car list?) args)
+             (apply #'less-deep-mapcar fun  (cdr list?) args)))))
+
+
+
+
+(defun car-mapcar (fun list?  &rest args)
+  "Mapcars <fun> if list? is a list or applies <fun> if it is an atom or
+a one-element list"
+  (cond  ((atom list?) (apply fun list? args))
+         ((= (length list?) 1) (apply fun (car list?) args))
+         (t (mapcar #'(lambda (x) (apply fun x  args ))  list? ))))
+
+
+
+
+; (defmacro ifnot (test then &optional else)
+;   `(if (not ,test)
+;        ,then
+;        ,else))

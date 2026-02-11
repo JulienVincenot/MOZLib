@@ -177,13 +177,24 @@ Strings starting with + or - are intervals from C0."
       (t
        (make-pitch :degree degrees :alter (pw::g* alters 2) :octave octaves)))))
 
+; (defun pitchunpack (p)
+;   "Return three values: degrees, alterations, octaves. Works on pitch or list of pitches."
+;   (let ((plist (mapcar #'parse-pitch (if (listp p) p (list p))) ))
+;     (values
+;      (mapcar #'pitch-degree plist)
+;      (pw::g/ (mapcar #'pitch-alter plist) 2)
+;      (mapcar #'pitch-octave plist))))
+
+
+;;;; directly as list not values 
+
 (defun pitchunpack (p)
   "Return three values: degrees, alterations, octaves. Works on pitch or list of pitches."
   (let ((plist (mapcar #'parse-pitch (if (listp p) p (list p))) ))
-    (values
+    (list
      (mapcar #'pitch-degree plist)
      (pw::g/ (mapcar #'pitch-alter plist) 2)
-     (mapcar #'pitch-octave plist))) )
+     (mapcar #'pitch-octave plist))))
 
 
 

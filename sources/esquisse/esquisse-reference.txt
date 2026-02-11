@@ -1,0 +1,598 @@
+
+**************************************************************************
+                          Esquisse 
+**************************************************************************
+12.10.2007
+--------------------------------------------------------------------------
+                        Intervals menu 
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+                        Generation menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK INTER->CHORD  (BASE INTER &OPTIONAL FORMAT): 
+<insert DOC here>
+
+PATCH-WORK CHORD->INTER  (CHORD &OPTIONAL FORMAT): 
+Returns a list containing the intervals (given in semitones; positive
+or negative) between the first note of <chords> and each successive
+note. Micro-intervals are represented as floating point number parts of a 
+semitone (e.g. a quarter-tone = 0.5).
+
+If <chords> is a list of chords it will return a structured list
+containing the intervals of each successive chord.
+
+The optional argument <format> allows a choice of whether the box 
+returns real intervals (setting 'inter') or set notation (setting 
+'notes'). 'Inter' will return only the intervals between notes. 'Notes' 
+returns the intervals present as well as the first note, given as '0'.
+
+PATCH-WORK ALL-SERIES  (SERIE NOTES INTS): 
+Prints and returns all the series beginning with the notes of (reverse <serie>)
+and filled with permutations of <notes> and intervals among <intervals>.
+
+COMBINATORIAL-INTERV FIND-INTERVALS  (AMB INTERVALS FORBID N MAX FIXED &OPTIONAL FORMAT): 
+Attempts to generate a list or lists containing the specified 
+<intervals> (given in semitones; positive or negative) within the 
+range <amb> (if negative intervals were used the range become between 
++ and - <amb>). Micro-intervals may be represented as floating point 
+number parts of a semitone (e.g. a quarter-tone = 0.5). 
+
+The number of intervals in each list found is determined by the 
+argument <n>. If <n> is not at least twice the number of intervals in
+<intervals> no solution is possible.    
+
+In addition to the requested <intervals> other intervals will be 
+formed by this box. The argument <forbid> allows the exclusion of
+certain intervals from the resultant lists.
+
+The argument <max> determines the maximum number of solutions returned
+(fewer may exist).
+
+The argument <fixed> forces each list to contain that value or those 
+values.
+
+The optional argument <format> allows a choice of whether the box 
+returns real intervals (setting 'inter') or set notation (setting 
+'notes'). 'Inter' will return only the intervals between notes, without 
+the first note. 'Notes' returns the intervals present as well as the 
+first note, given as '0'.
+
+Warning: a solution is not always possible, if none is found the 
+value 'nil' is returned. 
+--------------------------------------------------------------------------
+                        Treatment menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK REMOVE-INT  (CHORD FORBID &OPTIONAL REPLACE INF SUP): 
+Removes the interval <forbid> (given in midis) from the list
+<chord>. The upper note of the forbidden interval is deleted. 
+
+A list of chords may be entered in <chord> in which case the interval
+will be removed from each successive chord. A list of intervals for the 
+argument <forbid> is also possible.
+
+The optional argument <replace> will take the notes that would have been
+deleted and, instead, moves them to convert the forbidden interval into 
+the replacement.
+
+The optional arguments <inf> and <sup> allow the low, <inf>, and high, 
+<sup>, limits in which changes can take place to be defined. These values 
+are given in midis, and refer only to the upper note in the interval
+pair.
+
+Warnings: 
+The lists returned by this box will be ordered lowest note to highest 
+note, regardless of the order in the entries.
+Entries are in true midis, without any internal approximation, this 
+may provoke certain problems which can be rectified through the use of 
+the function approx-m prior to the entries.
+
+PATCH-WORK TRANSPOCT  (CHORD MIN MAX &OPTIONAL PIVOT): 
+Transposes notes of a chord or list of chords <chord> by octaves such 
+that all its notes will be contained within the range between <min> and
+<max>, given in midis.
+
+The optional argument <pivot>(a note, in midis) forces all notes 
+to be transposed so that they will be within one octave of that note. 
+<pivot> must be within the specified range, or an error will be 
+produced.
+
+PATCH-WORK MUL-CHORD  (CH1 CH2 &OPTIONAL TYPE): 
+Generates a list of chords in which the intervallic structure of <ch2>
+(a single chord in midis) is reproduced beginning on each successive 
+note of <ch1> (also a single chord in midis).
+
+The optional argument <type> allows the choice of whether the output is
+a list of chords ('seq') or a single chord ('chord') containing all the 
+transpositions combined.
+
+PATCH-WORK ALL-INVERSIONS  (CHORD DIRECTION &OPTIONAL FORMAT): 
+Outputs a structured list of all possible inversions of <chord> 
+(in midis). Inversion here means the moving of the highest note down 
+by octaves so as to make it the new bass note (when direction is '>'), or 
+moving the lowest note up by octaves to make it the highest (when 
+direction is '<'). The output is a list of chords on which this operation 
+has been performed to each successive chord until all notes of <chord> 
+have served as the base note.
+
+The optional argument <format> allows the choice of whether the original
+<chord> will be included, 'inclu' or excluded, 'exclu' from the output
+list.
+
+Warning: <chord> can take only a single chord.
+
+PATCH-WORK AUTO-TRANSP  (CHORD &OPTIONAL OUTPUT MIN MAX): 
+Outputs a list of all possible transpositions of <chord> (a single 
+chord in midis) which contain the first note of the chord. 
+
+The optional argument <output> allows the choice of whether the original
+<chord> will be included, 'inclu' or excluded, 'exclu' from the output
+list.
+
+The optional arguments <max> and <min> (in midis) will cause the 
+notes to be transposed by octaves to fit within the specified range.
+
+PATCH-WORK BEST-TRANSP  (CH1 CH2 &OPTIONAL FCT): 
+Transposes the chord <ch2> (a single chord in midis) so that its 
+intervallic distance to <ch1> (also a single chord in midis) is as 
+small as possible. Thus the distance between each note of <ch2> and each 
+note of <ch1> becomes as small as possible.This is essentially the same 
+as the box 'best-inv' except the ordering of <ch2> is preserved.
+
+The optional argument <fct> allows the choice between two different 
+algorithms for calculating this function,'sum' and 'max'. The default
+is sum because 'max' can produce quarter tones from demi-tone input. For
+best results one should experiment with both and chose according to 
+context.
+
+PATCH-WORK BEST-INV  (REGCH INTCH &OPTIONAL FCT): 
+Extracts the intervallic content of the chord <intch> (in midis) 
+and through a global transposition of the chord followed by octave 
+transpositions of individual notes produces a chord with the intervals 
+of <intch> whose notes are as close as possible to those of the chord 
+<regch> (also in midis). This in essence distorts the chord <regch> 
+by the smallest amount possible for it to take on the intervallic 
+structure of <intch>.
+
+<regch> must be a single chord.
+
+<intch> may be a list of chords (also in midis) from which the one 
+that distorts least <regch> is used for the operation. The output will 
+still be a single chord.
+
+The optional argument <fct> allows the choice between two different 
+algorithms for calculating this function,'sum' and 'max'. The default
+is sum because 'max' can produce quarter tones from demi-tone input. For
+best results one should experiment with both and choose according to 
+context.
+--------------------------------------------------------------------------
+                        Analysis menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK EXIST-NOTE?  (CHORD NOTE): 
+Outputs the first note in <chord> (a single chord in midis) which is 
+the same as <note> (regardless of octave). The value returned is the 
+midis value of that note at the octave it exists in the <chord>. If 
+the note is not present the value 'nil' is returned.
+
+The argument <chord> may receive a list of chords; in which case the 
+output is a list of lists containing the analyses of each successive 
+chord.
+
+The argument <note> may receive a list; in which case the output is a 
+corresponding list of notes found and/or nils.
+
+PATCH-WORK MIDI-CENTER  (CHORD): 
+Calculates the value in midis exactly halfway between the lowest 
+and highest notes of the chord <chord>. 
+
+If <chord> is a list of chords the output is a list of the central 
+values.
+
+PATCH-WORK SORT-MOD  (CHORD): 
+Returns a sorted list of lists in which each note of the chord <chord> 
+(in midis) is converted into a list containing the interval in 
+midis of that note from the 'c' below it, followed by the midis 
+value of that 'c.' A list of chords also may be entered for <chord> the 
+resulting list will, however, have a higher level of structure and may 
+not be acceptable as entry for some other boxes.
+--------------------------------------------------------------------------
+                        Freq harmony menu 
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+                        Harm Series menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK HARM-SERIES  (FUND NUMER DENOM BEGIN END &OPTIONAL UNIT TYPE): 
+Builds the harmonic and/or sub-harmonic series starting with the 
+fundamental <fund>. The harmonic series is the series of positive integer 
+multiples of the fundamental frequency. The sub-harmonic series is the 
+series of positive integer divisions of the fundamental frequency. 
+
+The arguments <numer> and <denom> determine what sample (<numer>/<denom>)
+of the partials is taken. (e.g. 1/1 = all; 1/2 = every other; 2/5 = the 
+first two of each group of five)
+
+The arguments <begin> and <end> determine the lowest and highest partials
+generated. The fundamental is represented by '1' or '-1' sub-harmonics are 
+represented by negative numbers, overtones by positive. (e.g. partial
+number 7 is 7 times the fundamental frequency,partial -7 is the 
+fundamental frequency divided by 7; thus to go from the seventh undertone 
+to the seventh overtone <begin> would equal '-7' and <end> would equal 
+'7')
+
+The optional argument <unit> determines whether the <fund> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+value will be converted to frequency inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculation and output are all in hertz.
+
+When <fund> is a list, the optional argument <type> is used to determine
+the format of the output. The value 'seq' returns a list of chords 
+representing the partials requested for each successive fundamental. The
+value 'chord' returns a single chord containing all the partials of all 
+the fundamentals.
+
+PATCH-WORK NTH-HARM  (FUND NTH &OPTIONAL UNIT TYPE): 
+Receives a fundamental <fund>, or list of fundamentals and returns 
+the <nth> harmonic or sub-harmonic of each fundamental. The harmonic 
+series is the series of positive integer multiples of the fundamental 
+frequency. The sub-harmonic series is the series of positive integer 
+divisions of the fundamental frequency. Partial numbers are determined 
+by their relationship to the fundamental. (e.g. partial number 7 is 7 
+times the fundamental frequency,partial -7 is the fundamental frequency 
+divided by 7) 
+
+If <nth> is a list, a corresponding series of partials will be returned 
+for each <fund>. If <nth> contains non-integers the returned partials 
+and/or sub-partials will be non-harmonic, and correspond to the 
+fundamental frequency multiplied by <nth> (when <nth> is positive) or 
+the fundamental frequency divided by the absolute value of <nth> 
+(when <nth> is negative).
+
+The optional argument <unit> determines whether the <fund> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+value will be converted to frequency inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculation and output are all in hertz.
+
+When <fund> is a list, the optional argument <type> is used to determine
+the format of the output. The value 'seq' returns a list of chords 
+representing the partials requested for each successive fundamental. The
+value 'chord' returns a single chord containing all the partials of all 
+the fundamentals.
+
+PATCH-WORK NTH-OVERTONES  (FUND NTH &OPTIONAL UNIT TYPE): 
+no doc
+--------------------------------------------------------------------------
+                        Modulations menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK FM-SPEC  (CARRIER MODUL INDEX UNIT OUTPUT): 
+Computes a FM spectrum. index is an int or float value between 1 and 25
+(float values a re interpolated).<carrier> and <modul> can be midis or freqs (default midis)
+depending on the value of the <unit> argument. Outputs either a chord object (default) or
+midis, or freqs, or velocities depending on the last input menu
+
+PATCH-WORK FREQ-MOD  (CARRIER MODUL INDEX &OPTIONAL UNIT OUTPUT): 
+Simulates the pitches generated by frequency modulation. The frequencies 
+of the carrier <carrier> and the modulator <modul> are treated according 
+to the following formula:
+carr. ± (i * mod.), i = 0,1,...<index>
+
+If <carrier> is a list the output is a list of modulations around each 
+successive carrier. 
+
+If <modul> is a list the carrier or carriers are each modulated by all 
+the notes in <modul> as well as the partials of those notes up to the 
+<index> specified.
+
+If <index> is a list the formula is computed with 'i' equal to only the
+listed values. (e.g. <index> = (1 3), notes calculated are:
+carr. + 1 * mod.; carr. - 1 * mod.;carr. + 3 * mod.; carr. - 3 * mod.) 
+
+The optional argument <unit> determines whether the <carrier> and <modul> 
+are given in midis, ('midi'), or in hertz ('freq'). If 'midi' is 
+selected the values will be converted to frequency inside the function 
+and then the output is reconverted to midis. If 'freq' is selected the 
+entry, calculation and output are all in hertz.
+
+The optional argument <output> determines whether the carriers are 
+included ('inclu') or excluded ('exclu') from the output list or lists.
+
+PATCH-WORK FM-RATIO  (CARRIER RATIO INDEX &OPTIONAL UNIT OUTPUT): 
+Simulates the pitches generated by frequency modulation. The frequency of
+the <carrier> is modulated by a modulator whose frequency is equal to the
+frequency of the carrier multiplied by the ratio. Once the frequency of 
+the modulator is determined, the calculations follow the same formula as
+the box 'freq-mod' :
+carr. ± (i * mod.), i = 0,1,...<index>
+
+If <carrier> is a list the output is a list of modulations around each 
+successive carrier. 
+
+If <ratio> is a list the carrier or carriers are each modulated by the 
+frequencies that form all the requested ratios as well as the partials of 
+those notes up to the <index> specified.
+
+If <index> is a list the formula is computed with 'i' equal to only the
+listed values. (e.g. <index> = (1 3), notes calculated are:
+carr. + 1 * mod.; carr. - 1 * mod.;carr. + 3 * mod.; carr. - 3 * mod.) 
+
+The optional argument <unit> determines whether the <carrier> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+value will be converted to frequency inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculation and output are all in hertz.
+
+The optional argument <output> determines whether the carrier or carriers 
+are included ('inclu') or excluded ('exclu') from the output list or 
+lists.
+
+PATCH-WORK RING-MOD  (CH1 CH2 &OPTIONAL UNIT TYPE OUTPUT): 
+Simulates the ring modulation of each note of <ch1> by all the notes of 
+<ch2>. The frequency of each note of <ch2> is added to and subtracted 
+from the frequency of each note of <ch1>; thus, all the possible 
+additive and subtractive combinations are produced.
+
+The optional argument <unit> determines whether <ch1> and <ch2> are 
+entered in midis, ('midi'), or in hertz ('freq'). If 'midi' is 
+selected the values will be converted to frequencies inside the function 
+and then the output is reconverted to midis. If 'freq' is selected the 
+entries, calculations and output are all in hertz. (note: Ring-modulation 
+can produce negative frequencies; conversion to midis will 
+automatically reflect these notes back into the positive domain.)
+
+When <ch1> contains multiple notes, the optional argument <type> is used 
+to determine the format of the output. The value 'seq' returns a list of 
+chords representing the modulation of each successive note of <ch1> by 
+all the notes of <ch2>. The value 'chord' returns a single chord 
+containing all the notes of all the modulations.
+
+The optional argument <output> determines whether the original notes of 
+<ch1> and <ch2> are included ('inclu') or excluded ('exclu') from the 
+output list or lists.
+
+PATCH-WORK RING-HARM  (FUNDA FUNDB HQA HQB &OPTIONAL UNIT TYPE OUTPUT): 
+Simulates the ring-modulation between the harmonic series (see box 
+'harm-series') built on <funda> and the harmonic series on <fundb>. The 
+arguments <hqa> and <hqb> determine the number of partials present for 
+each fundamental. The frequencies of each partial of the harmonic series 
+on <funda> is added to and subtracted from the frequency of each partial 
+of the harmonic series on <fundb>; thus, all the possible additive and 
+subtractive combinations are produced.
+
+If the arguments <hqa> or <hqb> are a list, rather then including all the 
+partials up to and including the number given: only the listed partials 
+for both fundamentals will included in the calculations.   
+
+The optional argument <unit> determines whether <funda> and <fundb> are 
+given in midis, ('midi'), or in hertz ('freq'). If 'midi' is 
+selected the values will be converted to frequencies inside the function 
+and then the output is reconverted to midis. If 'freq' is selected the 
+entries, calculations and output are all in hertz. (note: Ring-modulation 
+can produce negative frequencies; conversion to midis will 
+automatically reflect these notes back into the positive domain.)
+
+The optional argument <type> is used to determine the format of the 
+output. The value 'seq' returns a list of chords in which each successive 
+chord represents the notes involving the next partial or partials. 
+Thus the first chord contains: funda ± fundb; the second: 2*funda ± fundb,
+funda ± 2*fundb and 2*funda ± 2*fundb; etc. The value 'chord' returns a 
+single chord containing all the notes of all the combinations and 
+differences.
+
+The optional argument <output> determines whether the notes <funda> and
+<fundb> are included ('inclu') or excluded ('exclu') from the output list 
+or lists.
+--------------------------------------------------------------------------
+                        Treatment menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK FSHIFT  (CHORD DFREQ &OPTIONAL UNIT TYPE OUTPUT): 
+Shifts the frequency of each note of <chord> by a frequency <dfreq> 
+(positive or negative, but always in hertz).
+
+The optional argument <unit> determines whether <chord> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+values will be converted to frequencies inside the function and then the 
+output is reconverted to midis If 'freq' is selected the entry, 
+calculations and output are all in hertz. 
+
+If <chord> is a list of chords the optional argument <type> is used to 
+determine whether the output will be a list of chords ('seq'), each one
+shifted by <dfreq> or a single chord combining the notes of all the 
+shifted chords ('chord'). If <dfreq> is a list the same argument is used
+to choose between a list of chords shifted by each successive <dfreq> or a 
+single chord combining the different distortions. If both <chord> and
+<dfreq> are lists the position 'seq' will return a list of chords 
+containing  each chord shifted by each frequency; the position 'chord' 
+will return a list of chords containing each chord shifted by all the 
+listed frequencies.
+
+The optional argument <output> determines whether the original <chord> is 
+included ('inclu') or excluded ('exclu') from the output list.
+
+PATCH-WORK FSHIFT-PROC  (CHORD DFREQ STEPS &OPTIONAL UNIT OUTPUT): 
+Progressively shifts <chord> until the final chord which is shifted by 
+<dfreq> (positive or negative, but always in hertz). The argument <steps> 
+determines the number of intermediate distortions to be produced between 
+the unaltered <chord> and the chord shifted by <dfreq>. 
+
+The argument <chord> may be a list, in which case the same process of 
+shifting is carried out for each successive chord.
+
+<dfreq> and <steps> may not be lists.
+
+The optional argument <unit> determines whether <chord> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+values will be converted to frequencies inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculations and output are all in hertz.
+
+The optional argument <output> determines whether the non-shifted <chord> 
+is included ('inclu') or excluded ('exclu') from the output list of 
+chords.
+
+PATCH-WORK FDISTOR  (CHORD MINOUT MAXOUT &OPTIONAL MININ MAXIN UNIT OUTPUT): 
+Distorts the frequencies of <chord> so that the lowest note is changed to
+<minout> and the highest note to <maxout>. Interior notes are rescaled so
+as to preserve the relative positions of their frequencies.
+
+The optional inputs <minin> and <maxin> allow the scaling to be done 
+relative to two selected reference notes rather than the highest and 
+lowest notes of the chord. The note entered as <minin> will be moved to 
+<minout>, and <maxin> to <maxout> the rest of the chord is then 
+rescaled accordingly.
+
+If <chord> is a list of chords, output will be a corresponding list of 
+distorted chords.
+
+The optional argument <unit> determines whether <chord> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+values will be converted to frequencies inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculations and output are all in hertz.
+
+The optional argument <output> determines whether the non-distorted 
+<chord> is included ('inclu') or excluded ('exclu') from the output list. 
+If included the non-distorted notes will be mixed with the distorted into
+a single chord.
+
+PATCH-WORK FDISTOR-PROC  (CHORD STEPS MINOUT MAXOUT &OPTIONAL MININ MAXIN UNIT OUTPUT): 
+Progressively distorts <chord> until the distortion specified by <minout> 
+and <maxout> is reached. The argument <steps> determines the number of 
+intermediate distortions to be produced between the unaltered <chord> and 
+the final distortion. (For explanation of frequency distortion, as well as 
+the use of <minout>,<maxout>,<minin> and <maxin> see the box 'fdistor') 
+
+<chord> may not be a list of chords.
+
+The optional argument <unit> determines whether <chord> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+values will be converted to frequencies inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculations and output are all in hertz.
+
+The optional argument <output> determines whether the non-distorted 
+<chord> is included ('inclu') or excluded ('exclu') from the output list 
+of chords.
+
+PATCH-WORK DISTOR-EXT  (VALS? MININ MAXIN MINOUT MAXOUT): 
+Replaces all the <vals?> considered between <minin> and <maxin> by the values proportionaly
+placed between <minout> and <maxout>.
+--------------------------------------------------------------------------
+                        Analysis menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK HARM-DIST  (CHORD FUND &OPTIONAL UNIT): 
+Calculates the ratios between each note of <chord> and the closest 
+partial of the harmonic series built on <fund>. (For explanations of 
+harmonic series and partials, see the box 'harm-series')
+
+If <chord> is a list of chords the result will be the analyses of each 
+successive chord.
+
+The optional argument <unit> determines whether <chord> and <fund> are
+entered in midis, ('midi'), or in hertz ('freq'). If 'midi' is 
+selected the notes will be converted to frequencies inside the function
+before analysis.
+
+PATCH-WORK CLOSEST-HARM  (CHORD FUND &OPTIONAL UNIT TYPE): 
+Calculates the closest partial of the harmonic series built on <fund> to
+each note of <chord>. (For explanations of harmonic series and partials, 
+see the box 'harm-series')
+
+If <chord> is a list of chords the result will be the analyses of each 
+successive chord.
+
+The optional argument <unit> determines whether <chord> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+values will be converted to frequencies inside the function and then the 
+output (if appropriate) is reconverted to midis. If 'freq' is selected 
+the entry, calculations and output (if appropriate) are all in hertz.
+
+The optional argument <type> determines whether the output is a list of 
+partial rankings or the notes corresponding to those partials.
+
+PATCH-WORK BEST-FREQ  (CHORD &OPTIONAL UNIT): 
+Returns the note which is the minimum possible distance from the 
+frequencies of all the notes of <chord>. (minimum sum of the squares of 
+the distances) This note can be thought of as a sort of center of gravity
+for <chord> (it is not usually a member of the chord).
+
+If <chord> is a list of chords the box returns a list of best frequencies.
+
+The optional argument <unit> determines whether <chord> is entered in 
+midis, ('midi'), or in hertz ('freq'). If 'midi' is selected the 
+values will be converted to frequencies inside the function and then the 
+output is reconverted to midis. If 'freq' is selected the entry, 
+calculations and output are all in hertz.
+
+--------------------------------------------------------------------------
+                        Utilities menu 
+--------------------------------------------------------------------------
+
+
+PATCH-WORK L-DISTOR/2  (NEWMIN NEWMAX LISTE): 
+Distorts a list, <liste>, by a power function, thus if the list is linear 
+the result follow the power function, if the list is non-linear the 
+result will be a hybrid of the old liste and the power function. 
+
+The arguments <newmin> and <newmax> determine the scaling of the new 
+list. (<newmin> will be the smallest value present, <newmax> the largest)
+
+PATCH-WORK L-DISTOR/3  (NEWMIN NEWMAX REF NEWREF LISTE): 
+Distorts a list, <liste>, by a power function, thus if the list is linear 
+the result will follow the power function, if the list is non-linear the 
+result will be a hybrid of the old liste and the power function. This box
+is identical to 'l-distor/2' except that a reference point is 
+controllable.
+
+The arguments <newmin> and <newmax> determine the scaling of the new 
+list. (<newmin> will be the smallest value present, <newmax> the largest)
+The values <ref> and <newref> are used to specify that the element of the 
+original list with a value of <ref> will be moved to the value of 
+<newref>. The curve will be altered in order to accommodate the reference 
+point.
+
+PATCH-WORK L*LINE  (FACT1ST FACTLAST LISTE): 
+Multiplies a list, <liste>, by a linear function. The first element is 
+multiplied by <fact1st>, the last by <factlast> and all intermediate 
+elements by linear interpolations between those values.
+
+PATCH-WORK L*CURB/2  (FACT1ST FACTLAST LISTE): 
+Multiplies a list, <liste>, by a power function. The first element is 
+multiplied by <fact1st>, the last by <factlast> and all intermediate 
+elements by interpolations along a power function between those values.
+
+PATCH-WORK L*CURB/3  (FACT1ST FACTLAST REF FACTREF LISTE): 
+Multiplies a list, <liste>, by a power function. This box is identical to 
+'l*curb/2' except that a reference point is controllable. The first 
+element is multiplied by <fact1st>, the last by <factlast> and the 
+element of the original list with a value of <ref> will be multiplied by 
+<factref>. All intermediate elements will be multiplied by interpolations 
+along a power function between <fact1st> and <factlast>. The power 
+function, however, will be altered to accommodate the reference point.
+
+PATCH-WORK DENSIFIER  (LIST DENSITY &OPTIONAL MIN MAX): 
+Increases the density of a <list> by adding equally spaced notes between 
+each of its elements. The number of added notes is determined by the 
+argument <density>, which is equal to the number of notes added between 
+each pair of elements. 
+
+The optional arguments <min> and <max> allow the densification to take 
+place within only a portion of the list. Notes will only be added between 
+pairs of elements in which both members are at least <min> and no greater
+than <max>; all other parts of the list will be returned unchanged.
+
