@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 4,
+			"minor" : 6,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -232,13 +232,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-52",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 357.599514563106709, 485.0, 35.0 ],
-					"text" : "[ 'GREEN 'BLUE 'BLUE 'GREEN 'GREEN 'GREEN 'GREEN 'BLUE 'GREEN 'GREEN 'BLUE 'GREEN ]"
+					"patching_rect" : [ 38.458333333333258, 359.0, 824.0, 22.0 ],
+					"text" : "[ 'GREEN 'BLUE 'GREEN 'GREEN 'BLUE 'GREEN 'GREEN 'BLUE 'BLUE 'GREEN 'GREEN 'GREEN ]"
 				}
 
 			}
@@ -253,8 +252,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 4,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -672,7 +671,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 48.958333333333258, 265.599514563106709, 244.0, 22.0 ],
+					"patching_rect" : [ 48.958333333333258, 265.599514563106709, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -707,8 +706,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 4,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -910,7 +909,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 291.374999999999773, 256.325004759185163, 385.0, 61.0 ],
+					"patching_rect" : [ 242.0, 236.0, 385.0, 61.0 ],
 					"text" : "quickfix for package names\n<- here i turned lisp.quickeval into a subpatch and changed the default pw to cl-user",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
@@ -938,8 +937,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 4,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1145,7 +1144,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-52", 1 ],
-					"midpoints" : [ 58.458333333333258, 345.099514563106709, 534.5, 345.099514563106709 ],
+					"midpoints" : [ 58.458333333333258, 345.099514563106709, 852.958333333333258, 345.099514563106709 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -1373,6 +1372,13 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../patchers/utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "key_trigger.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../patchers/utilities",
@@ -1408,7 +1414,21 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.init-unless.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.mouse-is-inside.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../patchers/utilities",
 				"type" : "JSON",

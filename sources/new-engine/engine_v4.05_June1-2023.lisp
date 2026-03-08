@@ -1433,9 +1433,10 @@
 
 |#
 
+#|
 (engine_v4.05 12 '('blue 'green) 't *basic-domain*  nil nil
 	(list 
 	 (format-heuristic-RL-rule #'(lambda (&rest x) (progn (print   (b x)) 1))  0 )
 	)
 	 3 t 1)
-
+|#

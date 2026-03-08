@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 8,
+			"minor" : 6,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 1372.0, 782.0 ],
+		"rect" : [ -427.0, -816.0, 1372.0, 782.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 2277.0, 583.000002264976501, 29.5, 22.0 ],
+					"text" : "!- 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 2122.5, 627.0, 52.0, 22.0 ],
+					"text" : "gate 1 1"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "newobj",
@@ -156,8 +180,8 @@
 					"id" : "obj-50",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 379.059294581413326, 131.666748642921448, 103.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "bpatcher-resize",
@@ -179,8 +203,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 1,
-							"revision" : 8,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -889,7 +913,7 @@
 				"box" : 				{
 					"comment" : "rule lambda outlet",
 					"id" : "obj-68",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -901,7 +925,7 @@
 				"box" : 				{
 					"comment" : "rule lambda inlet",
 					"id" : "obj-70",
-					"index" : 0,
+					"index" : 5,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -950,7 +974,7 @@
 				"box" : 				{
 					"comment" : "rule mode — true/false (0), heur-switch (1) or real-heuristic (2)",
 					"id" : "obj-61",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -963,7 +987,7 @@
 				"box" : 				{
 					"comment" : "rule weight (for heur-switch mode only) — the higher the value, the more the rule is likely to apply against other heuristic rules",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 4,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -976,6 +1000,7 @@
 				"box" : 				{
 					"fontname" : "Andale Mono",
 					"fontsize" : 11.0,
+					"hidden" : 1,
 					"id" : "obj-87",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -1026,6 +1051,7 @@
 				"box" : 				{
 					"fontname" : "Menlo Regular",
 					"fontsize" : 10.0,
+					"hidden" : 1,
 					"id" : "obj-231",
 					"maxclass" : "number",
 					"numinlets" : 1,
@@ -1044,7 +1070,7 @@
 				"box" : 				{
 					"comment" : "domain and rules in chainedCLUSTER format",
 					"id" : "obj-53",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1204,6 +1230,7 @@
 				"box" : 				{
 					"fontsize" : 12.0,
 					"id" : "obj-56",
+					"linecount" : 2,
 					"maxclass" : "textedit",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -1211,8 +1238,9 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 1064.864687357239518, 510.566665530204773, 81.0, 22.0 ],
 					"presentation" : 1,
+					"presentation_linecount" : 2,
 					"presentation_rect" : [ 5.0, 114.468479936999813, 104.0, 20.0 ],
-					"text" : "0 1"
+					"text" : "[ 0 1 ] [ 0 2 ] [ 0 3 ]"
 				}
 
 			}
@@ -1252,7 +1280,7 @@
 				"box" : 				{
 					"comment" : "voices (counted from 0) — list of two integers (without brackets) or list of lists of two integers (without external brackets)",
 					"id" : "obj-52",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1346,7 +1374,7 @@
 				"box" : 				{
 					"comment" : "rule parameters (prefixes : bypass, collapse, rule_input, format, gracenotes?, timepoints) — domain and rules in chainedCLUSTER format",
 					"id" : "obj-40",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1457,6 +1485,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-51", 7 ],
 					"order" : 1,
+					"source" : [ "obj-119", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 6 ],
+					"order" : 2,
 					"source" : [ "obj-119", 0 ]
 				}
 
@@ -1788,6 +1824,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-51", 6 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-77", 0 ],
 					"source" : [ "obj-29", 0 ]
 				}
@@ -1797,6 +1840,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -2018,16 +2068,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-49", 1 ],
-					"midpoints" : [ 2091.324218257822395, 614.000002264976501, 2060.324218257822395, 614.000002264976501, 2060.324218257822395, 304.830581799942024, 2221.324218257822395, 304.830581799942024 ],
-					"source" : [ "obj-57", 0 ]
+					"destination" : [ "obj-28", 1 ],
+					"source" : [ "obj-57", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-51", 6 ],
-					"source" : [ "obj-57", 1 ]
+					"destination" : [ "obj-49", 1 ],
+					"midpoints" : [ 2091.324218257822395, 614.000002264976501, 2060.324218257822395, 614.000002264976501, 2060.324218257822395, 304.830581799942024, 2221.324218257822395, 304.830581799942024 ],
+					"source" : [ "obj-57", 0 ]
 				}
 
 			}
@@ -2218,6 +2268,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-133", 0 ],
 					"midpoints" : [ 2354.666677945190258, 541.995634249946534, 545.0, 541.995634249946534 ],
+					"order" : 2,
+					"source" : [ "obj-89", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
 					"order" : 1,
 					"source" : [ "obj-89", 0 ]
 				}
@@ -2262,205 +2320,13 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "moz.textfield.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../utilities",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.prepend.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../bach/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.filternull.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../bach/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pw.quote.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
-				"patcherrelativepath" : "../pw4m_lisp_code_generators_legacy",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "help.png",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
-				"patcherrelativepath" : "../../media",
-				"type" : "PNG",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.lookup.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../bach/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cluster.iter-append-umenu.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_cluster-engine/utilities",
-				"patcherrelativepath" : "./utilities",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cluster.typeroute-sym_or_nums.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_cluster-engine/utilities",
-				"patcherrelativepath" : "./utilities",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cluster.get_doc.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_cluster-engine/utilities",
-				"patcherrelativepath" : "./utilities",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "lisp.docstring.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_scripting_boxes",
-				"patcherrelativepath" : "../pw4m_lisp_scripting_boxes",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pw.eval-box.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
-				"patcherrelativepath" : "../pw4m_lisp_code_generators_legacy",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "make_path_once.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_lisp_code_generators_legacy",
-				"patcherrelativepath" : "../pw4m_lisp_code_generators_legacy",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cluster.rule_definition2param_umenu.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_cluster-engine/utilities",
-				"patcherrelativepath" : "./utilities",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bpatcher-resize.js",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../utilities",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bpatcher-resize-gizmo.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
-				"patcherrelativepath" : "../utilities",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.rminus.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../bach/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bach.join.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.wrap.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.reg.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.args.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.portal.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.eq.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.keys.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.append.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.nth.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.pick.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.iter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.write.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "shell.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.read.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.slice.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.group.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.flat.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.expr.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "MOZ-numint",
 				"default" : 				{
-					"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"fontsize" : [ 16.95833875454338 ],
 					"bgcolor" : [ 0.2, 0.2, 0.2, 0.0 ],
 					"fontname" : [ "Menlo Regular" ],
+					"fontsize" : [ 16.95833875454338 ],
+					"selectioncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
@@ -2470,8 +2336,8 @@
 , 			{
 				"name" : "MOZ-param",
 				"default" : 				{
-					"fontsize" : [ 16.0 ],
-					"fontname" : [ "Menlo Regular" ]
+					"fontname" : [ "Menlo Regular" ],
+					"fontsize" : [ 16.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2480,8 +2346,8 @@
 , 			{
 				"name" : "MOZ-title",
 				"default" : 				{
-					"fontsize" : [ 22.062094355029235 ],
-					"fontname" : [ "Andale Mono" ]
+					"fontname" : [ "Andale Mono" ],
+					"fontsize" : [ 22.062094355029235 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2491,20 +2357,20 @@
 				"name" : "MOZ-umenu",
 				"default" : 				{
 					"bgfillcolor" : 					{
-						"type" : "color",
+						"angle" : 270.0,
+						"autogradient" : 0.0,
+						"color" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
 						"color1" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
 						"color2" : [ 0.2, 0.2, 0.2, 1.0 ],
-						"color" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.5,
-						"autogradient" : 0.0
+						"type" : "color"
 					}
 ,
 					"color" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
 					"elementcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ],
+					"fontface" : [ 2 ],
 					"fontname" : [ "Menlo Regular" ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"fontface" : [ 2 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2518,8 +2384,8 @@
 , 			{
 				"name" : "comment001",
 				"default" : 				{
-					"fontsize" : [ 18.0 ],
-					"fontname" : [ "Herculanum" ]
+					"fontname" : [ "Herculanum" ],
+					"fontsize" : [ 18.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2537,8 +2403,8 @@
 , 			{
 				"name" : "message001",
 				"default" : 				{
-					"fontsize" : [ 13.0 ],
 					"fontname" : [ "Arial" ],
+					"fontsize" : [ 13.0 ],
 					"textcolor_inverse" : [ 0.92549, 0.364706, 0.341176, 1.0 ]
 				}
 ,
@@ -2575,18 +2441,18 @@
 , 			{
 				"name" : "orjan style",
 				"default" : 				{
+					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"bgcolor" : [ 0.97911, 0.963068, 0.9712, 1.0 ],
 					"bgfillcolor" : 					{
-						"type" : "gradient",
+						"angle" : 270.0,
+						"autogradient" : 0,
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
 						"color1" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"color2" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-						"angle" : 270.0,
 						"proportion" : 0.39,
-						"autogradient" : 0
+						"type" : "gradient"
 					}
 ,
-					"bgcolor" : [ 0.97911, 0.963068, 0.9712, 1.0 ],
-					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 					"color" : [ 0.037449, 0.035848, 0.03644, 1.0 ],
 					"elementcolor" : [ 0.898251, 0.915112, 0.965693, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
