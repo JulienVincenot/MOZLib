@@ -2211,10 +2211,10 @@ ATTENTION : in the mode true/false, does NOT work: because of SLEN"
   ;   :menu (mode? (:true/false "true/false") (:heuristic "heuristic"))
   ;  :class pmc-box
   (mode-switch
-    (1
+    (1                                                                    
      `(* (omcs::?if
           (if (= omcs::len (omcs::cur-slen))
-              (= ,sum (apply '+ (pw::flat (find-all-intervals (pw::sort-list omcs::l)))))
+              (= ,sum (apply '+ (pw::flat (find-all-intervals (sort omcs::l #'<)))))   ;;;;; ex : (pw::sort-list omcs::l)))))
             t))))
     (2
      `(* (omcs::?if

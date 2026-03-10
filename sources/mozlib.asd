@@ -85,26 +85,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
                (:file "my-package/my-script")
 
 
-
-
-
-               ; (:file "new-engine/engine_v0.1_June15-2022")
-               ; (:file "new-engine/engine_v1.0_June15-2022")
-               ; (:file "new-engine/engine_v2.0_July2-2022") ;; adds heuristic
-               ; (:file "new-engine/engine_v3.0_July7-2022") ;; optimization backjump
-               ; (:file "new-engine/engine_v3.0_July9-2022") ;; CLEAN-UP TO STUDY
-               ; (:file "new-engine/engine_v3.11_July10-2022") ;; added menus mode & rnd?
-               ; (:file "new-engine/engine_v3.12_Aug24-2022")
-               ; (:file "new-engine/engine_v3.14_Jan13-2023") ;; mode 1 & 2 only
-               ; (:file "new-engine/engine_v4.0_Jan26-2023") 
-               ; (:file "new-engine/engine_v4.01_Feb14-2023") 
-               ; (:file "new-engine/engine_v4.02_Feb14-2023") 
-         
-               (:file "new-engine/engine_v4.05_June1-2023")  ;;; last version
-
-
-               
-
                )
 
   ) 

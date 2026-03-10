@@ -853,22 +853,32 @@ restituisce un nil altrimenti da t"
 ;       (push (rest (pw::g- (nthcdr x chord) (nth x chord))) ris))))
 
 ;;;; rewritten with Iterate for MOZ
+; (defun find-all-intervals (chord)
+;     "Rewritten: This function outputs all intervals done by all the note of a given chord."
+; 		(iter (for i from 0 to (- (length chord) 2))
+; 			(let* ((schord (sort chord #'<)) 
+; 					   (xdx (pw::x->dx (nthcdr i schord)))
+; 					   (rxdx (reverse xdx)))
+; 				(collect (reverse (remove 'nil 
+; 						(iter (for j from 0 to (length xdx)) 
+; 								(collect (if (nthcdr j rxdx) 
+; 														 (apply #'+ (nthcdr j rxdx))))))))
+
+; 				)))
+
+
+;;;; FIXED by Claude (?) to avoid unnecessary NILs...
+
 (defun find-all-intervals (chord)
-    "Rewritten: This function outputs all intervals done by all the note of a given chord."
-		(iter (for i from 0 to (- (length chord) 2))
-			(let* ((schord (sort chord #'<)) 
-					   (xdx (pw::x->dx (nthcdr i schord)))
-					   (rxdx (reverse xdx)))
-				(collect (reverse (remove 'nil 
-						(iter (for j from 0 to (length xdx)) 
-								(collect (if (nthcdr j rxdx) 
-														 (apply #'+ (nthcdr j rxdx))))))))
-
-				)))
-
-
-
-
+  "Rewritten by Claude: This function outputs all intervals done by all the note of a given chord."
+  (let ((schord (sort (remove-duplicates chord) #'<)))
+    (iter (for i from 0 to (- (length schord) 2))
+      (let* ((xdx (pw::x->dx (nthcdr i schord)))
+             (rxdx (reverse xdx)))
+        (collect (reverse (remove nil
+            (iter (for j from 0 to (length xdx))
+              (collect (if (nthcdr j rxdx)
+                         (apply #'+ (nthcdr j rxdx))))))))))))
 
 
 

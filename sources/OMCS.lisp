@@ -6,9 +6,22 @@
 
 (in-package cl)
 
-(defsetf nthcdr (n lst) (new-val) 
-   `(setf (cdr (nthcdr (1- ,n) ,lst)) ,new-val))
+; (defsetf nthcdr (n lst) (new-val) 
+;    `(setf (cdr (nthcdr (1- ,n) ,lst)) ,new-val))
 
+
+;; FIX temporaire : on vérifie que la position cible est un CONS avant d'écrire
+; (defsetf nthcdr (n lst) (new-val)
+;   `(let ((target (nthcdr (1- ,n) ,lst)))
+;      (when (consp target)
+;        (setf (cdr target) ,new-val))))
+; commented to become strict again...
+
+;; FIX no2
+(defsetf nthcdr (n lst) (new-val)
+  `(let ((target (nthcdr (1- ,n) ,lst)))
+     (when (consp target)
+       (setf (cdr target) ,new-val))))
 
 
 ; (in-package :cl)
@@ -1569,7 +1582,14 @@ This function is optimised for partial solutions in reversed order (rl)."
          (fns (heuristic-rules self))
          (len (cur-index)) 
          score score+cand-pairs heuristic-rules-applied? res)
-    (setf (nthcdr (1+ index)  prev-sols) nil)
+
+
+    ;(setf (nthcdr (1+ index) prev-sols) nil)
+    ; fix?
+    (when (nthcdr (1+ index) prev-sols)
+      (setf (nthcdr (1+ index) prev-sols) nil))
+
+
     ;(print (list 'prev (butlast prev-sols) candidates))
     (dolist (candidate candidates)
       (setf (first ith) (car candidates))
@@ -1586,7 +1606,15 @@ This function is optimised for partial solutions in reversed order (rl)."
                        candidates))
     ;(setf (first ith) (car candidates))
     ;(setf (first prev-sols-rev) (car candidates))
-    (setf (nthcdr (1+ index)  prev-sols) end-sols-list)
+
+
+    ; (setf (nthcdr (1+ index)  prev-sols) end-sols-list)
+
+    ; fix?
+    (when end-sols-list
+     (setf (nthcdr (1+ index) prev-sols) end-sols-list))
+
+
     candidates)
   candidates))
 
@@ -1603,7 +1631,14 @@ This function is optimised for partial solutions in reversed order (rl)."
          (fns (rules self))
          (len (cur-index)) 
          temp)
-    (setf (nthcdr (1+ index) prev-sols) nil)
+
+
+    ;(setf (nthcdr (1+ index) prev-sols) nil)
+    ; fix?
+    (when (nthcdr (1+ index) prev-sols)
+      (setf (nthcdr (1+ index) prev-sols) nil))
+
+
     (dolist (fn fns)
       (setq temp nil)
       (loop while candidates
@@ -1620,8 +1655,13 @@ This function is optimised for partial solutions in reversed order (rl)."
         (setf (first ith) (car candidates))
         (setf (first prev-sols-rev) (car candidates)))
     
-    (setf (nthcdr (1+ index)  prev-sols) end-sols-list) ;;;;;;;;;;;;;;
-    
+   ; (setf (nthcdr (1+ index)  prev-sols) end-sols-list) ;;;;;;;;;;;;;;
+   ; fix?
+    (when end-sols-list
+     (setf (nthcdr (1+ index) prev-sols) end-sols-list))
+
+
+
     ; (if end-sols-list
     ;   (setf (nthcdr (1+ index)  prev-sols) end-sols-list)
     ;   t

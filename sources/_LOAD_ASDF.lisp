@@ -50,6 +50,8 @@
 		("fenv/" :fenv) 
 		("cluster-rules/" :cluster-rules)
 
+		("new-engine-main/" :new-engine)
+
 		; ("neuromuse/" :neuromuse)		
 		("fv-morphologie/" :fv-morphologie)
 
