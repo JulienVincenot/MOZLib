@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 5,
-			"revision" : 6,
+			"minor" : 6,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -43,13 +43,12 @@
 					"fontface" : 3,
 					"fontsize" : 31.619663521170434,
 					"id" : "obj-10",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 303.666606903076172, 538.068965517241395, 342.0, 77.0 ],
-					"text" : "BUG resulting interval\n+ cur-slen",
-					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
+					"patching_rect" : [ 303.666606903076172, 538.068965517241395, 211.0, 42.0 ],
+					"text" : "BUG fixed ! :)",
+					"textcolor" : [ 0.298039215686275, 0.0, 1.0, 1.0 ]
 				}
 
 			}
@@ -145,7 +144,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 461.666606903076172, 496.0, 258.0, 22.0 ],
-					"text" : "[ [ 0 1 3 3 ] [ 1 3 3 ] [ 2 2 ] [ 0 ] ]"
+					"text" : "[ [ 0 0 2 3 ] [ 0 2 3 ] [ 2 3 ] [ 1 ] ]"
 				}
 
 			}
@@ -322,8 +321,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 5,
-							"revision" : 6,
+							"minor" : 6,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -542,7 +541,8 @@
 					"numoutlets" : 2,
 					"offset" : [ -65.0, -114.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 23.0, 138.5, 107.0, 47.0 ],
+					"patching_rect" : [ 23.0, 138.0, 107.0, 47.0 ],
+					"varname" : "bp1315563986154",
 					"viewvisibility" : 1
 				}
 
@@ -563,7 +563,8 @@
 					"numoutlets" : 2,
 					"offset" : [ -2.0, -4.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 23.0, 269.0, 161.875, 60.0 ],
+					"patching_rect" : [ 23.0, 269.0, 161.0, 60.0 ],
+					"varname" : "bp761085670504",
 					"viewvisibility" : 1
 				}
 
@@ -759,12 +760,20 @@
  ],
 		"parameters" : 		{
 			"obj-11::obj-23" : [ "vst~[6]", "vst~[1]", 0 ],
+			"obj-15::obj-2::obj-64" : [ "live.text[3]", "live.text", 0 ],
 			"obj-15::obj-2::obj-85" : [ "live.text[5]", "live.text", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
 					"name" : "",
 					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"parameter_overrides" : 			{
+				"obj-15::obj-2::obj-85" : 				{
+					"parameter_longname" : "live.text[5]"
 				}
 
 			}
@@ -943,13 +952,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "bach.postpend.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../../../bach/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "bach.prepend.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
 				"patcherrelativepath" : "../../../../../../bach/patchers",
@@ -996,13 +998,6 @@
 , 			{
 				"name" : "bach.slice.mxo",
 				"type" : "iLaX"
-			}
-, 			{
-				"name" : "bach.split.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/bach/patchers",
-				"patcherrelativepath" : "../../../../../../bach/patchers",
-				"type" : "JSON",
-				"implicit" : 1
 			}
 , 			{
 				"name" : "bach.sum.maxpat",
@@ -1067,10 +1062,24 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "get_object-coord.js",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "help.png",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/media",
 				"patcherrelativepath" : "../../../../../media",
 				"type" : "PNG",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "jbs_block_code-bypass.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1165,6 +1174,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.detect2lisp.antenna.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.ezmidi_instr.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/moz_modules",
 				"patcherrelativepath" : "../../../../../patchers/moz_modules",
@@ -1173,6 +1189,20 @@
 			}
 , 			{
 				"name" : "moz.init-unless.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.maplength.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.maxverbang.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
@@ -1193,9 +1223,23 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "moz.mouse-is-inside.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "moz.play_hover_title.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.prepend-or-null.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1208,6 +1252,13 @@
 			}
 , 			{
 				"name" : "moz.sendto_ezmidi_instr.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
+				"patcherrelativepath" : "../../../../../patchers/utilities",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "moz.update-ui.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/utilities",
 				"patcherrelativepath" : "../../../../../patchers/utilities",
 				"type" : "JSON",
@@ -1236,6 +1287,13 @@
 			}
 , 			{
 				"name" : "pmc.jbs_rules.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
+				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pmc.thinking-engine_UI.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/MOZLib/patchers/pw4m_pmc",
 				"patcherrelativepath" : "../../../../../patchers/pw4m_pmc",
 				"type" : "JSON",

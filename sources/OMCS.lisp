@@ -2,64 +2,14 @@
   (:use :common-lisp :pw :iterate :sb-ext)) ; 
 
 
-
-
 (in-package cl)
 
-; (defsetf nthcdr (n lst) (new-val) 
-;    `(setf (cdr (nthcdr (1- ,n) ,lst)) ,new-val))
-
-
-;; FIX temporaire : on vérifie que la position cible est un CONS avant d'écrire
-; (defsetf nthcdr (n lst) (new-val)
-;   `(let ((target (nthcdr (1- ,n) ,lst)))
-;      (when (consp target)
-;        (setf (cdr target) ,new-val))))
-; commented to become strict again...
-
-;; FIX no2
-(defsetf nthcdr (n lst) (new-val)
-  `(let ((target (nthcdr (1- ,n) ,lst)))
-     (when (consp target)
-       (setf (cdr target) ,new-val))))
-
-
-; (in-package :cl)
-
-; (defun set-nthcdr (index list new-value)
-;   "If INDEX is 0, just return NEW-VALUE."
-;   (if (not (zerop index))
-;     (rplacd (nthcdr (1- index) list)
-;             new-value))
-;   new-value)
-
-; (defun set-nthcdr (index list new-value)
-;   "Redéfinit la cdr du (index-1)-ième élément de LIST avec NEW-VALUE.
-;    Si index = 0, retourne simplement new-value (sans modifier list)."
-;   (cond
-;     ((zerop index) new-value)
-;     ((and (consp list)
-;           (nthcdr (1- index) list))
-;      (rplacd (nthcdr (1- index) list) new-value)
-;      new-value)
-;     (t
-;      (format t "~%[ERROR] set-nthcdr: index=~a is out of bounds for list=~a~%" index list)
-;      new-value)))
-
-; (defsetf nthcdr set-nthcdr)
-
-
-
-
-
-
+(defsetf nthcdr (n lst) (new-val) 
+   `(setf (cdr (nthcdr (1- ,n) ,lst)) ,new-val))
 
 
 
 (in-package omcs)
-
-
-
 
 
 ;;;;;;;;;;;;
@@ -175,10 +125,6 @@
   (if (< num 0)
     (- (random (- num)))
     (random num))))
-
-
-
-
 
 
 ;===============================================
@@ -1465,7 +1411,76 @@ This function is optimised for partial solutions in reversed order (rl)."
     fn))
 |#
 
+; (defun mk-PMC-fn (l) ;; check !!
+;   (make-anon-fn (compile-pattern-matching-rule l)))
+
+
+
+
+;===============================================
+;  PMC rule safety checker
+;===============================================
+;; Detects (sort <expr> ...) calls where <expr> may reference omcs::l, omcs::rl
+;; without a protective copy-list wrapper. cl:sort is destructive and will corrupt
+;; the shared prev-sols list inside the PMC search engine.
+;;
+;; Safe alternatives:
+;;   (pw::sort-list omcs::l)          ; pw::sort-list uses copy-list internally
+;;   (sort (copy-list omcs::l) #'<)   ; explicit copy
+;;
+;; Called once at rule-compile time from mk-PMC-fn -- zero runtime overhead.
+
+(defparameter *pmc-shared-vars* '(omcs::l omcs::rl l rl)
+  "Symbols that refer to the shared partial-solution lists inside PMC rules.")
+
+(defun contains-shared-var-p (expr)
+  "Returns true if expr is or contains a reference to a PMC shared list variable."
+  (cond
+    ((null expr) nil)
+    ((atom expr) (member expr *pmc-shared-vars*))
+    ;; copy-list and pw::sort-list are safe wrappers -- don't descend
+    ((and (consp expr)
+          (member (car expr) '(copy-list pw::sort-list sort-list))) nil)
+    (t (or (contains-shared-var-p (car expr))
+           (contains-shared-var-p (cdr expr))))))
+
+(defun find-unsafe-sorts (expr &optional path)
+  "Walks expr and collects descriptions of unsafe (sort ...) calls."
+  (cond
+    ((atom expr) nil)
+    ((and (consp expr)
+          (member (car expr) '(sort cl:sort))
+          (consp (cdr expr))
+          (contains-shared-var-p (second expr))
+          (not (and (consp (second expr))
+                    (member (cadr expr) '(copy-list pw::sort-list sort-list)))))
+     (cons (list :unsafe-sort expr path)
+           (mapcan #'(lambda (sub) (find-unsafe-sorts sub (cons expr path)))
+                   (cdr expr))))
+    (t
+     (mapcan #'(lambda (sub) (find-unsafe-sorts sub (cons expr path)))
+             (cdr expr)))))
+
+(defun check-unsafe-sort (rule-sexp)
+  "Checks a PMC rule s-expression for unsafe cl:sort calls on shared variables.
+   Prints a warning for each one found. Called at compile time, zero runtime cost."
+  (let ((hits (find-unsafe-sorts rule-sexp)))
+    (dolist (hit hits)
+      (format t "~%*** PMC WARNING: unsafe (sort ...) on shared list detected in rule:~%")
+      (format t "    ~S~%" (second hit))
+      (format t "    cl:sort is DESTRUCTIVE and will corrupt l (the partial solution) during search.~%")
+      (format t "    Replace with: (pw::sort-list omcs::l)~%")
+      (format t "              or: (sort (copy-list omcs::l) #'<)~%"))
+    hits))
+
+
+
+
+
+
+
 (defun mk-PMC-fn (l) ;; check !!
+  (check-unsafe-sort l)
   (make-anon-fn (compile-pattern-matching-rule l)))
 
 
@@ -1582,14 +1597,7 @@ This function is optimised for partial solutions in reversed order (rl)."
          (fns (heuristic-rules self))
          (len (cur-index)) 
          score score+cand-pairs heuristic-rules-applied? res)
-
-
-    ;(setf (nthcdr (1+ index) prev-sols) nil)
-    ; fix?
-    (when (nthcdr (1+ index) prev-sols)
-      (setf (nthcdr (1+ index) prev-sols) nil))
-
-
+    (setf (nthcdr (1+ index)  prev-sols) nil)
     ;(print (list 'prev (butlast prev-sols) candidates))
     (dolist (candidate candidates)
       (setf (first ith) (car candidates))
@@ -1606,15 +1614,7 @@ This function is optimised for partial solutions in reversed order (rl)."
                        candidates))
     ;(setf (first ith) (car candidates))
     ;(setf (first prev-sols-rev) (car candidates))
-
-
-    ; (setf (nthcdr (1+ index)  prev-sols) end-sols-list)
-
-    ; fix?
-    (when end-sols-list
-     (setf (nthcdr (1+ index) prev-sols) end-sols-list))
-
-
+    (setf (nthcdr (1+ index)  prev-sols) end-sols-list)
     candidates)
   candidates))
 
@@ -1631,14 +1631,7 @@ This function is optimised for partial solutions in reversed order (rl)."
          (fns (rules self))
          (len (cur-index)) 
          temp)
-
-
-    ;(setf (nthcdr (1+ index) prev-sols) nil)
-    ; fix?
-    (when (nthcdr (1+ index) prev-sols)
-      (setf (nthcdr (1+ index) prev-sols) nil))
-
-
+    (setf (nthcdr (1+ index) prev-sols) nil)
     (dolist (fn fns)
       (setq temp nil)
       (loop while candidates
@@ -1655,13 +1648,8 @@ This function is optimised for partial solutions in reversed order (rl)."
         (setf (first ith) (car candidates))
         (setf (first prev-sols-rev) (car candidates)))
     
-   ; (setf (nthcdr (1+ index)  prev-sols) end-sols-list) ;;;;;;;;;;;;;;
-   ; fix?
-    (when end-sols-list
-     (setf (nthcdr (1+ index) prev-sols) end-sols-list))
-
-
-
+    (setf (nthcdr (1+ index)  prev-sols) end-sols-list) ;;;;;;;;;;;;;;
+    
     ; (if end-sols-list
     ;   (setf (nthcdr (1+ index)  prev-sols) end-sols-list)
     ;   t

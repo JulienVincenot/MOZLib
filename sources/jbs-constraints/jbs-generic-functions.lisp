@@ -845,12 +845,12 @@ restituisce un nil altrimenti da t"
 ;;;
 
 ;;;; bug in SBCL with cur-slen...
-; (defun find-all-intervals (chord)
-;     "This function outputs all intervals done by all the note of a given chord."
-;   (let ((ris nil)
-; 	(chord (pw::sort-list chord)))
-;     (dotimes (x (1- (length chord)) (nreverse ris))
-;       (push (rest (pw::g- (nthcdr x chord) (nth x chord))) ris))))
+(defun find-all-intervals (chord)
+    "This function outputs all intervals done by all the note of a given chord."
+  (let ((ris nil)
+	(chord (pw::sort-list chord)))
+    (dotimes (x (1- (length chord)) (nreverse ris))
+      (push (rest (pw::g- (nthcdr x chord) (nth x chord))) ris))))
 
 ;;;; rewritten with Iterate for MOZ
 ; (defun find-all-intervals (chord)
@@ -869,16 +869,16 @@ restituisce un nil altrimenti da t"
 
 ;;;; FIXED by Claude (?) to avoid unnecessary NILs...
 
-(defun find-all-intervals (chord)
-  "Rewritten by Claude: This function outputs all intervals done by all the note of a given chord."
-  (let ((schord (sort (remove-duplicates chord) #'<)))
-    (iter (for i from 0 to (- (length schord) 2))
-      (let* ((xdx (pw::x->dx (nthcdr i schord)))
-             (rxdx (reverse xdx)))
-        (collect (reverse (remove nil
-            (iter (for j from 0 to (length xdx))
-              (collect (if (nthcdr j rxdx)
-                         (apply #'+ (nthcdr j rxdx))))))))))))
+; (defun find-all-intervals (chord)
+;   "Rewritten by Claude: This function outputs all intervals done by all the note of a given chord."
+;   (let ((schord (sort (remove-duplicates chord) #'<)))
+;     (iter (for i from 0 to (- (length schord) 2))
+;       (let* ((xdx (pw::x->dx (nthcdr i schord)))
+;              (rxdx (reverse xdx)))
+;         (collect (reverse (remove nil
+;             (iter (for j from 0 to (length xdx))
+;               (collect (if (nthcdr j rxdx)
+;                          (apply #'+ (nthcdr j rxdx))))))))))))
 
 
 

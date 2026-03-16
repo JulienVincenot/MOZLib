@@ -227,7 +227,10 @@ will return
 PWGL->((3 9 3) (13 13 4) (11 13 6) (16 16 1))"
   
   
-  (sort list pred :key key))
+  ;(sort list pred :key key) FIX to avoid destructive behavior with find-all-intervals…?
+  (sort (copy-list list) pred :key key)
+
+  )
         
 
 
