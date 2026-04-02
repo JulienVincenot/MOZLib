@@ -56,9 +56,23 @@
 		("fv-morphologie/" :fv-morphologie)
 
 
+
 		("" :mozlib) ;;;; MOZ'Lib vanilla (incl. OM stuff, JBS libraries, Jv-components, Chreodes&Transkaija, etc )
 
 		("esquisse/" :esquisse)
+
+		("policy-cond/" :policy-cond)
+		("interface/" :interface)
+		("babel/" :babel)
+		("cffi/" :cffi)
+		("static-vectors/" :static-vectors)
+		("magicl/" :magicl)
+
+		("cl-json/" :cl-json)
+		("moz-transformer/" :moz-transformer)
+
+
+
 	)
 )
 
@@ -87,7 +101,9 @@
 								(probe-file (sb-unix::posix-getenv platform)))			                 
 							asdf:*central-registry*))
 
-					(asdf:operate 'asdf:load-op (second i))
+					; (asdf:operate 'asdf:load-op (second i))  ;;;; fix Claude for % comma thing...
+					(let ((*readtable* (copy-readtable nil)))
+  						(asdf:operate 'asdf:load-op (second i)))
 
 					(format t " OK:~%")
 					)

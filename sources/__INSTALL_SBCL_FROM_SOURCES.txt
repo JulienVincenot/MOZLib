@@ -28,14 +28,14 @@ cd sbcl-2.2.9-x86-64-darwin &&
 sudo sh install.sh &&
 rm -r ~/Downloads/sbcl-2.2.9-x86-64-darwin/ &&
 cd ~/Downloads/ && 
-curl -OL http://prdownloads.sourceforge.net/sbcl/sbcl-2.5.5-source.tar.bz2 && 
-bzip2 -d sbcl-2.5.5-source.tar.bz2 && 
-tar -zxvf sbcl-2.5.5-source.tar && 
-rm sbcl-2.5.5-source.tar && 
-cd sbcl-2.5.5 && 
+curl -OL http://prdownloads.sourceforge.net/sbcl/sbcl-2.6.3-source.tar.bz2 && 
+bzip2 -d sbcl-2.6.3-source.tar.bz2 && 
+tar -zxvf sbcl-2.6.3-source.tar && 
+rm sbcl-2.6.3-source.tar && 
+cd sbcl-2.6.3 && 
 sh make.sh && 
 sudo sh install.sh &&  
-rm -r ~/Downloads/sbcl-2.5.5/ &&
+rm -r ~/Downloads/sbcl-2.6.3/ &&
 rm ~/Documents/Max\ 8/Packages/MOZLib/sbcl/sbcl ; 
 rm ~/Documents/Max\ 8/Packages/MOZLib/sbcl/moz-complete.core ; 
 rm ~/Documents/Max\ 8/Packages/MOZLib/sbcl/moz-complete-new.core ; 
