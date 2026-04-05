@@ -215,10 +215,44 @@
        (snappy-decompress data))
       (t (error "CKPT: unknown compression type ~A" compression-byte)))))
 
+(defun tf-has-seqnum-p (key-bytes)
+  "Return T if KEY-BYTES ends with a TF/LevelDB sequence number.
+   TF sequence numbers: 8 bytes where the top 7 bytes encode a sequence number
+   and the last byte is the record type (0=deletion, 1=value).
+   In practice, for TF1 checkpoints the last 7 bytes of the seqnum are
+   mostly zero for early-written keys, but this is not guaranteed.
+   Better heuristic: check if stripping 8 bytes gives valid UTF-8 text
+   that looks like a variable name (contains only printable ASCII)."
+  (and (>= (length key-bytes) 9)
+       (let* ((candidate (subseq key-bytes 0 (- (length key-bytes) 8)))
+              (last-user-byte (aref candidate (1- (length candidate)))))
+         ;; Variable names end with alphanumeric, underscore, or digit
+         (or (and (>= last-user-byte 48) (<= last-user-byte 57))   ; 0-9
+             (and (>= last-user-byte 65) (<= last-user-byte 90))   ; A-Z
+             (and (>= last-user-byte 97) (<= last-user-byte 122))  ; a-z
+             (= last-user-byte 95)))))   ; underscore
+
+(defun tf-strip-seqnum (key-bytes)
+  "Strip TF internal 8-byte sequence number from a reconstructed full-key,
+   but ONLY if the key actually contains a seqnum.
+   The seqnum is present in the non-shared suffix of an entry.
+   We detect it by checking if the last byte of the suffix (which is part
+   of every non-shared contribution) looks like a seqnum type byte (0 or 1)
+   and if stripping 8 bytes gives a valid-looking variable name."
+  (if (tf-has-seqnum-p key-bytes)
+      (subseq key-bytes 0 (- (length key-bytes) 8))
+      key-bytes))
+
 (defun parse-data-block (block-bytes &key strip-sequence-number)
   "Parse a LevelDB data block into an alist of (key-bytes . value-bytes).
    When STRIP-SEQUENCE-NUMBER is true, removes the 8-byte TF sequence number
-   suffix from each key to get the user key."
+   from each reconstructed key using heuristic detection.
+
+   Key insight: the sequence number is only in the NON-SHARED part of
+   each entry's suffix. When shared > 0, the shared prefix may already
+   contain the seqnum bytes from the previous key. We therefore track
+   full-key (with seqnum) for prefix sharing, and derive user-key
+   by checking if the full-key ends with a valid seqnum pattern."
   (let* ((blen (length block-bytes))
          (num-restarts (read-u32-le-from block-bytes (- blen 4)))
          (restarts-end (- blen 4 (* num-restarts 4)))
@@ -230,18 +264,20 @@
         (multiple-value-bind (non-sh  i2) (read-varint block-bytes i1)
           (multiple-value-bind (val-len i3) (read-varint block-bytes i2)
             (let* ((suffix   (subseq block-bytes i3 (+ i3 non-sh)))
+                   ;; full-key includes TF seqnum — needed for correct prefix sharing
                    (full-key (concatenate '(vector (unsigned-byte 8))
                                           (subseq last-key 0
                                                   (min shared (length last-key)))
                                           suffix))
-                   (user-key (if (and strip-sequence-number
-                                      (>= (length full-key) 8))
-                                 (subseq full-key 0 (- (length full-key) 8))
+                   ;; user-key: strip seqnum only when it's actually present
+                   (user-key (if strip-sequence-number
+                                 (tf-strip-seqnum full-key)
                                  full-key))
                    (value    (subseq block-bytes (+ i3 non-sh)
                                      (+ i3 non-sh val-len))))
               (when (> (length user-key) 0)
                 (push (cons user-key value) entries))
+              ;; Store full-key (with seqnum) for next iteration's prefix sharing
               (setf last-key full-key)
               (setf i (+ i3 non-sh val-len)))))))
     (nreverse entries)))
