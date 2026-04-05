@@ -68,6 +68,8 @@
 		("static-vectors/" :static-vectors)
 		("magicl/" :magicl)
 
+		("trivial-gray-streams/" :trivial-gray-streams)
+		("flexi-streams/" :flexi-streams)
 		("cl-json/" :cl-json)
 		("moz-transformer/" :moz-transformer)
 
