@@ -216,21 +216,21 @@
       (t (error "CKPT: unknown compression type ~A" compression-byte)))))
 
 (defun tf-has-seqnum-p (key-bytes)
-  "Return T if KEY-BYTES ends with a TF/LevelDB sequence number.
-   TF sequence numbers: 8 bytes where the top 7 bytes encode a sequence number
-   and the last byte is the record type (0=deletion, 1=value).
-   In practice, for TF1 checkpoints the last 7 bytes of the seqnum are
-   mostly zero for early-written keys, but this is not guaranteed.
-   Better heuristic: check if stripping 8 bytes gives valid UTF-8 text
-   that looks like a variable name (contains only printable ASCII)."
+  "Return T if KEY-BYTES ends with a TF/LevelDB 8-byte sequence number.
+   In LevelDB, internal keys end with: 7 bytes seq number + 1 byte type.
+   TF1 uses type=1 (kTypeValue) for all checkpoint entries.
+   The type byte is always the last byte of the internal key."
   (and (>= (length key-bytes) 9)
-       (let* ((candidate (subseq key-bytes 0 (- (length key-bytes) 8)))
-              (last-user-byte (aref candidate (1- (length candidate)))))
-         ;; Variable names end with alphanumeric, underscore, or digit
-         (or (and (>= last-user-byte 48) (<= last-user-byte 57))   ; 0-9
-             (and (>= last-user-byte 65) (<= last-user-byte 90))   ; A-Z
-             (and (>= last-user-byte 97) (<= last-user-byte 122))  ; a-z
-             (= last-user-byte 95)))))   ; underscore
+       ;; Last byte must be type=1 (kTypeValue)
+       (= (aref key-bytes (1- (length key-bytes))) 1)
+       ;; Byte before the 8-byte seqnum must be valid variable name char
+       (let ((candidate-last (aref key-bytes (- (length key-bytes) 9))))
+         (or (and (>= candidate-last 48) (<= candidate-last 57))   ; 0-9
+             (and (>= candidate-last 65) (<= candidate-last 90))   ; A-Z
+             (and (>= candidate-last 97) (<= candidate-last 122))  ; a-z
+             (= candidate-last 95)    ; underscore
+             (= candidate-last 47)    ; slash
+             (= candidate-last 48)))))   ; underscore
 
 (defun tf-strip-seqnum (key-bytes)
   "Strip TF internal 8-byte sequence number from a reconstructed full-key,
