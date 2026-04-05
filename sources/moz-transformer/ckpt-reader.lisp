@@ -244,6 +244,119 @@
 ;;;; SSTable / LevelDB format parser
 ;;;; =========================================================================
 
+;;;; =========================================================================
+;;;; Snappy decompression (pure Common Lisp)
+;;;; Used by TF1 checkpoints for index block compression
+;;;; =========================================================================
+
+(defun snappy-read-varint32 (src pos)
+  "Read a Snappy varint32 from SRC at POS.
+   Returns (values integer new-pos)."
+  (let ((result 0) (shift 0) (i pos))
+    (loop
+      (let ((b (aref src i)))
+        (incf i)
+        (setf result (logior result (ash (logand b #x7F) shift)))
+        (incf shift 7)
+        (when (zerop (logand b #x80))
+          (return (values result i)))
+        (when (> shift 28)
+          (error "SNAPPY: Varint32 too long"))))))
+
+(defun snappy-decompress (src)
+  "Decompress a Snappy-compressed byte vector.
+   Returns the decompressed byte vector."
+  (let ((pos 0) (src-len (length src)))
+
+    ;; Read uncompressed length (varint32)
+    (multiple-value-bind (uncompressed-len new-pos)
+        (snappy-read-varint32 src pos)
+      (setf pos new-pos)
+
+      (let ((dst (make-array uncompressed-len
+                             :element-type '(unsigned-byte 8)
+                             :initial-element 0))
+            (dst-pos 0))
+
+        (loop while (< pos src-len) do
+          (let ((tag-byte (aref src pos)))
+            (incf pos)
+            (let ((tag-type (logand tag-byte #x03)))
+              (cond
+                ;; Literal
+                ((= tag-type 0)
+                 (let* ((len-minus-1 (ash tag-byte -2))
+                        (len (cond
+                               ((< len-minus-1 60)
+                                (1+ len-minus-1))
+                               ((= len-minus-1 60)
+                                (let ((v (aref src pos)))
+                                  (incf pos)
+                                  (1+ v)))
+                               ((= len-minus-1 61)
+                                (let ((v (logior (aref src pos)
+                                                 (ash (aref src (1+ pos)) 8))))
+                                  (incf pos 2)
+                                  (1+ v)))
+                               ((= len-minus-1 62)
+                                (let ((v (logior (aref src pos)
+                                                 (ash (aref src (1+ pos)) 8)
+                                                 (ash (aref src (+ pos 2)) 16))))
+                                  (incf pos 3)
+                                  (1+ v)))
+                               (t
+                                (let ((v (logior (aref src pos)
+                                                 (ash (aref src (1+ pos)) 8)
+                                                 (ash (aref src (+ pos 2)) 16)
+                                                 (ash (aref src (+ pos 3)) 24))))
+                                  (incf pos 4)
+                                  (1+ v))))))
+                   (dotimes (i len)
+                     (setf (aref dst dst-pos) (aref src pos))
+                     (incf dst-pos)
+                     (incf pos))))
+
+                ;; Copy 1-byte offset
+                ((= tag-type 1)
+                 (let* ((len (+ 4 (logand (ash tag-byte -2) #x07)))
+                        (offset (logior (ash (logand tag-byte #xE0) 3)
+                                        (aref src pos))))
+                   (incf pos)
+                   (let ((copy-pos (- dst-pos offset)))
+                     (dotimes (i len)
+                       (setf (aref dst dst-pos) (aref dst copy-pos))
+                       (incf dst-pos)
+                       (incf copy-pos)))))
+
+                ;; Copy 2-byte offset
+                ((= tag-type 2)
+                 (let* ((len (+ 1 (ash tag-byte -2)))
+                        (offset (logior (aref src pos)
+                                        (ash (aref src (1+ pos)) 8))))
+                   (incf pos 2)
+                   (let ((copy-pos (- dst-pos offset)))
+                     (dotimes (i len)
+                       (setf (aref dst dst-pos) (aref dst copy-pos))
+                       (incf dst-pos)
+                       (incf copy-pos)))))
+
+                ;; Copy 4-byte offset
+                ((= tag-type 3)
+                 (let* ((len (+ 1 (ash tag-byte -2)))
+                        (offset (logior (aref src pos)
+                                        (ash (aref src (1+ pos)) 8)
+                                        (ash (aref src (+ pos 2)) 16)
+                                        (ash (aref src (+ pos 3)) 24))))
+                   (incf pos 4)
+                   (let ((copy-pos (- dst-pos offset)))
+                     (dotimes (i len)
+                       (setf (aref dst dst-pos) (aref dst copy-pos))
+                       (incf dst-pos)
+                       (incf copy-pos)))))))))
+
+        dst))))
+
+
 ;;; SSTable footer: 48 bytes at end of file
 ;;;   [0..19]  metaindex block handle (varint offset + varint size, padded to 20 bytes)
 ;;;   [20..39] index block handle (varint offset + varint size, padded to 20 bytes)
@@ -281,12 +394,11 @@
       (setf (aref data i) (aref file-bytes (+ block-offset i))))
     ;; Check compression type (byte at block-offset + block-size)
     (let ((compression-type (aref file-bytes (+ block-offset block-size))))
-      (when (= compression-type 1)
-        (error "CKPT-READER: Snappy compression not supported in this checkpoint.~%~
-                Please contact Julien — this checkpoint uses Snappy compression."))
-      (when (not (= compression-type 0))
-        (error "CKPT-READER: Unknown compression type: ~A" compression-type)))
-    data))
+      (cond
+        ((= compression-type 0) data)           ; uncompressed, return as-is
+        ((= compression-type 1)                  ; Snappy
+         (snappy-decompress data))
+        (t (error "CKPT-READER: Unknown compression type: ~A" compression-type))))))
 
 (defun parse-data-block (block-bytes)
   "Parse a LevelDB data block into a list of (key . value) pairs.
