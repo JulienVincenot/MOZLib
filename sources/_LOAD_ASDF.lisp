@@ -59,19 +59,19 @@
 
 		("" :mozlib) ;;;; MOZ'Lib vanilla (incl. OM stuff, JBS libraries, Jv-components, Chreodes&Transkaija, etc )
 
-		("esquisse/" :esquisse)
+		("esquisse/" :esquisse t)
 
-		("policy-cond/" :policy-cond)
-		("interface/" :interface)
-		("babel/" :babel)
-		("cffi/" :cffi)
-		("static-vectors/" :static-vectors)
-		("magicl/" :magicl)
+		("policy-cond/" :policy-cond t)
+		("interface/" :interface t)
+		("babel/" :babel t)
+		("cffi/" :cffi t)
+		("static-vectors/" :static-vectors t)
+		("magicl/" :magicl t)
 
-		("trivial-gray-streams/" :trivial-gray-streams)
-		("flexi-streams/" :flexi-streams)
-		("cl-json/" :cl-json)
-		("moz-transformer/" :moz-transformer)
+		("trivial-gray-streams/" :trivial-gray-streams t)
+		("flexi-streams/" :flexi-streams t)
+		("cl-json/" :cl-json t)
+		("moz-transformer/" :moz-transformer t)
 
 
 
@@ -103,9 +103,18 @@
 								(probe-file (sb-unix::posix-getenv platform)))			                 
 							asdf:*central-registry*))
 
-					; (asdf:operate 'asdf:load-op (second i))  ;;;; fix Claude for % comma thing...
-					(let ((*readtable* (copy-readtable nil)))
-  						(asdf:operate 'asdf:load-op (second i)))
+					; ; (asdf:operate 'asdf:load-op (second i))  ;;;; fix Claude for % comma thing...
+					; (let ((*readtable* (copy-readtable nil)))
+  					; 	(asdf:operate 'asdf:load-op (second i)))
+
+					(if (third i)
+					    (let ((*readtable* (copy-readtable nil)))
+					        (asdf:operate 'asdf:load-op (second i)))
+					    (asdf:operate 'asdf:load-op (second i)))
+
+
+
+
 
 					(format t " OK:~%")
 					)
